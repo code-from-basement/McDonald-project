@@ -1,0 +1,37 @@
+:root {
+  --color-primary-900: #ffc72c;
+  --color-primary-100: #ffc72c25;
+
+  --color-secondary-900: #da291c;
+  --color-secondary-100: #da291c25;
+
+  --color-gray-900: #27251f;
+  --color-gray-100: #27251f25;
+  --color-gray-300: #27251f50;
+  --color-gray-600: #27251f75;
+
+  --color-white: white;
+  --color-trans: transparent;
+
+  --color-blue: #3369e7;
+  --transition: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 62.5%;
+  color: var(--color-gray-900);
+  box-sizing: border-box;
+}
+
+body {
+}
+button {
+  cursor: pointer;
+}

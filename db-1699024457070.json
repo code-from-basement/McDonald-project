@@ -21,8 +21,20 @@
         "sugar": 12,
         "saturated": 13
       },
-      "ingredient": ["Soft bun", "Meat, Premium Beef", "Bacon", "Sauce, Big Mac", "Cheese, Aged cheddar", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Meat, Premium Beef",
+        "Bacon",
+        "Sauce, Big Mac",
+        "Cheese, Aged cheddar",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Red onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 15,
       "related_products": []
@@ -48,8 +60,20 @@
         "sugar": 12,
         "saturated": 21
       },
-      "ingredient": ["Soft bun", "Meat, QP", "Bacon", "Cheese, Cheddar processed cheese", "Sauce, Big Mac", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Meat, QP",
+        "Bacon",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Big Mac",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Red onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -75,8 +99,18 @@
         "sugar": 7.8,
         "saturated": 22
       },
-      "ingredient": ["Bread, QP", "Meat, QP", "Cheese, Cheddar processed cheese", "Sauce, Vegan Chili McFeast", "Pickled cucumber", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Meat, QP",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Vegan Chili McFeast",
+        "Pickled cucumber",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -102,8 +136,19 @@
         "sugar": 8.7,
         "saturated": 10
       },
-      "ingredient": ["Bread, Big Mac", "Meat, HB", "Cheese, Cheddar processed cheese", "Sauce, Big Mac", "Iceberg lettuce (shredded)", "Pickled cucumber", "Finely chopped onion (freeze-dried)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, Big Mac",
+        "Meat, HB",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Big Mac",
+        "Iceberg lettuce (shredded)",
+        "Pickled cucumber",
+        "Finely chopped onion (freeze-dried)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 25,
       "related_products": []
@@ -129,8 +174,18 @@
         "sugar": 5.4,
         "saturated": 3.8
       },
-      "ingredient": ["Bread, gluten-free", "Mustard", "Ketchup", "Sauce, Big Mac", "Finely chopped onion (freeze-dried)", "Meat, HB", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, gluten-free",
+        "Mustard",
+        "Ketchup",
+        "Sauce, Big Mac",
+        "Finely chopped onion (freeze-dried)",
+        "Meat, HB",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 25,
       "related_products": []
@@ -156,8 +211,18 @@
         "sugar": 7.5,
         "saturated": 6
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Ketchup", "Mustard", "Pickled cucumber", "Finely chopped onion (freeze-dried)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Ketchup",
+        "Mustard",
+        "Pickled cucumber",
+        "Finely chopped onion (freeze-dried)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 10,
       "related_products": []
@@ -183,8 +248,18 @@
         "sugar": 7.5,
         "saturated": 6
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Ketchup", "Mustard", "Pickled cucumber", "Finely chopped onion (freeze-dried)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Ketchup",
+        "Mustard",
+        "Pickled cucumber",
+        "Finely chopped onion (freeze-dried)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 10,
       "related_products": []
@@ -210,8 +285,19 @@
         "sugar": 7.8,
         "saturated": 14
       },
-      "ingredient": ["Bread, QP", "Meat, QP", "Ketchup", "Cheese, Cheddar processed cheese", "Sauce, Vegan Chili McFeast", "Pickled cucumber", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Meat, QP",
+        "Ketchup",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Vegan Chili McFeast",
+        "Pickled cucumber",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 10,
       "related_products": []
@@ -237,8 +323,20 @@
         "sugar": 8,
         "saturated": 12
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Ketchup", "Cheese, Cheddar processed cheese", "Ketchup", "Mustard", "Pickled cucumber", "Finely chopped onion (freeze-dried)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Ketchup",
+        "Cheese, Cheddar processed cheese",
+        "Ketchup",
+        "Mustard",
+        "Pickled cucumber",
+        "Finely chopped onion (freeze-dried)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -264,8 +362,19 @@
         "sugar": 10,
         "saturated": 21
       },
-      "ingredient": ["Bread, QP", "Meat, QP", "Cheese, Cheddar processed cheese", "Ketchup", "Mustard", "Pickled cucumber", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Meat, QP",
+        "Cheese, Cheddar processed cheese",
+        "Ketchup",
+        "Mustard",
+        "Pickled cucumber",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -291,8 +400,18 @@
         "sugar": 7,
         "saturated": 3.4
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Pickled cucumber", "Ketchup", "Mustard", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Pickled cucumber",
+        "Ketchup",
+        "Mustard",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -318,8 +437,17 @@
         "sugar": 5.4,
         "saturated": 3.8
       },
-      "ingredient": ["Bread, gluten-free", "Meat, HB", "Pickled cucumber", "Ketchup", "Mustard", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, gluten-free",
+        "Meat, HB",
+        "Pickled cucumber",
+        "Ketchup",
+        "Mustard",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -345,8 +473,19 @@
         "sugar": 7.5,
         "saturated": 11
       },
-      "ingredient": ["Bread, QP", "Meat, QP", "Cheese, Cheddar processed cheese", "Sauce, Vegan McFeast", "Iceberg lettuce (shredded)", "Tomato (sliced)", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Meat, QP",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Vegan McFeast",
+        "Iceberg lettuce (shredded)",
+        "Tomato (sliced)",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 25,
       "related_products": []
@@ -372,8 +511,20 @@
         "sugar": 5.3,
         "saturated": 11
       },
-      "ingredient": ["Bread, gluten-free", "Meat, QP", "Sauce, Vegan McFeast", "Yellow onion (fresh, sliced)", "Iceberg lettuce (shredded)", "Tomato (sliced)", "Tomato (sliced)", "Cheese, Cheddar processed cheese", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, gluten-free",
+        "Meat, QP",
+        "Sauce, Vegan McFeast",
+        "Yellow onion (fresh, sliced)",
+        "Iceberg lettuce (shredded)",
+        "Tomato (sliced)",
+        "Tomato (sliced)",
+        "Cheese, Cheddar processed cheese",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 25,
       "related_products": []
@@ -399,8 +550,21 @@
         "sugar": 11,
         "saturated": 18
       },
-      "ingredient": ["Soft bun", "Meat, Premium Beef", "Bacon", "Cheese, Emmentaler processed cheese", "Sauce, Tasty", "Tomato (sliced)", "Sauce, Tasty Glaze", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Meat, Premium Beef",
+        "Bacon",
+        "Cheese, Emmentaler processed cheese",
+        "Sauce, Tasty",
+        "Tomato (sliced)",
+        "Sauce, Tasty Glaze",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Red onion (fresh, sliced)"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -426,8 +590,18 @@
         "sugar": 14,
         "saturated": 22
       },
-      "ingredient": ["Soft bun", "Meat, Premium Beef", "Cheese, Emmentaler processed cheese", "Sauce, Tasty", "Tomato (sliced)", "Batavia salad (cut)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Meat, Premium Beef",
+        "Cheese, Emmentaler processed cheese",
+        "Sauce, Tasty",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -453,8 +627,19 @@
         "sugar": 11,
         "saturated": 30
       },
-      "ingredient": ["Soft bun", "Meat, Premium Beef", "Sauce, Truffle mayonnaise", "Cheese, Aged cheddar", "Grilled onions", "Roasted onions", "Pickled cucumber", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Meat, Premium Beef",
+        "Sauce, Truffle mayonnaise",
+        "Cheese, Aged cheddar",
+        "Grilled onions",
+        "Roasted onions",
+        "Pickled cucumber",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -480,8 +665,19 @@
         "sugar": 16,
         "saturated": 23
       },
-      "ingredient": ["Bread, QP", "Meat, QP", "Ketchup", "Cheese, Aged cheddar", "Mustard", "Pickled cucumber", "Yellow onion (fresh, sliced)", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Meat, QP",
+        "Ketchup",
+        "Cheese, Aged cheddar",
+        "Mustard",
+        "Pickled cucumber",
+        "Yellow onion (fresh, sliced)",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -507,8 +703,18 @@
         "sugar": 11,
         "saturated": 32
       },
-      "ingredient": ["Bread, gluten-free", "Meat, QP", "Mustard", "Ketchup", "Pickled cucumber", "Cheese, Cheddar processed cheese", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, gluten-free",
+        "Meat, QP",
+        "Mustard",
+        "Ketchup",
+        "Pickled cucumber",
+        "Cheese, Cheddar processed cheese",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 10,
       "related_products": []
@@ -534,8 +740,18 @@
         "sugar": 13,
         "saturated": 43
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Cheese, Cheddar processed cheese", "Ketchup", "Mustard", "Pickled cucumber", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Cheese, Cheddar processed cheese",
+        "Ketchup",
+        "Mustard",
+        "Pickled cucumber",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -555,460 +771,27 @@
         "kj": 437,
         "fat": 14,
         "fiber": 2.1,
-        "protein": 31,
+        "protein": 231,
         "salt": 3.8,
         "carbohydrates": 38,
         "sugar": 11,
         "saturated": 23
       },
-      "ingredient": ["Bread, HB", "Meat, HB", "Cheese, Aged cheddar", "Roasted onions", "Pickled cucumber", "Spice mix"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, HB",
+        "Meat, HB",
+        "Cheese, Aged cheddar",
+        "Roasted onions",
+        "Pickled cucumber",
+        "Spice mix"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
     },
-
-    {
-      "id": 300,
-      "title": "4 Chicken McNuggets",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 39,
-      "size": [],
-      "description": "Our delicious Chicken McNugget's always consist of chicken fillet with a crispy golden brown breading.",
-      "calories": 739,
-      "kj": 176,
-      "nutrition": {
-        "calories": 739,
-        "kj": 176,
-        "fat": 21,
-        "fiber": 1.1,
-        "protein": 21,
-        "salt": 2.1,
-        "carbohydrates": 11,
-        "sugar": 12,
-        "saturated": 34
-      },
-      "ingredient": ["Chicken fillet", "water", "flour", "starch ", "salt", "breadcrumbs "],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 301,
-      "title": "6 Chicken McNuggets",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 46,
-      "size": [],
-      "description": "Our delicious Chicken McNugget's always consist of chicken breast fillet with a crispy golden brown breading.",
-      "calories": 1109,
-      "kj": 264,
-      "nutrition": {
-        "calories": 1109,
-        "kj": 264,
-        "fat": 24,
-        "fiber": 1.3,
-        "protein": 23,
-        "salt": 2.1,
-        "carbohydrates": 13,
-        "sugar": 9,
-        "saturated": 38.2
-      },
-      "ingredient": ["Chicken fillet", "water", "flour", "starch ", "salt", "breadcrumbs "],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-    {
-      "id": 302,
-      "title": "9 Chicken McNuggets",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 54,
-      "size": [],
-      "description": "Our delicious Chicken McNugget's always consist of chicken breast fillet with a crispy golden brown breading.",
-      "calories": 1663,
-      "kj": 396,
-      "nutrition": {
-        "calories": 1663,
-        "kj": 396,
-        "fat": 29,
-        "fiber": 1.8,
-        "protein": 25,
-        "salt": 2.3,
-        "carbohydrates": 12,
-        "sugar": 3.1,
-        "saturated": 42
-      },
-      "ingredient": ["Chicken fillet", "water", "flour", "starch ", "salt", "breadcrumbs "],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 303,
-      "title": "9 Hot Wings",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 45,
-      "size": [],
-      "description": "Our deliciously spicy, flavorful and crunchy chicken wings are now available in 9-packs and can also be had as a menu item.",
-      "calories": 2247,
-      "kj": 539,
-      "nutrition": {
-        "calories": 2247,
-        "kj": 539,
-        "fat": 32,
-        "fiber": 1.1,
-        "protein": 22,
-        "salt": 1.9,
-        "carbohydrates": 8.9,
-        "sugar": 3.2,
-        "saturated": 32.2
-      },
-      "ingredient": ["Chicken wings", "breadcrumbs", "vegetable oils", "modified starch ", "wheat flour", "gluten", "salt"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 304,
-      "title": "20 Chicken McNuggets",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 89,
-      "size": [],
-      "description": "Our crispy Chicken McNugget's large packs always consist of chicken breast fillet with a golden brown breading. Order home today!",
-      "calories": 3696,
-      "kj": 880,
-      "nutrition": {
-        "calories": 3696,
-        "kj": 880,
-        "fat": 65,
-        "fiber": 1,
-        "protein": 42,
-        "salt": 3.1,
-        "carbohydrates": 12,
-        "sugar": 1.1,
-        "saturated": 43.2
-      },
-      "ingredient": ["Chicken fillet", "water", "flour", "vegetable oils", "wheat flour", "salt", "breadcrumbs"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 305,
-      "title": "Big Share",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 69,
-      "size": [],
-      "description": "The Big Share includes 6 Chicken McNuggets, 6 Hot Wings and 6 Chili Cheese Tops as well as 2 dipping sauces.",
-      "calories": 3729,
-      "kj": 892,
-      "nutrition": {
-        "calories": 3729,
-        "kj": 892,
-        "fat": 12,
-        "fiber": 2.1,
-        "protein": 23,
-        "salt": 2.1,
-        "carbohydrates": 14,
-        "sugar": 1.2,
-        "saturated": 22.6
-      },
-      "ingredient": ["Chili cheese tops", "Chicken McNuggets", "Hot Wings"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-    {
-      "id": 306,
-      "title": "Chicken Bacon Clubhouse",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 89,
-      "size": [],
-      "description": "A crispy chicken burger with Cheddar cheese, mild red onion, chopped batavia salad and the wonderfully tasty Big Mac sauce.",
-      "calories": 2475,
-      "kj": 593,
-      "nutrition": {
-        "calories": 2475,
-        "kj": 593,
-        "fat": 8,
-        "fiber": 1.2,
-        "protein": 19,
-        "salt": 2.9,
-        "carbohydrates": 12.2,
-        "sugar": 1.4,
-        "saturated": 25
-      },
-      "ingredient": ["Soft bun", "Chicken, Chicken Premiere", "Bacon", "Cheese, Cheddar processed cheese", "Sauce, Big Mac", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 307,
-      "title": "Chicken Burger",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 69,
-      "size": [],
-      "description": "Order our chicken burger today! Enjoy crispy chicken, salad and Mc Feast sauce!",
-      "calories": 1366,
-      "kj": 326,
-      "nutrition": {
-        "calories": 1366,
-        "kj": 326,
-        "fat": 12.2,
-        "fiber": 2.1,
-        "protein": 32,
-        "salt": 1.8,
-        "carbohydrates": 15.7,
-        "sugar": 1.2,
-        "saturated": 32
-      },
-      "ingredient": ["Bread, HB", "Crispy chicken small", "Bacon", "Sauce, Vegan McFeast", "Sauce, Big Mac", "Iceberg lettuce (shredded)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 10,
-      "related_products": []
-    },
-    {
-      "id": 308,
-      "title": "Chicken McFeast",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 79,
-      "size": [],
-      "description": "Chicken McFeast & Co. A tasty chicken burger with McFeast sauce.",
-      "calories": 2081,
-      "kj": 497,
-      "nutrition": {
-        "calories": 2081,
-        "kj": 497,
-        "fat": 12.9,
-        "fiber": 1.9,
-        "protein": 29,
-        "salt": 1.2,
-        "carbohydrates": 17,
-        "sugar": 1.4,
-        "saturated": 21
-      },
-      "ingredient": ["Bread, QP", "Chicken, Chicken Premiere", "Cheese, Cheddar processed cheese", "Sauce, Vegan McFeast", "Iceberg lettuce (shredded)", "Tomato (sliced)", "Yellow onion (fresh, sliced)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 10,
-      "related_products": []
-    },
-    {
-      "id": 309,
-      "title": "Chicken Tasty",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 79,
-      "size": [],
-      "description": "Chicken, Tasty sauce, Emmental cheese, fresh red onion, crispy salad. Complement hamburgers with a drink and accessories of your choice.",
-      "calories": 2051,
-      "kj": 600,
-      "nutrition": {
-        "calories": 2051,
-        "kj": 600,
-        "fat": 15,
-        "fiber": 1.1,
-        "protein": 19,
-        "salt": 1.1,
-        "carbohydrates": 12,
-        "sugar": 1.4,
-        "saturated": 32
-      },
-      "ingredient": ["Soft bun", "Chicken, Chicken Premiere", "Cheese, Emmentaler processed cheese", "Sauce, Tasty", "Tomato (sliced)", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 310,
-      "title": "Filet-O-Fish",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 59,
-      "size": [],
-      "description": "Our popular Filet-O-Fish comes from MSC certified fish stocks - served with cheese and a dollop of tartar sauce",
-      "calories": 1390,
-      "kj": 331,
-      "nutrition": {
-        "calories": 1390,
-        "kj": 331,
-        "fat": 8,
-        "fiber": 1.9,
-        "protein": 32,
-        "salt": 1.4,
-        "carbohydrates": 19,
-        "sugar": 1.2,
-        "saturated": 12
-      },
-      "ingredient": ["Bread, HB", "Fish, Filet-O-Fish", "Sauce, Tartar", "Sauce, Tasty", "Cheese, Cheddar processed cheese"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 311,
-      "title": "Hot Wings",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 39,
-      "size": [],
-      "description": "Our popular Filet-O-Fish comes from MSC certified fish stocks - served with cheese and a dollop of tartar sauce",
-      "calories": 749,
-      "kj": 180,
-      "nutrition": {
-        "calories": 749,
-        "kj": 180,
-        "fat": 21,
-        "fiber": 1,
-        "protein": 23,
-        "salt": 3.2,
-        "carbohydrates": 12,
-        "sugar": 1.1,
-        "saturated": 21
-      },
-      "ingredient": ["Chicken wings", "breadcrumbs ", "vegetable oils", "modified starch", "wheat flour", "salt"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-    {
-      "id": 312,
-      "title": "McChicken",
-      "image": "",
-      "category": "chicken&fish",
-      "price": 59,
-      "size": [],
-      "description": "A crispy chicken burger with iceberg lettuce and mild sauce, surrounded by an airy and toasted bread.",
-      "calories": 1857,
-      "kj": 443,
-      "nutrition": {
-        "calories": 1857,
-        "kj": 443,
-        "fat": 11,
-        "fiber": 1.2,
-        "protein": 12,
-        "salt": 1.2,
-        "carbohydrates": 19,
-        "sugar": 1.34,
-        "saturated": 9.2
-      },
-      "ingredient": ["Bread, QP", "Chicken, Chicken Premiere", "Sauce, Vegan McFeast", "Iceberg lettuce (shredded)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-
-    {
-      "id": 313,
-      "title": "McChicken",
-      "image": "",
-      "category": "McSelection Crafted Chicken CBO",
-      "price": 69,
-      "size": [],
-      "description": "Our good news McSelection Crafted Chicken CBO is a burger with a crispy, juicy and tender chicken thigh fillet, spicy sauce, bacon, batavia salad, cheddar and roasted onions.",
-      "calories": 3140,
-      "kj": 753,
-      "nutrition": {
-        "calories": 1857,
-        "kj": 443,
-        "fat": 21,
-        "fiber": 1.45,
-        "protein": 14,
-        "salt": 2.1,
-        "carbohydrates": 21,
-        "sugar": 0.7,
-        "saturated": 18
-      },
-      "ingredient": ["Soft bun", "Chicken, Crafted Chicken", "Bacon", "Sauce, CBO", "Cheese, Cheddar processed cheese", "Roasted onions", "Batavia salad (cut)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-    {
-      "id": 314,
-      "title": "McChicken",
-      "image": "",
-      "category": "McSelection Crafted Chicken Hot Jalapeño",
-      "price": 72,
-      "size": [],
-      "description": "The new McSelection Crafted Chicken Hot Jalapeño consists of a crispy, juicy and tender chicken thigh fillet, chili mayo, McFeast® sauce, chopped batavia salad and hot jalapeños. All gathered in a freshly toasted bread.",
-      "calories": 2570,
-      "kj": 616,
-      "nutrition": {
-        "calories": 2570,
-        "kj": 616,
-        "fat": 21,
-        "fiber": 1.2,
-        "protein": 11.2,
-        "salt": 3.2,
-        "carbohydrates": 21.9,
-        "sugar": 1,
-        "saturated": 32
-      },
-      "ingredient": ["Soft bun", "Chicken, Crafted Chicken", "Sauce, Vegan Chili McFeast", "Sauce, Vegan McFeast", "Batavia salad (cut)", "Roasted onions", "Jalapeños"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 0,
-      "related_products": []
-    },
-    {
-      "id": 315,
-      "title": "McChicken",
-      "image": "",
-      "category": "Tasty Chicken Burger",
-      "price": 65,
-      "size": [],
-      "description": "Our popular Chicken Tasty is now available in a smaller version with the irresistible Tasty sauce, lettuce and cheddar. All gathered in a warm and airy bread.",
-      "calories": 1718,
-      "kj": 410,
-      "nutrition": {
-        "calories": 1718,
-        "kj": 410,
-        "fat": 11,
-        "fiber": 1.1,
-        "protein": 12.2,
-        "salt": 3.3,
-        "carbohydrates": 11.9,
-        "sugar": 1.2,
-        "saturated": 12
-      },
-      "ingredient": ["Bread, HB", "Crispy chicken small", "Sauce, Tasty", "Cheese, Cheddar processed cheese", "Iceberg lettuce (shredded)"],
-      "favorite": [""],
-      "discount": false,
-      "discount_rate": 25,
-      "related_products": []
-    },
-
     {
       "id": 600,
       "title": "Salad Mango-Chili Chicken and Kale",
@@ -1030,8 +813,17 @@
         "sugar": 11,
         "saturated": 23
       },
-      "ingredient": ["Salad", "paprika", "honey", "Roasted onions", "salt", "garlic"],
-      "favorite": [""],
+      "ingredient": [
+        "Salad",
+        "paprika",
+        "honey",
+        "Roasted onions",
+        "salt",
+        "garlic"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1057,8 +849,18 @@
         "sugar": 11,
         "saturated": 13
       },
-      "ingredient": ["Processed cheese", "water", "butter ", "milk protein", "antioxidants", "sunflower", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Processed cheese",
+        "water",
+        "butter ",
+        "milk protein",
+        "antioxidants",
+        "sunflower",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1084,8 +886,18 @@
         "sugar": 18,
         "saturated": 20
       },
-      "ingredient": ["Processed cheese", "water", "butter", "milk protein", "antioxidants", "sunflower", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Processed cheese",
+        "water",
+        "butter",
+        "milk protein",
+        "antioxidants",
+        "sunflower",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 10,
       "related_products": []
@@ -1111,8 +923,18 @@
         "sugar": 19,
         "saturated": 29
       },
-      "ingredient": ["Chicken wings", "breadcrumbs ", "vegetable oils", "wheat flour", "paprika extract", "sunflower", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Chicken wings",
+        "breadcrumbs ",
+        "vegetable oils",
+        "wheat flour",
+        "paprika extract",
+        "sunflower",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1138,8 +960,12 @@
         "sugar": 10,
         "saturated": 0
       },
-      "ingredient": ["Apple"],
-      "favorite": [""],
+      "ingredient": [
+        "Apple"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1165,8 +991,18 @@
         "sugar": 18,
         "saturated": 10
       },
-      "ingredient": ["Barbeque", "water", "red wine vinegar", "vinegar", "sugar", "modified corn starch", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Barbeque",
+        "water",
+        "red wine vinegar",
+        "vinegar",
+        "sugar",
+        "modified corn starch",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1192,8 +1028,18 @@
         "sugar": 20,
         "saturated": 32
       },
-      "ingredient": ["Rapeseed oil", "water", "egg yolk", "vinegar", "sugar", "dried herbs", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Rapeseed oil",
+        "water",
+        "egg yolk",
+        "vinegar",
+        "sugar",
+        "dried herbs",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1219,8 +1065,14 @@
         "sugar": 12,
         "saturated": 48
       },
-      "ingredient": ["Chili cheese tops", "Chicken McNuggets", "Hot Wings"],
-      "favorite": [""],
+      "ingredient": [
+        "Chili cheese tops",
+        "Chicken McNuggets",
+        "Hot Wings"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1246,8 +1098,12 @@
         "sugar": 19.5,
         "saturated": 12
       },
-      "ingredient": ["Carrot"],
-      "favorite": [""],
+      "ingredient": [
+        "Carrot"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1273,8 +1129,18 @@
         "sugar": 18.2,
         "saturated": 12
       },
-      "ingredient": ["Rapeseed oil", "water", "cheddar cheese", "vinegar", "egg yolk", "sugar", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Rapeseed oil",
+        "water",
+        "cheddar cheese",
+        "vinegar",
+        "egg yolk",
+        "sugar",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1300,8 +1166,16 @@
         "sugar": 14.6,
         "saturated": 12
       },
-      "ingredient": ["Potatoes", "vegetable oil", "disodium diphosphate", "dextrose", "salt"],
-      "favorite": [""],
+      "ingredient": [
+        "Potatoes",
+        "vegetable oil",
+        "disodium diphosphate",
+        "dextrose",
+        "salt"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1327,8 +1201,17 @@
         "sugar": 8.7,
         "saturated": 9.2
       },
-      "ingredient": ["Rapeseed oil", "water", "egg yolk", "vinegar", "salt", "garlic puree"],
-      "favorite": [""],
+      "ingredient": [
+        "Rapeseed oil",
+        "water",
+        "egg yolk",
+        "vinegar",
+        "salt",
+        "garlic puree"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1354,8 +1237,18 @@
         "sugar": 8.3,
         "saturated": 1.2
       },
-      "ingredient": ["Water", "sugar", "tomato paste", "modified corn starch", "salt", "cayenne pepper", "red chili"],
-      "favorite": [""],
+      "ingredient": [
+        "Water",
+        "sugar",
+        "tomato paste",
+        "modified corn starch",
+        "salt",
+        "cayenne pepper",
+        "red chili"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1381,8 +1274,16 @@
         "sugar": 9.9,
         "saturated": 0
       },
-      "ingredient": ["Tomato puree", "glucose-fructose syrup", "vinegar", "salt", "spice extract"],
-      "favorite": [""],
+      "ingredient": [
+        "Tomato puree",
+        "glucose-fructose syrup",
+        "vinegar",
+        "salt",
+        "spice extract"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1408,8 +1309,18 @@
         "sugar": 11,
         "saturated": 3.2
       },
-      "ingredient": ["Water", "vegetable oil", "egg yolk", "salt", "modified corn starch", "vinegar", "sugar"],
-      "favorite": [""],
+      "ingredient": [
+        "Water",
+        "vegetable oil",
+        "egg yolk",
+        "salt",
+        "modified corn starch",
+        "vinegar",
+        "sugar"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1435,8 +1346,19 @@
         "sugar": 3.2,
         "saturated": 19
       },
-      "ingredient": ["Chicken fillet", "water", "flour", "starch", "modified corn starch", "durum wheat semolina", "salt", "breadcrumbs"],
-      "favorite": [""],
+      "ingredient": [
+        "Chicken fillet",
+        "water",
+        "flour",
+        "starch",
+        "modified corn starch",
+        "durum wheat semolina",
+        "salt",
+        "breadcrumbs"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1462,8 +1384,17 @@
         "sugar": 4.2,
         "saturated": 29
       },
-      "ingredient": ["Rapeseed oil", "water", "vinegar", "extra virgin olive oil", "salt", "sugar"],
-      "favorite": [""],
+      "ingredient": [
+        "Rapeseed oil",
+        "water",
+        "vinegar",
+        "extra virgin olive oil",
+        "salt",
+        "sugar"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1489,8 +1420,20 @@
         "sugar": 1.2,
         "saturated": 9
       },
-      "ingredient": ["Bread, QP", "Soy Veggie Patty", "Sauce, Vegan McFeast", "Iceberg lettuce (shredded)", "Tomato (sliced)", "Pickled cucumber", "Yellow onion (fresh, sliced)", "Ketchup", "Mustard"],
-      "favorite": [""],
+      "ingredient": [
+        "Bread, QP",
+        "Soy Veggie Patty",
+        "Sauce, Vegan McFeast",
+        "Iceberg lettuce (shredded)",
+        "Tomato (sliced)",
+        "Pickled cucumber",
+        "Yellow onion (fresh, sliced)",
+        "Ketchup",
+        "Mustard"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 0,
       "related_products": []
@@ -1516,8 +1459,18 @@
         "sugar": 3.1,
         "saturated": 3
       },
-      "ingredient": ["Soft bun", "Soy Veggie Patty", "Cheese, Cheddar processed cheese", "Sauce, Big Mac", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Soy Veggie Patty",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Big Mac",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Red onion (fresh, sliced)"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 15,
       "related_products": []
@@ -1543,8 +1496,18 @@
         "sugar": 1.1,
         "saturated": 14.2
       },
-      "ingredient": ["Soft bun", "Soy Veggie Patty", "Cheese, Cheddar processed cheese", "Sauce, Tasty", "Tomato (sliced)", "Batavia salad (cut)", "Red onion (fresh, sliced)"],
-      "favorite": [""],
+      "ingredient": [
+        "Soft bun",
+        "Soy Veggie Patty",
+        "Cheese, Cheddar processed cheese",
+        "Sauce, Tasty",
+        "Tomato (sliced)",
+        "Batavia salad (cut)",
+        "Red onion (fresh, sliced)"
+      ],
+      "favorite": [
+        ""
+      ],
       "discount": false,
       "discount_rate": 15,
       "related_products": []

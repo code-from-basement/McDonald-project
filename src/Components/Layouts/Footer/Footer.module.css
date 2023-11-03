@@ -1,0 +1,8 @@
+.footer {
+  width: 100%;
+  height: min-content;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-container);
+}

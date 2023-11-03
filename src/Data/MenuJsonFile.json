@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "id": "",
+      "title": "double cheese burger",
+      "image": "",
+      "category": "hamburger",
+      "price": 1,
+      "description": "",
+      "calories": 1,
+      "kj": 1,
+      "nutrition": {
+        "calories": 1,
+        "kj": 1,
+        "fat": 1,
+        "fiber": 1,
+        "protein": 1,
+        "salt": 1,
+        "carbohydrates": 1,
+        "sugar": 1,
+        "saturated": 1
+      },
+      "ingredient": ["Soft bun", "Meat, Premium Beef", "Sauce, Truffle mayonnaise", "Cheese, Aged cheddar", "Grilled onions", "Pickled cucumber", "Spice mix"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1
+    }
+  ]
+}

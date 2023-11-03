@@ -5,16 +5,92 @@
   --color-secondary-900: #da291c;
   --color-secondary-100: #da291c25;
 
-  --color-gray-900: #27251f;
-  --color-gray-100: #27251f25;
-  --color-gray-300: #27251f50;
-  --color-gray-600: #27251f75;
-
   --color-white: white;
   --color-trans: transparent;
 
   --color-blue: #3369e7;
-  --transition: 0.3s;
+
+  /* color-gray */
+  --color-gray-100: #f5f5f7;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #dadada;
+  --color-gray-400: #cdcdd0;
+  --color-gray-500: #bdbdc1;
+  --color-gray-600: #acacb1;
+  --color-gray-700: #6e6e73;
+  --color-gray-800: #424245;
+  --color-gray-900: #1d1d1f;
+
+  /* font-size */
+  --font-size-xxs: 1.2rem;
+  --font-size-xs: 1.4rem;
+  --font-size-sm: 1.6rem;
+  --font-size-md: 1.8rem;
+  --font-size-lg: 2.5rem;
+  --font-size-xl: 3.2rem;
+  --font-size-xxl: 4rem;
+
+  /* font-weight */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-regular: 600;
+  --font-weight-semi-bold: 700;
+  --font-weight-bold: 800;
+
+  /* padding */
+  --padding-xs: 1rem;
+  --padding-sm: 1.5rem;
+  --padding-md: 3rem;
+  --padding-lg: 4.5rem;
+  --padding-container-xl: 0 4vw;
+  --padding-section: 2rem;
+
+  /* spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* font */
+  --font-family-primary: "Noto Sans", sans-serif;
+
+  /* Icon size */
+  --icon-size-32: 3.2rem;
+  --icon-size-24: 2.4rem;
+  --icon-size-16: 1.6rem;
+
+  /* border */
+  --border-radius-sm: 0.6rem;
+  --border-radius-md: 1.2rem;
+  --border-radius-lg: 2.4rem;
+  --border-radius-circle: 999px;
+
+  /* box-shadow */
+  --box-shadow: 0 3rem 6rem #00000025;
+
+  /* opacity */
+  --opacity-0: 0;
+  --opacity-25: 0.25;
+  --opacity-50: 0.5;
+  --opacity-75: 0.75;
+  --opacity-100: 1;
+
+  /* z-index */
+  --z-index-0: 0;
+  --z-index-100: 100;
+  --z-index-200: 200;
+  --z-index-300: 300;
+  --z-index-400: 400;
+  --z-index-500: 500;
+  --z-index-600: 600;
+  --z-index-700: 700;
+  --z-index-800: 800;
+  --z-index-900: 900;
+
+  /* transition */
+  --transition: all 0.2s ease-out;
 }
 
 * {
@@ -34,4 +110,10 @@ body {
 }
 button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: none;
+  outline: none;
 }

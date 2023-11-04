@@ -25,7 +25,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 15,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 501,
@@ -52,7 +53,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 502,
@@ -79,7 +81,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 503,
@@ -106,7 +109,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 25,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 504,
@@ -133,7 +137,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 25,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 505,
@@ -160,7 +165,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 506,
@@ -187,7 +193,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 507,
@@ -214,7 +221,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 508,
@@ -241,7 +249,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 509,
@@ -268,7 +277,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 510,
@@ -295,7 +305,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 511,
@@ -322,7 +333,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 512,
@@ -349,7 +361,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 25,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 513,
@@ -376,7 +389,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 25,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 514,
@@ -403,7 +417,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 515,
@@ -430,7 +445,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 516,
@@ -457,7 +473,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 517,
@@ -484,7 +501,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 518,
@@ -511,7 +529,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 519,
@@ -538,7 +557,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 520,
@@ -565,7 +585,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -593,7 +614,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -621,7 +643,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 302,
@@ -648,7 +671,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -676,7 +700,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -704,7 +729,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -732,7 +758,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 306,
@@ -759,7 +786,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -787,7 +815,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 308,
@@ -814,7 +843,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 309,
@@ -841,7 +871,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -869,7 +900,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -897,7 +929,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 312,
@@ -924,7 +957,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -952,7 +986,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 314,
@@ -979,7 +1014,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 315,
@@ -1006,7 +1042,1635 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 25,
-      "related_products": []
+      "related_products": [],
+      "tags": []
+    },
+
+    {
+      "id": 100,
+      "title": "Cappuccino",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "At McDonald's you can order a regular coffee, coffee with milk, a latte, a cappuccino or an espresso.",
+      "calories": 102,
+      "kj": 426,
+      "nutrition": {
+        "calories": 102,
+        "kj": 426,
+        "fat": 4.5,
+        "fiber": 0,
+        "protein": 6.4,
+        "salt": 0.17,
+        "carbohydrates": 9.3,
+        "sugar": 8.8,
+        "saturated": 2.8
+      },
+      "ingredient": ["Espresso", "Milk", "Latte Art organic"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 101,
+      "title": "Coca-Cola",
+      "image": "",
+      "category": "drink",
+      "price": 25,
+      "size": [],
+      "description": "Coca Cola or Fanta? Or why not Fanta Exotic which only contains natural sugar? Or perhaps you prefer a refreshing, sugar-free Cola-Cola diet, Coke Zero or Sprite Zero? With us you can choose from most things!",
+      "calories": 168,
+      "kj": 720,
+      "nutrition": {
+        "calories": 168,
+        "kj": 720,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 42,
+        "sugar": 42,
+        "saturated": 0
+      },
+      "ingredient": ["Carbonated water", "sugar", "acid-resistant sugar color", "phosphoric acid", "flavoring agents"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 102,
+      "title": "Coca-Cola Zero",
+      "image": "",
+      "category": "drink",
+      "price": 25,
+      "size": [],
+      "description": "Coca Cola or Fanta? Or why not Fanta Exotic which only contains natural sugar? Or perhaps you prefer a refreshing, sugar-free Cola-Cola diet, Coke Zero or Sprite Zero? With us you can choose from most things!",
+      "calories": 2,
+      "kj": 6,
+      "nutrition": {
+        "calories": 2,
+        "kj": 6,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0.12,
+        "carbohydrates": 0,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Carbonated water", "sugar color", "phosphoric acid", "sodium citrates", "aspartame", "acesulfame K", "natural flavors", "sodium benzoate", "dimethylpolysiloxane"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 103,
+      "title": "Coffee with milk",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "Craving for coffee? McDonald's coffee is organic and comes from Rainforest Alliance certified farms. Always from 100% freshly ground Arabica beans. Organic milk.",
+      "calories": 49,
+      "kj": 203,
+      "nutrition": {
+        "calories": 49,
+        "kj": 203,
+        "fat": 2.2,
+        "fiber": 0,
+        "protein": 3,
+        "salt": 0.07,
+        "carbohydrates": 4.8,
+        "sugar": 3.9,
+        "saturated": 1.3
+      },
+      "ingredient": ["Coffee", "Dark roast", "Milk", "Latte Art organic"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 104,
+      "title": "Coffee",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "Time for a coffee? McDonald's coffee is both organic and comes from Rainforest Alliance-certified farms. Always consists of 100% freshly ground Arabica beans.",
+      "calories": 6,
+      "kj": 24,
+      "nutrition": {
+        "calories": 6,
+        "kj": 24,
+        "fat": 0.3,
+        "fiber": 0,
+        "protein": 0.3,
+        "salt": 0,
+        "carbohydrates": 1.2,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Coffee", "Dark roast"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 105,
+      "title": "Organic skimmed milk, 3 dl",
+      "image": "",
+      "category": "drink",
+      "price": 17,
+      "size": [],
+      "description": "Every drop of milk we serve is organic. This has been the case since 1995.",
+      "calories": 120,
+      "kj": 480,
+      "nutrition": {
+        "calories": 120,
+        "kj": 480,
+        "fat": 1.5,
+        "fiber": 0,
+        "protein": 11,
+        "salt": 0.3,
+        "carbohydrates": 15,
+        "sugar": 15,
+        "saturated": 0.9
+      },
+      "ingredient": ["Organic milk (0.5% fat)", "vitamin D3"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 106,
+      "title": "Espresso",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "At McDonald's you can order a regular coffee, coffee with milk, a latte, a cappuccino or an espresso.",
+      "calories": 1,
+      "kj": 6,
+      "nutrition": {
+        "calories": 1,
+        "kj": 6,
+        "fat": 0.1,
+        "fiber": 0,
+        "protein": 0.1,
+        "salt": 0,
+        "carbohydrates": 0.3,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Arabica coffee"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 107,
+      "title": "Fanta Exotic",
+      "image": "",
+      "category": "drink",
+      "price": 25,
+      "size": [],
+      "description": "Coca Cola or Fanta? Or why not Fanta Exotic which only contains natural sugar? Or perhaps you prefer a refreshing, sugar-free Cola-Cola diet, Coke Zero or Sprite Zero? With us you can choose from most things!.",
+      "calories": 212,
+      "kj": 904,
+      "nutrition": {
+        "calories": 212,
+        "kj": 904,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 52,
+        "sugar": 52,
+        "saturated": 0
+      },
+      "ingredient": ["Carbonated water", "sugar", "water", "orange juice", "flavourings", "citric acid", "fruit and vegetable concentrate", "sodium benzoate", "potassium sorbate"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 108,
+      "title": "Fanta",
+      "image": "",
+      "category": "drink",
+      "price": 25,
+      "size": [],
+      "description": "Coca Cola or Fanta? Or why not Fanta Exotic which only contains natural sugar? Or perhaps you prefer a refreshing, sugar-free Cola-Cola diet, Coke Zero or Sprite Zero? With us you can choose from most things!.",
+      "calories": 200,
+      "kj": 848,
+      "nutrition": {
+        "calories": 200,
+        "kj": 848,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 49,
+        "sugar": 49,
+        "saturated": 0
+      },
+      "ingredient": ["Carbonated water", "sugar", "water", "orange juice", "flavourings", "citric acid", "fruit and vegetable concentrate", "sodium benzoate", "potassium sorbate"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 109,
+      "title": "Sprite Zero Sugar",
+      "image": "",
+      "category": "drink",
+      "price": 25,
+      "size": [],
+      "description": "Drink with food? Complete your meal with Sprite Zero Sugar with the taste of lemon and lime, without sugar. Order at McDonald's today!",
+      "calories": 4,
+      "kj": 20,
+      "nutrition": {
+        "calories": 4,
+        "kj": 20,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 6,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Carbonated water", "citric acid", "L-tartaric acid", "sodium citrates", "aspartame", "acesulfame K", "sucralose", "natural lemon-lime flavors", "sodium sulfite", "phenylalanine"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 110,
+      "title": "Hot chocolate",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "Come into McDonald's and enjoy a cup of hot chocolate. So simple and so good. We make our hot chocolate from the children's favorite, O'Boy. Welcome!",
+      "calories": 102,
+      "kj": 437,
+      "nutrition": {
+        "calories": 102,
+        "kj": 437,
+        "fat": 0.4,
+        "fiber": 0.8,
+        "protein": 6,
+        "salt": 0.34,
+        "carbohydrates": 18,
+        "sugar": 18,
+        "saturated": 0.2
+      },
+      "ingredient": ["milk powder", "sugar", "salt", "fat-reduced cocoa", "aroma", "silicon dioxide"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 111,
+      "title": "Latte",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "McDonald's coffee is both organic and comes from Rainforest Alliance-certified farms. And always consists of 100% freshly ground Arabica beans.",
+      "calories": 130,
+      "kj": 539,
+      "nutrition": {
+        "calories": 130,
+        "kj": 539,
+        "fat": 5.6,
+        "fiber": 0,
+        "protein": 8.2,
+        "salt": 0.21,
+        "carbohydrates": 12,
+        "sugar": 11,
+        "saturated": 3.6
+      },
+      "ingredient": ["milk", "Latte Art organic"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 112,
+      "title": "Milkshake Chocolate flavor",
+      "image": "",
+      "category": "drink",
+      "price": 45,
+      "size": [],
+      "description": "Milkshake Chocolate flavor. Choose from our classic Milkshakes, available in more flavors. Order at a restaurant or home with McDelivery!",
+      "calories": 326,
+      "kj": 1376,
+      "nutrition": {
+        "calories": 326,
+        "kj": 1376,
+        "fat": 6.4,
+        "fiber": 1.1,
+        "protein": 8.4,
+        "salt": 0.8,
+        "carbohydrates": 57,
+        "sugar": 48,
+        "saturated": 4.1
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 113,
+      "title": "Milkshake Raspberry and Blueberry flavor",
+      "image": "",
+      "category": "drink",
+      "price": 45,
+      "size": [],
+      "description": "A delicious and refreshing milkshake with raspberry and blueberry flavor.",
+      "calories": 318,
+      "kj": 1343,
+      "nutrition": {
+        "calories": 318,
+        "kj": 1343,
+        "fat": 5.8,
+        "fiber": 0,
+        "protein": 7.7,
+        "salt": 0.47,
+        "carbohydrates": 58,
+        "sugar": 51,
+        "saturated": 3.7
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 114,
+      "title": "Milkshake Strawberry flavor",
+      "image": "",
+      "category": "drink",
+      "price": 45,
+      "size": [],
+      "description": "A classic and favorite at McDonald's – Strawberry flavored Milkshake. Available in more flavors. Order at a restaurant or home with McDelivery today!",
+      "calories": 318,
+      "kj": 1345,
+      "nutrition": {
+        "calories": 318,
+        "kj": 1345,
+        "fat": 5.8,
+        "fiber": 0,
+        "protein": 7.7,
+        "salt": 0.47,
+        "carbohydrates": 58,
+        "sugar": 54,
+        "saturated": 3.7
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 115,
+      "title": "Milkshake Vanilla flavor",
+      "image": "",
+      "category": "drink",
+      "price": 45,
+      "size": [],
+      "description": "A classic and favorite at McDonald's – Milkshake with vanilla flavor. Available in more flavors. Order at a restaurant or home with McDelivery today!",
+      "calories": 323,
+      "kj": 1365,
+      "nutrition": {
+        "calories": 323,
+        "kj": 1365,
+        "fat": 5.8,
+        "fiber": 0,
+        "protein": 7.7,
+        "salt": 0.47,
+        "carbohydrates": 59,
+        "sugar": 55,
+        "saturated": 3.7
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": ["mahyar nafisi"],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 116,
+      "title": "Tea",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "Relax and order a cup of tea with us!",
+      "calories": 3,
+      "kj": 15,
+      "nutrition": {
+        "calories": 3,
+        "kj": 15,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 0,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Black tea", "aroma"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+
+    {
+      "id": 200,
+      "title": "Big Mac",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "The Big Mac™ is the world's most popular hamburger. It is not without reason that it is hard to resist.",
+      "calories": 525,
+      "kj": 2195,
+      "nutrition": {
+        "calories": 525,
+        "kj": 2195,
+        "fat": 27,
+        "fiber": 4,
+        "protein": 27,
+        "salt": 2.3,
+        "carbohydrates": 42,
+        "sugar": 8.7,
+        "saturated": 10
+      },
+      "ingredient": ["Bread", "Meat", "Cheese", "Sauce", "Pickled cucumber", "Spice mix"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 201,
+      "title": "Cappuccino",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "At McDonald's you can order a regular coffee, coffee with milk, a latte, a cappuccino or an espresso.",
+      "calories": 102,
+      "kj": 426,
+      "nutrition": {
+        "calories": 102,
+        "kj": 426,
+        "fat": 4.5,
+        "fiber": 0,
+        "protein": 6.4,
+        "salt": 0.17,
+        "carbohydrates": 9.3,
+        "sugar": 8.8,
+        "saturated": 2.8
+      },
+      "ingredient": ["Espresso", "Milk", "Latte Art organic"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 202,
+      "title": "Cheeseburger",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "Our popular Cheeseburger with 100% pure beef, onion, pickles, mustard, ketchup and a slice of cheese - served with warm, freshly toasted bread.",
+      "calories": 298,
+      "kj": 1250,
+      "nutrition": {
+        "calories": 298,
+        "kj": 1250,
+        "fat": 12,
+        "fiber": 2.2,
+        "protein": 16,
+        "salt": 1.6,
+        "carbohydrates": 30,
+        "sugar": 7.5,
+        "saturated": 6
+      },
+      "ingredient": ["Bread", "Meat", "Cheese", "Mustard", "Pickled cucumber", "Spice mix", "Ketchup"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 203,
+      "title": "Breakfast sandwich with cheese and turkey",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "Start the day right with us at McDonald's with our breakfast sandwich with Cheese and Turkey. Read more about ingredient, allergy and nutritional information.",
+      "calories": 375,
+      "kj": 1565,
+      "nutrition": {
+        "calories": 375,
+        "kj": 1565,
+        "fat": 17,
+        "fiber": 4.5,
+        "protein": 17,
+        "salt": 1.6,
+        "carbohydrates": 36,
+        "sugar": 2.4,
+        "saturated": 5.7
+      },
+      "ingredient": ["Bread", "Smoked turkey", "Cheese", "Batavia salad", "Tomato ", "Bregott normal salted"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 204,
+      "title": "Coffee with milk",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "Craving for coffee? McDonald's coffee is organic and comes from Rainforest Alliance certified farms. Always from 100% freshly ground Arabica beans. Organic milk.",
+      "calories": 49,
+      "kj": 203,
+      "nutrition": {
+        "calories": 49,
+        "kj": 203,
+        "fat": 2.2,
+        "fiber": 0,
+        "protein": 3,
+        "salt": 0.7,
+        "carbohydrates": 4.8,
+        "sugar": 3.9,
+        "saturated": 1.3
+      },
+      "ingredient": ["Coffee", "Dark roast", "Milk", "Latte Art organic"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 205,
+      "title": "Coffee",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "Time for a coffee? McDonald's coffee is both organic and comes from Rainforest Alliance-certified farms. Always consists of 100% freshly ground Arabica beans.",
+      "calories": 6,
+      "kj": 24,
+      "nutrition": {
+        "calories": 6,
+        "kj": 24,
+        "fat": 0.3,
+        "fiber": 0,
+        "protein": 0.3,
+        "salt": 0,
+        "carbohydrates": 1.2,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Coffee", "Dark roast"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 206,
+      "title": "Double McMuffin Sausage and Egg",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "Breakfast at McDonalds! With us you can order the delicious Double McMuffin Sausage with egg.",
+      "calories": 574,
+      "kj": 2398,
+      "nutrition": {
+        "calories": 574,
+        "kj": 2398,
+        "fat": 36,
+        "fiber": 2,
+        "protein": 34,
+        "salt": 2.4,
+        "carbohydrates": 28,
+        "sugar": 2.6,
+        "saturated": 15
+      },
+      "ingredient": ["English Muffins", "Sausage", "Cheese", "Eggs", "Cheddar processed cheese ", "Bregott normal salted"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 207,
+      "title": "Espresso",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "At McDonald's you can order a regular coffee, coffee with milk, a latte, a cappuccino or an espresso.",
+      "calories": 1,
+      "kj": 6,
+      "nutrition": {
+        "calories": 1,
+        "kj": 6,
+        "fat": 0.1,
+        "fiber": 0,
+        "protein": 0.1,
+        "salt": 0,
+        "carbohydrates": 0.3,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Arabica coffee"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 208,
+      "title": "French fries",
+      "image": "",
+      "category": "breakfast",
+      "price": 35,
+      "size": [],
+      "description": "Our world famous Pommes Frites – soft on the inside, golden and crispy on the outside. Order at a restaurant or home with McDelivery today!",
+      "calories": 329,
+      "kj": 1379,
+      "nutrition": {
+        "calories": 329,
+        "kj": 1379,
+        "fat": 16,
+        "fiber": 4,
+        "protein": 3.9,
+        "salt": 0.65,
+        "carbohydrates": 41,
+        "sugar": 0.4,
+        "saturated": 1.5
+      },
+      "ingredient": ["Salt", "Potatoes", "vegetable oil"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 209,
+      "title": "Cheeseburger with gluten-free bread",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "Most of our hamburgers can be ordered with gluten-free bread.",
+      "calories": 391,
+      "kj": 1639,
+      "nutrition": {
+        "calories": 391,
+        "kj": 1639,
+        "fat": 16,
+        "fiber": 2.3,
+        "protein": 13,
+        "salt": 1.8,
+        "carbohydrates": 47,
+        "sugar": 6.3,
+        "saturated": 6.3
+      },
+      "ingredient": ["Bread, gluten-free", "Meat", "Cheddar processed cheese", "Ketchup", "Mustard", "Pickled cucumber", "Spice mix"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 210,
+      "title": "Hamburgers with gluten-free bread",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "You know that most of our hamburgers at McDonald's can be ordered with gluten-free bread. Welcome in!",
+      "calories": 343,
+      "kj": 1438,
+      "nutrition": {
+        "calories": 343,
+        "kj": 1438,
+        "fat": 13,
+        "fiber": 2.2,
+        "protein": 11,
+        "salt": 1.4,
+        "carbohydrates": 46,
+        "sugar": 5.4,
+        "saturated": 3.8
+      },
+      "ingredient": ["Bread, gluten-free", "Meat", "onion ", "Ketchup", "Mustard", "Pickled cucumber", "Spice mix"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 211,
+      "title": "Hamburger",
+      "image": "",
+      "category": "breakfast",
+      "price": 89,
+      "size": [],
+      "description": "100% pure beef, onion, pickles, mustard and ketchup. All in a warm, freshly toasted bread. Simply our classic hamburger.",
+      "calories": 249,
+      "kj": 1047,
+      "nutrition": {
+        "calories": 249,
+        "kj": 1047,
+        "fat": 8.6,
+        "fiber": 2.2,
+        "protein": 13,
+        "salt": 1.1,
+        "carbohydrates": 29,
+        "sugar": 7,
+        "saturated": 3.4
+      },
+      "ingredient": ["Bread", "Meat", "onion ", "Ketchup", "Mustard", "Pickled cucumber", "Spice mix"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 212,
+      "title": "Hash brown",
+      "image": "",
+      "category": "breakfast",
+      "price": 60,
+      "size": [],
+      "description": "Time for breakfast? Welcome in and start the day with McDonald's hash brown. Hot and crispy, golden brown potatoes - perfect for breakfast.",
+      "calories": 138,
+      "kj": 576,
+      "nutrition": {
+        "calories": 138,
+        "kj": 576,
+        "fat": 8.8,
+        "fiber": 2.1,
+        "protein": 1.1,
+        "salt": 0.63,
+        "carbohydrates": 13,
+        "sugar": 0.1,
+        "saturated": 0.9
+      },
+      "ingredient": ["Potatoes", "vegetable oil", "Spice mix"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 213,
+      "title": "Hot chocolate",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "Come into McDonald's and enjoy a cup of hot chocolate. So simple and so good. We make our hot chocolate from the children's favorite, O'Boy. Welcome!",
+      "calories": 102,
+      "kj": 437,
+      "nutrition": {
+        "calories": 102,
+        "kj": 437,
+        "fat": 0.4,
+        "fiber": 0.8,
+        "protein": 6,
+        "salt": 0.36,
+        "carbohydrates": 18,
+        "sugar": 18,
+        "saturated": 0.2
+      },
+      "ingredient": ["milk powder", "sugar", "salt", "fat-reduced cocoa", "aroma", "silicon dioxide"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 214,
+      "title": "Latte",
+      "image": "",
+      "category": "breakfast",
+      "price": 30,
+      "size": [],
+      "description": "McDonald's coffee is both organic and comes from Rainforest Alliance-certified farms. And always consists of 100% freshly ground Arabica beans.",
+      "calories": 130,
+      "kj": 539,
+      "nutrition": {
+        "calories": 130,
+        "kj": 539,
+        "fat": 5.6,
+        "fiber": 0,
+        "protein": 8.2,
+        "salt": 0.21,
+        "carbohydrates": 12,
+        "sugar": 11,
+        "saturated": 3.6
+      },
+      "ingredient": ["milk", "Latte Art organic"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 215,
+      "title": "McMuffin Bacon and Egg",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "McMuffin Bacon and Egg – a breakfast classic. Delicious bacon, fresh Swedish organic eggs and a slice of cheddar cheese. All in a toasted English McMuffin.",
+      "calories": 309,
+      "kj": 1298,
+      "nutrition": {
+        "calories": 309,
+        "kj": 1298,
+        "fat": 14,
+        "fiber": 2,
+        "protein": 18,
+        "salt": 1.4,
+        "carbohydrates": 27,
+        "sugar": 2.4,
+        "saturated": 5.9
+      },
+      "ingredient": ["English Muffins", "Eggs", "Cheddar processed cheese", "Bacon", "Bregott normal salted"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 216,
+      "title": "McMuffin Sausage and Egg",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "A guaranteed breakfast experience. Fresh eggs, melted cheddar cheese and a tasty sausage. All in a toasted English McMuffin.",
+      "calories": 430,
+      "kj": 1801,
+      "nutrition": {
+        "calories": 430,
+        "kj": 1801,
+        "fat": 24,
+        "fiber": 1.7,
+        "protein": 25,
+        "salt": 1.9,
+        "carbohydrates": 28,
+        "sugar": 2.6,
+        "saturated": 10
+      },
+      "ingredient": ["English Muffins", "Eggs", "Cheddar processed cheese", "Bacon", "Bregott normal salted"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 217,
+      "title": "McToast Turkey",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "Our classic toast, warm with creamy melted cheese and turkey.",
+      "calories": 248,
+      "kj": 1042,
+      "nutrition": {
+        "calories": 248,
+        "kj": 1042,
+        "fat": 9.8,
+        "fiber": 1.7,
+        "protein": 12,
+        "salt": 1.7,
+        "carbohydrates": 27,
+        "sugar": 5.4,
+        "saturated": 5.6
+      },
+      "ingredient": ["Bread", "Emmentaler processed cheese", "Smoked turkey"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 218,
+      "title": "McToast",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "Breakfast day? Taste McToast – Our classic toast, warm with creamy Emmentaler melted cheese and smoked ham. Order at a restaurant or home with McDelivery!",
+      "calories": 249,
+      "kj": 1043,
+      "nutrition": {
+        "calories": 249,
+        "kj": 1043,
+        "fat": 9.9,
+        "fiber": 1.7,
+        "protein": 12,
+        "salt": 1.8,
+        "carbohydrates": 27,
+        "sugar": 5.5,
+        "saturated": 5.7
+      },
+      "ingredient": ["Bread", "Emmentaler processed cheese", "Smoked ham"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 219,
+      "title": "Mighty McMuffin",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "Breakfast day? Taste our classic Mighty McMuffin - A tastier, faster and easier breakfast. Order at a restaurant or home with McDelivery!",
+      "calories": 502,
+      "kj": 2102,
+      "nutrition": {
+        "calories": 502,
+        "kj": 2102,
+        "fat": 28,
+        "fiber": 2.4,
+        "protein": 29,
+        "salt": 2.5,
+        "carbohydrates": 32,
+        "sugar": 6.1,
+        "saturated": 11
+      },
+      "ingredient": ["English Muffins", "Sausage", "Bacon", "Eggs", "Cheddar processed cheese", "Ketchup", "Bregott normal salted"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 220,
+      "title": "Pancakes with strawberry topping",
+      "image": "",
+      "category": "breakfast",
+      "price": 70,
+      "size": [],
+      "description": "A grand breakfast is a pancake breakfast! Choose our classically delicious pancakes served with strawberry topping.",
+      "calories": 251,
+      "kj": 1029,
+      "nutrition": {
+        "calories": 251,
+        "kj": 1029,
+        "fat": 8.4,
+        "fiber": 2.7,
+        "protein": 7.4,
+        "salt": 0.8,
+        "carbohydrates": 36,
+        "sugar": 15,
+        "saturated": 2.4
+      },
+      "ingredient": ["milk", "Eggs", "Strawberries ", "Wheat"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 221,
+      "title": "Tea",
+      "image": "",
+      "category": "drink",
+      "price": 30,
+      "size": [],
+      "description": "Relax and order a cup of tea with us!",
+      "calories": 3,
+      "kj": 15,
+      "nutrition": {
+        "calories": 3,
+        "kj": 15,
+        "fat": 0,
+        "fiber": 0,
+        "protein": 0,
+        "salt": 0,
+        "carbohydrates": 0,
+        "sugar": 0,
+        "saturated": 0
+      },
+      "ingredient": ["Black tea", "aroma"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+
+    {
+      "id": 400,
+      "title": "Apple pie",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "McDonald's Apple Pie - a crispy pie filled with warm apple pieces. Flavored with cinnamon. Order home with McDelivery or with us today. Welcome to McDonald's!",
+      "calories": 245,
+      "kj": 1021,
+      "nutrition": {
+        "calories": 245,
+        "kj": 1021,
+        "fat": 14,
+        "fiber": 1.3,
+        "protein": 2.1,
+        "salt": 0.45,
+        "carbohydrates": 28,
+        "sugar": 11,
+        "saturated": 2.8
+      },
+      "ingredient": ["Wheat", "Apple", "vegetable oil"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 401,
+      "title": "McDonut, chocolate",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Time for a coffee break? Welcome to McDonald's and enjoy our wonderful McDonuts with rich chocolate flavor. Perfect for coffee.",
+      "calories": 197,
+      "kj": 825,
+      "nutrition": {
+        "calories": 197,
+        "kj": 825,
+        "fat": 11,
+        "fiber": 1.1,
+        "protein": 3.3,
+        "salt": 0.51,
+        "carbohydrates": 21,
+        "sugar": 5.2,
+        "saturated": 5.1
+      },
+      "ingredient": ["Wheat", "Water", "vegetable oil"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 402,
+      "title": "Frappe KitKat Caramel",
+      "image": "",
+      "category": "dessert",
+      "price": 65,
+      "size": [],
+      "description": "An ice-cold and creamy frappé with the taste of caramel and a touch of coffee mixed with KitKat! Topped with whipped cream and caramel sauce.",
+      "calories": 442,
+      "kj": 1853,
+      "nutrition": {
+        "calories": 442,
+        "kj": 1853,
+        "fat": 21,
+        "fiber": 0.6,
+        "protein": 7.2,
+        "salt": 0.27,
+        "carbohydrates": 56,
+        "sugar": 51,
+        "saturated": 14
+      },
+      "ingredient": ["Frappe mix caramel", "KitKat", "Spray cream", "Frappé caramel sauce"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 403,
+      "title": "Frappe KitKat Mocha",
+      "image": "",
+      "category": "dessert",
+      "price": 65,
+      "size": [],
+      "description": "An ice-cold and creamy frappé with the taste of chocolate and a touch of coffee mixed with KitKat! Topped with whipped cream and chocolate sauce.",
+      "calories": 445,
+      "kj": 1864,
+      "nutrition": {
+        "calories": 445,
+        "kj": 1864,
+        "fat": 21,
+        "fiber": 0.7,
+        "protein": 6.5,
+        "salt": 0.28,
+        "carbohydrates": 57,
+        "sugar": 52,
+        "saturated": 15
+      },
+      "ingredient": ["Frappe mix mocha", "KitKat", "Spray cream", "Frappé chocolate sauce"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 404,
+      "title": "KitKat Shake",
+      "image": "",
+      "category": "dessert",
+      "price": 65,
+      "size": [],
+      "description": "An ice-cold and creamy frappé with the taste of chocolate and a touch of coffee mixed with KitKat! Topped with whipped cream and chocolate sauce.",
+      "calories": 414,
+      "kj": 1739,
+      "nutrition": {
+        "calories": 414,
+        "kj": 1739,
+        "fat": 19,
+        "fiber": 0.8,
+        "protein": 7.2,
+        "salt": 0.31,
+        "carbohydrates": 54,
+        "sugar": 42,
+        "saturated": 12
+      },
+      "ingredient": ["Frappe mix mocha", "KitKat", "Spray cream"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 405,
+      "title": "McFlurry Daim",
+      "image": "",
+      "category": "dessert",
+      "price": 45,
+      "size": [],
+      "description": "A McDonald's classic! McFlurry Daim. Creamy soft ice cream with crushed pieces of crispy Daim. Read more about ingredient, allergy and nutritional information.",
+      "calories": 290,
+      "kj": 1218,
+      "nutrition": {
+        "calories": 290,
+        "kj": 1218,
+        "fat": 9.8,
+        "fiber": 0.5,
+        "protein": 5.6,
+        "salt": 0.43,
+        "carbohydrates": 44,
+        "sugar": 37,
+        "saturated": 6
+      },
+      "ingredient": ["Milk", "cream", "sugar", "whey powder", "glucose syrup"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 406,
+      "title": "McFlurry Oreos",
+      "image": "",
+      "category": "dessert",
+      "price": 45,
+      "size": [],
+      "description": "McFlurry Oreos. Creamy soft ice cream with tasty Oreo cookie pieces. Read more about ingredient, allergy and nutritional information.",
+      "calories": 314,
+      "kj": 1324,
+      "nutrition": {
+        "calories": 314,
+        "kj": 1324,
+        "fat": 20,
+        "fiber": 1,
+        "protein": 6.3,
+        "salt": 0.43,
+        "carbohydrates": 51,
+        "sugar": 37,
+        "saturated": 4.7
+      },
+      "ingredient": ["Milk", "cream", "sugar", "whey powder", "glucose syrup"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 407,
+      "title": "McFlurry S'Mores",
+      "image": "",
+      "category": "dessert",
+      "price": 45,
+      "size": [],
+      "description": "A dessert for all chocolate lovers! Creamy ice cream mixed with cookies/caramel-chocolate sauce, marshmallows and pieces of cake covered in white chocolate.",
+      "calories": 382,
+      "kj": 1608,
+      "nutrition": {
+        "calories": 382,
+        "kj": 1608,
+        "fat": 13,
+        "fiber": 0.9,
+        "protein": 6.3,
+        "salt": 0.47,
+        "carbohydrates": 59,
+        "sugar": 37,
+        "saturated": 4.7
+      },
+      "ingredient": ["Milk", "cream", "sugar", "whey powder", "glucose syrup", "butter"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 408,
+      "title": "Milkshake Raspberry and Blueberry flavor",
+      "image": "",
+      "category": "dessert",
+      "price": 45,
+      "size": [],
+      "description": "A delicious and refreshing milkshake with raspberry and blueberry flavor.",
+      "calories": 318,
+      "kj": 1343,
+      "nutrition": {
+        "calories": 318,
+        "kj": 1343,
+        "fat": 5.8,
+        "fiber": 0,
+        "protein": 7.7,
+        "salt": 0.47,
+        "carbohydrates": 58,
+        "sugar": 51,
+        "saturated": 3.7
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 409,
+      "title": "Sundae with sprinkles Chocolate",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Extend the summer with our creamy ice cream topped with caramel sprinkles. Yum!",
+      "calories": 330,
+      "kj": 1386,
+      "nutrition": {
+        "calories": 330,
+        "kj": 1386,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 410,
+      "title": "Sundae with strawberry sprinkles",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Extend the summer with our creamy ice cream topped with caramel sprinkles. Yum!",
+      "calories": 279,
+      "kj": 1175,
+      "nutrition": {
+        "calories": 279,
+        "kj": 1175,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 411,
+      "title": "Sundae with sprinkles Toffee",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Extend the summer with our creamy ice cream topped with caramel sprinkles. Yum!",
+      "calories": 341,
+      "kj": 1439,
+      "nutrition": {
+        "calories": 341,
+        "kj": 1439,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 412,
+      "title": "Sundae with sprinkles Natural",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Extend the summer with our creamy ice cream topped with caramel sprinkles. Yum!",
+      "calories": 205,
+      "kj": 864,
+      "nutrition": {
+        "calories": 205,
+        "kj": 864,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 413,
+      "title": "Chocolate Sundae",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Craving something good? Welcome in and enjoy McDonald's deliciously creamy soft ice cream topped with hot chocolate sauce.",
+      "calories": 250,
+      "kj": 1055,
+      "nutrition": {
+        "calories": 250,
+        "kj": 1055,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 414,
+      "title": "Strawberry Sundae",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Dessert? Coffee day? McDonald's deliciously creamy soft ice cream topped with strawberry sauce is suitable for all occasions. Welcome in!",
+      "calories": 211,
+      "kj": 893,
+      "nutrition": {
+        "calories": 211,
+        "kj": 893,
+        "fat": 8,
+        "fiber": 1.6,
+        "protein": 5.3,
+        "salt": 0.45,
+        "carbohydrates": 58,
+        "sugar": 52,
+        "saturated": 6.2
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 415,
+      "title": "Sundae Naturell",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Our delicious Sundae with vanilla flavor",
+      "calories": 153,
+      "kj": 644,
+      "nutrition": {
+        "calories": 153,
+        "kj": 644,
+        "fat": 3.8,
+        "fiber": 0.2,
+        "protein": 3.7,
+        "salt": 0.23,
+        "carbohydrates": 26,
+        "sugar": 21,
+        "saturated": 2.6
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 416,
+      "title": "Sundae caramel",
+      "image": "",
+      "category": "dessert",
+      "price": 40,
+      "size": [],
+      "description": "Time for a coffee break? Welcome to McDonald's and enjoy our deliciously creamy soft ice cream topped with hot caramel sauce.",
+      "calories": 288,
+      "kj": 1219,
+      "nutrition": {
+        "calories": 288,
+        "kj": 1219,
+        "fat": 5.8,
+        "fiber": 0.2,
+        "protein": 4.7,
+        "salt": 0.4,
+        "carbohydrates": 54,
+        "sugar": 39,
+        "saturated": 3.9
+      },
+      "ingredient": ["Milk", "sugar", "cream", "whey powder", "glucose", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 417,
+      "title": "Natural ice cream in a cone",
+      "image": "",
+      "category": "dessert",
+      "price": 30,
+      "size": [],
+      "description": "At McDonald's, we make our ice cream with cream and skimmed milk. Cream to get the right rich flavor on the ice cream and skimmed milk to keep the fat content down.",
+      "calories": 127,
+      "kj": 538,
+      "nutrition": {
+        "calories": 127,
+        "kj": 538,
+        "fat": 3,
+        "fiber": 0.5,
+        "protein": 3,
+        "salt": 0.16,
+        "carbohydrates": 22,
+        "sugar": 15,
+        "saturated": 1.8
+      },
+      "ingredient": ["Milk", "sugar", "cream", "stabilizer"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
+    },
+    {
+      "id": 418,
+      "title": "Triple Chocolate Cookie",
+      "image": "",
+      "category": "dessert",
+      "price": 25,
+      "size": [],
+      "description": "Craving something sweet? Try our Triple Chocolate Cookie - perfect as a dessert or with coffee. Order at one of our restaurants or home with McDelivery!",
+      "calories": 372,
+      "kj": 1555,
+      "nutrition": {
+        "calories": 372,
+        "kj": 1555,
+        "fat": 19,
+        "fiber": 2,
+        "protein": 3.9,
+        "salt": 0.43,
+        "carbohydrates": 46,
+        "sugar": 28,
+        "saturated": 11
+      },
+      "ingredient": ["Milk", "sugar", "Eggs", "Wheat", "Butter"],
+      "favorite": [],
+      "discount": false,
+      "discount_rate": 1,
+      "related_products": [],
+      "tags": []
     },
 
     {
@@ -1034,7 +2698,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 700,
@@ -1061,7 +2726,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 701,
@@ -1088,7 +2754,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 10,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 702,
@@ -1115,7 +2782,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 703,
@@ -1142,7 +2810,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 704,
@@ -1169,7 +2838,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 705,
@@ -1196,7 +2866,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 706,
@@ -1223,7 +2894,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 707,
@@ -1247,10 +2919,11 @@
         "saturated": 12
       },
       "ingredient": ["Carrot"],
-      "favorite": [""],
+      "favorite": [],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 708,
@@ -1274,10 +2947,11 @@
         "saturated": 12
       },
       "ingredient": ["Rapeseed oil", "water", "cheddar cheese", "vinegar", "egg yolk", "sugar", "salt"],
-      "favorite": [""],
+      "favorite": [],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 709,
@@ -1304,7 +2978,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 710,
@@ -1331,7 +3006,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 711,
@@ -1358,7 +3034,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 712,
@@ -1385,7 +3062,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 713,
@@ -1412,7 +3090,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 714,
@@ -1439,7 +3118,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 715,
@@ -1466,7 +3146,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 800,
@@ -1493,7 +3174,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 0,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 801,
@@ -1520,7 +3202,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 15,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     },
     {
       "id": 802,
@@ -1547,7 +3230,8 @@
       "favorite": [""],
       "discount": false,
       "discount_rate": 15,
-      "related_products": []
+      "related_products": [],
+      "tags": []
     }
   ]
 }

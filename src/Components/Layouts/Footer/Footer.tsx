@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Styles from "./Footer.module.css";
 import React from "react";
+import { FacebookRoundedIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from "../../UI/IconsLibrary/IconsLibrary";
 
 const year = new Date().getFullYear();
 
@@ -13,11 +14,14 @@ function Footer() {
       </div>
       <div className={Styles.footer__promotion}>
         <div className={Styles.footer__promotion_social}>
-          social media
+          <button><FacebookRoundedIcon/></button>
+          <button><TwitterIcon/></button>
+          <button><InstagramIcon/></button>
+          <button><YouTubeIcon/></button>
         </div>
         <div className={Styles.footer__promotion_apps}>
-          <img src="src/assets//Image//footerImages//app-store-logo.png" alt="app-store-logo" />
-          <img src="src/assets//Image//footerImages//Google-Play-Logo-PNG-Photos.png" alt="google-play-logo" />
+          <img src="src/assets//Image//footerImages//app-store.png" alt="app-store-logo" />
+          <img src="src/assets//Image//footerImages//google-play.png" alt="google-play-logo" />
         </div>
       </div>
       <hr />

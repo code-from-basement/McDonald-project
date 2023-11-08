@@ -1,7 +1,5 @@
-import React from "react";
-
 import Styles from "./HomeMenuList.module.css";
-import { ButtonPrimary, ButtonSecondary } from "../../../UI/Buttons/Buttons";
+import React from "react";
 
 function HomeMenuList() {
   return <div className={Styles.homeMenuList}>menu</div>;

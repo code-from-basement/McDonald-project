@@ -1,16 +1,19 @@
 .buttonPrimary {
-  padding: 1.5rem 4rem;
-  font-size: 1.8rem;
-  font-weight: 500;
+  padding: 1.5rem 2.5rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   color: var(--color-gray-900);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--padding-xs);
   background-color: var(--color-primary-900);
   border: none;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-circle);
   transition: var(--transition);
+}
+.buttonPrimary svg {
+  font-size: var(--icon-size-24);
 }
 
 .buttonPrimary:hover {
@@ -18,18 +21,21 @@
 }
 
 .buttonSecondary {
-  padding: 1.5rem 4rem;
-  font-size: 1.8rem;
-  font-weight: 500;
+  padding: 1.5rem 2rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   color: var(--color-gray-900);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--padding-xs);
   background-color: var(--color-trans);
   border: 2px solid var(--color-gray-700);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-circle);
   transition: var(--transition);
+}
+.buttonSecondary svg {
+  font-size: var(--icon-size-24);
 }
 
 .buttonSecondary:hover {
@@ -40,7 +46,7 @@
 .disable {
   padding: 1.5rem 4rem;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--color-gray-600);
   display: flex;
   align-items: center;

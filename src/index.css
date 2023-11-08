@@ -19,7 +19,7 @@
   --color-gray-600: #acacb1;
   --color-gray-700: #6e6e73;
   --color-gray-800: #424245;
-  --color-gray-900: #1d1d1f;
+  --color-gray-900: #232324;
 
   /* font-size */
   --font-size-xxs: 1.2rem;
@@ -90,7 +90,7 @@
   --z-index-900: 900;
 
   /* transition */
-  --transition: all 0.2s ease-out;
+  --transition: all 0.3s cubic-bezier(0.075, 0.9, 0.1, 1);
 }
 
 * {

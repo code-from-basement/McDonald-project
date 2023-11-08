@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import faqsData from "../../../../Data/FAQ";
 import { RemoveRoundedIcon, AddRoundedIcon, NavigateNextRoundedIcon, CloseRoundedIcon } from "./../../../UI/IconsLibrary/IconsLibrary";
 import { ButtonSecondary } from "../../../UI/Buttons/Buttons";
+import { motion } from "framer-motion";
 
 function FQA() {
   const [open, setOpen] = useState<null | number>(0);
@@ -20,6 +21,7 @@ function FQA() {
       setNumOfListItem((prevData) => prevData + 3);
     } else {
       setNumOfListItem(3);
+      setOpen(0);
     }
   };
 
@@ -34,7 +36,7 @@ function FQA() {
             return null;
           }
           return (
-            <div key={item.id} className={Styles.fqaItem} onClick={() => toggle(i)}>
+            <div key={item.id} className={`${Styles.fqaItem} ${open === i ? Styles.openItem : ""}`} onClick={() => toggle(i)}>
               <div className={Styles.fqaItem__header}>
                 <h3>{item.question}</h3>
                 {open === i ? <RemoveRoundedIcon /> : <AddRoundedIcon />}
@@ -47,7 +49,7 @@ function FQA() {
       </div>
 
       <ButtonSecondary type="" onClick={onClickLisIncrementHandler}>
-        {numOfListItem <= 8 ? "See more questions" : "Minimist the list"}
+        {numOfListItem <= 8 ? "See more questions" : "Minimal the list"}
         {numOfListItem <= 8 ? <NavigateNextRoundedIcon /> : <CloseRoundedIcon />}
       </ButtonSecondary>
     </section>

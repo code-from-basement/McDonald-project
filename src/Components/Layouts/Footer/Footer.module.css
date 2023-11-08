@@ -28,18 +28,41 @@
   justify-content: space-between;
   gap: 2rem;
   padding-bottom: 5rem;
+  padding-top: 5rem;
+  margin:0 var(--padding-lg);
 }
+
+.footer__promotion_social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__promotion_social button{
+  background-color: transparent;
+  border: 1px solid var(--color-gray-400);
+  padding: var(--padding-xs);
+  border-radius: 100%;
+
+}
+
+.footer__promotion_social svg{
+  font-size: var(--font-size-lg);
+
+}
+
 
 .footer__promotion_apps{
   display:flex;
   justify-content: center;
   align-items: center;
-
+  gap: 4rem;
 
 }
 .footer__promotion_apps img{
-  /* width: 100%;
-  height: 100%; */
+  width: 155px;
+  height: 50px;
+  opacity: var(--opacity-100);
 }
 
 

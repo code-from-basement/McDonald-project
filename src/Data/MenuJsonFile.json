@@ -1,4 +1,14 @@
 {
+  "image": [
+    {
+      "id": 0,
+      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/Banner-1.jpg?alt=media&token=a7b2e68d-7950-47f0-bb33-2b6e3f5b0331"
+    },
+    {
+      "id": 0,
+      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/Banner-2.jpg?alt=media&token=ff6e840a-8337-4adf-b0dd-3cb1d2174926"
+    }
+  ],
   "menu": [
     {
       "id": 500,

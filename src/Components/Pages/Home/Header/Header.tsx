@@ -26,7 +26,7 @@ function Header() {
           modules={[Parallax, Pagination, Navigation]}
         >
           <SwiperSlide className={Styles.banner__1}>
-            <div className={Styles.teaserBox} data-swiper-parallax-duration="1000" data-swiper-parallax="45%">
+            <div className={Styles.teaserBox} data-swiper-parallax-duration="1000" data-swiper-parallax="75%">
               <div className={Styles.TeaserBox__header} data-swiper-parallax="15%" data-swiper-parallax-duration="600">
                 <h1 className={Styles.teaserBox__title}>Whack-a-Mac!</h1>
               </div>
@@ -37,7 +37,7 @@ function Header() {
           </SwiperSlide>
 
           <SwiperSlide className={Styles.banner__2}>
-            <div className={Styles.teaserBox} data-swiper-parallax-duration="1000" data-swiper-parallax="-46%">
+            <div className={Styles.teaserBox} data-swiper-parallax-duration="1000" data-swiper-parallax="-76%">
               <div className={Styles.TeaserBox__header} data-swiper-parallax="-15%" data-swiper-parallax-duration="600">
                 <h1 className={Styles.teaserBox__title}>Just tap the McDonald’s App!</h1>
               </div>

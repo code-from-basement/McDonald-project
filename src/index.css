@@ -69,7 +69,7 @@
   --border-radius-circle: 999px;
 
   /* box-shadow */
-  --box-shadow: 0 3rem 6rem #00000025;
+  --box-shadow: 0 3rem 6rem #00000035;
 
   /* opacity */
   --opacity-0: 0;
@@ -92,6 +92,11 @@
 
   /* transition */
   --transition: all 0.3s cubic-bezier(0.075, 0.9, 0.1, 1);
+
+  /* Swiper */
+  --swiper-navigation-size: 4rem;
+  --swiper-navigation-color: var(--color-white);
+  --swiper-pagination-color: var(--color-white);
 }
 
 * {
@@ -105,6 +110,7 @@ html {
   font-size: 62.5%;
   color: var(--color-gray-900);
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -119,4 +125,31 @@ button {
   outline: none;
   height: 5.6rem;
   transition: var(--transition);
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-button-next {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-circle);
+  transition: all 0.3s;
+}
+
+.swiper-button-prev {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-circle);
+  transition: all 0.3s;
+}
+
+.swiper-button-next:hover {
+  background-color: #ffffff35;
+}
+
+.swiper-button-prev:hover {
+  background-color: #ffffff35;
 }

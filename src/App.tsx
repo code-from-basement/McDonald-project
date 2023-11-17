@@ -11,14 +11,14 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Navbar />
-        <MegaMenu />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />
-          <Route path="ourmenu" element={<OurMenu />} />
-          <Route path="aboutourfood" element={<AboutOurFood />} />
-          <Route path="ourapp" element={<OurApp />} />
-          <Route path="trendingnow" element={<TrendingNow />} />
+          {/* <Route path="ourmenu" element={<OurMenu />} /> */}
+          {/* <Route path="aboutourfood" element={<AboutOurFood />} /> */}
+          {/* <Route path="ourapp" element={<OurApp />} /> */}
+          {/* <Route path="trendingnow" element={<TrendingNow />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

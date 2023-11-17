@@ -6,33 +6,32 @@
   justify-content: center;
   padding: var(--padding-container-xl);
   flex-direction: column;
-  margin:var(--spacing-xl) 0;
- 
+  margin: var(--spacing-xl) 0;
 }
-.footerContainer{
+.footerContainer {
   height: 80%;
-  justify-content: center;  
+  justify-content: center;
 }
 
-.footer__nav_section{  
+.footer__nav_section {
   width: 100%;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
   color: var(--color-gray-900);
   font-size: var(--font-size-sm);
-  margin:var(--padding-md) 0;
+  margin: var(--padding-md) 0;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0 var(--padding-lg);
 }
-.footer__nav_box{
+
+.footer__nav_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
-.footer__nav_box h2{
+.footer__nav_box h2 {
   font-size: 10rem;
   font-weight: var(--font-weight-black);
   letter-spacing: -7px;
@@ -41,21 +40,20 @@
   margin-right: 15rem;
   transform: translateY(-6px);
   color: var(--color-gray-900);
-  
 }
-.footer__nav_box h2 span{
+.footer__nav_box h2 span {
   font-size: var(--font-size-xl);
   position: absolute;
 }
-.footer__nav_box p{
+.footer__nav_box p {
   font-weight: var(--font-weight-semiBold);
-  padding-bottom: var(--padding-xs); 
+  padding-bottom: var(--padding-xs);
   position: relative;
 }
-.footer__nav_box p::before{
-  content: '';
+.footer__nav_box p::before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
   width: 11rem;
   height: 4px;
@@ -65,49 +63,47 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-.footer__nav_box p:hover::before{
+.footer__nav_box p:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.footer__nav_box li{
+.footer__nav_box li {
   list-style: none;
   padding: var(--spacing-xs);
   transition: var(--transition);
   border-radius: 0.5rem;
 }
-.footer__nav_box li a{
+.footer__nav_box li a {
   text-decoration: none;
   color: var(--color-gray-900);
 }
-.footer__nav_box li:hover{
+.footer__nav_box li:hover {
   background-color: var(--color-gray-100);
-  
 }
 
-
 /************************styling footer promotion**********************/
-.footer__promotion{
+.footer__promotion {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding-bottom: 5rem;
   padding-top: 5rem;
-  margin:0 var(--padding-lg);
+  margin: 0 var(--padding-lg);
 }
 
-.footer__promotion_social{
+.footer__promotion_social {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.footer__promotion_social link{
-  background-color: transparent; 
+.footer__promotion_social link {
+  background-color: transparent;
 }
 
-.footer__promotion_social svg{
+.footer__promotion_social svg {
   color: var(--color-gray-900);
   border-radius: var(--border-radius-circle);
   padding: var(--padding-xs);
@@ -115,56 +111,51 @@
   font-size: var(--font-size-lg);
   width: 48px;
   height: 48px;
-
 }
 
-
-.footer__promotion_apps{
-  display:flex;
+.footer__promotion_apps {
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-
 }
-.footer__promotion_apps img{
+.footer__promotion_apps img {
   width: 155px;
   height: 50px;
   opacity: var(--opacity-100);
 }
 
-
 /************************styling footer legal**********************/
-.footer__legal{
+.footer__legal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem; 
-  padding-top: 7rem; 
+  gap: 2rem;
+  padding-top: 7rem;
   padding-bottom: 7rem;
-  margin:0 var(--padding-lg);
+  margin: 0 var(--padding-lg);
 }
-.footer__legal_links{
+.footer__legal_links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   font-size: var(--font-size-sm);
 }
-.footer__legal_links a{
+.footer__legal_links a {
   text-decoration: none;
   color: var(--color-gray-900);
 }
-.footer__legal_copyright{
+.footer__legal_copyright {
   display: flex;
   justify-content: space-between;
   gap: 4rem;
   align-items: center;
-  
 }
-.footer__legal_copyright p{
+.footer__legal_copyright p {
   font-size: var(--font-size-sm);
 }
-.footer__legal_copyright img{
+.footer__legal_copyright img {
   width: 2rem;
   height: 2rem;
 }

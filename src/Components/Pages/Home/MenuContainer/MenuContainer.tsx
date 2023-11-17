@@ -1,5 +1,4 @@
 import React from "react";
-
 import Styles from "./MenuContainer.module.css";
 
 function MenuContainer() {

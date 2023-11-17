@@ -1,0 +1,16 @@
+.megaMenu {
+  width: 100%;
+  background-color: var(--color-white);
+  height: calc(90vh - 8rem);
+  padding: var(--spacing-md);
+  position: relative;
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.bg__logo {
+  position: absolute;
+  top: 0%;
+  right: -10%;
+  transform: scale(1.1);
+}

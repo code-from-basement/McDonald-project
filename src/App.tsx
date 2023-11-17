@@ -5,7 +5,6 @@ import Home from "./Components/Pages/Home/Home";
 import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPage";
 import Navbar from "./Components/Layouts/Navbar/Navbar";
 import Footer from "./Components/Layouts/Footer/Footer";
-import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 
 function App() {
   return (
@@ -16,6 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />
+          <Route path="ourmenu" element={<OurMenu />} />
+          <Route path="aboutourfood" element={<AboutOurFood />} />
+          <Route path="ourapp" element={<OurApp />} />
+          <Route path="trendingnow" element={<TrendingNow />} />
         </Routes>
         <Footer />
       </BrowserRouter>

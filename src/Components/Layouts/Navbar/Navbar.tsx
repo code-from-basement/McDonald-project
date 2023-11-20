@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "./Navbar.module.css";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../../assets/Image/Icon/macdonaldPNG.png";
-import { AccountCircleIcon, AccountCircleOutlinedIcon, LocalMallOutlinedIcon, PermIdentityOutlinedIcon } from "../../UI/IconsLibrary/IconsLibrary";
+import { AccountCircleIcon, LocalMallOutlinedIcon} from "../../UI/IconsLibrary/IconsLibrary";
 
 function Navbar() {
 

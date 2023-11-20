@@ -9,6 +9,7 @@ import OurMenu from "./Components/Pages/OurMenu/OurMenu";
 import AboutOurFood from "./Components/Pages/AboutOurFood/AboutOurFood";
 import OurApp from "./Components/Pages/OurApp/OurApp";
 import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
+import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 
 function App() {
   return (

@@ -8,9 +8,10 @@ import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 
 export {
   InstagramIcon,
@@ -25,5 +26,6 @@ export {
   LocalMallOutlinedIcon,
   AccountCircleOutlinedIcon,
   PermIdentityOutlinedIcon,
-  AccountCircleIcon
+  AccountCircleIcon,
+  KeyboardArrowUpRoundedIcon,
 };

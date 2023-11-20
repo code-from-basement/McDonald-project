@@ -91,7 +91,7 @@
   --z-index-900: 900;
 
   /* transition */
-  --transition: all 0.3s cubic-bezier(0.075, 0.9, 0.1, 1);
+  --transition: all 0.3s cubic-bezier(0.075, 0.9, 0.1, 1.1);
 
   /* Swiper */
   --swiper-navigation-size: 4rem;
@@ -125,6 +125,10 @@ button {
   outline: none;
   height: 5.6rem;
   transition: var(--transition);
+}
+
+li {
+  list-style: none;
 }
 
 .swiper-pagination-bullet {

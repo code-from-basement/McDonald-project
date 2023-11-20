@@ -8,7 +8,7 @@
   font-weight: var(--font-weight-light);
   display: flex;
   align-items: center;
-  margin-top: var(--padding-md);
+  /* margin-top: var(--padding-md); */
   justify-content: space-between;
 }
 
@@ -23,7 +23,7 @@
   height: 8rem;
   width: 8rem;
   /* margin-left: 20rem; */
-  margin-bottom: var(--padding-md);
+  /* margin-bottom: var(--padding-md); */
   margin-right: var(--padding-lg);
   filter: contrast(100%);
   opacity: var(--opacity-100);
@@ -41,8 +41,9 @@
   letter-spacing: -1px;
   text-decoration: none;
   color: var(--color-gray-900);
-  padding-bottom: 2rem;
- 
+  display: flex;
+  align-items: center; 
+  height: 100%;
 }
 
 .active{

@@ -16,7 +16,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Navbar />
-        <MegaMenu />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />

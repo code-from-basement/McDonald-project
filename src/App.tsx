@@ -16,8 +16,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Navbar />
-        {/* <MegaMenu /> */}
-
+        <MegaMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />

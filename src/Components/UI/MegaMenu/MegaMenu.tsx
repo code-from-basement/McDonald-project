@@ -17,50 +17,7 @@ function MegaMenu() {
       <div className={Styles.bg__logo}>
         <img src={bgLogo} alt="background logo" />
       </div>
-      <section className={Styles.foodCategory}>
-        <ul className={Styles.menuList}>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={hamburgerMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={chickenBurgerMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={vegiBurgerMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={breakfastMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={snackMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={saladMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={drinkMenuImg} alt="" />
-            </NavLink>
-          </li>
-          <li className={Styles.menuItem}>
-            <NavLink to="" className={Styles.menuLink}>
-              <img src={dessertMenuImg} alt="" />
-            </NavLink>
-          </li>
-        </ul>
-      </section>
+      <section className={Styles.foodCategory}>food categories</section>
       <section className={Styles.menuAds}>menu ads</section>
       <button className={Styles.menuCloser}>
         <KeyboardArrowUpRoundedIcon />

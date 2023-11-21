@@ -1,13 +1,28 @@
-import React from "react";
 import Styles from "./Navbar.module.css";
-import { NavLink, Link } from "react-router-dom";
+import React from "react";
 import logo from "../../../assets/Image/Icon/macdonaldPNG.png";
-import { AccountCircleIcon, LocalMallOutlinedIcon} from "../../UI/IconsLibrary/IconsLibrary";
+import { AccountCircleIcon, LocalMallOutlinedIcon } from "../../UI/IconsLibrary/IconsLibrary";
+import MegaMenu from "../../UI/MegaMenu/MegaMenu";
+import { NavLink, Link } from "react-router-dom";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Navbar() {
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
+  const { megaMenuToggler, megaMenuOpen } = useGlobalContext();
+
+  const onClickMegaMenuToggler = () => {
+    megaMenuToggler();
+  };
+
+  console.log(megaMenuOpen);
+
+  const megaMenuComponent = megaMenuOpen && (
+    <div className={Styles.megaMenuContainer}>
+      <MegaMenu />
+    </div>
+  );
 
   return (
     <nav className={Styles.navbar}>
@@ -16,7 +31,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
         </Link>
         <div className={Styles.pagesContainer}>
-          <NavLink to="/ourmenu" className={activeClass}>
+          <NavLink className={activeClass} onClick={onClickMegaMenuToggler}>
             Our Menu
           </NavLink>
           <NavLink to="/aboutourfood" className={activeClass}>
@@ -39,6 +54,7 @@ function Navbar() {
           Shopping bag
         </Link>
       </div>
+      {megaMenuComponent}
     </nav>
   );
 }

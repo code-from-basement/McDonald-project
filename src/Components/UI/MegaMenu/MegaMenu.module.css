@@ -1,9 +1,9 @@
 .megaMenu {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background-color: var(--color-white);
   height: calc(90vh - 8rem);
   padding: var(--spacing-md);

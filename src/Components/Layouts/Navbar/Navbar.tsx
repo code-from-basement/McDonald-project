@@ -5,6 +5,7 @@ import { AccountCircleIcon, LocalMallOutlinedIcon } from "../../UI/IconsLibrary/
 import MegaMenu from "../../UI/MegaMenu/MegaMenu";
 import { NavLink, Link } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
   const activeClass = ({ isActive, isPending }) => {
@@ -17,12 +18,6 @@ function Navbar() {
   };
 
   console.log(megaMenuOpen);
-
-  const megaMenuComponent = megaMenuOpen && (
-    <div className={Styles.megaMenuContainer}>
-      <MegaMenu />
-    </div>
-  );
 
   return (
     <nav className={Styles.navbar}>
@@ -51,10 +46,8 @@ function Navbar() {
         </Link>
         <Link to="/shoppingcartpage" className={Styles.shoppingContainer}>
           <LocalMallOutlinedIcon />
-          Shopping bag
         </Link>
       </div>
-      {megaMenuComponent}
     </nav>
   );
 }

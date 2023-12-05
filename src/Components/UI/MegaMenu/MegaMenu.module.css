@@ -1,6 +1,6 @@
 .megaMenu {
   width: 100%;
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,8 @@
   overflow: hidden;
   gap: var(--spacing-md);
   z-index: var(--z-index-500);
+  top: 7rem;
+  left: 0;
 }
 
 .bg__logo {

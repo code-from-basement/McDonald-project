@@ -3,7 +3,7 @@ import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./MegaMenu.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { megaMenuAnimationStyles } from "../Animation/AnimationStyles";
+import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 
 function MegaMenu() {
   const { megaMenuToggler, megaMenuOpen } = useGlobalContext();
@@ -16,7 +16,7 @@ function MegaMenu() {
     <motion.div {...megaMenuAnimationStyles} className={Styles.megaMenu}>
       <AnimatePresence>
         {megaMenuOpen && (
-          <motion.div key="backgroundLogo" initial={{ y: "-100%" }} animate={{ y: 0, transition: { delay: 0.2 } }} exit={{ y: "300%", transition: { duration: 2 } }} className={Styles.bg__logo}>
+          <motion.div {...megaMenuBackgroundLogoAnimationStyles} className={Styles.bg__logo}>
             <img src={bgLogo} alt="background logo" />
           </motion.div>
         )}

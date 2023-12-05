@@ -7,7 +7,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Navbar() {
-  const activeClass = ({ isActive, isPending }: any) => {
+  const activeClass = ({ isActive, isPending }) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
   const { megaMenuToggler, megaMenuOpen } = useGlobalContext();

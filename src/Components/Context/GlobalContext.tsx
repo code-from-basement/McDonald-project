@@ -8,7 +8,7 @@ interface globalContextProps {
 
 function GlobalContextProvider({ children }: globalContextProps) {
   /*Mega menu functions  */
-  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [megaMenuOpen, setMegaMenuOpen] = useState<boolean>(false);
   const megaMenuToggler = () => {
     console.log("click");
     setMegaMenuOpen(!megaMenuOpen);

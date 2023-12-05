@@ -10,7 +10,7 @@
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   overflow: hidden;
   gap: var(--spacing-md);
-  z-index: var(--z-index-800);
+  z-index: var(--z-index-500);
 }
 
 .bg__logo {

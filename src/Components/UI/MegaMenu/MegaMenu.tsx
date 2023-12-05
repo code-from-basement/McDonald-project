@@ -1,8 +1,8 @@
-import Styles from "./MegaMenu.module.css";
+import { useGlobalContext } from "../../Context/GlobalContext";
 import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
-import React, { useCallback } from "react";
-import { useGlobalContext } from "../../Context/GlobalContext";
+import Styles from "./MegaMenu.module.css";
+import { motion } from "framer-motion";
 
 function MegaMenu() {
   const { megaMenuToggler } = useGlobalContext();
@@ -12,7 +12,7 @@ function MegaMenu() {
   };
 
   return (
-    <div className={Styles.megaMenu}>
+    <motion.div initial={{ y: "-100%" }} animate={{ y: 0, transition: { duration: 0.3 } }} className={Styles.megaMenu}>
       <div className={Styles.bg__logo}>
         <img src={bgLogo} alt="background logo" />
       </div>
@@ -21,7 +21,7 @@ function MegaMenu() {
       <button className={Styles.menuCloser} onClick={onClickMegaMenuToggler}>
         <KeyboardArrowUpRoundedIcon />
       </button>
-    </div>
+    </motion.div>
   );
 }
 

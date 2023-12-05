@@ -26,18 +26,18 @@
   flex: 2;
   z-index: var(--z-index-900);
   height: 100%;
-  background-color: #eeeeee75;
+  /* background-color: #eeeeee75; */
 }
 
 .menuAds {
   flex: 1;
   z-index: var(--z-index-900);
   height: 100%;
-  background-color: #eeeeee75;
+  /* background-color: #eeeeee75; */
 }
 .menuCloser {
   border-radius: var(--border-radius-circle);
-  background-color: var(--color-gray-200);
+  background-color: var(--color-white);
   position: absolute;
   bottom: 1rem;
   left: 50%;

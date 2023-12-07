@@ -152,8 +152,10 @@ li {
 
 .swiper-button-next:hover {
   background-color: #ffffff35;
+  transform: scale(1.1);
 }
 
 .swiper-button-prev:hover {
   background-color: #ffffff35;
+  transform: scale(1.1);
 }

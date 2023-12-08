@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 
 function MegaMenu() {
-  const { megaMenuToggler, megaMenuOpen } = useGlobalContext();
+  const { megaMenuToggler, megaMenuOpen }: any = useGlobalContext();
 
   const onClickMegaMenuToggler = () => {
     megaMenuToggler();

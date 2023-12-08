@@ -8,7 +8,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
-  const activeClass = ({ isActive, isPending }) => {
+  const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
   const { megaMenuToggler, megaMenuOpen } = useGlobalContext();

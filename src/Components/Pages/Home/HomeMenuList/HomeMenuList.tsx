@@ -1,18 +1,18 @@
-import Styles from "./HomeMenuList.module.css";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import { Pagination, Navigation } from "swiper/modules";
-import ButtonSwiper from "./ButtonSwiper/ButtonSwiper";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { InfoRoundedIcon } from "../../../UI/IconsLibrary/IconsLibrary";
+import Styles from "./HomeMenuList.module.css";
+
+import { Navigation, Pagination } from "swiper/modules";
+import ButtonSwiper from "./ButtonSwiper/ButtonSwiper";
 
 function HomeMenuList() {
   return (
     <div className={Styles.homeMenuList}>
-      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={36} navigation={true} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
+      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={32} navigation={true} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
         <SwiperSlide className={Styles.menuListIntro}>
           <div className={Styles.menuListIntroCard}>
             <h2>Choose a menu:</h2>

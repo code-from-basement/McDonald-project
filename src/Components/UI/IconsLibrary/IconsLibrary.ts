@@ -12,6 +12,10 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+import FastfoodRoundedIcon from "@mui/icons-material/FastfoodRounded";
+import LunchDiningRoundedIcon from "@mui/icons-material/LunchDiningRounded";
+import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
+import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 
 export {
   InstagramIcon,
@@ -28,4 +32,8 @@ export {
   PermIdentityOutlinedIcon,
   AccountCircleIcon,
   KeyboardArrowUpRoundedIcon,
+  FastfoodRoundedIcon,
+  LunchDiningRoundedIcon,
+  LunchDiningOutlinedIcon,
+  InfoRoundedIcon,
 };

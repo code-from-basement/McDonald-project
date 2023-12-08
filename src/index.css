@@ -29,6 +29,7 @@
   --font-size-lg: 2.5rem;
   --font-size-xl: 3.2rem;
   --font-size-xxl: 4rem;
+  --font-size-xxxl: 5.8rem;
 
   /* font-weight */
   --font-weight-light: 300;
@@ -58,6 +59,7 @@
   --font-family-primary: "Noto Sans", sans-serif;
 
   /* Icon size */
+  --icon-size-40: 4rem;
   --icon-size-32: 3.2rem;
   --icon-size-24: 2.4rem;
   --icon-size-16: 1.6rem;
@@ -69,7 +71,7 @@
   --border-radius-circle: 999px;
 
   /* box-shadow */
-  --box-shadow: 0 2rem 7rem #00000025;
+  --box-shadow: 0 1.5rem 3rem #00000015;
 
   /* opacity */
   --opacity-0: 0;

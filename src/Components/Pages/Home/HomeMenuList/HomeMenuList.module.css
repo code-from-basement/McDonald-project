@@ -1,19 +1,66 @@
 .homeMenuList {
   width: 100%;
   height: min-content;
-  background-color: var(--color-trans);
+  padding-top: 4rem;
 }
 .menuListContainer {
   height: min-content;
   width: 100%;
   background-color: var(--color-white);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+.menuListIntro {
+  width: 36rem !important;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+
+  /* background-color: var(--color-gray-100); */
+  /* box-shadow: var(--box-shadow); */
+}
+.menuListIntroCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.menuListIntroCard h2 {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-light);
+  color: var(--color-gray-800);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.menuListIntroCard p {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-gray-700);
+  margin-top: auto;
+  padding: var(--spacing-md);
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+.menuListIntroCard p svg {
+  font-size: var(--icon-size-24);
 }
 .categoryItem {
-  width: 30rem !important;
-  height: min-content;
-  border: 2px dotted;
+  width: 18rem !important;
+  height: 26rem;
+  box-shadow: var(--box-shadow);
   background-color: white;
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.categoryItem:hover {
+  transform: translate(0, -4px);
+  box-shadow: 0 2rem 4rem #00000020;
 }

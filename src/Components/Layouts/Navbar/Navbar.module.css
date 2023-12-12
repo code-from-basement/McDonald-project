@@ -79,13 +79,13 @@
 .basketNum {
   position: absolute;
   background-color: var(--color-primary-900);
-  width: var(--icon-size-16);
-  height: var(--icon-size-16);
+  width: var(--icon-size-24);
+  height: var(--icon-size-24);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-circle);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   top: 60%;
   right: -20%;
 }

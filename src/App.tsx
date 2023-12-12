@@ -14,7 +14,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
 
 function App() {
-  const { megaMenuOpen } = useGlobalContext();
+  const { eventToggles }: any = useGlobalContext();
+  const { megaMenuOpen } = eventToggles;
   return (
     <div className="app">
       <BrowserRouter>

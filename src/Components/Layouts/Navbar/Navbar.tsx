@@ -11,13 +11,10 @@ function Navbar() {
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
-  const { megaMenuToggler, megaMenuOpen } = useGlobalContext();
+  const { eventToggles }: any = useGlobalContext();
+  const { togglerFunc } = eventToggles;
 
-  const onClickMegaMenuToggler = () => {
-    megaMenuToggler();
-  };
-
-  console.log(megaMenuOpen);
+  const onClickBasketToggler = () => {};
 
   return (
     <nav className={Styles.navbar}>
@@ -26,7 +23,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
         </Link>
         <div className={Styles.pagesContainer}>
-          <NavLink className={activeClass} onClick={onClickMegaMenuToggler}>
+          <NavLink to="" className={activeClass} onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}>
             Our Menu
           </NavLink>
           <NavLink to="/aboutourfood" className={activeClass}>
@@ -44,9 +41,10 @@ function Navbar() {
         <Link to="/login" className={Styles.userContainer}>
           <AccountCircleIcon />
         </Link>
-        <Link to="/shoppingcartpage" className={Styles.shoppingContainer}>
+        <button onClick={() => {}} className={Styles.shoppingContainer}>
+          <span className={Styles.basketNum}>0</span>
           <LocalMallOutlinedIcon />
-        </Link>
+        </button>
       </div>
     </nav>
   );

@@ -4,23 +4,29 @@ const GlobalContext = createContext();
 
 interface globalContextProps {
   children: React.ReactNode;
+  eventToggles: {
+    toggleFunc: () => void;
+    isBasketShow: boolean;
+    megaMenuOpen: boolean;
+  };
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
-  /*Mega menu functions  */
-  const [megaMenuOpen, setMegaMenuOpen] = useState<boolean>(false);
-  const megaMenuToggler = () => {
-    console.log("click");
-    setMegaMenuOpen(!megaMenuOpen);
-  };
-  //----------------------/
+  const [eventToggles, setEventToggles] = useState({
+    togglerFunc: (key: any, value: any) => {
+      setEventToggles((prevData) => {
+        return { ...prevData, [key]: value };
+      });
+    },
+    isBasketShow: false,
+    megaMenuOpen: false,
+  });
 
   return (
     <GlobalContext.Provider
       value={{
-        megaMenuOpen,
-        setMegaMenuOpen,
-        megaMenuToggler,
+        eventToggles,
+        setEventToggles,
       }}
     >
       {children}

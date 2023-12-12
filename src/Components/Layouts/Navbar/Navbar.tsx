@@ -39,7 +39,7 @@ function Navbar() {
         <Link to="/login" className={Styles.userContainer}>
           <AccountCircleIcon />
         </Link>
-        <button onClick={() => {}} className={Styles.shoppingContainer}>
+        <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>
           <span className={Styles.basketNum}>0</span>
           <LocalMallOutlinedIcon />
         </button>

@@ -6,12 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 
 function MegaMenu() {
-  const { megaMenuToggler, eventToggles }: any = useGlobalContext();
-  const { megaMenuOpen } = eventToggles;
-
-  const onClickMegaMenuToggler = () => {
-    megaMenuToggler();
-  };
+  const { eventToggles }: any = useGlobalContext();
+  const { togglerFunc, megaMenuOpen } = eventToggles;
 
   return (
     <motion.div {...megaMenuAnimationStyles} className={Styles.megaMenu}>
@@ -24,7 +20,7 @@ function MegaMenu() {
       </AnimatePresence>
       <section className={Styles.foodCategory}>food categories</section>
       <section className={Styles.menuAds}>menu ads</section>
-      <button className={Styles.menuCloser} onClick={onClickMegaMenuToggler}>
+      <button className={Styles.menuCloser} onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}>
         <KeyboardArrowUpRoundedIcon />
       </button>
     </motion.div>

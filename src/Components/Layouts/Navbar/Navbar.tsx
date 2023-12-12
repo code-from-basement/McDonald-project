@@ -14,8 +14,6 @@ function Navbar() {
   const { eventToggles }: any = useGlobalContext();
   const { togglerFunc } = eventToggles;
 
-  const onClickBasketToggler = () => {};
-
   return (
     <nav className={Styles.navbar}>
       <div className={Styles.leftContainer}>

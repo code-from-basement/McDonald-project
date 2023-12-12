@@ -12,6 +12,7 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  //**Event State Management *///////////////////////////
   const [eventToggles, setEventToggles] = useState({
     togglerFunc: (key: any, value: any) => {
       setEventToggles((prevData) => {
@@ -21,6 +22,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     isBasketShow: false,
     megaMenuOpen: false,
   });
+  //----------------------------------------------------//
 
   return (
     <GlobalContext.Provider

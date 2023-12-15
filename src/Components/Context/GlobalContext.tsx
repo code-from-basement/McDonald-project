@@ -8,6 +8,7 @@ interface globalContextProps {
     toggleFunc: () => void;
     isBasketShow: boolean;
     megaMenuOpen: boolean;
+    isBasketEmpty: boolean;
   };
 }
 
@@ -21,6 +22,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     },
     isBasketShow: false,
     megaMenuOpen: false,
+    isBasketEmpty: true,
   });
   //----------------------------------------------------//
 

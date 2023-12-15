@@ -18,7 +18,14 @@ export const megaMenuBackgroundLogoAnimationStyles = {
 
 export const basketMenuAnimationStyles = {
   key: "megaMenu",
-  initial: { x: "120%" },
-  animate: { x: "0%", transition: { duration: 1, ease: "easeInOut", bounce: 10 } },
-  exit: { x: "120%", transition: { delay: 0.1, duration: 0.8, ease: "easeInOut" } },
+  initial: { x: "100%" },
+  animate: { x: "0%", transition: { duration: 0.5, ease: "easeInOut", bounce: 10 } },
+  exit: { x: "100%", transition: { delay: 0.2, duration: 0.3, ease: "easeInOut" } },
+};
+
+export const emptyCartContentsAnimationStyles = {
+  key: "megaMenu",
+  initial: { y: "-2%", opacity: 0 },
+  animate: { y: "0%", opacity: 1, transition: { delay: 0.3, duration: 1, ease: "easeInOut" } },
+  exit: { y: "2%", opacity: 0, transition: { duration: 0.1, ease: "easeInOut" } },
 };

@@ -1,11 +1,51 @@
 .basketMenu {
-  width: 50rem;
-  height: 70rem;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius-lg);
-  background-color: var(--color-white);
   position: absolute;
-  top: 9rem;
+  width: 30%;
+  height: 70rem;
+  box-shadow: 0 0 7rem #00000035;
+  border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+  background-color: var(--color-white);
+  top: 25%;
+  right: 0rem;
+  z-index: var(--z-index-200);
+  position: fixed;
+  transform: translate(0%, -50%);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+.basketMenu__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-800);
+
+  letter-spacing: -1px;
+  color: var(--color-gray-800);
+  font-size: var(--font-size-xl);
+}
+
+.btn__close {
+  position: absolute;
+  top: 2rem;
   right: 2rem;
-  z-index: var(--z-index-800);
+  width: var(--icon-size-32);
+  height: var(--icon-size-32);
+  border-radius: var(--border-radius-circle);
+  background-color: var(--color-white);
+  transition: all 0.2s;
+  border: 2px solid var(--color-secondary-900);
+}
+.btn__close:hover {
+  background-color: var(--color-secondary-900);
+  border: 1px solid transparent;
+  transform: scale(1.1);
+}
+.btn__close:active {
+  transform: scale(1);
+}
+.btn__close:hover svg {
+  color: var(--color-primary-900);
+}
+.btn__close svg {
+  font-size: var(--icon-size-32);
+  color: var(--color-secondary-900);
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
 import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPage";
@@ -15,8 +15,12 @@ import { useGlobalContext } from "./Components/Context/GlobalContext";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 
 function App() {
-  const { eventToggles }: any = useGlobalContext();
+  const { eventToggles, fetchAllMenuData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow } = eventToggles;
+  useEffect(() => {
+    fetchAllMenuData("menu");
+  }, []);
+
   return (
     <div className="app">
       <BrowserRouter>

@@ -1,4 +1,4 @@
-import React, { Context, createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const GlobalContext = createContext();
 
@@ -13,6 +13,8 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  const [isLoading, setIsLoading] = useState(false);
+
   //**Event State Management *///////////////////////////
   const [eventToggles, setEventToggles] = useState({
     togglerFunc: (key: any, value: any) => {
@@ -26,11 +28,36 @@ function GlobalContextProvider({ children }: globalContextProps) {
   });
   //----------------------------------------------------//
 
+  //*Fetch from firebase real time
+  const [fullMenuListData, setFullMenuListData] = useState();
+
+  const fetchAllMenuData = async (address: string) => {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
+      const data = await res.json();
+      setFullMenuListData(data);
+      console.log(data);
+    } catch (error) {
+      setIsLoading(false);
+      alert(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  console.log(fullMenuListData);
+
+  //*----------------------------------------------------//
   return (
     <GlobalContext.Provider
       value={{
         eventToggles,
+        isLoading,
+        fullMenuListData,
         setEventToggles,
+        fetchAllMenuData,
+        setIsLoading,
+        setFullMenuListData,
       }}
     >
       {children}

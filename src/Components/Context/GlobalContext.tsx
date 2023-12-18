@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const GlobalContext = createContext();
 
@@ -30,6 +30,10 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   //*Fetch from firebase real time
   const [fullMenuListData, setFullMenuListData] = useState();
+  const [menuLists, setMenuLists] = useState({
+    hamburger: [],
+    chickenAndFish: [],
+  });
 
   const fetchAllMenuData = async (address: string) => {
     try {
@@ -48,6 +52,17 @@ function GlobalContextProvider({ children }: globalContextProps) {
   console.log(fullMenuListData);
 
   //*----------------------------------------------------//
+
+  useEffect(() => {
+    if (fullMenuListData) {
+      const getHamburgerMenuList = fullMenuListData.filter((item: any) => item.category == "hamburger");
+      const getChickenAndFishMenuList = fullMenuListData.filter((item: any) => item.category == "chicken&fish");
+      setMenuLists({ hamburger: getHamburgerMenuList, chickenAndFish: getChickenAndFishMenuList });
+    }
+  }, [fullMenuListData]);
+
+  console.log(menuLists);
+
   return (
     <GlobalContext.Provider
       value={{

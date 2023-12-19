@@ -96,7 +96,7 @@
   color: var(--color-secondary-900);
 }
 .categoryItem a img {
-  transition: var(--transition) 0.1s;
+  transition: var(--transition);
   width: 100%;
   min-width: 8rem;
   max-width: 9rem;

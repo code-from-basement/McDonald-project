@@ -10,6 +10,7 @@ import burgerMenu from "./../../../../assets/Image/swipperIcons/05_Beef_0.webp";
 import chickenAndFishMenu from "./../../../../assets/Image/swipperIcons/07_Fish.webp";
 import beveragesMenu from "./../../../../assets/Image/swipperIcons/Beverages.webp";
 import breakfastMenu from "./../../../../assets/Image/swipperIcons/breakfast_0.webp";
+import VegetarianMenu from "./../../../../assets/Image/swipperIcons/10_Produce.webp";
 import Styles from "./HomeMenuList.module.css";
 
 import { NavLink } from "react-router-dom";
@@ -48,14 +49,14 @@ function HomeMenuList() {
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
           <NavLink>
-            <img src={burgerMenu} alt="" />
-            <h2>Vegetarian Burger</h2>
+            <img src={breakfastMenu} alt="" />
+            <h2>Breakfast</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
           <NavLink>
-            <img src={breakfastMenu} alt="" />
-            <h2>Breakfast</h2>
+            <img src={VegetarianMenu} alt="" />
+            <h2>Vegetarian Menu</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>

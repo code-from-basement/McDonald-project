@@ -8,7 +8,7 @@ function MenuContainer() {
     <div className={Styles.menuContainer}>
       {fullMenuListData?.map((item, i) => (
         <div key={i} style={{ border: "1px solid", width: "min-content" }}>
-          <h5>{item.title}</h5>
+          <h5>{item.title} </h5>
           <img style={{ width: "100px", height: "auto" }} src={item.url} alt="pic" />
         </div>
       ))}

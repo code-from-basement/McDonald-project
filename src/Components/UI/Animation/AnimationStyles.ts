@@ -24,7 +24,7 @@ export const basketMenuAnimationStyles = {
 };
 
 export const emptyCartContentsAnimationStyles = {
-  key: "megaMenu",
+  key: "basketMenu",
   initial: { y: "-2%", opacity: 0 },
   animate: { y: "0%", opacity: 1, transition: { delay: 0.3, duration: 1, ease: "easeInOut" } },
   exit: { y: "2%", opacity: 0, transition: { duration: 0.1, ease: "easeInOut" } },

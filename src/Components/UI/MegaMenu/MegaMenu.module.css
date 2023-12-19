@@ -1,16 +1,77 @@
 .megaMenu {
   width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-white);
   height: calc(90vh - 8rem);
   padding: var(--spacing-md);
-  position: relative;
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   overflow: hidden;
+  gap: var(--spacing-md);
+  z-index: var(--z-index-500);
+  top: 7rem;
+  left: 0;
+  box-shadow: var(--box-shadow);
 }
 
 .bg__logo {
   position: absolute;
+  top: 15%;
+  right: 0%;
+  transform: scale(0.7);
+}
+
+.foodCategory {
+  flex: 2;
+  z-index: var(--z-index-900);
+  height: 100%;
+  /* background-color: #eeeeee75; */
+}
+
+.menuAds {
+  flex: 1;
+  z-index: var(--z-index-900);
+  height: 100%;
+  /* background-color: #eeeeee75; */
+}
+.menuCloser {
+  border-radius: var(--border-radius-circle);
+  background-color: var(--color-white);
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  z-index: var(--z-index-900);
+}
+.menuCloser:hover {
+  background-color: var(--color-secondary-900);
+  transform: translateY(-8px);
+}
+.menuCloser:hover svg {
+  color: var(--color-white);
+}
+
+.menuCloser:hover::after {
+  top: -30%;
+  left: 50%;
+  opacity: 1;
+}
+
+.menuCloser:after {
+  content: "Close Menu";
+  position: absolute;
+  width: 20rem;
   top: 0%;
-  right: -10%;
-  transform: scale(1.1);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 0.3s;
+  opacity: 0;
+  font-weight: var(--font-weight-regular);
+}
+
+.menuCloser svg {
+  font-size: var(--icon-size-32);
+  color: var(--color-gray-700);
 }

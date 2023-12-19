@@ -1,0 +1,36 @@
+.buttonContainer {
+  display: flex;
+  gap: var(--spacing-sm);
+  position: absolute;
+  top: 0rem;
+  right: 6rem;
+}
+.buttonContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-sm);
+  height: 4.2rem;
+  width: 7.6rem;
+  border-radius: var(--border-radius-circle);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-700);
+  transition: all 0.3s;
+}
+.buttonContainer button:hover {
+  background-color: var(--color-gray-100);
+}
+.buttonContainer button:hover svg {
+  color: var(--color-gray-900);
+  transform: scale(1.1);
+}
+
+.buttonContainer button:active svg {
+  transform: scale(0.9);
+}
+
+.buttonContainer button svg {
+  font-size: var(--icon-size-40);
+  color: var(--color-gray-700);
+  transition: all 0.3s;
+}

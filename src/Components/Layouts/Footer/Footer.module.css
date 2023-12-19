@@ -26,10 +26,11 @@
   padding: 0 var(--padding-lg);
 }
 
+.footer__nav_box:nth-child(1) {
+  flex: 3;
+}
 .footer__nav_box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex: 1;
 }
 .footer__nav_box h2 {
   font-size: 10rem;
@@ -114,7 +115,7 @@
   height: 48px;
 }
 
-.footer__promotion_social svg:hover{
+.footer__promotion_social svg:hover {
   background-color: var(--color-gray-200);
   transition: var(--transition);
 }

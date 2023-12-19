@@ -1,0 +1,29 @@
+.emptyCart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+}
+.emptyCartImage {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.title {
+  width: 75%;
+  text-align: center;
+  letter-spacing: -1px;
+  color: var(--color-secondary-900);
+  font-size: var(--font-size-xl);
+  line-height: 1;
+}
+
+.description {
+  text-align: center;
+  font-size: var(--font-size-md);
+  color: var(--color-gray-800);
+  width: 85%;
+}

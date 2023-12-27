@@ -34,7 +34,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
   const [menuLists, setMenuLists] = useState({
     hamburger: [],
     chickenAndFish: [],
-    drink: [],
+    drinks: [],
     breakfast: [],
     snackAndSides: [],
     dessert: [],
@@ -82,7 +82,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       setMenuLists({
         hamburger: getHamburgerMenuList,
         chickenAndFish: getChickenAndFishMenuList,
-        drink: getDrinkMenuList,
+        drinks: getDrinkMenuList,
         breakfast: getBreakFastMenuList,
         snackAndSides: getSnackAndSidesMenuList,
         dessert: getDessertMenuList,

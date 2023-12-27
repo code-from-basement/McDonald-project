@@ -11,15 +11,23 @@ function Footer() {
       <div className={Styles.footerContainer}>
         <div className={Styles.footer__nav_section}>
           <div className={Styles.footer__nav_box}>
-              <h2>i'm lovin' it<span>®</span></h2>  
+            <h2>
+              i'm lovin' it<span>®</span>
+            </h2>
           </div>
           <div className={Styles.footer__nav_box}>
             <div className={Styles.footer__nav_box_title}>
               <p>Our Company</p>
               <ul>
-                <li><Link to="/">Our Company</Link></li>
-                <li><Link to="/">Our Community</Link></li>
-                <li><Link to="/">Our History</Link></li>
+                <li>
+                  <Link to="/">Our Company</Link>
+                </li>
+                <li>
+                  <Link to="/">Our Community</Link>
+                </li>
+                <li>
+                  <Link to="/">Our History</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -27,9 +35,15 @@ function Footer() {
             <div className={Styles.footer__nav_box_title}>
               <p>Careers</p>
               <ul>
-                <li><Link to="/">Careers</Link></li>
-                <li><Link to="/">Training and Education</Link></li>
-                <li><Link to="/">Apply Now</Link></li>
+                <li>
+                  <Link to="/">Careers</Link>
+                </li>
+                <li>
+                  <Link to="/">Training and Education</Link>
+                </li>
+                <li>
+                  <Link to="/">Apply Now</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -37,7 +51,9 @@ function Footer() {
             <div className={Styles.footer__nav_box_title}>
               <p>Contact Us</p>
               <ul>
-                <li><Link to="/">Contact Us</Link></li>
+                <li>
+                  <Link to="/">Contact Us</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -45,19 +61,33 @@ function Footer() {
             <div className={Styles.footer__nav_box_title}>
               <p>Newsroom</p>
               <ul>
-                <li><Link to="/">Newsroom</Link></li>
-                <li><Link to="/">Local</Link></li>
-                <li><Link to="/">Regional</Link></li>
+                <li>
+                  <Link to="/">Newsroom</Link>
+                </li>
+                <li>
+                  <Link to="/">Local</Link>
+                </li>
+                <li>
+                  <Link to="/">Regional</Link>
+                </li>
               </ul>
             </div>
-          </div>         
+          </div>
         </div>
         <div className={Styles.footer__promotion}>
           <div className={Styles.footer__promotion_social}>
-            <Link to=""><FacebookRoundedIcon/></Link>
-            <Link to=""><TwitterIcon/></Link>
-            <Link to=""><InstagramIcon/></Link>
-            <Link to=""><YouTubeIcon/></Link>
+            <Link to="">
+              <FacebookRoundedIcon />
+            </Link>
+            <Link to="">
+              <TwitterIcon />
+            </Link>
+            <Link to="">
+              <InstagramIcon />
+            </Link>
+            <Link to="">
+              <YouTubeIcon />
+            </Link>
           </div>
           <div className={Styles.footer__promotion_apps}>
             <img src="src/assets//Image//footerImages//app-store.png" alt="app-store-logo" />

@@ -30,9 +30,16 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   //*Fetch from firebase real time
   const [fullMenuListData, setFullMenuListData] = useState();
+
   const [menuLists, setMenuLists] = useState({
     hamburger: [],
     chickenAndFish: [],
+    drink: [],
+    breakfast: [],
+    snackAndSides: [],
+    dessert: [],
+    vegetarian: [],
+    salad: [],
   });
 
   const fetchAllMenuData = async (address: string) => {
@@ -53,14 +60,37 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   //*----------------------------------------------------//
 
+  //*Menu List Management
   useEffect(() => {
     if (fullMenuListData) {
-      const getHamburgerMenuList = fullMenuListData.filter((item: any) => item.category == "hamburger");
-      const getChickenAndFishMenuList = fullMenuListData.filter((item: any) => item.category == "chicken&fish");
-      setMenuLists({ hamburger: getHamburgerMenuList, chickenAndFish: getChickenAndFishMenuList });
+      //hamburgers list
+      const getHamburgerMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "hamburger");
+      //chicken and fish list
+      const getChickenAndFishMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "chicken&fish");
+      //drink list
+      const getDrinkMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "drink");
+      //breakfast list
+      const getBreakFastMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "breakfast");
+      //snack and slides list
+      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snack&slides");
+      //dessert list
+      const getDessertMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dessert");
+      //vegetarian list
+      const getVegetarianMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "vegetarian");
+      //salad list
+      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salad");
+      setMenuLists({
+        hamburger: getHamburgerMenuList,
+        chickenAndFish: getChickenAndFishMenuList,
+        drink: getDrinkMenuList,
+        breakfast: getBreakFastMenuList,
+        snackAndSides: getSnackAndSidesMenuList,
+        dessert: getDessertMenuList,
+        vegetarian: getVegetarianMenuList,
+        salad: getSaladsMenuList,
+      });
     }
   }, [fullMenuListData]);
-
   console.log(menuLists);
 
   return (
@@ -69,6 +99,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         eventToggles,
         isLoading,
         fullMenuListData,
+        menuLists,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,

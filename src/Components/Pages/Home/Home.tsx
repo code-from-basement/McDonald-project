@@ -10,7 +10,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 const LoadingDemo = () => {
   return (
     <div>
-      <h1>loading</h1>
+      <h1>loading...</h1>
     </div>
   );
 };

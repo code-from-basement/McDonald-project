@@ -49,7 +49,7 @@ function FQA() {
       </div>
 
       <ButtonSecondary type="" onClick={onClickLisIncrementHandler}>
-        {numOfListItem <= 8 ? "See more questions" : "Minimal the list"}
+        {numOfListItem <= 8 ? "See more questions" : "Minimize the list"}
         {numOfListItem <= 8 ? <NavigateNextRoundedIcon /> : <CloseRoundedIcon />}
       </ButtonSecondary>
     </section>

@@ -39,6 +39,7 @@ function App() {
         <Routes>
           <Route index element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}>
+            <Route index element={<Navigate to="all-menu" />} />
             <Route path="all-menu" element={<AllMenu />} />
             <Route path="hamburger-menu" element={<HamburgerMenu />} />
             <Route path="chicken&fish-menu" element={<ChickenBurgerMenu />} />

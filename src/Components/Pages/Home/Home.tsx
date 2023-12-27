@@ -16,7 +16,7 @@ const LoadingDemo = () => {
 };
 
 function Home() {
-  const { isLoading } = useGlobalContext();
+  const { isLoading } = useGlobalContext() as { isLoading: boolean };
 
   return (
     <div className={Styles.home}>

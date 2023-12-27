@@ -30,50 +30,50 @@ function HomeMenuList() {
           </div>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={allMenu} alt="" />
+          <NavLink to="all-menu">
+            <img src={allMenu} alt="image of all menu list" />
             <h2>All</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={burgerMenu} alt="" />
+          <NavLink to="hamburger-menu">
+            <img src={burgerMenu} alt="image of burger menu list" />
             <h2>Hamburgers</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={chickenAndFishMenu} alt="" />
+          <NavLink to="chicken&fish-menu">
+            <img src={chickenAndFishMenu} alt="image of chicken burger menu list " />
             <h2>Chicken Burger</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={breakfastMenu} alt="" />
+          <NavLink to="breakfast-menu">
+            <img src={breakfastMenu} alt="image of breakfast menu list " />
             <h2>Breakfast</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={VegetarianMenu} alt="" />
+          <NavLink to="vegetarian-menu">
+            <img src={VegetarianMenu} alt="image of vegetarian menu list " />
             <h2>Vegetarian Menu</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={snacksMenu} alt="" />
+          <NavLink to="snacks-menu">
+            <img src={snacksMenu} alt="image of snacks menu list " />
             <h2>Snacks</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={beveragesMenu} alt="" />
+          <NavLink to="drink-menu">
+            <img src={beveragesMenu} alt="image of drink menu list" />
             <h2>Drinks</h2>
           </NavLink>
         </SwiperSlide>
         <SwiperSlide className={Styles.categoryItem}>
-          <NavLink>
-            <img src={saladsMenu} alt="" />
+          <NavLink to="salad-menu">
+            <img src={saladsMenu} alt="image of salad menu list" />
             <h2>Salads</h2>
           </NavLink>
         </SwiperSlide>

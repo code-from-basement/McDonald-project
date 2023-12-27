@@ -1,9 +1,13 @@
-import React from "react";
 import Styles from "./MenuContainer.module.css";
-import { useGlobalContext } from "../../../Context/GlobalContext";
+import { Outlet } from "react-router-dom";
 
 function MenuContainer() {
-  return <div className={Styles.menuContainer}></div>;
+  return (
+    <div className={Styles.menuContainer}>
+      <h2>menu</h2>
+      <Outlet />
+    </div>
+  );
 }
 
 export default MenuContainer;

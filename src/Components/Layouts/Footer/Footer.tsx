@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Styles from "./Footer.module.css";
 import React from "react";
+import AppStoreImg from "../../../assets/Image/footerImages/app-store.png";
+import GooglePlayImg from "../../../assets/Image/footerImages/google-play.png";
 import { FacebookRoundedIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from "../../UI/IconsLibrary/IconsLibrary";
 
 const year = new Date().getFullYear();
@@ -90,8 +92,8 @@ function Footer() {
             </Link>
           </div>
           <div className={Styles.footer__promotion_apps}>
-            <img src="src/assets//Image//footerImages//app-store.png" alt="app-store-logo" />
-            <img src="src/assets//Image//footerImages//google-play.png" alt="google-play-logo" />
+            <img src={AppStoreImg} alt="app-store-logo" />
+            <img src={GooglePlayImg} alt="google-play-logo" />
             {/* <p>Apple and the Apple logo are trade marks of Apple Inc., registered in the U.S.
                and other countries. App Store is a service mark of Apple Inc.,
                 registered in the U.S. and other countries. Google Play and the Google Play logo are

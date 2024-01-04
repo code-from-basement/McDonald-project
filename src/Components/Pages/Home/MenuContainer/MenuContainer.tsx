@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 function MenuContainer() {
   return (
     <div className={Styles.menuContainer}>
-      <h2>menu</h2>
+      <h2 className={Styles.title}>Menu</h2>
       <Outlet />
     </div>
   );

@@ -1,0 +1,79 @@
+.menuItem {
+  height: 34rem;
+  overflow: hidden;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.menuItem:hover .menuItem__image {
+  transform: scale(1.02);
+}
+.menuItem:hover .menuItemMacLogo {
+  width: var(--icon-size-32);
+}
+/* -------------------------------- */
+.menuItem__header {
+  width: 100%;
+  position: relative;
+}
+.menuItem__header img {
+  width: var(--icon-size-32);
+  transition: var(--transition);
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.menuItem__body {
+  width: 100%;
+}
+
+.menuItem__footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding-inline: var(--spacing-md);
+}
+
+.menuItem__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+}
+
+.menuItem__price {
+  font-size: var(--font-size-md);
+  color: var(--color-secondary-900);
+  font-weight: var(--font-weight-regular);
+}
+
+.menuItem__image {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: var(--transition);
+}
+
+.menuItemMacLogo {
+  width: var(--icon-size-40);
+  height: auto;
+  border: 2px solid var(--color-primary-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-circle);
+  /* padding: var(--spacing-sm); */
+  position: absolute;
+  z-index: var(--z-index-500);
+  top: 0;
+  right: 0;
+  margin: var(--spacing-md);
+  transition: var(--transition) 0.1s;
+}

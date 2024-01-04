@@ -1,13 +1,18 @@
 import React from "react";
 import Styles from "./AboutOurFood.module.css";
-import banner from "../../../assets/Image/banner/mcd-sv-core-omvarmat-pommesfrites-2col.jpeg";
+import imageOfMan from "../../../assets/Image/panelWrapper/Food quality & sourcing2.png";
+import iceCreamImg from "../../../assets/Image/panelWrapper/230329_Limehouse_DDB_McDonalds_McSundae_Table_Small_061_sticker_R9_2.png";
+import imageOfWomen from "../../../assets/Image/panelWrapper/Jobs & inclusion3.png";
+import imageOfBoy from "../../../assets/Image/panelWrapper/Community connection3_0.png";
+import { motion } from "framer-motion";
 
 function AboutOurFood() {
   return (
     <div className={Styles.aboutOurFood}>
-      <div className={Styles.bannerContainer}>
+      {/* <div className={Styles.bannerContainer}>
         <img src={banner} alt="Potato with the dark background" />
-      </div>
+      </div> */}
+      <div className={Styles.banner}></div>
       <div className={Styles.detailsContainer}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, cum dolores placeat itaque dolor quasi eaque quis labore sint nam veniam cupiditate at, reprehenderit voluptatibus a optio temporibus neque! Hic totam voluptatem
@@ -18,7 +23,40 @@ function AboutOurFood() {
           quo.
         </p>
       </div>
-      <div className={Styles.panelWrapper}></div>
+      <div className={Styles.panelWrapper}>
+        <div className={Styles.row1}>
+          <div className={Styles.imageContainerOdd}>
+            <img src={imageOfMan} alt="a farmer man" />
+          </div>
+          <div className={Styles.cardContainerOdd}>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+          </div>
+        </div>
+        <div className={Styles.row1}>
+          <div className={Styles.cardContainerEven}>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+          </div>
+          <div className={Styles.imageContainerEven}>
+            <img src={iceCreamImg} alt="an ice cream" />
+          </div>
+        </div>
+        <div className={Styles.row1}>
+          <div className={Styles.imageContainerOdd}>
+            <img src={imageOfBoy} alt="a happy boy" />
+          </div>
+          <div className={Styles.cardContainerOdd}>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+          </div>
+        </div>
+        <div className={Styles.row1}>
+          <div className={Styles.cardContainerEven}>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+          </div>
+          <div className={Styles.imageContainerEven}>
+            <img src={imageOfWomen} alt="two women at macDonald " />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

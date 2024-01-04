@@ -11,8 +11,17 @@
 }
 .bannerContainer img {
   width: 100%;
-  height: 80rem;
+  height: 75rem;
   opacity: var(--opacity-100);
+}
+
+.banner{
+  background-image: url(../../../assets/Image/banner/DDB_0183_CITW_0173_Lime_R1_RGB_v1_current_0.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75rem;
+  width: 100%;
 }
 
 .panelWrapper {
@@ -23,4 +32,71 @@
   background-size: cover;
   height: 400vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding-top: 15rem;
 }
+
+.row1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* height: 96vh; */
+  gap: var(--spacing-xl);
+  /* border: 3px solid yellow; */
+}
+.imageContainerOdd{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  /* background-color: blue; */
+  margin-top: 5rem;
+}
+.imageContainerOdd img{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  /* background-color: green;   */
+}
+.cardContainerOdd{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  background-color: var(--color-white);
+  height: 60rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+}
+.imageContainerEven{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+}
+.imageContainerEven img{
+  display: flex;
+  align-items: center;
+  width: 80%;  
+}
+.cardContainerEven{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+

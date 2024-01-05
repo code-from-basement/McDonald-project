@@ -4,7 +4,7 @@ function AllMenu() {
   const { fullMenuListData }: any = useGlobalContext();
   return (
     <div className={Styles.allMenuContainer}>
-      <h1>AllMenu</h1>
+      <h3 className={Styles.title}>All menu</h3>
       {fullMenuListData?.map((item) => {
         return <h2>{item.title}</h2>;
       })}

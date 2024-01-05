@@ -1,4 +1,14 @@
 .hamburgerMenuContainer {
   width: 100%;
   height: min-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+  grid-template-rows: 32rem;
+  grid-gap: var(--spacing-lg);
+}
+
+.title {
+  color: var(--color-gray-800);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
 }

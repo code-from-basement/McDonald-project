@@ -1,15 +1,14 @@
-import React from "react";
-import Styles from "./HamburgerMenu.module.css";
 import { useGlobalContext } from "../../../../Context/GlobalContext";
+import MenuItem from "../../../../UI/MenuItem/MenuItem";
+import Styles from "./HamburgerMenu.module.css";
 
 function HamburgerMenu() {
   const { menuLists }: any = useGlobalContext();
   const { hamburger } = menuLists;
   return (
     <div className={Styles.hamburgerMenuContainer}>
-      <h1>HamburgerMenu</h1>
-      {hamburger?.map((item) => {
-        return <h2>{item.title}</h2>;
+      {hamburger.map((item: any) => {
+        return <MenuItem key={item.id} item={item} />;
       })}
     </div>
   );

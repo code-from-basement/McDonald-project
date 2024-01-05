@@ -62,12 +62,31 @@ function AboutOurFood() {
             <img src={imageOfMan} alt="a farmer man" />
           </div>
           <div className={Styles.cardContainerOdd}>
-            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div className={Styles.card_content}>
+                <h3>Food quality and sourcing</h3>
+                <p>McDonald’s has been purchasing fresh produce, ingredients, and products from Aussie farmers
+                   and suppliers for more than 50 years, serving up a homegrown menu, wherever possible.
+                </p>
+                <div className={Styles.card_content_link}>
+                  <a href="#">Explore more</a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
         <div className={Styles.row1}>
           <div className={Styles.cardContainerEven}>
-            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div className={Styles.card_content}>
+                    <h3>Our planet</h3>
+                    <p>We are doing our part to protect the planet for communities today and into the future: from minimising how much plastic we use in our packaging, to driving climate action and partnering to advance sustainable agriculture.
+                    </p>
+                    <div className={Styles.card_content_link}>
+                      <a href="#">Explore more</a>
+                    </div>
+                </div>
+            </motion.div>
           </div>
           <div className={Styles.imageContainerEven}>
             <img src={iceCreamImg} alt="an ice cream" />
@@ -78,12 +97,31 @@ function AboutOurFood() {
             <img src={imageOfBoy} alt="a happy boy" />
           </div>
           <div className={Styles.cardContainerOdd}>
-            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div className={Styles.card_content}>
+                  <h3>Community connection</h3>
+                  <p>We are committed to playing an active role in local communities through providing jobs,
+                    supporting local charities and sporting clubs, and contributing in times of need.
+                  </p>
+                  <div className={Styles.card_content_link}>
+                    <a href="#">Explore more</a>
+                  </div>
+              </div> 
+            </motion.div>
           </div>
         </div>
         <div className={Styles.row1}>
           <div className={Styles.cardContainerEven}>
-            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}></motion.div>
+            <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div className={Styles.card_content}>
+                    <h3>Jobs, inclusion & empowerment</h3>
+                    <p>As one of the largest employers in Australia, we are serving up bright futures for our people by offering a supportive and inclusive working environment and world-class training programs.
+                    </p>
+                    <div className={Styles.card_content_link}>
+                      <a href="#">Explore more</a>
+                    </div>
+              </div> 
+            </motion.div>
           </div>
           <div className={Styles.imageContainerEven}>
             <img src={imageOfWomen} alt="two women at macDonald " />

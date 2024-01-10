@@ -1,28 +1,23 @@
-import React from "react";
+import React, {useState } from "react";
 import Styles from "./AboutOurFood.module.css";
 import imageOfMan from "../../../assets/Image/panelWrapper/Food quality & sourcing2.png";
 import iceCreamImg from "../../../assets/Image/panelWrapper/230329_Limehouse_DDB_McDonalds_McSundae_Table_Small_061_sticker_R9_2.png";
 import imageOfWomen from "../../../assets/Image/panelWrapper/Jobs & inclusion3.png";
 import imageOfBoy from "../../../assets/Image/panelWrapper/Community connection3_0.png";
 import { motion } from "framer-motion";
-import CountUp from "react-countup"
+import CountUp from "react-countup";
 
 function AboutOurFood() {
 
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
   const onStart = () => {setLoading(true)};
   const onEnd = () => {setLoading(false)};
   const containerProps = {
     'aria-busy': loading
   };
 
-
-
   return (
     <div className={Styles.aboutOurFood}>
-      {/* <div className={Styles.bannerContainer}>
-        <img src={banner} alt="Potato with the dark background" />
-      </div> */}
       <div className={Styles.banner}></div>
       <div className={Styles.detailsContainer}>
         <div className={Styles.detailsContainer_counter}>
@@ -34,7 +29,7 @@ function AboutOurFood() {
             </div>
             <div className={Styles.counter_items}>
               <p>Licensees</p>
-              <CountUp onStart={onStart} onEnd={onEnd} containerProps={containerProps}  end={200} duration={3.6} delay={0.1} suffix="+" />
+              <CountUp onStart={onStart} onEnd={onEnd} containerProps={containerProps}  end={200} duration={3.5} delay={0.1} suffix="+" />
             </div>
             <div className={Styles.counter_items}>
               <p>Employees</p>
@@ -55,7 +50,7 @@ function AboutOurFood() {
             Changing for the better? We’re On It.
           </p>
         </div>
-      </div>
+      </div>     
       <div className={Styles.panelWrapper}>
         <div className={Styles.row1}>
           <div className={Styles.imageContainerOdd}>

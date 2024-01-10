@@ -1,0 +1,105 @@
+.trendingNow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.trendingNow h1{
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-black);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+.banner{
+    background-image: url(../../../assets/Image/Trending/banner/promotions-desktop-1168x520-2_hero-desktop.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80rem;
+    opacity: var(--opacity-100);
+}
+
+.macContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: space-between;
+    gap: 5rem;
+    width: 65%;
+    padding: var(--spacing-xl);
+    /* background-color: var(--color-gray-100); */
+    margin-top: var(--spacing-xl);
+}
+.macContainer_left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: blue ; */
+    width: 100%;
+}
+.macContainer_left img{
+    width: 100%;
+    opacity: var(--opacity-100);
+
+}
+.macContainer_left h3{
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-black);
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+   
+}
+.macContainer_link{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.macContainer_link a{
+    text-decoration: none;
+    color: var(--color-gray-900);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    letter-spacing: -1px;
+    padding-bottom: 1rem;   
+}
+.macContainer_link a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10rem;
+    height: 5px;
+    background-color: var(--color-primary-900);
+    border-radius: var(--border-radius-circle);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .macContainer_link a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+/* **************************************************************** */
+.macContainer_right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: pink ; */
+}
+.macContainer_right h3{
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-black);
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+    
+}
+.macContainer_right img{
+    width: 100%;
+    opacity: var(--opacity-100);
+}

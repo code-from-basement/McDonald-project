@@ -6,21 +6,12 @@
   width: 100%;
 }
 
-.bannerContainer {
-  width: 100%;
-}
-.bannerContainer img {
-  width: 100%;
-  height: 75rem;
-  opacity: var(--opacity-100);
-}
-
 .banner{
   background-image: url(../../../assets/Image/banner/DDB_0183_CITW_0173_Lime_R1_RGB_v1_current_0.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 75rem;
+  height: 65rem;
   width: 100%;
 }
 .detailsContainer{

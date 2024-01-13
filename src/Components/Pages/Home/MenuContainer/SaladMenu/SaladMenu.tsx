@@ -8,7 +8,7 @@ function SaladMenu() {
   return (
     <div>
       <h1 className={Styles.saladMenuContainer}>SaladMenu</h1>
-      {salad?.map((item) => {
+      {salad?.map((item: any) => {
         return <h2>{item.title}</h2>;
       })}
     </div>

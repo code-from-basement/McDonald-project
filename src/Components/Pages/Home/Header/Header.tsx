@@ -1,14 +1,14 @@
-import Styles from "./Header.module.css";
+import { Navigation, Pagination, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Parallax } from "swiper/modules";
-import React from "react";
+import Styles from "./Header.module.css";
 
 // Import css style for swiper components
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/parallax";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -32,6 +32,9 @@ function Header() {
               </div>
               <div className={Styles.teaserBox__body} data-swiper-parallax="100">
                 <p className={Styles.teaserBox__content}>Here’s your chance to win delicious new offers! Pick up your hammer to play and enjoy the crazy deals.</p>
+              </div>
+              <div>
+                <NavLink to="aboutourfood">Our Foods</NavLink>
               </div>
             </div>
           </SwiperSlide>

@@ -20,9 +20,11 @@ import ButtonSwiper from "./ButtonSwiper/ButtonSwiper";
 interface homeMenuListProps {
   isActive: boolean;
 }
+
 const isActiveTab = ({ isActive }: homeMenuListProps) => {
-  return isActive ? Styles.activeTab : "";
+  return isActive ? Styles.active : "";
 };
+
 function HomeMenuList() {
   return (
     <div className={Styles.homeMenuList}>

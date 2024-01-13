@@ -69,6 +69,7 @@
   transition: all 0.3s;
   overflow: hidden;
 }
+
 .categoryItem:hover {
   transform: translate(0, -4px);
   box-shadow: 0 2rem 4rem #00000020;
@@ -104,9 +105,10 @@
 }
 .activeTab h2 {
   color: var(--color-secondary-900);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-family: var(--font-family-bold);
 }
 
-.activeTab img {
+.homeMenuList a[type="selected"] {
+  background-color: red;
 }

@@ -12,7 +12,6 @@ import DipsMenu from "./../../../../assets/Image/swipperIcons/14_Values.webp";
 import beveragesMenu from "./../../../../assets/Image/swipperIcons/Beverages.webp";
 import breakfastMenu from "./../../../../assets/Image/swipperIcons/breakfast_0.webp";
 import Styles from "./HomeMenuList.module.css";
-
 import { NavLink } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 import ButtonSwiper from "./ButtonSwiper/ButtonSwiper";

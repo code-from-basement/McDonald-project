@@ -10,7 +10,7 @@
   background-color: var(--color-primary-900);
   border: none;
   border-radius: var(--border-radius-md);
-  transition: var(--transition);
+  transition: all 0.3s;
 }
 .buttonPrimary svg {
   font-size: var(--icon-size-24);
@@ -32,7 +32,7 @@
   background-color: var(--color-trans);
   border: 2px solid var(--color-gray-700);
   border-radius: var(--border-radius-md);
-  transition: var(--transition);
+  transition: all 0.3s;
 }
 .buttonSecondary svg {
   font-size: var(--icon-size-24);

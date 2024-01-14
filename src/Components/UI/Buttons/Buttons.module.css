@@ -9,7 +9,7 @@
   gap: var(--padding-xs);
   background-color: var(--color-primary-900);
   border: none;
-  border-radius: var(--border-radius-circle);
+  border-radius: var(--border-radius-md);
   transition: var(--transition);
 }
 .buttonPrimary svg {
@@ -31,7 +31,7 @@
   gap: var(--padding-xs);
   background-color: var(--color-trans);
   border: 2px solid var(--color-gray-700);
-  border-radius: var(--border-radius-circle);
+  border-radius: var(--border-radius-md);
   transition: var(--transition);
 }
 .buttonSecondary svg {

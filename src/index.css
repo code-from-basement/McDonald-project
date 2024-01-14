@@ -165,7 +165,6 @@ button {
   gap: 1rem;
   border: none;
   outline: none;
-  height: 5.6rem;
   transition: var(--transition);
 }
 

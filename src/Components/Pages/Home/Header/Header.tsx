@@ -1,16 +1,19 @@
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Styles from "./Header.module.css";
+import { NavigateNextRoundedIcon } from "./../../../UI/IconsLibrary/IconsLibrary";
 
 // Import css style for swiper components
 
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/parallax";
-import { NavLink } from "react-router-dom";
+import { ButtonPrimary } from "../../../UI/Buttons/Buttons";
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <div className={Styles.header}>
       <section className={Styles.banner}>
@@ -33,8 +36,10 @@ function Header() {
               <div className={Styles.teaserBox__body} data-swiper-parallax="100">
                 <p className={Styles.teaserBox__content}>Here’s your chance to win delicious new offers! Pick up your hammer to play and enjoy the crazy deals.</p>
               </div>
-              <div>
-                <NavLink to="aboutourfood">Our Foods</NavLink>
+              <div className={Styles.teaserBox__footer}>
+                <ButtonPrimary type="" onClick={() => navigate("aboutourfood")}>
+                  About our foods <NavigateNextRoundedIcon />
+                </ButtonPrimary>
               </div>
             </div>
           </SwiperSlide>
@@ -46,6 +51,11 @@ function Header() {
               </div>
               <div className={Styles.teaserBox__body}>
                 <p className={Styles.teaserBox__content}>With every order, earn rewards points! Stack them up and redeem them on exclusive rewards!</p>
+              </div>
+              <div className={Styles.teaserBox__footer}>
+                <ButtonPrimary type="" onClick={() => navigate("trendingnow")}>
+                  New Trends! <NavigateNextRoundedIcon />
+                </ButtonPrimary>
               </div>
             </div>
           </SwiperSlide>

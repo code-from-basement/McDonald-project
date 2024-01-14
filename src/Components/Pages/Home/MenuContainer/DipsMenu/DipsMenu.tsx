@@ -9,7 +9,7 @@ function DipsMenu() {
     <div className={Styles.dipsMenuContainer}>
       <h1>dips menu</h1>
       {dips?.map((item) => {
-        return <h2>{item.title}</h2>;
+        return <h2 key={item.id}>{item.title}</h2>;
       })}
     </div>
   );

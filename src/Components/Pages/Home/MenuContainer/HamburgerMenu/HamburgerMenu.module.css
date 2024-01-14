@@ -2,8 +2,7 @@
   width: 100%;
   height: min-content;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  grid-template-rows: 36rem;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
   grid-gap: var(--spacing-md);
   position: relative;
   padding-top: 10rem;

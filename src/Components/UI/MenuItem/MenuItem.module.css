@@ -1,5 +1,5 @@
 .menuItem {
-  /* height: 36rem; */
+  height: 40rem;
   overflow: hidden;
   /* padding: var(--spacing-md); */
   display: flex;
@@ -62,12 +62,14 @@
 }
 
 .menuItem__title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
+  flex: 1;
+  letter-spacing: -1px;
 }
 
 .menuItem__price {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   color: var(--color-secondary-900);
   font-weight: var(--font-weight-regular);
 }

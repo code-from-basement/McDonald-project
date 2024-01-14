@@ -45,7 +45,7 @@
   /* background-color: gray; */
 }
 .menuItem__image {
-  width: clamp(18rem, 80%, 36rem);
+  width: clamp(18rem, 80%, 40rem);
   height: auto;
   transform: scale(1);
   transition: all 0.3s;
@@ -58,14 +58,14 @@
   justify-content: space-between;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
-  /* border: 1px solid; */
+  font-family: var(--font-family-bold);
 }
 
 .menuItem__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
   flex: 1;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
 }
 
 .menuItem__price {

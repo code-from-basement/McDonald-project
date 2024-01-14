@@ -11,7 +11,9 @@ import chickenAndFishMenu from "./../../../../assets/Image/swipperIcons/07_Fish.
 import DipsMenu from "./../../../../assets/Image/swipperIcons/14_Values.webp";
 import beveragesMenu from "./../../../../assets/Image/swipperIcons/Beverages.webp";
 import breakfastMenu from "./../../../../assets/Image/swipperIcons/breakfast_0.webp";
+import menuListEndCardImage from "./../../../../assets/UI/smilebox.png";
 import Styles from "./HomeMenuList.module.css";
+
 import { NavLink } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 import ButtonSwiper from "./ButtonSwiper/ButtonSwiper";
@@ -21,13 +23,13 @@ interface homeMenuListProps {
 }
 
 const isActiveTab = ({ isActive }: homeMenuListProps) => {
-  return isActive ? Styles.active : "";
+  return isActive ? Styles.activeTab : "";
 };
 
 function HomeMenuList() {
   return (
     <div className={Styles.homeMenuList}>
-      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={32} navigation={true} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
+      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={40} navigation={false} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
         <SwiperSlide className={Styles.menuListIntro}>
           <div className={Styles.menuListIntroCard}>
             <h2>Choose a menu:</h2>
@@ -84,6 +86,11 @@ function HomeMenuList() {
             <img src={DipsMenu} alt="image of dips menu list" />
             <h2>Dips</h2>
           </NavLink>
+        </SwiperSlide>
+        <SwiperSlide className={Styles.menuListEnd}>
+          <div className={Styles.menuListEndCard}>
+            <img src={menuListEndCardImage} alt="happy meel box image" />
+          </div>
         </SwiperSlide>
 
         <ButtonSwiper />

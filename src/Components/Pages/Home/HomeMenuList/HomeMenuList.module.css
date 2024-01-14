@@ -77,7 +77,7 @@
   width: 42rem;
   height: auto;
   position: absolute;
-  transform: translateY(-6rem) rotate(15deg);
+  transform: translateY(-6rem) translateX(2rem) rotate(15deg);
 }
 .categoryItem {
   width: 22rem !important;

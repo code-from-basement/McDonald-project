@@ -38,8 +38,8 @@ function GlobalContextProvider({ children }: globalContextProps) {
     breakfast: [],
     snackAndSides: [],
     dessert: [],
-    vegetarian: [],
     salad: [],
+    dips: [],
   });
 
   const fetchAllMenuData = async (address: string) => {
@@ -75,10 +75,10 @@ function GlobalContextProvider({ children }: globalContextProps) {
       const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snack&slides");
       //dessert list
       const getDessertMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dessert");
-      //vegetarian list
-      const getVegetarianMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "vegetarian");
+      //dips list
+      const getDipsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dip");
       //salad list
-      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salad");
+      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salads");
       setMenuLists({
         hamburger: getHamburgerMenuList,
         chickenAndFish: getChickenAndFishMenuList,
@@ -86,8 +86,8 @@ function GlobalContextProvider({ children }: globalContextProps) {
         breakfast: getBreakFastMenuList,
         snackAndSides: getSnackAndSidesMenuList,
         dessert: getDessertMenuList,
-        vegetarian: getVegetarianMenuList,
         salad: getSaladsMenuList,
+        dips: getDipsMenuList,
       });
     }
   }, [fullMenuListData]);

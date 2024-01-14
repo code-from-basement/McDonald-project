@@ -17,6 +17,9 @@ import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
+import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 export {
   InstagramIcon,
@@ -38,4 +41,7 @@ export {
   InfoRoundedIcon,
   KeyboardArrowDownRoundedIcon,
   KeyboardArrowUpRoundedIcon,
+  FavoriteBorderRoundedIcon,
+  FavoriteRoundedIcon,
+  InfoOutlinedIcon,
 };

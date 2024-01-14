@@ -11,10 +11,9 @@
   ],
   "menu": [
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fbacon-clubhouse.webp?alt=media&token=d243a438-11e1-46f1-960a-1ecdbeb45d9e",
       "id": 500,
       "title": "Aussie Angus Deluxe",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FAussie-Angus-Deluxe-2023-1016.png?alt=media&token=c020c905-7c2e-484b-9674-a423b813bb95",
       "category": "hamburger",
       "price": 89,
       "size": [],
@@ -40,10 +39,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fbig-bacon-clubhouse.webp?alt=media&token=ac818229-db91-466f-a1f2-82a116a131ff",
       "id": 501,
       "title": "BBQ Bacon Angus",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fbbqangus.png?alt=media&token=4ccb3895-09ff-4932-bd20-2c182c132f5c",
       "category": "hamburger",
       "price": 99,
       "size": [],
@@ -69,10 +67,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fbig-mac.webp?alt=media&token=cabcd0b7-06d9-4979-8173-6da47d9a1c3d",
       "id": 502,
       "title": "Big Mac",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FBig-Mac-2023-0926_0.png?alt=media&token=eb30da50-0f84-4438-a5c6-8811ffb9fafb",
       "category": "hamburger",
       "price": 89,
       "size": [],
@@ -98,10 +95,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fbig-mac.webp?alt=media&token=cabcd0b7-06d9-4979-8173-6da47d9a1c3d",
       "id": 503,
       "title": "Cheeseburger",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FCheeseburger.png?alt=media&token=aa3a8d70-b8b7-48e1-bd91-9027b12ea955",
       "category": "hamburger",
       "price": 68,
       "size": [],
@@ -127,10 +123,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fcheeseburger-with-gluten-free-bread.webp?alt=media&token=8793739e-0b5b-4377-96b2-d48e246ddf01",
       "id": 504,
       "title": "Double Cheeseburger",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FCheeseburger-Double_0.png?alt=media&token=f26970c4-a57a-4495-b09b-28faaeef8071",
       "category": "hamburger",
       "price": 60,
       "size": [],
@@ -156,10 +151,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fcheeseburgers.webp?alt=media&token=dbb09cf3-dfcb-43aa-a13d-3c95a7e6196f",
       "id": 505,
       "title": "Triple Cheeseburger",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FCheeseburger-Triple_2.png?alt=media&token=c02d354e-d4eb-4a6a-981b-8a416d81b8ce",
       "category": "hamburger",
       "price": 45,
       "size": [],
@@ -185,10 +179,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fcheeseburger-with-gluten-free-bread.webp?alt=media&token=8793739e-0b5b-4377-96b2-d48e246ddf01",
       "id": 506,
       "title": "Hamburger",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FHamburger.png?alt=media&token=01b42fb3-c718-456c-be06-871ad0c1adc1",
       "category": "hamburger",
       "price": 59,
       "size": [],
@@ -214,10 +207,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fchili-mayo-%26-cheese.webp?alt=media&token=a4667d9f-5743-4599-afde-83b90f32447c",
       "id": 507,
       "title": "Quarter Pounder®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FQuarter-Pounder-2023.png?alt=media&token=40357205-7713-4736-84aa-1e042edbade4",
       "category": "hamburger",
       "price": 59,
       "size": [],
@@ -243,10 +235,9 @@
       "tags": []
     },
     {
-      "url": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2Fdouble-cheeseburger.webp?alt=media&token=94576c30-9dd1-4a63-876a-67a9c2e39573",
       "id": 508,
       "title": "Double Quarter Pounder®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fhamburger%2FQuarter-Pounder-Double_1.png?alt=media&token=13be468b-e57e-454c-a7f1-f99cd42597a4",
       "category": "hamburger",
       "price": 59,
       "size": [],

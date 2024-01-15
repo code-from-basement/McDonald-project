@@ -27,7 +27,36 @@
 /* -------------------------------- */
 .menuItem__header {
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  z-index: var(--z-index-500);
+}
+
+.menuItem__header button {
+  width: var(--icon-size-40);
+  height: var(--icon-size-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-primary-900);
+}
+.menuItem__header button:hover {
+  color: var(--color-primary-900);
+  background-color: var(--color-tertiary-900);
+  border-radius: var(--border-radius-circle);
+}
+
+.menuItem__header button svg {
+  width: var(--icon-size-32);
+  height: var(--icon-size-32);
+  /* color: var(--color-tertiary-900); */
 }
 .menuItem__header img {
   width: var(--icon-size-32);
@@ -45,7 +74,7 @@
   /* background-color: gray; */
 }
 .menuItem__image {
-  width: clamp(18rem, 80%, 40rem);
+  width: clamp(18rem, 80%, 28rem);
   height: auto;
   transform: scale(1);
   transition: all 0.3s;
@@ -64,6 +93,7 @@
 .menuItem__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
+  line-height: 1;
   flex: 1;
   /* letter-spacing: -1px; */
 }
@@ -72,6 +102,7 @@
   font-size: var(--font-size-lg);
   color: var(--color-secondary-900);
   font-weight: var(--font-weight-regular);
+  line-height: 1;
 }
 
 .menuItemMacLogo {

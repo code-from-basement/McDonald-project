@@ -1,12 +1,23 @@
 import Styles from "./MenuItem.module.css";
-import macIcon from "../../../assets/Image/Icon/macdonaldPNG.png";
+import { InfoOutlinedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon } from "./../IconsLibrary/IconsLibrary";
+import { useMemo, useState } from "react";
 
 function MenuItem({ item }: any) {
+  const [isFavorite, setIsFavorite] = useState(false);
   const { title, price, image } = item;
+
+  const FavoriteToggle = () => {
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <div className={Styles.menuItem}>
-      <img className={Styles.menuItemMacLogo} src={macIcon} alt="mac icon" />
-      <div className={Styles.menuItem__header}></div>
+      <div className={Styles.menuItem__header}>
+        <button>
+          <InfoOutlinedIcon />
+        </button>
+        <button onClick={FavoriteToggle}>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
+      </div>
       <div className={Styles.menuItem__body}>
         <img className={Styles.menuItem__image} src={image} alt={title} />
       </div>

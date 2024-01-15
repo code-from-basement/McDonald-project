@@ -6,8 +6,8 @@ function SaladMenu() {
   const { menuLists }: any = useGlobalContext();
   const { salad } = menuLists;
   return (
-    <div>
-      <h1 className={Styles.saladMenuContainer}>SaladMenu</h1>
+    <div className={Styles.saladMenuContainer}>
+      <h3 className={Styles.title}>SaladMenu</h3>
       {salad?.map((item: any) => {
         return <h2>{item.title}</h2>;
       })}

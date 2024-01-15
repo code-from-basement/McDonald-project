@@ -6,8 +6,8 @@ function DrinksMenu() {
   const { drinks } = menuLists;
 
   return (
-    <div>
-      <h1 className={Styles.drinksMenuContainer}>DrinksMenu</h1>
+    <div className={Styles.drinksMenuContainer}>
+      <h3 className={Styles.title}>DrinksMenu</h3>
       {drinks?.map((item: any) => {
         return <h2>{item.title}</h2>;
       })}

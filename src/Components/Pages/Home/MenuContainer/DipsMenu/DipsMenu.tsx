@@ -7,7 +7,7 @@ function DipsMenu() {
   const { dips } = menuLists;
   return (
     <div className={Styles.dipsMenuContainer}>
-      <h1>dips menu</h1>
+      <h3 className={Styles.title}>dips menu</h3>
       {dips?.map((item) => {
         return <h2 key={item.id}>{item.title}</h2>;
       })}

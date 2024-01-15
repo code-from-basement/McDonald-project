@@ -6,8 +6,8 @@ function ChickenBurgerMenu() {
   const { menuLists }: any = useGlobalContext();
   const { chickenAndFish } = menuLists;
   return (
-    <div>
-      <h1 className={Styles.chickenBurgerMenuContainer}>ChickenBurgerMenu</h1>
+    <div className={Styles.chickenBurgerMenuContainer}>
+      <h3 className={Styles.title}>ChickenBurgerMenu</h3>
       {chickenAndFish?.map((item) => {
         return <h2>{item.title}</h2>;
       })}

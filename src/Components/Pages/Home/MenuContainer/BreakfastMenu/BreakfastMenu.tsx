@@ -7,7 +7,7 @@ function BreakfastMenu() {
   const { breakfast } = menuLists;
   return (
     <div className={Styles.breakfastMenuContainer}>
-      <h1>BreakfastMenu</h1>
+      <h3 className={Styles.title}>BreakfastMenu</h3>
       {breakfast?.map((item) => {
         return <h2>{item.title}</h2>;
       })}

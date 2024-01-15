@@ -3,6 +3,8 @@
   padding: var(--padding-container-xl);
   height: min-content;
   background-color: transparent;
+  position: relative;
+  overflow: hidden;
 }
 .title {
   color: var(--color-gray-900);

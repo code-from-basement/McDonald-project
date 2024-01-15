@@ -7,20 +7,11 @@ import MenuContainer from "./MenuContainer/MenuContainer";
 import FQA from "./FQA/FQA";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
-const LoadingDemo = () => {
-  return (
-    <div>
-      <h1>loading...</h1>
-    </div>
-  );
-};
-
 function Home() {
   const { isLoading } = useGlobalContext() as { isLoading: boolean };
 
   return (
     <div className={Styles.home}>
-      {isLoading && <LoadingDemo />}
       <Header />
       <HomeMenuList />
       <MenuContainer />

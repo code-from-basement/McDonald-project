@@ -18,7 +18,7 @@
 
 .bg__logo {
   position: absolute;
-  top: 15%;
+  top: 10rem;
   right: 0%;
   transform: scale(0.7);
 }

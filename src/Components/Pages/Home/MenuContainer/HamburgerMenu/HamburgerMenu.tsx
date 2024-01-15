@@ -7,7 +7,7 @@ function HamburgerMenu() {
   const { hamburger } = menuLists;
   return (
     <div className={Styles.hamburgerMenuContainer}>
-      <h3 className={Styles.title}>Enjoy of our unique taste's hamburgers!</h3>
+      <h1 className={Styles.title}>Enjoy of our unique taste's hamburgers!</h1>
       {hamburger.map((item: any) => {
         return <MenuItem key={item.id} item={item} />;
       })}

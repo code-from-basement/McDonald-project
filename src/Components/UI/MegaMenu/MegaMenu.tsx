@@ -1,9 +1,9 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./MegaMenu.module.css";
-import { motion, AnimatePresence } from "framer-motion";
-import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 
 function MegaMenu() {
   const { eventToggles }: any = useGlobalContext();

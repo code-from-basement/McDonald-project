@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../../../../Context/GlobalContext";
+import MenuItem from "../../../../UI/MenuItem/MenuItem";
 import Styles from "./DrinksMenu.module.css";
 
 function DrinksMenu() {
@@ -7,9 +8,9 @@ function DrinksMenu() {
 
   return (
     <div className={Styles.drinksMenuContainer}>
-      <h3 className={Styles.title}>DrinksMenu</h3>
+      <h3 className={Styles.title}>Fresh and cold drinks for you!</h3>
       {drinks?.map((item: any) => {
-        return <h2>{item.title}</h2>;
+        return <MenuItem key={item.id} item={item} />;
       })}
     </div>
   );

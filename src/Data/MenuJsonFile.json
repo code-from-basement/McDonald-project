@@ -265,7 +265,7 @@
     {
       "id": 300,
       "title": "Chicken 'n' Cheese",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FChicken-n'-Cheese_0.png?alt=media&token=1268e96d-a3a2-4059-8fe0-7d3f0f666882",
       "category": "chicken&fish",
       "price": 39,
       "size": [],
@@ -294,7 +294,7 @@
     {
       "id": 301,
       "title": "Filet-O-Fish®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FFilet-O-Fish_0.png?alt=media&token=e39a4fd4-3059-4223-9099-e206bcee6dd5",
       "category": "chicken&fish",
       "price": 46,
       "size": [],
@@ -322,7 +322,7 @@
     {
       "id": 302,
       "title": "Grilled Chicken Deluxe",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FGrilled-Chicken-Deluxe-2018.png?alt=media&token=95d803a1-8730-441c-a305-08df3a564b0e",
       "category": "chicken&fish",
       "price": 54,
       "size": [],
@@ -351,7 +351,7 @@
     {
       "id": 303,
       "title": "McChicken®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FMcChicken-2023.png?alt=media&token=464f9193-19c3-45e3-a8ff-e0bf874cc189",
       "category": "chicken&fish",
       "price": 45,
       "size": [],
@@ -380,7 +380,7 @@
     {
       "id": 304,
       "title": "McCrispy®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FMcCrispy-2023.png?alt=media&token=64ea7e47-eba9-46b3-b3d3-384737532a3e",
       "category": "chicken&fish",
       "price": 89,
       "size": [],
@@ -409,7 +409,7 @@
     {
       "id": 305,
       "title": "McCrispy® Bacon Deluxe",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FMcCrispy-Bacon-Deluxe-2023-1110.png?alt=media&token=e15423d0-1e89-4f5f-a3d8-1766a4a97e61",
       "category": "chicken&fish",
       "price": 69,
       "size": [],
@@ -437,7 +437,7 @@
     {
       "id": 306,
       "title": "McCrispy® Deluxe",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FMcCrispy-Deluxe-2023.png?alt=media&token=5442f3c6-708e-40d9-807f-1574b56fc632",
       "category": "chicken&fish",
       "price": 89,
       "size": [],
@@ -466,7 +466,7 @@
     {
       "id": 307,
       "title": "McSpicy®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fchicken%26fish%2FMcSpicy_0.png?alt=media&token=450486c8-2eb8-4431-8299-6c5f3fa78f27",
       "category": "chicken&fish",
       "price": 69,
       "size": [],
@@ -494,7 +494,7 @@
     {
       "id": 100,
       "title": "Coca-Cola®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdrinks%2FCoke-Classic_0.png?alt=media&token=e48e5c79-2209-424e-8ef7-010238516795",
       "category": "drink",
       "price": 30,
       "size": [],
@@ -522,7 +522,7 @@
     {
       "id": 101,
       "title": "Coca-Cola® Zero Sugar",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdrinks%2FCoca-Cola-Zero-Sugar_1.png?alt=media&token=86b0b614-10a6-4e3e-9bd5-a8c0f4c23594",
       "category": "drink",
       "price": 25,
       "size": [],
@@ -550,7 +550,7 @@
     {
       "id": 102,
       "title": "Fanta®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdrinks%2FFanta-202305_6.png?alt=media&token=aa405062-c727-46f7-adec-0a7b5d419a77",
       "category": "drink",
       "price": 25,
       "size": [],
@@ -578,7 +578,7 @@
     {
       "id": 103,
       "title": "Sprite® Zero Sugar",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdrinks%2FSprite%20Zero%20Sugar.png?alt=media&token=63efdaca-a6d0-43d7-a072-f9180bfa1af3",
       "category": "drink",
       "price": 30,
       "size": [],
@@ -606,7 +606,7 @@
     {
       "id": 104,
       "title": "Orange Fruit Drink",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdrinks%2FOrange-Juice.png?alt=media&token=ada5765b-ce42-46ae-a848-5a29ed2a7c4f",
       "category": "drink",
       "price": 30,
       "size": [],
@@ -635,7 +635,7 @@
     {
       "id": 200,
       "title": "Bacon & Egg McMuffin®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FBacon-%26-Egg-McMuffin_1.png?alt=media&token=48fd8cc5-03de-4d8f-804a-09856a0600e3",
       "category": "breakfast",
       "price": 89,
       "size": [],
@@ -663,7 +663,7 @@
     {
       "id": 201,
       "title": "Big Brekkie Burger",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FBig-Brekkie-Burger.png?alt=media&token=1e905ceb-6b14-47c1-8e55-66da8285ba74",
       "category": "breakfast",
       "price": 30,
       "size": [],
@@ -691,7 +691,7 @@
     {
       "id": 202,
       "title": "Mighty McMuffin®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FMighty-McMuffin.png?alt=media&token=cb44343c-a560-4aa2-bb14-2366dfc78211",
       "category": "breakfast",
       "price": 89,
       "size": [],
@@ -719,7 +719,7 @@
     {
       "id": 203,
       "title": "Sausage & Egg McMuffin®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FSausage-%26-Egg-McMuffin.png?alt=media&token=0bfe3665-d9c0-4bbf-b4a1-72c9d218d7db",
       "category": "breakfast",
       "price": 89,
       "size": [],
@@ -747,7 +747,7 @@
     {
       "id": 204,
       "title": "Sausage McMuffin®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FSausage-McMuffin.png?alt=media&token=fe2e3cee-d1a1-4248-bbd1-6a1f982fa728",
       "category": "breakfast",
       "price": 30,
       "size": [],
@@ -775,7 +775,7 @@
     {
       "id": 205,
       "title": "Hotcakes with Butter and Syrup",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FHotcakes.png?alt=media&token=e4626f34-0dc1-4da7-90ac-9720ad2b19d4",
       "category": "breakfast",
       "price": 30,
       "size": [],
@@ -803,7 +803,7 @@
     {
       "id": 206,
       "title": "Hash Brown",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fbreakfast%2FHashbrown_0.png?alt=media&token=5efcc47f-fa67-405b-ab58-d74a4ce3e5cd",
       "category": "breakfast",
       "price": 89,
       "size": [],
@@ -1001,7 +1001,7 @@
     {
       "id": 600,
       "title": "BBQ Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FBBQ-Sauce.png?alt=media&token=e695129c-03e5-495e-bc65-3845e3d60d94",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1029,7 +1029,7 @@
     {
       "id": 601,
       "title": "Cafe Butter Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FCafe-Butter.png?alt=media&token=1ec2302f-2dc3-4d46-9f49-288e6567686f",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1057,7 +1057,7 @@
     {
       "id": 602,
       "title": "Ketchup Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FKetchup.png?alt=media&token=62438fe4-a232-4d77-9635-6d5ccb2f8c87",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1086,7 +1086,7 @@
     {
       "id": 603,
       "title": "McChicken Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FMcChicken-Sauce.png?alt=media&token=7e923335-700d-4c0f-b0b9-25771f0aa080",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1115,7 +1115,7 @@
     {
       "id": 604,
       "title": "Sweet and Sour Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FSweet-n'-Sour-Sauce.png?alt=media&token=26c89f57-5860-45dc-9ae4-e09f15d968b4",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1144,7 +1144,7 @@
     {
       "id": 605,
       "title": "Whipped Dip Sauce",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fdips%2FWhipped-Butter.png?alt=media&token=671827ad-2371-41ba-b9c5-104652266877",
       "category": "dip",
       "price": 15,
       "size": [],
@@ -1173,7 +1173,7 @@
     {
       "id": 700,
       "title": "Fries",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsnacks%2FFries.png?alt=media&token=6a43d8e9-bbad-42e3-98a8-4056e6fd3ae2",
       "category": "snack&slides",
       "price": 32,
       "size": [],
@@ -1201,7 +1201,7 @@
     {
       "id": 701,
       "title": "Chicken McNuggets®",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsnacks%2FMcNuggets-6.png?alt=media&token=fdf6d234-30e6-4061-be5a-20dd2ef76802",
       "category": "snack&slides",
       "price": 42,
       "size": [],
@@ -1229,7 +1229,7 @@
     {
       "id": 702,
       "title": "Hot Apple Pie",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsnacks%2FHot-Apple-Pie.png?alt=media&token=67b513b8-ede4-4910-a542-403c00441c58",
       "category": "snack&slides",
       "price": 49,
       "size": [],
@@ -1257,7 +1257,7 @@
     {
       "id": 703,
       "title": "Pineapple Fritters",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsnacks%2FPineapple-Fritters-2023-1117.png?alt=media&token=aa2b82e4-4a26-48fe-8f86-70c02556950b",
       "category": "snack&slides",
       "price": 19,
       "size": [],
@@ -1285,7 +1285,7 @@
     {
       "id": 704,
       "title": "Hash Brown",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsnacks%2FHashbrown_0.png?alt=media&token=8c58f792-277d-48eb-9133-49c7390f7c59",
       "category": "snack&slides",
       "price": 8,
       "size": [],
@@ -1314,8 +1314,8 @@
     {
       "id": 800,
       "title": "Caesar Chicken McWrap®",
-      "image": "",
-      "category": "Salads",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsalads%2FCaesar-Chicken-Salad-2023.png?alt=media&token=ac62c5cb-b160-4b42-948f-3514e900c045",
+      "category": "salads",
       "price": 76,
       "size": [],
       "description": "Our vegan burger McVegan consists of a seasoned soy burger, egg-free mayonnaise, ketchup, mustard, pickle, lettuce and tomato. Also available with gluten-free bread.",
@@ -1342,7 +1342,7 @@
     {
       "id": 801,
       "title": "Classic Chicken Salad",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsalads%2FClassic-Chicken-Salad-2023.png?alt=media&token=683caf2c-d509-4e1b-8f40-60554bada9a8",
       "category": "salads",
       "price": 99,
       "size": [],
@@ -1370,7 +1370,7 @@
     {
       "id": 802,
       "title": "Garden Salad",
-      "image": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/menuImage%2Fsalads%2FGarden-Salad.png?alt=media&token=7c1572b6-6fc8-4d42-bb1d-360f7b84e695",
       "category": "salads",
       "price": 97,
       "size": [],

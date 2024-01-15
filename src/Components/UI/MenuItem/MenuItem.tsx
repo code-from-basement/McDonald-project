@@ -1,6 +1,6 @@
 import Styles from "./MenuItem.module.css";
 import { InfoOutlinedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon } from "./../IconsLibrary/IconsLibrary";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 function MenuItem({ item }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -19,7 +19,7 @@ function MenuItem({ item }: any) {
         <button onClick={FavoriteToggle}>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
       </div>
       <div className={Styles.menuItem__body}>
-        <img className={Styles.menuItem__image} src={image} alt={title} />
+        <img className={Styles.menuItem__image} src={image} alt={title} loading="lazy" />
       </div>
       <div className={Styles.menuItem__footer}>
         <h1 className={Styles.menuItem__title}>{title}</h1>

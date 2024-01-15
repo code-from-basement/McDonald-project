@@ -1,15 +1,17 @@
 import React from "react";
 import Styles from "./DipsMenu.module.css";
 import { useGlobalContext } from "../../../../Context/GlobalContext";
+import MenuItem from "../../../../UI/MenuItem/MenuItem";
 
 function DipsMenu() {
-  const { menuLists } = useGlobalContext();
+  const { menuLists }: any = useGlobalContext();
   const { dips } = menuLists;
+
   return (
     <div className={Styles.dipsMenuContainer}>
-      <h3 className={Styles.title}>dips menu</h3>
-      {dips?.map((item) => {
-        return <h2 key={item.id}>{item.title}</h2>;
+      <h3 className={Styles.title}>Let boost our taste in you mouth!</h3>
+      {dips?.map((item: any) => {
+        return <MenuItem key={item.id} item={item} />;
       })}
     </div>
   );

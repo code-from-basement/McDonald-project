@@ -1,26 +1,23 @@
 .menuItem {
+  position: relative;
+}
+
+.menuItem__card {
   height: 40rem;
   overflow: hidden;
-  /* padding: var(--spacing-md); */
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
   position: relative;
-  /* gap: 1rem; */
-  cursor: pointer;
   background: linear-gradient(to top, var(--color-primary-200), var(--color-white));
   border-radius: var(--border-radius-md);
   transition: all 0.3s;
+  z-index: 100;
+  cursor: pointer;
 }
 
-.menuItem:hover .menuItem__image {
-  transform: scale(1.02);
-}
-.menuItem:hover .menuItemMacLogo {
-  width: var(--icon-size-32);
-}
-.menuItem:hover {
+.menuItem__card:hover {
   background: linear-gradient(to top, var(--color-primary-300), var(--color-white));
 }
 
@@ -35,7 +32,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--spacing-sm);
-  z-index: var(--z-index-500);
+  z-index: var(--z-index-200);
 }
 
 .menuItem__header button {
@@ -56,7 +53,6 @@
 .menuItem__header button svg {
   width: var(--icon-size-32);
   height: var(--icon-size-32);
-  /* color: var(--color-tertiary-900); */
 }
 .menuItem__header img {
   width: var(--icon-size-32);
@@ -71,7 +67,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* background-color: gray; */
 }
 .menuItem__image {
   width: clamp(18rem, 80%, 28rem);
@@ -103,21 +98,4 @@
   color: var(--color-secondary-900);
   font-weight: var(--font-weight-regular);
   line-height: 1;
-}
-
-.menuItemMacLogo {
-  width: var(--icon-size-40);
-  height: auto;
-  border: 2px solid var(--color-primary-900);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--border-radius-circle);
-  /* padding: var(--spacing-sm); */
-  position: absolute;
-  z-index: var(--z-index-500);
-  top: 0;
-  right: 0;
-  margin: var(--spacing-md);
-  transition: var(--transition) 0.1s;
 }

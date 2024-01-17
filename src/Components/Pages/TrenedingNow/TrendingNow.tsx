@@ -5,6 +5,7 @@ import macCrispy from '../../../assets/Image/Trending/otherPic/Trending-McCrispy
 import macSauce from "../../../assets/Image/Trending/otherPic/big-mac-sauce-uae-en.png"
 import macJr from "../../../assets/Image/Trending/otherPic/mac-jr-en-uae.png"
 import grandMac from "../../../assets/Image/Trending/otherPic/grand-mac-en-uae.png"
+import { NavigateNextRoundedIcon } from '../../UI/IconsLibrary/IconsLibrary'
 
 
 
@@ -38,13 +39,27 @@ function TrendingNow() {
               <img src={macSauce} alt='A pic of big mac sauce.'/>
               <h3>App Exclusive</h3>
               <p>The iconic taste is now available as a dip, the new limited time Big Mac Sauce! Add it to your order only on the McDonald’s App. </p>
-              {/* <button>click here</button> */}
+              <button className={Styles.btn_order}>
+                <div className={Styles.btn_order__icon}>
+                  <NavigateNextRoundedIcon />
+                </div>
+                <div className={Styles.btn_order__text}>
+                  Order now
+                </div>
+              </button>
             </div>
             <div className={Styles.smallBox}>
               <img src={grandMac} alt='A pic of grand Mac.'/>
               <h3>App Exclusive</h3>
               <p>More beef, more cheese, more sauce… Order the new limited time Grand Big Mac! </p>
-              {/* <button>click here</button> */}
+              <button className={Styles.btn_order}>
+                <div className={Styles.btn_order__icon}>
+                  <NavigateNextRoundedIcon />
+                </div>
+                <div className={Styles.btn_order__text}>
+                  Order now
+                </div>
+              </button>
             </div>
           </div>
         </div>
@@ -55,7 +70,14 @@ function TrendingNow() {
               <img src={macJr} alt='A pic of mac Jr.'/>
               <h3>App Exclusive</h3>
               <p>All the flavor… one less layer! Introducing the new limited time Mac Jr. </p>
-              {/* <button>click here</button> */}
+              <button className={Styles.btn_order}>
+                <div className={Styles.btn_order__icon}>
+                  <NavigateNextRoundedIcon />
+                </div>
+                <div className={Styles.btn_order__text}>
+                  Order now
+                </div>
+              </button>
             </div>
         </div>
       </div>

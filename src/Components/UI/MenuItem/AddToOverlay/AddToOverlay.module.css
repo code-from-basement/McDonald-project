@@ -7,7 +7,7 @@
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, 0);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 -4rem 5rem #ffffff;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
@@ -17,54 +17,50 @@
 
 .btn__qty {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-sm);
   flex: 1;
   background-color: var(--color-white);
   border: 3px solid var(--color-tertiary-600);
   border-radius: var(--border-radius-sm);
 }
+.btn__qty:hover {
+  background-color: var(--color-tertiary-100);
+}
+
+.btn__qty h2 {
+}
+
+.btn__qty svg {
+  transform: rotate(-90deg);
+  font-size: var(--icon-size-24);
+}
 
 .btn__addOn {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   color: var(--color-white);
   flex: 4;
-  background-color: var(--color-tertiary-800);
+  background-color: var(--color-tertiary-600);
   border-radius: var(--border-radius-sm);
-}
-
-.btn__addOn .icon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 var(--spacing-md);
   position: relative;
-  padding: var(--spacing-sm);
 }
-.btn__addOn .icon span:nth-child(2) {
-  position: absolute;
-  bottom: var(--spacing-xs);
-  right: 50%;
-  transform: translate(50%, 0);
+.btn__addOn:hover {
+  background-color: var(--color-tertiary-700);
 }
 
-.btn__addOn .icon svg {
-  align-self: center;
-  font-size: var(--icon-size-48);
+.btn__addOn:active {
+  background-color: var(--color-tertiary-500);
 }
 
-.btn__addOn .price {
-  flex: 3;
-  display: flex;
-  align-items: flex-end;
-  padding-right: var(--spacing-md);
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--color-tertiary-shade);
+.btn__addOn svg {
+  font-size: var(--icon-size-40);
 }
-.btn__addOn .price span {
+
+.btn__addOn h2 {
   font-size: var(--font-size-lg);
   font-family: var(--font-family-bold);
 }

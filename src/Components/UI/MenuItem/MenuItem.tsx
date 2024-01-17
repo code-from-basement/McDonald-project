@@ -2,19 +2,25 @@ import { useState } from "react";
 import { FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon } from "./../IconsLibrary/IconsLibrary";
 import AddToOverlay from "./AddToOverlay/AddToOverlay";
 import Styles from "./MenuItem.module.css";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 function MenuItem({ item }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [showAddonOverlay, setShowAddonOverlay] = useState(false);
   const { title, price, image } = item;
 
   const FavoriteToggle = () => {
     setIsFavorite(!isFavorite);
   };
+  const onCLickShowAddOnOverlay = () => {
+    setShowAddonOverlay(!showAddonOverlay);
+  };
+
+  console.log(showAddonOverlay);
   return (
     <div className={Styles.menuItem}>
-      {/* <div style={{ width: "100%", height: "100%", backgroundColor: "transparent", top: "0", left: "0", position: "absolute", zIndex: "900" }}>helo</div> */}
-      <AddToOverlay item={item} />
-      <div className={Styles.menuItem__card}>
+      {showAddonOverlay && <AddToOverlay item={item} />}
+      <div className={Styles.menuItem__card} onClick={onCLickShowAddOnOverlay}>
         <div className={Styles.menuItem__header}>
           <button>
             <InfoOutlinedIcon />

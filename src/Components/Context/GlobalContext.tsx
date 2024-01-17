@@ -94,12 +94,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   //----------------------------------------------------//
 
-  //*Product Management
-  const [showOverlays, setShowOverlays] = useState({
-    showAddToOverlay: false,
-    showQuantitySelector: false,
-  });
-
   return (
     <GlobalContext.Provider
       value={{
@@ -107,12 +101,11 @@ function GlobalContextProvider({ children }: globalContextProps) {
         isLoading,
         fullMenuListData,
         menuLists,
-        showOverlays,
+
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
         setFullMenuListData,
-        setShowOverlays,
       }}
     >
       {children}

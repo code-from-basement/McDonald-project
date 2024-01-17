@@ -48,7 +48,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
       const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
       const data = await res.json();
       setFullMenuListData(data);
-      console.log(data);
     } catch (error) {
       setIsLoading(false);
       alert(error);
@@ -56,7 +55,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
       setIsLoading(false);
     }
   };
-  console.log(fullMenuListData);
 
   //*----------------------------------------------------//
 

@@ -9,7 +9,9 @@ function BreakfastMenu() {
   console.log("render breakfast");
   return (
     <div className={Styles.breakfastMenuContainer}>
-      <h3 className={Styles.title}>Let get something to start Beautiful day!</h3>
+      <h3 className={Styles.title}>
+        Let get something to start Beautiful day!
+      </h3>
       {breakfast?.map((item: any) => {
         return <MenuItem key={item.id} item={item} />;
       })}

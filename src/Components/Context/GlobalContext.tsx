@@ -28,8 +28,9 @@ function GlobalContextProvider({ children }: globalContextProps) {
   });
   //----------------------------------------------------//
 
-  //*Fetch from firebase real time
-  const [fullMenuListData, setFullMenuListData] = useState();
+  //*Fetching data from Firebase Realtime Database
+
+  const [fullMenuListData, setFullMenuListData] = useState<any>();
 
   const [menuLists, setMenuLists] = useState({
     hamburger: [],
@@ -56,7 +57,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     }
   };
 
-  //*----------------------------------------------------//
+  //----------------------------------------------------//
 
   //*Menu List Management
   useEffect(() => {
@@ -91,6 +92,14 @@ function GlobalContextProvider({ children }: globalContextProps) {
   }, [fullMenuListData]);
   console.log(menuLists);
 
+  //----------------------------------------------------//
+
+  //*Product Management
+  const [showOverlays, setShowOverlays] = useState({
+    showAddToOverlay: false,
+    showQuantitySelector: false,
+  });
+
   return (
     <GlobalContext.Provider
       value={{
@@ -98,10 +107,12 @@ function GlobalContextProvider({ children }: globalContextProps) {
         isLoading,
         fullMenuListData,
         menuLists,
+        showOverlays,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
         setFullMenuListData,
+        setShowOverlays,
       }}
     >
       {children}

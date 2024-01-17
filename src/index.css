@@ -61,11 +61,11 @@
   --font-size-xxs: 1.2rem;
   --font-size-xs: 1.4rem;
   --font-size-sm: 1.6rem;
-  --font-size-md: 1.8rem;
+  --font-size-md: 2rem;
   --font-size-lg: 2.5rem;
-  --font-size-xl: 3.2rem;
-  --font-size-xxl: 4rem;
-  --font-size-xxxl: 5.8rem;
+  --font-size-xl: 4.2rem;
+  --font-size-xxl: 5.6rem;
+  --font-size-xxxl: 6.8rem;
 
   /* font-weight */
   --font-weight-light: 300;
@@ -174,8 +174,14 @@ li {
 
 h1,
 h2,
-h4,
+h3,
 h4 {
+  font-family: var(--font-family-bold);
+  letter-spacing: -1.2px;
+  line-height: 1;
+}
+a {
+  letter-spacing: -0.6px;
   font-family: var(--font-family-bold);
 }
 

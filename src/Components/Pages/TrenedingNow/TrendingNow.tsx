@@ -5,9 +5,9 @@ import macCrispy from '../../../assets/Image/Trending/otherPic/Trending-McCrispy
 import macSauce from "../../../assets/Image/Trending/otherPic/big-mac-sauce-uae-en.png"
 import macJr from "../../../assets/Image/Trending/otherPic/mac-jr-en-uae.png"
 import grandMac from "../../../assets/Image/Trending/otherPic/grand-mac-en-uae.png"
+import familyMenuImg from "../../../assets/Image/Trending/otherPic/Trending_FamilyMenu_v004.png"
+import confettiImg from "../../../assets/Image/Trending/otherPic/pieces4.svg"
 import { NavigateNextRoundedIcon } from '../../UI/IconsLibrary/IconsLibrary'
-
-
 
 
 function TrendingNow() {
@@ -31,6 +31,16 @@ function TrendingNow() {
           </div>
         </div>        
       </div>
+      <div className={Styles.familyMenuContainer}>
+        <h2>Family menu</h2>
+        <img src={familyMenuImg} alt='mac box food'/>
+        <h3>Happy Meal® menu</h3>
+        <p>Kids love a treat. So it’s good to know there’s a menu just for them.</p>
+        <div className={Styles.familyMenuContainer_link}>
+          <a href='#'>Explore Happy Meal</a>
+        </div>
+      </div>
+            
       <div className={Styles.looseMenu}>
         <div className={Styles.looseMenu_container}>
           <h3>Loose Change Menu</h3>

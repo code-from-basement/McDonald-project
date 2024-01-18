@@ -1,9 +1,8 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon } from "./../IconsLibrary/IconsLibrary";
 import AddToOverlay from "./AddToOverlay/AddToOverlay";
 import Styles from "./MenuItem.module.css";
-import { Opacity } from "@mui/icons-material";
 
 function MenuItem({ item }: any) {
   const [isFavorite, setIsFavorite] = useState(false);

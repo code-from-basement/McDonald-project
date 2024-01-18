@@ -17,7 +17,7 @@ function AddToOverlay({ item }: any) {
         <h2>1</h2>
         <NavigateNextRoundedIcon />
       </button>
-      <button className={Styles.btn__addOn} name={title} onClick={(e) => console.log(e.target)}>
+      <button className={Styles.btn__addOn} name={title} onClick={(e) => console.log(e)}>
         <AddRoundedIcon />
         <h2>{`${price}:-`}</h2>
       </button>

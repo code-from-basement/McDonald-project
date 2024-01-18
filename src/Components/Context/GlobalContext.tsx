@@ -30,7 +30,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   //*Fetching data from Firebase Realtime Database
 
-  const [fullMenuListData, setFullMenuListData] = useState<any>();
+  const [fullMenuListData, setFullMenuListData] = useState<any>(null);
 
   const [menuLists, setMenuLists] = useState({
     hamburger: [],
@@ -53,7 +53,9 @@ function GlobalContextProvider({ children }: globalContextProps) {
       setIsLoading(false);
       alert(error);
     } finally {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
     }
   };
 

@@ -1,24 +1,39 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon } from "./../IconsLibrary/IconsLibrary";
 import AddToOverlay from "./AddToOverlay/AddToOverlay";
 import Styles from "./MenuItem.module.css";
-import { useGlobalContext } from "../../Context/GlobalContext";
+import { Opacity } from "@mui/icons-material";
 
 function MenuItem({ item }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
   const [showAddonOverlay, setShowAddonOverlay] = useState(false);
-  const { title, price, image } = item;
+  const [productSelected, setProductSelected] = useState();
+  const { title, price, image, id } = item;
 
   const FavoriteToggle = () => {
     setIsFavorite(!isFavorite);
   };
+  //
+
+  const overlayMasterSwitch = {
+    switchFalse: () => {
+      setShowAddonOverlay(false);
+    },
+    switchTrue: () => {
+      setProductSelected(true);
+    },
+  };
   const onCLickShowAddOnOverlay = () => {
     setShowAddonOverlay(!showAddonOverlay);
-  };
 
-  console.log(showAddonOverlay);
+    console.log("pass");
+  };
+  //
+  console.log(productSelected);
+
   return (
-    <div className={Styles.menuItem}>
+    <motion.div className={Styles.menuItem} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} exit={{ opacity: 0 }}>
       {showAddonOverlay && <AddToOverlay item={item} />}
       <div className={Styles.menuItem__card} onClick={onCLickShowAddOnOverlay}>
         <div className={Styles.menuItem__header}>
@@ -35,7 +50,7 @@ function MenuItem({ item }: any) {
           <h2 className={Styles.menuItem__price}>{price}:-</h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

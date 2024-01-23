@@ -103,7 +103,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
         isLoading,
         fullMenuListData,
         menuLists,
-
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,

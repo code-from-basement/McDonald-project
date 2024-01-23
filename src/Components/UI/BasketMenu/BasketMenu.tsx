@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 function BasketMenu() {
   const { eventToggles, basketList, setBasketList } = useGlobalContext();
-  const { itemQtyNum, setItemQtyNum } = useState();
+  const { itemQtyNum, setItemQtyNum } = useState("");
   const { togglerFunc, isBasketEmpty } = eventToggles;
 
   const onClickRemoveItemHandler = (id: number) => {
@@ -50,13 +50,7 @@ function BasketMenu() {
                   </div>
                   <div className={Styles.basketItem__sideRight}>
                     <h2>{price * qty} Kr</h2>
-                    <input
-                      className={Styles.input__qty}
-                      type="number"
-                      value={itemQtyNum}
-                      onChange={(e) => onChangeItemQty(e, id)}
-                      placeholder={item.qty}
-                    />
+                    <input className={Styles.input__qty} type="number" value={item.qty} onChange={(e) => onChangeItemQty(e, id)} />
                     <button className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(id)}>
                       <DeleteRoundedIcon />
                     </button>

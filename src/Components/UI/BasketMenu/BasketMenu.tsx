@@ -32,7 +32,7 @@ function BasketMenu() {
         <NavigateNextRoundedIcon />
       </button>
       <h2 className={Styles.basketMenu__title}>Order List:</h2>
-      {isBasketEmpty && <EmptyCart />}
+      {!basketList.length && <EmptyCart />}
       {!isBasketEmpty && (
         <div className={Styles.basketListContainer}>
           <ul className={Styles.basketList}>

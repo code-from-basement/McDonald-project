@@ -1,6 +1,6 @@
 .basketMenu {
   position: absolute;
-  width: 30%;
+  width: clamp(40rem, 75vw, 60rem);
   height: 70rem;
   box-shadow: 0 0 7rem #00000035;
   border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);

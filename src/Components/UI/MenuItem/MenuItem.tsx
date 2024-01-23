@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon } from "./../IconsLibrary/IconsLibrary";
 import AddToOverlay from "./AddToOverlay/AddToOverlay";
 import Styles from "./MenuItem.module.css";
+import { Block } from "@mui/icons-material";
 
 function MenuItem({ item }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -13,10 +14,13 @@ function MenuItem({ item }: any) {
     setIsFavorite(!isFavorite);
   };
 
+  const onClickShowAddOnOverlay = (e) => {
+    setShowAddonOverlay(!showAddonOverlay);
+  };
   return (
     <motion.div className={Styles.menuItem} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
-      {showAddonOverlay && <AddToOverlay item={item} />}
-      <div className={Styles.menuItem__card}>
+      <div className={Styles.addToOverlay}>{showAddonOverlay && <AddToOverlay item={item} />}</div>
+      <div className={Styles.menuItem__card} onClick={(e) => onClickShowAddOnOverlay(e)} title={title}>
         <div className={Styles.menuItem__header}>
           <button>
             <InfoOutlinedIcon />

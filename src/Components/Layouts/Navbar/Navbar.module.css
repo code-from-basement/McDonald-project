@@ -109,6 +109,8 @@
   font-size: var(--font-size-sm);
   top: 60%;
   right: -20%;
+  font-family: var(--font-family-bold);
+  line-height: 0;
 }
 .userContainer {
   display: flex;

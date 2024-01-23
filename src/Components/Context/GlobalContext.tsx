@@ -15,6 +15,24 @@ interface globalContextProps {
 function GlobalContextProvider({ children }: globalContextProps) {
   const [isLoading, setIsLoading] = useState(false);
 
+  // Basket Data Management
+  const [basketList, setBasketList] = useState([
+    {
+      id: 1,
+      title: "Big Mac",
+      price: 69,
+      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
+      qty: 3,
+    },
+    {
+      id: 2,
+      title: "Double Big Mac",
+      price: 89,
+      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Double-Big-Mac.jpg",
+      qty: 1,
+    },
+  ]);
+
   //**Event State Management *///////////////////////////
   const [eventToggles, setEventToggles] = useState({
     togglerFunc: (key: any, value: any) => {
@@ -24,7 +42,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     },
     isBasketShow: false,
     megaMenuOpen: false,
-    isBasketEmpty: true,
+    isBasketEmpty: false,
   });
   //----------------------------------------------------//
 
@@ -103,10 +121,12 @@ function GlobalContextProvider({ children }: globalContextProps) {
         isLoading,
         fullMenuListData,
         menuLists,
+        basketList,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
         setFullMenuListData,
+        setBasketList,
       }}
     >
       {children}

@@ -104,6 +104,7 @@
   display: inherit;
 }
 
-.menuItem .addToOverlay {
-  display: none;
+.addToOverlay {
+  /* display: none !important; */
+  background-color: yellow !important;
 }

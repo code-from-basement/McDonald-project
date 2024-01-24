@@ -9,7 +9,7 @@ function Navbar() {
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
-  const { eventToggles }: any = useGlobalContext();
+  const { eventToggles, basketList }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
 
   return (
@@ -38,7 +38,7 @@ function Navbar() {
           <AccountCircleIcon />
         </Link>
         <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>
-          <span className={Styles.basketNum}>0</span>
+          <span className={Styles.basketNum}>{basketList.length}</span>
           <LocalMallOutlinedIcon />
         </button>
       </div>

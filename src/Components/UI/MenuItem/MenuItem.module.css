@@ -99,3 +99,12 @@
   font-weight: var(--font-weight-regular);
   line-height: 1;
 }
+
+.menuItem .addToOverlay .active {
+  display: inherit;
+}
+
+.addToOverlay {
+  /* display: none !important; */
+  background-color: yellow !important;
+}

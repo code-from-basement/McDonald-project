@@ -1,9 +1,8 @@
-import Styles from "./FQA.module.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import faqsData from "../../../../Data/FAQ";
-import { RemoveRoundedIcon, AddRoundedIcon, NavigateNextRoundedIcon, CloseRoundedIcon } from "./../../../UI/IconsLibrary/IconsLibrary";
 import { ButtonSecondary } from "../../../UI/Buttons/Buttons";
-import { motion } from "framer-motion";
+import { AddRoundedIcon, CloseRoundedIcon, NavigateNextRoundedIcon, RemoveRoundedIcon } from "./../../../UI/IconsLibrary/IconsLibrary";
+import Styles from "./FQA.module.css";
 
 function FQA() {
   const [open, setOpen] = useState<null | number>(0);

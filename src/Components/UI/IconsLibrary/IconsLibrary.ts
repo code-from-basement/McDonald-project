@@ -4,6 +4,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
@@ -44,4 +45,5 @@ export {
   FavoriteBorderRoundedIcon,
   FavoriteRoundedIcon,
   InfoOutlinedIcon,
+  DeleteRoundedIcon,
 };

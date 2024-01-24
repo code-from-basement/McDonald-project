@@ -8,6 +8,8 @@ import grandMac from "../../../assets/Image/Trending/otherPic/grand-mac-en-uae.p
 import familyMenuImg from "../../../assets/Image/Trending/otherPic/Trending_FamilyMenu_v004.png"
 import confettiImg from "../../../assets/Image/Trending/otherPic/pieces4.svg"
 import { NavigateNextRoundedIcon } from '../../UI/IconsLibrary/IconsLibrary'
+import { ButtonPrimary } from '../../UI/Buttons/Buttons'
+import {motion} from "framer-motion"
 
 
 function TrendingNow() {
@@ -76,6 +78,7 @@ function TrendingNow() {
       </div>
       <div className={Styles.looseMenuDown}>
         <div className={Styles.looseMenu_container}>
+        <div className={Styles.looseMenu_container__boxes}>
             <div className={Styles.smallBox}>
               <img src={macJr} alt='A pic of mac Jr.'/>
               <h3>App Exclusive</h3>
@@ -89,6 +92,34 @@ function TrendingNow() {
                 </div>
               </button>
             </div>
+            <motion.div className={Styles.smallBox_textContainer}
+              initial={{x: 300}}
+              whileInView={{
+                        x: -20,
+                        transition:{
+                          duration: 3,
+                          type: "spring",
+                          bounce: 0.5
+                        }
+                      }}
+              // viewport={{
+              //   once: true,
+              // }}
+              // animate={{
+              //           x: -20,
+              //           transition:{                         
+              //             duration: 3,
+              //             type: "spring",
+              //             bounce: 0.5
+              //           }
+              //         }}
+            >
+              <h3>Enjoy your meal</h3>
+              <ButtonPrimary type="" onClick={() => {}}>
+                  Order now <NavigateNextRoundedIcon />
+              </ButtonPrimary>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>

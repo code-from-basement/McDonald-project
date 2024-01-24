@@ -99,7 +99,7 @@ function TrendingNow() {
                         transition:{
                           duration: 3,
                           type: "spring",
-                          bounce: 0.5
+                          bounce: 0.6
                         }
                       }}
               // viewport={{

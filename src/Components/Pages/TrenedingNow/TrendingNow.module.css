@@ -9,6 +9,7 @@
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-black);
   padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
 }
 .banner {
   background-image: url(../../../assets/UI/2400x9791_0.jpg.webp);
@@ -219,9 +220,10 @@
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   padding: 0.5rem;
-  height: 50rem;
+  padding-bottom: 2rem;
+  height: 45rem;
   box-shadow: 0 9px 6px #00000015;
-  /* background-color: purple; */
+  min-width: 35rem;
 }
 .smallBox:hover{
   box-shadow: 0 12px 12px #00000020;
@@ -262,7 +264,9 @@
   box-shadow: var(--box-shadow);
   width: 4.5rem;
   height: 4.5rem;
-  margin: 2rem;
+  margin-top: auto;
+  margin-left: 2rem;
+  /* margin-bottom: auto; */
 }
 .btn_order__icon {
   width: 100%;
@@ -334,6 +338,7 @@
   padding: 1rem;
   padding-left: 7rem;
   height: 50rem;
+  min-width: 35rem;
 }
 .smallBox_textContainer h3 {
   font-size: 10rem;

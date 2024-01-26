@@ -5,6 +5,7 @@ import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/Icon
 import Styles from "./BasketMenu.module.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
 import { useEffect, useState } from "react";
+import TotalSection from "./TotalSection/TotalSection";
 
 function BasketMenu() {
   const { eventToggles, basketList, setBasketList } = useGlobalContext();
@@ -18,7 +19,7 @@ function BasketMenu() {
   };
 
   const onChangeItemQty = (e, id) => {
-    if (e.target.value >= 1) {
+    if (e.target.value <= 10 && e.target.value > 0) {
       setBasketList((prevData) => {
         return prevData.map((item) => (item.id === id ? { ...item, qty: e.target.value } : item));
       });
@@ -32,8 +33,9 @@ function BasketMenu() {
         <NavigateNextRoundedIcon />
       </button>
       <h2 className={Styles.basketMenu__title}>Order List:</h2>
+
       {!basketList.length && <EmptyCart />}
-      {!isBasketEmpty && (
+      {basketList.length && (
         <div className={Styles.basketListContainer}>
           <ul className={Styles.basketList}>
             {basketList?.map((item: any) => {
@@ -50,7 +52,7 @@ function BasketMenu() {
                   </div>
                   <div className={Styles.basketItem__sideRight}>
                     <h2>{price * qty} Kr</h2>
-                    <input className={Styles.input__qty} type="number" value={item.qty} onChange={(e) => onChangeItemQty(e, id)} />
+                    <input className={Styles.input__qty} type="number" max="10" min="1" value={item.qty} onChange={(e) => onChangeItemQty(e, id)} />
                     <button className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(id)}>
                       <DeleteRoundedIcon />
                     </button>
@@ -59,6 +61,11 @@ function BasketMenu() {
               );
             })}
           </ul>
+        </div>
+      )}
+      {basketList.length && (
+        <div className={Styles.totalContainer}>
+          <TotalSection />
         </div>
       )}
     </motion.div>

@@ -22,7 +22,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       title: "Big Mac",
       price: 69,
       image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
-      qty: 3,
+      qty: 4,
     },
     {
       id: 2,
@@ -31,7 +31,21 @@ function GlobalContextProvider({ children }: globalContextProps) {
       image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Double-Big-Mac.jpg",
       qty: 1,
     },
+    {
+      id: 3,
+      title: "Mac double cheese",
+      price: 99,
+      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
+      qty: 1,
+    },
   ]);
+
+  const [receipt, setReceipt] = useState({
+    total: 0,
+    subTotal: 0,
+    deliveryFees: 25,
+    taxAndFees: 0,
+  });
 
   //**Event State Management *///////////////////////////
   const [eventToggles, setEventToggles] = useState({
@@ -122,11 +136,13 @@ function GlobalContextProvider({ children }: globalContextProps) {
         fullMenuListData,
         menuLists,
         basketList,
+        receipt,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
         setFullMenuListData,
         setBasketList,
+        setReceipt,
       }}
     >
       {children}

@@ -177,8 +177,9 @@ h2,
 h3,
 h4 {
   font-family: var(--font-family-bold);
-  letter-spacing: -1.2px;
+  letter-spacing: -1px;
   line-height: 1;
+  transform: translateY(2px);
 }
 a {
   letter-spacing: -0.6px;

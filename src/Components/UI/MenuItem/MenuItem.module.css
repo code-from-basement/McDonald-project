@@ -61,6 +61,7 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: var(--spacing-sm);
+  z-index: 200;
 }
 .header__btn h2 {
   color: var(--color-secondary-900);
@@ -98,7 +99,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateY(-1rem);
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .menuItem__footer {
@@ -109,7 +110,7 @@
   justify-content: space-between;
   padding: var(--spacing-md);
   transform: translateY(-1rem);
-  /* background-color: var(--color-gray-100); */
+  border: 1px solid var(--color-gray-100);
   border-radius: var(--border-radius-lg);
 }
 

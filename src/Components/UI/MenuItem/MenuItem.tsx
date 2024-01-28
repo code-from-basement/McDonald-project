@@ -1,41 +1,47 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon } from "./../IconsLibrary/IconsLibrary";
-import AddToOverlay from "./AddToOverlay/AddToOverlay";
 import Styles from "./MenuItem.module.css";
-import { Block } from "@mui/icons-material";
+import { AddRoundedIcon, RemoveRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, FavoriteBorderRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 
 function MenuItem({ item }: any) {
-  const [isFavorite, setIsFavorite] = useState(false);
-  const [showAddonOverlay, setShowAddonOverlay] = useState(false);
   const { title, price, image, id } = item;
+  const titleMod = title.replace("®", "");
+  console.log(titleMod);
 
-  const FavoriteToggle = () => {
-    setIsFavorite(!isFavorite);
-  };
-
-  const onClickShowAddOnOverlay = (e) => {
-    setShowAddonOverlay(!showAddonOverlay);
-  };
   return (
-    <motion.div className={Styles.menuItem} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
-      <div className={Styles.addToOverlay}>{showAddonOverlay && <AddToOverlay item={item} />}</div>
-      <div className={Styles.menuItem__card} onClick={(e) => onClickShowAddOnOverlay(e)} title={title}>
+    <div>
+      <div className={Styles.menuItem}>
         <div className={Styles.menuItem__header}>
-          <button>
-            <InfoOutlinedIcon />
-          </button>
-          <button onClick={FavoriteToggle}>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
+          <div className={Styles.header__title}>
+            <h2>{title}</h2>
+          </div>
+          <div className={Styles.header__btn}>
+            <button>
+              <FavoriteBorderRoundedIcon />
+            </button>
+            <button>
+              <InfoOutlinedIcon />
+            </button>
+          </div>
         </div>
-        <div className={Styles.menuItem__body}>
-          <img className={Styles.menuItem__image} src={image} alt={title} />
-        </div>
+        <div className={Styles.menuItem__body} style={{ backgroundImage: `url(${image})` }}></div>
         <div className={Styles.menuItem__footer}>
-          <h1 className={Styles.menuItem__title}>{title}</h1>
-          <h2 className={Styles.menuItem__price}>{price}:-</h2>
+          <div className={Styles.qtySection}>
+            <button>
+              <RemoveRoundedIcon />
+            </button>
+            <input type="number" max="2" />
+            <button>
+              <AddRoundedIcon />
+            </button>
+          </div>
+          <div className={Styles.addBtn}>
+            <button>
+              <AddRoundedIcon />
+            </button>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

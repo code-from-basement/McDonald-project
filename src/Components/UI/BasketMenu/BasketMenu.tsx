@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { basketMenuAnimationStyles } from "../Animation/AnimationStyles";
 import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/IconsLibrary";
 import Styles from "./BasketMenu.module.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
-import { useEffect, useState } from "react";
 import TotalSection from "./TotalSection/TotalSection";
 
 function BasketMenu() {

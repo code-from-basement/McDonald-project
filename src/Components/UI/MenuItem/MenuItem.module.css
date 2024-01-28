@@ -66,6 +66,7 @@
   color: var(--color-secondary-900);
   font-size: var(--font-size-lg);
   transform: translateX(12px);
+  margin-bottom: var(--spacing-sm);
 }
 .header__btn button {
   z-index: var(--z-index-300);
@@ -162,26 +163,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4.2rem;
   width: var(--icon-size-48);
   height: var(--icon-size-48);
   padding: var(--spacing-md);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);
   border-radius: var(--border-radius-circle);
-  background-color: var(--color-gray-100);
+  background-color: var(--color-primary-900);
 }
 .addBtn button:hover {
-  background-color: var(--color-tertiary-100);
+  background-color: var(--color-secondary-900);
 }
 
 .addBtn button svg {
   font-size: var(--icon-size-48);
-  color: var(--color-gray-800);
+  color: var(--color-gray-900);
   transition: all 0.2s ease-in-out;
 }
 
 .addBtn button:hover svg {
-  color: var(--color-tertiary-900);
-  transform: scale(1.1);
+  color: var(--color-primary-700);
 }

@@ -17,6 +17,7 @@ function MenuItem({ item }: any) {
             </p>
           </div>
           <div className={Styles.header__btn}>
+            <h2>{price}Kr</h2>
             <button>
               <FavoriteBorderRoundedIcon />
             </button>

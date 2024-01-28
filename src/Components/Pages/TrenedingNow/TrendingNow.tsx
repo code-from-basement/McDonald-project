@@ -10,9 +10,13 @@ import confettiImg from "../../../assets/Image/Trending/otherPic/pieces4.svg"
 import { NavigateNextRoundedIcon } from '../../UI/IconsLibrary/IconsLibrary'
 import { ButtonPrimary } from '../../UI/Buttons/Buttons'
 import {motion} from "framer-motion"
+import Confetti from 'react-confetti'
+import useWindowSize from 'react-use/lib/useWindowSize'; 
 
 
 function TrendingNow() {
+  const { width, height }= useWindowSize();
+
   return (
     <div className={Styles.trendingNow}>
       <h1>Trending Now</h1>
@@ -34,6 +38,9 @@ function TrendingNow() {
         </div>        
       </div>
       <div className={Styles.familyMenuContainer}>
+        <Confetti width={width} height={height} numberOfPieces={190} tweenDuration={9000}
+          colors={["#ffbc03","#ffd76a","#ffebb4","#ba2318","#f8d0cd","#f0908a","#7abf95","#c6e4d1","#e33225","#fff3d2","#fdefee","#ffcb3d"]}
+          gravity={0.09} style={{position: 'absolute', top:1720, left: 0}}  />
         <h2>Family menu</h2>
         <img src={familyMenuImg} alt='mac box food'/>
         <h3>Happy Meal® menu</h3>

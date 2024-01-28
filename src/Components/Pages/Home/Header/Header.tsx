@@ -1,7 +1,7 @@
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Styles from "./Header.module.css";
 import { NavigateNextRoundedIcon } from "./../../../UI/IconsLibrary/IconsLibrary";
+import Styles from "./Header.module.css";
 
 // Import css style for swiper components
 
@@ -34,7 +34,9 @@ function Header() {
                 <h1 className={Styles.teaserBox__title}>Whack-a-Mac!</h1>
               </div>
               <div className={Styles.teaserBox__body} data-swiper-parallax="100">
-                <p className={Styles.teaserBox__content}>Here’s your chance to win delicious new offers! Pick up your hammer to play and enjoy the crazy deals.</p>
+                <p className={Styles.teaserBox__content}>
+                  Here’s your chance to win delicious new offers! Pick up your hammer to play and enjoy the crazy deals.
+                </p>
               </div>
               <div className={Styles.teaserBox__footer}>
                 <ButtonPrimary type="" onClick={() => navigate("aboutourfood")}>
@@ -50,7 +52,9 @@ function Header() {
                 <h1 className={Styles.teaserBox__title}>Just tap the McDonald’s App!</h1>
               </div>
               <div className={Styles.teaserBox__body}>
-                <p className={Styles.teaserBox__content}>With every order, earn rewards points! Stack them up and redeem them on exclusive rewards!</p>
+                <p className={Styles.teaserBox__content}>
+                  With every order, earn rewards points! Stack them up and redeem them on exclusive rewards!
+                </p>
               </div>
               <div className={Styles.teaserBox__footer}>
                 <ButtonPrimary type="" onClick={() => navigate("trendingnow")}>

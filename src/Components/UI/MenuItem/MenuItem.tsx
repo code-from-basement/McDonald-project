@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
+import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
-import { AddRoundedIcon, RemoveRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, FavoriteBorderRoundedIcon } from "./../IconsLibrary/IconsLibrary";
-import { NavLink } from "react-router-dom";
 
 function MenuItem({ item }: any) {
-  const { title, price, image, id } = item;
+  const { title, price, image, id, nutrition } = item;
   const titleMod = title.replace("®", "");
   console.log(titleMod);
 
@@ -14,6 +12,9 @@ function MenuItem({ item }: any) {
         <div className={Styles.menuItem__header}>
           <div className={Styles.header__title}>
             <h2>{title}</h2>
+            <p>
+              {nutrition.calories} kj - {nutrition.fat}g fat
+            </p>
           </div>
           <div className={Styles.header__btn}>
             <button>

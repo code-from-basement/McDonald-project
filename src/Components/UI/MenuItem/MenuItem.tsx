@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Styles from "./MenuItem.module.css";
 import { AddRoundedIcon, RemoveRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, FavoriteBorderRoundedIcon } from "./../IconsLibrary/IconsLibrary";
+import { NavLink } from "react-router-dom";
 
 function MenuItem({ item }: any) {
   const { title, price, image, id } = item;

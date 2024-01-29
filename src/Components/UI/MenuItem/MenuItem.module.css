@@ -117,7 +117,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-md);
-  transform: translateY(-0rem);
+  transform: translateY(0rem);
   border: 1px solid var(--color-gray-100);
   border-radius: var(--border-radius-lg);
   backdrop-filter: blur(10px);

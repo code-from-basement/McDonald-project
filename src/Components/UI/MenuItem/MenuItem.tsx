@@ -2,7 +2,8 @@ import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoun
 import Styles from "./MenuItem.module.css";
 
 function MenuItem({ item }: any) {
-  const { title, price, image, id, nutrition, category } = item;
+  const { title, price, image, id, nutrition } = item;
+
   const titleMod = title.replace("®", "");
   console.log(titleMod);
 

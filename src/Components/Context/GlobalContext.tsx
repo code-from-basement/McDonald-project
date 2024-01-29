@@ -89,6 +89,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       } finally {
         setTimeout(() => {
           setIsLoading(false);
+          console.log("full menu fetched");
         }, 1000);
       }
     } else if (address === "megaMenuItem") {

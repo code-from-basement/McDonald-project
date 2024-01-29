@@ -21,6 +21,7 @@ import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPa
 import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
+import ItemPage from "./Components/UI/ItemPage/ItemPage";
 
 function App() {
   const { eventToggles, fetchAllMenuData }: any = useGlobalContext();
@@ -52,6 +53,7 @@ function App() {
             <Route path="salad-menu" element={<SaladMenu />} />
             <Route path="dips-menu" element={<DipsMenu />} />
           </Route>
+          <Route path="/:title" element={<ItemPage />} />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />
           <Route path="ourmenu" element={<OurMenu />} />
           <Route path="aboutourfood" element={<AboutOurFood />} />

@@ -25,20 +25,22 @@
   transition: all 0.2s;
 }
 .menuItem:hover::after {
-  height: calc(100% - 13rem);
-  width: 100%;
-  border-radius: 2.4rem 50rem 2.4rem 2.4rem / 2.4rem 50rem 2.4rem 2.4rem;
+  border-radius: 2.4rem 2.4rem 2.4rem 2.4rem;
+  background-color: var(--color-primary-900);
 }
-
+.menuItem:hover .menuItem__footer {
+  border: 1px solid var(--color-primary-200);
+  box-shadow: 0 -0.2rem 0.1rem var(--color-primary-400);
+}
 /* -------------------------------- */
 .menuItem__header {
+  z-index: var(--z-index-300);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--spacing-md);
   width: 100%;
   height: 10rem;
-  z-index: var(--z-index-200);
   padding: var(--spacing-md);
 }
 
@@ -68,9 +70,12 @@
   font-size: var(--font-size-lg);
   transform: translateX(12px);
   margin-bottom: var(--spacing-sm);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header__btn button {
-  z-index: var(--z-index-300);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,25 +98,27 @@
 .menuItem__body {
   width: 80%;
   height: 28rem;
-  z-index: var(--z-index-300);
+  z-index: var(--z-index-200);
   position: relative;
   background-position: 100% 90%;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateY(-1rem);
+  transform: translateY(-3rem);
   transition: all 0.2s;
 }
 
 .menuItem__footer {
   width: 100%;
-  z-index: var(--z-index-200);
+  z-index: var(--z-index-300);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-md);
-  transform: translateY(-1rem);
+  transform: translateY(-3rem);
   border: 1px solid var(--color-gray-100);
   border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s;
 }
 
 .qtySection {
@@ -164,8 +171,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--icon-size-48);
-  height: var(--icon-size-48);
+  width: var(--icon-size-40);
+  height: var(--icon-size-40);
   padding: var(--spacing-md);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);

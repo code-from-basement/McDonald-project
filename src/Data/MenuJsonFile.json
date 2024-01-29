@@ -1,4 +1,62 @@
 {
+  "megaMenuItem": [
+    {
+      "id": 0,
+      "title": "Hamburgers",
+      "description": "Our popular Cheeseburger with 100% pure beef",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Beef_2340x640.png?alt=media&token=bad67837-c49b-41cd-8810-a7fdcffad8d2",
+      "category": "hamburger",
+      "startPrice": 59
+    },
+    {
+      "id": 1,
+      "title": "Chicken & Fish",
+      "description": "At McDonald's you will find wonderfully tasty chicken burgers",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Chicken_2340x640_2023-0926.png?alt=media&token=212e71e4-1273-497e-a640-b13b2cd63a6b",
+      "category": "chicken&fish",
+      "startPrice": 49
+    },
+    {
+      "id": 2,
+      "title": "Breakfast",
+      "description": "Every morning we serve a quick and tasty breakfast until 10 in most of our restaurants.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Breakfast_2340x640.png?alt=media&token=09232657-ea71-41da-8fb5-3b9b3f3c1e5a",
+      "category": "breakfast",
+      "startPrice": 29
+    },
+    {
+      "id": 3,
+      "title": "Snacks & Sides",
+      "description": "Snacks are the treats that make life worth living.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_sides_1170x320_0.png?alt=media&token=ececed6e-ae79-4aa1-9ccc-8493a86cf927",
+      "category": "snacks&sides",
+      "startPrice": 29
+    },
+    {
+      "id": 4,
+      "title": "Drinks",
+      "description": "Whether you want to quench your thirst or indulge yourself, we have a drink for you.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Drinks_2340x640-0516.png?alt=media&token=d1261595-6c17-4951-bf22-11ff99265823",
+      "category": "drink",
+      "startPrice": 25
+    },
+    {
+      "id": 5,
+      "title": "Salads",
+      "description": "Satisfying and full of flavor. Made with nature's freshest ingredients.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Salads-20230912.png?alt=media&token=c0a0fdf3-2eed-4284-9318-467dc3062ad3",
+      "category": "salad",
+      "startPrice": 49
+    },
+    {
+      "id": 6,
+      "title": "Dips",
+      "description": "Our dips are the perfect complement to your meal.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/fir-1-c7f12.appspot.com/o/megamenuImage%2FMCD_Category_Condiments_1170x320_0.png?alt=media&token=d0f57bec-f19d-40e5-b4f6-07e966bfff8f",
+      "category": "dip",
+      "startPrice": 10
+    }
+  ],
   "image": [
     {
       "id": 0,

@@ -25,8 +25,13 @@ import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 function App() {
   const { eventToggles, fetchAllMenuData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow } = eventToggles;
+
   useEffect(() => {
     fetchAllMenuData("menu");
+  }, []);
+
+  useEffect(() => {
+    fetchAllMenuData("megaMenuItem");
   }, []);
 
   return (

@@ -63,6 +63,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
   //*Fetching data from Firebase Realtime Database
 
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
+  const [megaMenuItemData, setMegaMenuItemData] = useState([]);
 
   const [menuLists, setMenuLists] = useState({
     hamburger: [],
@@ -76,18 +77,33 @@ function GlobalContextProvider({ children }: globalContextProps) {
   });
 
   const fetchAllMenuData = async (address: string) => {
-    try {
-      setIsLoading(true);
-      const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
-      const data = await res.json();
-      setFullMenuListData(data);
-    } catch (error) {
-      setIsLoading(false);
-      alert(error);
-    } finally {
-      setTimeout(() => {
+    if (address === "menu") {
+      try {
+        setIsLoading(true);
+        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
+        const data = await res.json();
+        setFullMenuListData(data);
+      } catch (error) {
         setIsLoading(false);
-      }, 1000);
+        alert(error);
+      } finally {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
+      }
+    } else if (address === "megaMenuItem") {
+      try {
+        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
+        const data = await res.json();
+        setMegaMenuItemData(data);
+      } catch (error) {
+        setIsLoading(false);
+        alert(error);
+      } finally {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
+      }
     }
   };
 
@@ -124,7 +140,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
       });
     }
   }, [fullMenuListData]);
-  console.log(menuLists);
 
   //----------------------------------------------------//
 
@@ -134,6 +149,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         eventToggles,
         isLoading,
         fullMenuListData,
+        megaMenuItemData,
         menuLists,
         basketList,
         receipt,
@@ -141,6 +157,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         fetchAllMenuData,
         setIsLoading,
         setFullMenuListData,
+        setMegaMenuItemData,
         setBasketList,
         setReceipt,
       }}

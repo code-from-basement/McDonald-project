@@ -12,17 +12,17 @@ function ItemPage() {
   const ingredientString = selectedProduct?.ingredient.toString().replace(/,/g, ", ") + ".";
 
   // nutrition list component , extract the object and map it to a list
-  const nutritionList =
-    fullMenuListData &&
-    Object.entries(selectedProduct?.nutrition).map((item, index) => {
-      return (
-        <li className={Styles.listItem} key={index}>
-          <h2>
-            {item[0].charAt(0).toUpperCase() + item[0].slice(1).toLowerCase()}: {item[1]}
-          </h2>
-        </li>
-      );
-    });
+  // const nutritionList =
+  //   fullMenuListData &&
+  //   Object.entries(selectedProduct?.nutrition).map((item, index) => {
+  //     return (
+  //       <li className={Styles.listItem} key={index}>
+  //         <h2>
+  //           {item[0].charAt(0).toUpperCase() + item[0].slice(1).toLowerCase()}: {item[1]}
+  //         </h2>
+  //       </li>
+  //     );
+  //   });
 
   // To relocate to the top of the page when the page is loaded
   useEffect(() => {
@@ -69,7 +69,12 @@ function ItemPage() {
           <div className={Styles.nutrition__card}>
             <h2 className={Styles.nutrition__title}>Nutrition:</h2>
             <div className={Styles.nutrition__list}>
-              <ul className={Styles.list}>{nutritionList}</ul>
+              <ul className={Styles.list}>
+                <h2>item</h2>
+                <h2>item</h2>
+                <h2>item</h2>
+                {}
+              </ul>
             </div>
           </div>
         </section>

@@ -104,9 +104,9 @@
   --icon-size-16: 1.6rem;
 
   /* border */
-  --border-radius-sm: 0.8rem;
-  --border-radius-md: 1.1rem;
-  --border-radius-lg: 2.4rem;
+  --border-radius-sm: 0.6rem;
+  --border-radius-md: 1.3rem;
+  --border-radius-lg: 2.8rem;
   --border-radius-circle: 999px;
 
   /* box-shadow */

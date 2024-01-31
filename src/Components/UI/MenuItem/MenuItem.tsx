@@ -5,7 +5,6 @@ import Styles from "./MenuItem.module.css";
 function MenuItem({ item }: any) {
   const navigate = useNavigate();
   const { title, price, image, id, nutrition } = item;
-  const titleMod = title.replace("®", "");
 
   const onClickNavigation = () => {
     navigate(`/${title}`);

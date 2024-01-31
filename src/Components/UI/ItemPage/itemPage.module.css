@@ -45,11 +45,11 @@
   max-width: 110rem;
   height: 70rem;
   background-color: transparent;
-  backdrop-filter: blur(90px);
+  backdrop-filter: blur(110px);
   z-index: var(--z-index-300);
   border-radius: var(--border-radius-lg);
   border-left: 2px solid #ffffff55;
-  border-top: 2px solid #ffffff35;
+  border-top: 3px solid #ffffff35;
   box-shadow: var(--box-shadow);
   overflow: hidden;
   display: flex;
@@ -144,13 +144,12 @@
   font-size: var(--font-size-md);
   letter-spacing: 0;
   color: var(--color-gray-700);
-  padding: 1rem 0;
+  padding-bottom: 2rem;
 }
 .nutrition__card {
   width: 100%;
   height: min-content;
   padding: var(--spacing-md);
-  margin-top: var(--spacing-md);
 }
 
 .nutrition__title {

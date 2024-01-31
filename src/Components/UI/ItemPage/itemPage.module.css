@@ -112,7 +112,7 @@
 .item__price {
   width: 100%;
   font-size: var(--font-size-xxl);
-  color: var(--color-tertiary-700);
+  color: var(--color-secondary-800);
   margin-bottom: var(--spacing-md);
 }
 .item__description {

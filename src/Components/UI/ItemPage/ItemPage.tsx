@@ -44,8 +44,10 @@ function ItemPage() {
         </p>
       </div>
       <section className={Styles.mainSection}>
-        {isLoading && <h1>Loading...</h1>}
         <section className={Styles.section__img}>
+          <div className={Styles.category}>
+            <h2>{selectedProduct?.category}</h2>
+          </div>
           <img src={selectedProduct?.image} alt="" />
         </section>
         <section className={Styles.section__content}>

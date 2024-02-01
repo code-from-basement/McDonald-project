@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 35vw;
+  width: 30vw;
   background-color: var(--color-primary-800);
   height: 100%;
   z-index: var(--z-index-100);
@@ -20,18 +20,26 @@
 
 .tag {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: var(--icon-size-64);
+  padding: var(--spacing-sm);
+  gap: var(--spacing-sm);
+  color: var(--color-primary-700);
+  width: 14vw;
   height: var(--icon-size-64);
   background-color: var(--color-tertiary-900);
   position: absolute;
   bottom: 0;
-  left: 2rem;
+  left: 1vw;
   border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
-
+  transition: all 0.3s ease-in-out;
   z-index: var(--z-index-200);
+  overflow: hidden;
 }
+.tag:hover {
+  height: 9.8rem;
+}
+
 .tag img {
   width: var(--icon-size-48);
   height: auto;
@@ -43,7 +51,7 @@
   width: 100%;
   min-width: 50rem;
   max-width: 110rem;
-  height: 70rem;
+  height: 72rem;
   background-color: transparent;
   backdrop-filter: blur(110px);
   z-index: var(--z-index-300);
@@ -93,6 +101,29 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: var(--spacing-md);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+}
+.section__img::after {
+  width: 50%;
+  height: 8rem;
+  content: "";
+  bottom: 0;
+  right: 0;
+  z-index: 400;
+  background-image: linear-gradient(180deg, transparent 0%, #ffffff 100%);
+  position: absolute;
+}
+.section__img::before {
+  width: 50%;
+  height: 3rem;
+  content: "";
+  top: 0;
+  right: 0;
+  z-index: 400;
+  background-image: linear-gradient(0deg, transparent 0%, #ffffff 100%);
+  position: absolute;
 }
 
 .item__card {
@@ -123,9 +154,9 @@
   color: var(--color-gray-700);
   border-bottom: 3px solid var(--color-gray-100);
   padding: 1rem 0;
+  line-height: 1.2;
 }
 .ingredient__card {
-  /* background-color: var(--color-gray-100); */
   width: 100%;
   height: min-content;
   padding: 0 var(--spacing-md);
@@ -145,6 +176,7 @@
   letter-spacing: 0;
   color: var(--color-gray-700);
   padding-bottom: 2rem;
+  line-height: 1.2;
 }
 .nutrition__card {
   width: 100%;
@@ -155,7 +187,7 @@
 .nutrition__title {
   font-family: var(--font-family-bold);
   font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   color: var(--color-gray-800);
 }
 .nutrition__list {
@@ -170,11 +202,33 @@
 }
 
 .listItem {
-  font-family: var(--font-family-regular);
+  /* font-family: var(--font-family-regular); */
   background-color: var(--color-tertiary-100);
   color: var(--color-tertiary-900);
   padding: var(--spacing-sm);
-  border-radius: var(--border-radius-circle);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: var(--color-tertiary-800);
+  transition: all 0.3s ease-in-out;
+}
+.listItem:hover {
+  background-color: var(--color-tertiary-200);
+}
+.list__item__key {
+  font-weight: var(--font-weight-black);
+  text-transform: capitalize;
+  font-size: var(--font-size-sm);
+  transform: translateY(3px);
+}
+
+.list__item__value {
+  font-family: var(--font-family-regular);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-sm);
+  transform: translateY(3px);
 }
 
 /* TAG CALORY */

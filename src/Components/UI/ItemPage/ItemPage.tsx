@@ -1,28 +1,15 @@
-import { memo, useEffect, useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
 import Styles from "./itemPage.module.css";
-import { selectClasses } from "@mui/material";
 
 function ItemPage() {
   const { fullMenuListData, isLoading, setIsLoading, fetchAllMenuData } = useGlobalContext();
   const [selectedProduct, setSelectedProduct] = useState();
+  const [nutritionListComp, setNutritionListComp] = useState<[string, unknown][]>([]);
   const { title } = useParams();
   const ingredientString = selectedProduct?.ingredient.toString().replace(/,/g, ", ") + ".";
-
-  // nutrition list component , extract the object and map it to a list
-  // const nutritionList =
-  //   fullMenuListData &&
-  //   Object.entries(selectedProduct?.nutrition).map((item, index) => {
-  //     return (
-  //       <li className={Styles.listItem} key={index}>
-  //         <h2>
-  //           {item[0].charAt(0).toUpperCase() + item[0].slice(1).toLowerCase()}: {item[1]}
-  //         </h2>
-  //       </li>
-  //     );
-  //   });
 
   // To relocate to the top of the page when the page is loaded
   useEffect(() => {
@@ -35,8 +22,12 @@ function ItemPage() {
       fetchAllMenuData("menu");
     } else if (fullMenuListData) {
       setIsLoading(true);
-      const searchedProduct = fullMenuListData.find((item) => item.title === title);
+      const searchedProduct = fullMenuListData.find((item: any) => item.title === title);
       setSelectedProduct(searchedProduct);
+      if (searchedProduct) {
+        const nutritionListArray = Object.entries(searchedProduct.nutrition);
+        setNutritionListComp(nutritionListArray);
+      }
       setIsLoading(false);
     } else {
       console.log("no data");
@@ -47,6 +38,10 @@ function ItemPage() {
     <div className={Styles.itemPage}>
       <div className={Styles.tag}>
         <img src={macIcon} alt="icon of mac donald" />
+        <p>
+          MahyarNafisi and Roudabeh Adnani 2024. This website is copyrighted for portfolio and educational use only. Unauthorized reproduction or
+          distribution is prohibited. For inquiries, contact. mahyar.nafisi@gmail.com.
+        </p>
       </div>
       <section className={Styles.mainSection}>
         {isLoading && <h1>Loading...</h1>}
@@ -70,10 +65,13 @@ function ItemPage() {
             <h2 className={Styles.nutrition__title}>Nutrition:</h2>
             <div className={Styles.nutrition__list}>
               <ul className={Styles.list}>
-                <h2>item</h2>
-                <h2>item</h2>
-                <h2>item</h2>
-                {}
+                {nutritionListComp.map((item: any, index: number) => {
+                  return (
+                    <li className={Styles.listItem} key={index}>
+                      <span className={Styles.list__item__key}>{item[0]}</span> : <span className={Styles.list__item__value}>{item[1]}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

@@ -25,7 +25,7 @@ function MenuItem({ item }: any) {
             <button>
               <FavoriteBorderRoundedIcon />
             </button>
-            <button onClick={onClickNavigation}>
+            <button className={Styles.info__btn} onClick={onClickNavigation}>
               <InfoOutlinedIcon />
             </button>
           </div>

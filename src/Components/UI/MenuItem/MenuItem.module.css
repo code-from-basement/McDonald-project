@@ -66,6 +66,7 @@
   gap: var(--spacing-sm);
   z-index: 200;
 }
+
 .header__btn h2 {
   color: var(--color-secondary-900);
   font-size: var(--font-size-lg);

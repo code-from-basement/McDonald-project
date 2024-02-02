@@ -27,7 +27,6 @@ function MenuItem({ item }: any) {
   const onClickNavigation = () => {
     navigate(`/${title}`);
   };
-
   const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
 
   return (

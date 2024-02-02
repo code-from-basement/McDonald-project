@@ -28,28 +28,7 @@ function MenuItem({ item }: any) {
     navigate(`/${title}`);
   };
 
-  const [{ qty }, dispatch] = useReducer(reducer, initialState);
-  const onClickAddItemHandler = () => {
-    if (basketList.length === 0) {
-      setBasketList((prevData: any) => {
-        return [...prevData, { id, image, title, price, qty }];
-      });
-    } else {
-      const isItemInBasket = basketList.find((item: any) => item.title === title);
-      if (!isItemInBasket) {
-        setBasketList((prevData: any) => {
-          return [...prevData, { id, image, title, price, qty }];
-        });
-      } else if(isItemInBasket) {
-        const getItemQty = basketList.filter((item)=> item.title === title);
-        console.log(getItemQty,"getItemQty")
-        setBasketList((prevData: any)=>{
-          return prevData.map((item:any)=>{return item.title === getItemQty[0].title ? {...item, qty:item.qty + qty} : item})
-        });
-        
-      }
-    }
-  };
+  const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
 
   
   return (
@@ -82,8 +61,8 @@ function MenuItem({ item }: any) {
             >
               <RemoveRoundedIcon />
             </button>
-            <input type="number" value={qty} onChange={()=>{}} />
-            <button onClick={() => dispatch({ type: "increment", payload: qty + 1 })}>
+            <input type="number" min="1" max="10" value={qty} />
+            <button onClick={() => dispatch({ type: "increment", payload: qty + 1 > 10 ? 10 : qty + 1 })}>
               <AddRoundedIcon />
             </button>
           </div>

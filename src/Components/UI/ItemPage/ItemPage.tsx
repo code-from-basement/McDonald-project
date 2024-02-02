@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
@@ -33,6 +33,7 @@ function ItemPage() {
       console.log("no data");
     }
   }, [fullMenuListData]);
+  console.log(nutritionListComp);
 
   return (
     <div className={Styles.itemPage}>
@@ -83,4 +84,4 @@ function ItemPage() {
   );
 }
 
-export default ItemPage;
+export default memo(ItemPage);

@@ -27,7 +27,7 @@ function MenuItem({ item }: any) {
     navigate(`/${title}`);
   };
 
-  const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
+  const [{ qty }, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
@@ -59,7 +59,7 @@ function MenuItem({ item }: any) {
             >
               <RemoveRoundedIcon />
             </button>
-            <input type="number" min="1" max="10" value={qty}  />
+            <input type="number" min="1" max="10" value={qty} />
             <button onClick={() => dispatch({ type: "increment", payload: qty + 1 > 10 ? 10 : qty + 1 })}>
               <AddRoundedIcon />
             </button>

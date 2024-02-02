@@ -51,6 +51,7 @@ function MenuItem({ item }: any) {
     }
   };
 
+  
   return (
     <div>
       <div className={Styles.menuItem}>

@@ -17,27 +17,27 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
   // Basket Data Management
   const [basketList, setBasketList] = useState([
-    {
-      id: 1,
-      title: "Big Mac",
-      price: 69,
-      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
-      qty: 4,
-    },
-    {
-      id: 2,
-      title: "Double Big Mac",
-      price: 89,
-      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Double-Big-Mac.jpg",
-      qty: 1,
-    },
-    {
-      id: 3,
-      title: "Mac double cheese",
-      price: 99,
-      image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
-      qty: 1,
-    },
+    // {
+    //   id: 1,
+    //   title: "Big Mac",
+    //   price: 69,
+    //   image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
+    //   qty: 4,
+    // },
+    // {
+    //   id: 2,
+    //   title: "Double Big Mac",
+    //   price: 89,
+    //   image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Double-Big-Mac.jpg",
+    //   qty: 1,
+    // },
+    // {
+    //   id: 3,
+    //   title: "Mac double cheese",
+    //   price: 99,
+    //   image: "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Big-Mac.jpg",
+    //   qty: 1,
+    // },
   ]);
 
   const [receipt, setReceipt] = useState({

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
 import { useReducer } from "react";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 const initialState = {
   qty: 1,
@@ -10,16 +11,16 @@ const initialState = {
 const reducer = (state: any, action: any) => {
   switch (action.type) {
     case "increment":
-      return { ...state, status: "incremented", qty: action.payload };
+      return { ...state, status: "incremented", qty: action.payload <= 10 ? action.payload : 10 };
     case "decrement":
-      return { ...state, status: "decremented", qty: action.payload };
-
+      return { ...state, status: "decremented", qty: action.payload < 1 ? 1 : action.payload };
     default:
       throw new Error("Function not implemented.");
   }
 };
 
 function MenuItem({ item }: any) {
+  const { setBasketList, basketList }: any = useGlobalContext();
   const navigate = useNavigate();
   const { title, price, image, id, nutrition } = item;
 
@@ -27,7 +28,7 @@ function MenuItem({ item }: any) {
     navigate(`/${title}`);
   };
 
-  const [{ qty }, dispatch] = useReducer(reducer, initialState);
+  const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
@@ -54,7 +55,7 @@ function MenuItem({ item }: any) {
           <div className={Styles.qtySection}>
             <button
               onClick={() => {
-                dispatch({ type: "decrement", payload: qty - 1 <= 1 ? 1 : qty - 1 });
+                dispatch({ type: "decrement", payload: qty - 1 });
               }}
             >
               <RemoveRoundedIcon />
@@ -65,7 +66,7 @@ function MenuItem({ item }: any) {
             </button>
           </div>
           <div className={Styles.addBtn}>
-            <button>
+            <button onClick={onClickAddItemHandler}>
               <AddRoundedIcon />
             </button>
           </div>

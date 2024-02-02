@@ -86,6 +86,10 @@
 
 .basketItem__sideLeft {
   flex: 1;
+ 
+}
+.basketItem__sideLeft img{
+  width: 10rem;
 }
 
 .basketItem__sideRight {

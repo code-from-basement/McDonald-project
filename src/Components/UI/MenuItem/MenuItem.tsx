@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
 import { useReducer } from "react";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 const initialState = {
   qty: 1,
@@ -10,16 +11,16 @@ const initialState = {
 const reducer = (state: any, action: any) => {
   switch (action.type) {
     case "increment":
-      return { ...state, status: "incremented", qty: action.payload };
+      return { ...state, status: "incremented", qty: action.payload <= 10 ? action.payload : 10 };
     case "decrement":
-      return { ...state, status: "decremented", qty: action.payload };
-
+      return { ...state, status: "decremented", qty: action.payload < 1 ? 1 : action.payload };
     default:
       throw new Error("Function not implemented.");
   }
 };
 
 function MenuItem({ item }: any) {
+  const { setBasketList, basketList }: any = useGlobalContext();
   const navigate = useNavigate();
   const { title, price, image, id, nutrition } = item;
 
@@ -27,7 +28,28 @@ function MenuItem({ item }: any) {
     navigate(`/${title}`);
   };
 
-  const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
+  const [{ qty }, dispatch] = useReducer(reducer, initialState);
+  const onClickAddItemHandler = () => {
+    if (basketList.length === 0) {
+      setBasketList((prevData: any) => {
+        return [...prevData, { id, image, title, price, qty }];
+      });
+    } else {
+      const isItemInBasket = basketList.find((item: any) => item.title === title);
+      if (!isItemInBasket) {
+        setBasketList((prevData: any) => {
+          return [...prevData, { id, image, title, price, qty }];
+        });
+      } else if(isItemInBasket) {
+        const getItemQty = basketList.filter((item)=> item.title === title);
+        console.log(getItemQty,"getItemQty")
+        setBasketList((prevData: any)=>{
+          return prevData.map((item:any)=>{return item.title === getItemQty[0].title ? {...item, qty:item.qty + qty} : item})
+        });
+        
+      }
+    }
+  };
 
   return (
     <div>
@@ -54,18 +76,18 @@ function MenuItem({ item }: any) {
           <div className={Styles.qtySection}>
             <button
               onClick={() => {
-                dispatch({ type: "decrement", payload: qty - 1 <= 1 ? 1 : qty - 1 });
+                dispatch({ type: "decrement", payload: qty - 1 });
               }}
             >
               <RemoveRoundedIcon />
             </button>
-            <input type="number" min="1" max="10" value={qty}  />
-            <button onClick={() => dispatch({ type: "increment", payload: qty + 1 > 10 ? 10 : qty + 1 })}>
+            <input type="number" value={qty} onChange={()=>{}} />
+            <button onClick={() => dispatch({ type: "increment", payload: qty + 1 })}>
               <AddRoundedIcon />
             </button>
           </div>
           <div className={Styles.addBtn}>
-            <button>
+            <button onClick={onClickAddItemHandler}>
               <AddRoundedIcon />
             </button>
           </div>

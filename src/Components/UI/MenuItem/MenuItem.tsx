@@ -1,6 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
+import { useReducer } from "react";
+
+const initialState = {
+  qty: 1,
+};
+
+const reducer = (state: any, action: any) => {
+  switch (action.type) {
+    case "increment":
+      return { ...state, status: "incremented", qty: action.payload };
+    case "decrement":
+      return { ...state, status: "decremented", qty: action.payload };
+
+    default:
+      throw new Error("Function not implemented.");
+  }
+};
 
 function MenuItem({ item }: any) {
   const navigate = useNavigate();
@@ -9,6 +26,8 @@ function MenuItem({ item }: any) {
   const onClickNavigation = () => {
     navigate(`/${title}`);
   };
+
+  const [{ qty, isAdded, isRemoved }, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
@@ -33,11 +52,15 @@ function MenuItem({ item }: any) {
         <div className={Styles.menuItem__body} style={{ backgroundImage: `url(${image})` }}></div>
         <div className={Styles.menuItem__footer}>
           <div className={Styles.qtySection}>
-            <button>
+            <button
+              onClick={() => {
+                dispatch({ type: "decrement", payload: qty - 1 <= 1 ? 1 : qty - 1 });
+              }}
+            >
               <RemoveRoundedIcon />
             </button>
-            <input type="number" max="2" />
-            <button>
+            <input type="number" min="1" max="10" value={qty}  />
+            <button onClick={() => dispatch({ type: "increment", payload: qty + 1 > 10 ? 10 : qty + 1 })}>
               <AddRoundedIcon />
             </button>
           </div>

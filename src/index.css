@@ -97,6 +97,7 @@
   --font-family-bold: "Speedee Bold";
 
   /* Icon size */
+  --icon-size-64: 6.4rem;
   --icon-size-48: 4.8rem;
   --icon-size-40: 4rem;
   --icon-size-32: 3.2rem;
@@ -104,13 +105,13 @@
   --icon-size-16: 1.6rem;
 
   /* border */
-  --border-radius-sm: 0.8rem;
-  --border-radius-md: 1.1rem;
-  --border-radius-lg: 2.2rem;
+  --border-radius-sm: 0.6rem;
+  --border-radius-md: 1.3rem;
+  --border-radius-lg: 2.8rem;
   --border-radius-circle: 999px;
 
   /* box-shadow */
-  --box-shadow: 0 1rem 3rem #00000015;
+  --box-shadow: 0 1rem 3rem #00000020;
 
   /* opacity */
   --opacity-0: 0;
@@ -183,6 +184,7 @@ h4 {
   transform: translateY(2px);
 }
 a {
+  text-decoration: none;
   letter-spacing: -0.6px;
   font-family: var(--font-family-bold);
 }

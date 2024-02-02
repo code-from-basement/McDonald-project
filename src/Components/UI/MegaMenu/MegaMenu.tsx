@@ -4,10 +4,18 @@ import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "
 import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./MegaMenu.module.css";
+import MegaMenuItem from "./MegaMenuItem/MegaMenuItem";
+import { useMemo } from "react";
 
 function MegaMenu() {
-  const { eventToggles }: any = useGlobalContext();
+  const { eventToggles, megaMenuItemData }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
+
+  const MenuItem = useMemo(() => {
+    return megaMenuItemData.map((item: any) => {
+      return <MegaMenuItem key={item.id} data={item} />;
+    });
+  }, [megaMenuItemData]);
 
   return (
     <motion.div {...megaMenuAnimationStyles} className={Styles.megaMenu}>
@@ -18,7 +26,7 @@ function MegaMenu() {
           </motion.div>
         )}
       </AnimatePresence>
-      <section className={Styles.foodCategory}>food categories</section>
+      <section className={Styles.foodCategory}>{MenuItem}</section>
       <section className={Styles.menuAds}>menu ads</section>
       <button className={Styles.menuCloser} onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}>
         <KeyboardArrowUpRoundedIcon />

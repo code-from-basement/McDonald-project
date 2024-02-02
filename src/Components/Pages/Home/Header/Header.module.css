@@ -24,8 +24,8 @@
 }
 
 .teaserBox {
-  width: 36rem;
-  height: 30rem;
+  width: 40rem;
+  height: min-content;
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-md);
@@ -50,9 +50,10 @@
   width: 100%;
 }
 .teaserBox__title {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacing-sm);
+  font-family: var(--font-family-bold);
   line-height: 1.2;
   letter-spacing: -2px;
 }
@@ -60,6 +61,8 @@
 .teaserBox__body {
   width: 100%;
   font-size: var(--font-size-md);
+  font-family: var(--font-family-regular);
+  margin-bottom: var(--spacing-lg);
 }
 .teaserBox__content {
 }

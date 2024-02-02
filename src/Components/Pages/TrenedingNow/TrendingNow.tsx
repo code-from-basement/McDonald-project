@@ -14,8 +14,12 @@ import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'; 
 
 
+
+
 function TrendingNow() {
   const { width, height }= useWindowSize();
+  const top = width - 180; 
+  console.log("this is width", width, "this is top", top, "this is height", height)
 
   return (
     <div className={Styles.trendingNow}>
@@ -38,9 +42,20 @@ function TrendingNow() {
         </div>        
       </div>
       <div className={Styles.familyMenuContainer}>
-        <Confetti width={width} height={height} numberOfPieces={190} tweenDuration={9000}
-          colors={["#ffbc03","#ffd76a","#ffebb4","#ba2318","#f8d0cd","#f0908a","#7abf95","#c6e4d1","#e33225","#fff3d2","#fdefee","#ffcb3d"]}
-          gravity={0.09} style={{position: 'absolute', top:1720, left: 0}}  />
+        <Confetti width={width} height={height} numberOfPieces={60} tweenDuration={5000}
+        drawShape={ctx => {
+          ctx.beginPath()
+          for(let i = 0; i < 30; i++) {
+            const angle = 0.35 * i
+            const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+            const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+            ctx.lineTo(x, y)
+          }
+          ctx.stroke()
+          ctx.closePath()
+        }}
+          colors={["#ffbc03","#ba2318","#f0908a","#7abf95","#c6e4d1","#e33225"]}
+          gravity={0.09} style={{position: 'absolute', top:top , left: 0}}  />
         <h2>Family menu</h2>
         <img src={familyMenuImg} alt='mac box food'/>
         <h3>Happy Meal® menu</h3>

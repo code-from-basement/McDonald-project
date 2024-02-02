@@ -22,32 +22,38 @@
   height: 100%;
   gap: 2rem;
   margin: 6rem var(--spacing-xl) 15rem var(--spacing-xl); 
+  padding:var(--padding-container-lg) ;
 
 }
 
 .detailsContainer_counter{
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 30%;
-  /* border: 1px solid red; */
-}
+  height: 100%;
+  width: 30%; 
+} 
 .counter{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  font-size: var(--font-size-xxl);
+  justify-content: flex-start;
+  min-width: 30rem;
+  width: 100%;
+  /* gap: 5rem; */
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-light);
   margin-top: 3rem;
 }
 .counter_items{
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; 
 }
+
 .counter_items p{
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-black);
@@ -55,18 +61,17 @@
   
 }
 
-
 .detailsContainer_counter h2{
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
 }
 .detailsContainer_content{
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   width: 30%;
-  /* border: 1px solid blue; */
   /* padding-top: 2rem; */
 }
 .detailsContainer_content p{
@@ -97,7 +102,6 @@
   width: 100%;
   /* height: 96vh; */
   gap: var(--spacing-xl);
-  /* border: 3px solid yellow; */
 }
 .imageContainerOdd{
   display: flex;
@@ -105,14 +109,12 @@
   justify-content: flex-end;
   width: 50%;
   height: 100%;
-  /* background-color: blue; */
   margin-top: 5rem;
 }
 .imageContainerOdd img{
   display: flex;
   align-items: center;
   width: 80%;
-  /* background-color: green;   */
 }
 .cardContainerOdd{
   display: flex;
@@ -120,7 +122,6 @@
   justify-content: flex-start;
   width: 50%;
   height: 100%;
-  /* background-color: red; */
 }
 .card{
   display: flex;
@@ -138,7 +139,6 @@
   justify-content: flex-start;
   width: 70%;
   height: 40rem;
-  /* background-color: greenyellow; */
   flex-direction: column;
   gap: 3rem;
 }
@@ -159,7 +159,6 @@
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  /* background-color: deeppink; */
 }
 .card_content_link a{
   text-decoration: none;

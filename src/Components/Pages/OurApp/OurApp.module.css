@@ -1,0 +1,247 @@
+.ourApp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.joinOurCrew{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 45rem;
+    /* background-color: aqua; */
+    margin-top: 15rem;
+}
+.joinOurCrew_leftContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20rem;
+    /* background-color: beige; */
+    height: 40rem;
+    gap: 2rem;
+}
+.joinOurCrew_leftContainer h2{
+    font-size: 8.5rem;
+    font-weight: var(--font-weight-black);
+    letter-spacing: -2px;
+    /* background-color: red; */
+    width: fit-content;
+    padding:2rem;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.joinOurCrew_leftContainer h2::before{
+    content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: var(--color-primary-shade);
+ transform: translateY(-100%);
+ transition: all .3s;
+ z-index: -1;
+}
+.joinOurCrew_leftContainer h2:hover::before{
+    transform: translateX(0);
+
+}
+.joinOurCrew_leftContainer h4{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    font-family: var(--font-family-regular);
+    padding-top: 3rem;
+    
+}
+.joinOurCrew_rightContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100rem;
+    margin-right: 20rem;
+    height: 41rem;
+    /* background-color: palevioletred; */
+}
+.joinOurCrew_rightContainer_card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary-shade);
+    border-radius: var(--border-radius-md);
+    padding: 4rem;
+    gap: 1rem;
+}
+.joinOurCrew_rightContainer_card h3{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semiBold);
+    letter-spacing: -0.5px;
+    padding-top: 2rem;
+
+}
+.joinOurCrew_rightContainer_card input{
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: transparent;
+    background-color: var(--color-primary-400);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    padding: 2rem;
+    padding-left: 3.5rem;
+}
+.inputRow{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    
+}
+.inputRow span{
+  top: 50%;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  padding-left: 1rem;
+  color: var(--color-gray-700);
+
+}
+.inputRow span svg{
+    font-size: var(--font-size-md);
+    
+}
+.joinOurCrew_rightContainer_card button{
+    width: 100%;
+    border-radius: 0.5rem;
+    border: transparent;
+    height: 5rem;
+    margin-top: 3rem;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semiBold);
+    padding: 1rem;
+}
+.joinOurCrew_rightContainer_card button:hover{
+    background-color: var(--color-secondary-900);
+    color: var(--color-white);
+    transition: var(--transition);
+}
+.imageContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    /* background-color: blueviolet;
+    border: 1px solid blue; */
+
+}
+.imageContainer img{
+    width: 30%;
+    height: 100%;
+    margin-right: 4rem;
+}
+
+
+.banner{
+    background-image: url(../../../assets/Image/Careers/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75rem;
+    width: 100%;   
+}
+.logoContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 10rem;
+    /* background-color:yellowgreen ; */
+    width: 100%;
+}
+.logoContainer img{
+    width: 70rem;   
+    z-index: 900;
+
+}
+/*************************************** WORKING AT THE GOLDEN ARCHES ***********************************************/
+.goldenArchesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+.goldenArchesContainer h2{
+    font-size: 8.5rem;
+    font-weight: var(--font-weight-black);
+}
+.goldenArchesContainer_imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 3px solid green; */
+    margin-bottom: 20rem;
+}
+.goldenArchesContainer_imageContainer__image{
+    /* position: relative; */
+    background-image: url(../../../assets/Image/Careers/2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 55rem;
+    width: 100%; 
+    /* z-index: 0; */
+    /* overflow: hidden;  */
+}
+.goldenArchesContainer_imageContainer__card{
+    position: absolute;
+    justify-content: flex-end;
+    width: 100%;
+    /* z-index: 999; */
+    top: 0px;
+    height: 1.5rem;
+    background-color:var(--color-primary-shade);
+    animation-name: card;
+    animation-duration: 2s;
+    transition: var(transition);  
+}
+@keyframes card {
+    0%  {top:0px; left:0px; ; height : 55rem; width: 100%}
+    50% {top:0px; left:0px; ; height : 1.5rem;width: 100%}
+
+  }
+.goldenArchesContainer_imageContainer__cardAbove{
+    position: absolute;
+    height: 27rem;
+    width: 80%;
+    background-color: var(--color-primary-shade);
+    bottom: 0px;
+    transform: translateY(60%);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.goldenArchesContainer_imageContainer__cardAbove h3{
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+}
+.goldenArchesContainer_imageContainer__cardAbove p{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-normal);
+}

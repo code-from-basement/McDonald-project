@@ -8,7 +8,7 @@
 .trendingNow h1 {
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-black);
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
 }
 .banner {

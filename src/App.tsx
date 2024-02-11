@@ -22,10 +22,27 @@ import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 import ItemPage from "./Components/UI/ItemPage/ItemPage";
+import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 
 function App() {
-  const { eventToggles, fetchAllMenuData }: any = useGlobalContext();
-  const { megaMenuOpen, isBasketShow } = eventToggles;
+  const { eventToggles, setEventToggles, fetchAllMenuData }: any = useGlobalContext();
+  const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
+
+  useEffect(() => {
+    const target = document.querySelector("#navbar");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        !entry.isIntersecting
+          ? setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: true };
+            })
+          : setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: false };
+            });
+      });
+    });
+    observer.observe(target);
+  }, []);
 
   useEffect(() => {
     fetchAllMenuData("menu");
@@ -40,6 +57,7 @@ function App() {
       <BrowserRouter>
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
+        <AnimatePresence>{stickyBasket && <BasketSticky />}</AnimatePresence>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>

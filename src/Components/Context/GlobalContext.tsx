@@ -9,6 +9,7 @@ interface globalContextProps {
     isBasketShow: boolean;
     megaMenuOpen: boolean;
     isBasketEmpty: boolean;
+    stickyBasket: boolean;
   };
 }
 
@@ -35,6 +36,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     isBasketShow: false,
     megaMenuOpen: false,
     isBasketEmpty: false,
+    stickyBasket: false,
   });
   //----------------------------------------------------//
 

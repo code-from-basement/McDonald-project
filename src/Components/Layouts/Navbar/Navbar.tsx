@@ -4,7 +4,6 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 import { AccountCircleIcon, LocalMallOutlinedIcon } from "../../UI/IconsLibrary/IconsLibrary";
 import { KeyboardArrowDownRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./Navbar.module.css";
-
 function Navbar() {
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
@@ -13,7 +12,7 @@ function Navbar() {
   const { togglerFunc, megaMenuOpen } = eventToggles;
 
   return (
-    <nav className={Styles.navbar}>
+    <nav className={Styles.navbar} id="navbar">
       <div className={Styles.leftContainer}>
         <Link to="/">
           <img src={logo} alt="logo" />

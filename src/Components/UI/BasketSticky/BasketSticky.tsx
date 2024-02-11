@@ -1,12 +1,16 @@
-import React from "react";
-import Styles from "./BasketSticky.module.css";
 import { motion } from "framer-motion";
 import { stickyBasketANimationStyles } from "../Animation/AnimationStyles";
+import { LocalMallOutlinedIcon } from "../IconsLibrary/IconsLibrary";
+import Styles from "./BasketSticky.module.css";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 function BasketSticky() {
+  const { basketList } = useGlobalContext();
   return (
     <motion.div {...stickyBasketANimationStyles} className={Styles.basketSticky}>
-      BasketSticky
+      <LocalMallOutlinedIcon />
+      <div className={Styles.divider}>&nbsp;</div>
+      <h2>{basketList.length}</h2>
     </motion.div>
   );
 }

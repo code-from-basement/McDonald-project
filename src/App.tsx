@@ -28,6 +28,7 @@ function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
 
+  // intersection observer for sticky basket
   useEffect(() => {
     const target = document.querySelector("#navbar");
     const observer = new IntersectionObserver((entries) => {
@@ -44,10 +45,12 @@ function App() {
     observer.observe(target);
   }, []);
 
+  // Fetching data from Firebase Realtime Database
   useEffect(() => {
     fetchAllMenuData("menu");
   }, []);
 
+  // Fetching data from Firebase Realtime Database
   useEffect(() => {
     fetchAllMenuData("megaMenuItem");
   }, []);

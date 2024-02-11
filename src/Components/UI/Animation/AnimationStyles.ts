@@ -33,6 +33,6 @@ export const emptyCartContentsAnimationStyles = {
 export const stickyBasketANimationStyles = {
   key: "stickyBasket",
   initial: { x: "100%" },
-  animate: { x: "0%", transition: { duration: 0.5, ease: "easeInOut", bounce: 10 } },
-  exit: { x: "200%", transition: { delay: 0.2, duration: 1, ease: "easeInOut" } },
+  animate: { x: "0%", transition: { duration: 0.5, ease: "easeInOut" } },
+  exit: { x: "300%", transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
 };

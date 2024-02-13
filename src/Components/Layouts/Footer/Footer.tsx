@@ -11,7 +11,9 @@ function Footer() {
   useEffect(() => {
     const loginIsShow = location.pathname === "/login";
     const footerElement = document.querySelector("#footer");
-    if (loginIsShow) {
+    if (!loginIsShow) {
+      footerElement?.classList.remove(Styles.hideFooter);
+    } else {
       footerElement?.classList.add(Styles.hideFooter);
     }
   }, [location.pathname]);

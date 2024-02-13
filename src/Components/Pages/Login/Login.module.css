@@ -5,11 +5,11 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
+  position: relative;
 }
 
 .btn__login {
-  /* height: 4.6rem; */
   padding: var(--spacing-sm) var(--spacing-md);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
@@ -43,4 +43,25 @@
   line-height: 1;
   transform: translateY(-4px);
   color: var(--color-primary-900);
+}
+.btn__home {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-circle);
+  margin-top: var(--spacing-lg);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-gray-100);
+}
+.btn__home:hover {
+  background-color: var(--color-secondary-200);
+  transform: translate(-50%, -60%);
+}
+.btn__home svg {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-800);
+}
+.btn__home:hover svg {
+  color: var(--color-secondary-900);
 }

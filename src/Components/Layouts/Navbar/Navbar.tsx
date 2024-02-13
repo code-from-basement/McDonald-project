@@ -11,7 +11,9 @@ function Navbar() {
   useEffect(() => {
     const loginIsShow = location.pathname === "/login";
     const navbarElement = document.querySelector("#navbar");
-    if (loginIsShow) {
+    if (!loginIsShow) {
+      navbarElement?.classList.remove(Styles.hideNavbar);
+    } else {
       navbarElement?.classList.add(Styles.hideNavbar);
     }
   }, [location.pathname]);

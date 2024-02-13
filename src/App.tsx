@@ -26,7 +26,7 @@ import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
   // intersection observer for sticky basket
   useEffect(() => {

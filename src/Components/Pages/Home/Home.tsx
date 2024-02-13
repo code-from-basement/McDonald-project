@@ -1,11 +1,10 @@
-import React from "react";
-
-import Styles from "./Home.module.css";
+import { useEffect, useRef } from "react";
+import { useGlobalContext } from "../../Context/GlobalContext";
+import FQA from "./FQA/FQA";
 import Header from "./Header/Header";
+import Styles from "./Home.module.css";
 import HomeMenuList from "./HomeMenuList/HomeMenuList";
 import MenuContainer from "./MenuContainer/MenuContainer";
-import FQA from "./FQA/FQA";
-import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Home() {
   const { isLoading } = useGlobalContext() as { isLoading: boolean };

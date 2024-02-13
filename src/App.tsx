@@ -21,14 +21,13 @@ import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPa
 import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
-import ItemPage from "./Components/UI/ItemPage/ItemPage";
 const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
+import Login from "./Components/Pages/Login/Login";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
-
   // intersection observer for sticky basket
   useEffect(() => {
     const target = document.querySelector("#navbar");
@@ -88,6 +87,7 @@ function App() {
           <Route path="aboutourfood" element={<AboutOurFood />} />
           <Route path="ourapp" element={<OurApp />} />
           <Route path="trendingnow" element={<TrendingNow />} />
+          <Route path="login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

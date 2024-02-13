@@ -13,6 +13,9 @@
   justify-content: space-between;
   z-index: var(--z-index-900);
 }
+.hideNavbar {
+  display: none;
+}
 
 .leftContainer {
   display: flex;

@@ -1,10 +1,21 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../../assets/Image/Icon/macdonaldPNG.png";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { AccountCircleIcon, LocalMallOutlinedIcon } from "../../UI/IconsLibrary/IconsLibrary";
 import { KeyboardArrowDownRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./Navbar.module.css";
+import { useEffect } from "react";
 function Navbar() {
+  let location = useLocation();
+
+  useEffect(() => {
+    const loginIsShow = location.pathname === "/login";
+    const navbarElement = document.querySelector("#navbar");
+    if (loginIsShow) {
+      navbarElement?.classList.add(Styles.hideNavbar);
+    }
+  }, [location.pathname]);
+
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };

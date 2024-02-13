@@ -30,7 +30,7 @@
   background-color: var(--color-tertiary-900);
   position: absolute;
   bottom: 0;
-  left: 1vw;
+  right: 1vw;
   border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
   transition: all 0.3s ease-in-out;
   z-index: var(--z-index-200);
@@ -45,28 +45,46 @@
   height: auto;
 }
 .btn__getBack {
+  width: 12rem;
+  height: 100%;
   position: absolute;
   top: 50%;
-  left: 1rem;
+  left: 0rem;
   z-index: var(--z-index-300);
   transform: translate(0, -50%);
-  border-radius: var(--border-radius-circle);
   background-color: transparent;
-  border: 3px solid var(--color-secondary-900);
+  border-right: 3px solid var(--color-secondary-900);
   font-size: var(--font-size-md);
-  padding: var(--spacing-sm) var(--spacing-md);
+
+  /* padding: var(--spacing-sm) var(--spacing-md); */
 }
 
 .btn__getBack:hover {
+  width: 18rem;
   background-color: var(--color-secondary-900);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: white;
+}
+
+.btn__getBack h3 {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease-in-out;
+}
+.btn__getBack:hover h3 {
+  color: white;
+  opacity: 1;
+  width: 80%;
+  height: min-content;
 }
 .btn__getBack:hover svg {
   color: var(--color-white);
 }
 .btn__getBack svg {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxxl);
   color: var(--color-secondary-900);
 
   transition: all 0.3s ease-in-out;

@@ -40,7 +40,7 @@ function ItemPage() {
     <div className={Styles.itemPage}>
       <button className={Styles.btn__getBack} onClick={() => navigate(`/${selectedProduct?.category}-menu`)}>
         <NavigateBeforeRoundedIcon />
-        Get back to {selectedProduct?.category}
+        <h3>{`${selectedProduct?.category.charAt(0).toUpperCase() + selectedProduct?.category.slice(1)} Menu`}</h3>
       </button>
       <div className={Styles.tag}>
         <img src={macIcon} alt="icon of mac donald" />

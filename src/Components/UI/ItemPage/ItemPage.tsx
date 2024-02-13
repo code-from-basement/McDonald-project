@@ -38,7 +38,7 @@ function ItemPage() {
 
   return (
     <div className={Styles.itemPage}>
-      <button className={Styles.btn__getBack} onClick={() => navigate(`/${selectedProduct?.category}-menu`)}>
+      <button className={Styles.btn__getBack} onClick={() => navigate(`/${selectedProduct?.category}-menu`, { replace: true, preventScrollReset: true })}>
         <NavigateBeforeRoundedIcon />
         <h3>{`${selectedProduct?.category.charAt(0).toUpperCase() + selectedProduct?.category.slice(1)} Menu`}</h3>
       </button>

@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
@@ -22,6 +22,7 @@ import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 import ItemPage from "./Components/UI/ItemPage/ItemPage";
+const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 
 function App() {
@@ -74,7 +75,14 @@ function App() {
             <Route path="salad-menu" element={<SaladMenu />} />
             <Route path="dips-menu" element={<DipsMenu />} />
           </Route>
-          <Route path="/:title" element={<ItemPage />} />
+          <Route
+            path="/:title"
+            element={
+              <Suspense fallback="loading...">
+                <LazyItemPage />
+              </Suspense>
+            }
+          />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />
           <Route path="ourmenu" element={<OurMenu />} />
           <Route path="aboutourfood" element={<AboutOurFood />} />

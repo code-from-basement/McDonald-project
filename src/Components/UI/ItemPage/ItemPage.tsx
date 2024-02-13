@@ -1,13 +1,15 @@
 import { memo, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
 import Styles from "./itemPage.module.css";
+import { NavigateBeforeRoundedIcon } from "../IconsLibrary/IconsLibrary";
 
 function ItemPage() {
   const { fullMenuListData, isLoading, setIsLoading, fetchAllMenuData } = useGlobalContext();
   const [selectedProduct, setSelectedProduct] = useState();
   const [nutritionListComp, setNutritionListComp] = useState<[string, unknown][]>([]);
+  const navigate = useNavigate();
   const { title } = useParams();
   const ingredientString = selectedProduct?.ingredient.toString().replace(/,/g, ", ") + ".";
 
@@ -33,16 +35,16 @@ function ItemPage() {
       console.log("no data");
     }
   }, [fullMenuListData]);
-  console.log(nutritionListComp);
 
   return (
     <div className={Styles.itemPage}>
+      <button className={Styles.btn__getBack} onClick={() => navigate(`/${selectedProduct?.category}-menu`)}>
+        <NavigateBeforeRoundedIcon />
+        Get back to {selectedProduct?.category}
+      </button>
       <div className={Styles.tag}>
         <img src={macIcon} alt="icon of mac donald" />
-        <p>
-          MahyarNafisi and Roudabeh Adnani 2024. This website is copyrighted for portfolio and educational use only. Unauthorized reproduction or
-          distribution is prohibited. For inquiries, contact. mahyar.nafisi@gmail.com.
-        </p>
+        <p>MahyarNafisi and Roudabeh Adnani 2024. This website is copyrighted for portfolio and educational use only. Unauthorized reproduction or distribution is prohibited. For inquiries, contact. mahyar.nafisi@gmail.com.</p>
       </div>
       <section className={Styles.mainSection}>
         <section className={Styles.section__img}>

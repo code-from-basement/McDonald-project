@@ -7,6 +7,8 @@ import Styles from "./Navbar.module.css";
 import { useEffect } from "react";
 function Navbar() {
   let location = useLocation();
+  const { loggedUser, setLoggedUser } = useGlobalContext();
+  console.log(loggedUser, "from navbar");
 
   useEffect(() => {
     const loginIsShow = location.pathname === "/login";
@@ -47,8 +49,9 @@ function Navbar() {
       </div>
       <div className={Styles.rightContainer}>
         <Link to="/login" className={Styles.userContainer}>
-          <AccountCircleIcon />
+          {loggedUser?.photoURL ? <img className={Styles.userPhoto} src={loggedUser.photoURL}></img> : <AccountCircleIcon />}
         </Link>
+        <h5>{loggedUser.displayName}</h5>
         <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>
           <span className={Styles.basketNum}>{basketList.length}</span>
           <LocalMallOutlinedIcon />

@@ -14,6 +14,10 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  //**User State Management *///////////////////////////
+  const [loggedUser, setLoggedUser] = useState({});
+
+  // Loading State Management
   const [isLoading, setIsLoading] = useState(false);
 
   // Basket Data Management
@@ -134,6 +138,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         menuLists,
         basketList,
         receipt,
+        loggedUser,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
@@ -141,6 +146,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setMegaMenuItemData,
         setBasketList,
         setReceipt,
+        setLoggedUser,
       }}
     >
       {children}

@@ -63,5 +63,21 @@
   color: var(--color-gray-800);
 }
 .btn__home:hover svg {
-  color: var(--color-secondary-900);
+  color: var(--color-secondary-900) !important;
+}
+.showHomeBtn {
+  transform: translate(-50%, -300%) scale(1.2);
+  background-color: var(--color-primary-100);
+  transition: all 0.5s 0.2s !important;
+}
+.showHomeBtn:hover {
+  transform: translate(-50%, -310%) scale(1.2) !important;
+}
+
+.showHomeBtn svg {
+  color: var(--color-primary-900) !important;
+  transition: all 0.5s 0.2s !important;
+}
+
+.showHomeBtn:hover svg {
 }

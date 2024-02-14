@@ -29,7 +29,6 @@ function Login() {
       console.log(err, "error to sign out");
     }
   };
-  console.log(loggedUser, "loggedUser");
   return (
     <div className={Styles.loginContainer}>
       <div className={Styles.brandContainer}>
@@ -38,7 +37,7 @@ function Login() {
       </div>
       <button className={Styles.btn__login} onClick={loggedUser.photoURL ? logOutWithGoogle : signInWithGoogle}>
         <img src={googleIcon} alt="google icon for login button" />
-        {loggedUser.photoURL ? "Sign out " : "Continue with google"}
+        {loggedUser.photoURL ? "Logout" : "Continue with google"}
       </button>
       {loggedUser.photoURL ? <p>You can log out from here.</p> : <p>Let's login to your google account.</p>}
       <button id="btn-go-to-home" className={Styles.btn__home} onClick={() => navigate("/", { replace: true })}>

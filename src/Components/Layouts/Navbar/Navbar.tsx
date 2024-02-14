@@ -6,10 +6,13 @@ import { KeyboardArrowDownRoundedIcon } from "./../../UI/IconsLibrary/IconsLibra
 import Styles from "./Navbar.module.css";
 import { useEffect } from "react";
 function Navbar() {
+  // location from react-router-dom
   let location = useLocation();
-  const { loggedUser, setLoggedUser } = useGlobalContext();
-  console.log(loggedUser, "from navbar");
 
+  // logged in user data
+  const { loggedUser, setLoggedUser } = useGlobalContext();
+
+  // hide navbar when login page is shown
   useEffect(() => {
     const loginIsShow = location.pathname === "/login";
     const navbarElement = document.querySelector("#navbar");
@@ -20,9 +23,12 @@ function Navbar() {
     }
   }, [location.pathname]);
 
+  // active class for navlink
   const activeClass = ({ isActive, isPending }: any) => {
     return isPending ? Styles.pending : isActive ? Styles.active : "";
   };
+
+  // eventToggles and basketList from global context
   const { eventToggles, basketList }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
 

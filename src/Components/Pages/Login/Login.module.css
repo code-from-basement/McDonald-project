@@ -69,6 +69,7 @@
   transform: translate(-50%, -300%) scale(1.2);
   background-color: var(--color-primary-100);
   transition: all 0.5s 0.2s !important;
+  animation: showHomeBtn 2s infinite !important;
 }
 .showHomeBtn:hover {
   transform: translate(-50%, -310%) scale(1.2) !important;
@@ -80,4 +81,19 @@
 }
 
 .showHomeBtn:hover svg {
+}
+
+@keyframes showHomeBtn {
+  0% {
+    transform: translate(-50%, -300%) scale(1.2);
+  }
+  30% {
+    transform: translate(-50%, -320%) scale(1.2);
+  }
+  50% {
+    transform: translate(-50%, -300%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -300%) scale(1.2);
+  }
 }

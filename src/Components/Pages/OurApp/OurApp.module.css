@@ -180,6 +180,7 @@
     height: 100%;
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    /* background-color: red; */
 }
 .goldenArchesContainer h2{
     font-size: 8.5rem;
@@ -245,3 +246,68 @@
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-normal);
 }
+
+/*********************************** WORKING AT THE Scroll panel container ********************************************/
+.scrollPanelContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60rem;
+    /* background-color: cadetblue; */
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md) 19.5rem var(--spacing-md) 19.5rem;
+
+}
+.scrollPanelContainer__left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    overflow-y: scroll;
+
+}
+.scrollPanelContainer__left_l1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--padding-md);
+    width: 100%;
+    height: max-content;
+    padding-top: var(--padding-md);
+    background-color: transparent;
+    /* background-color: aqua; */
+}
+
+.scrollPanelContainer__left_l1 img{
+    border: 3px solid var(--color-primary-900);
+    border-radius: var(--border-radius-md);
+    padding: 1rem;
+    width: 8rem;
+    height: 8rem;
+
+}
+
+.scrollPanelContainer__left_l1 h3{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-light);
+    letter-spacing: -0.5px;
+    
+}
+
+
+.scrollPanelContainer__right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    
+}
+ 

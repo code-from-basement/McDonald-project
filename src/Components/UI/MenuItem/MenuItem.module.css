@@ -186,6 +186,12 @@
 .addBtn button:hover {
   background-color: var(--color-secondary-900);
 }
+.addBtn button:active {
+  background-color: var(--color-primary-800);
+}
+.addBtn button:active svg {
+  color: var(--color-secondary-800) !important;
+}
 
 .addBtn button svg {
   font-size: var(--icon-size-48);

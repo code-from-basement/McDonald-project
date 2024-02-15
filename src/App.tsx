@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
@@ -21,16 +21,37 @@ import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPa
 import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
 import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
-import ItemPage from "./Components/UI/ItemPage/ItemPage";
+const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
+import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
+import Login from "./Components/Pages/Login/Login";
 
 function App() {
-  const { eventToggles, fetchAllMenuData }: any = useGlobalContext();
-  const { megaMenuOpen, isBasketShow } = eventToggles;
+  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading }: any = useGlobalContext();
+  const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
 
+  // intersection observer for sticky basket
+  useEffect(() => {
+    const target = document.querySelector("#navbar");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        !entry.isIntersecting
+          ? setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: true };
+            })
+          : setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: false };
+            });
+      });
+    });
+    observer.observe(target);
+  }, []);
+
+  // Fetching data from Firebase Realtime Database
   useEffect(() => {
     fetchAllMenuData("menu");
   }, []);
 
+  // Fetching data from Firebase Realtime Database
   useEffect(() => {
     fetchAllMenuData("megaMenuItem");
   }, []);
@@ -40,6 +61,7 @@ function App() {
       <BrowserRouter>
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
+        <AnimatePresence>{stickyBasket && <BasketSticky />}</AnimatePresence>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>
@@ -53,12 +75,20 @@ function App() {
             <Route path="salad-menu" element={<SaladMenu />} />
             <Route path="dips-menu" element={<DipsMenu />} />
           </Route>
-          <Route path="/:title" element={<ItemPage />} />
+          <Route
+            path="/:title"
+            element={
+              <Suspense fallback="loading...">
+                <LazyItemPage />
+              </Suspense>
+            }
+          />
           <Route path="shoppingcartpage" element={<ShoppingCartPage />} />
           <Route path="ourmenu" element={<OurMenu />} />
           <Route path="aboutourfood" element={<AboutOurFood />} />
           <Route path="ourapp" element={<OurApp />} />
           <Route path="trendingnow" element={<TrendingNow />} />
+          <Route path="login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,15 +1,25 @@
-import { Link } from "react-router-dom";
-import Styles from "./Footer.module.css";
-import React from "react";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import AppStoreImg from "../../../assets/Image/footerImages/app-store.png";
 import GooglePlayImg from "../../../assets/Image/footerImages/google-play.png";
 import { FacebookRoundedIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from "../../UI/IconsLibrary/IconsLibrary";
-
+import Styles from "./Footer.module.css";
 const year = new Date().getFullYear();
 
 function Footer() {
+  let location = useLocation();
+  useEffect(() => {
+    const loginIsShow = location.pathname === "/login";
+    const footerElement = document.querySelector("#footer");
+    if (!loginIsShow) {
+      footerElement?.classList.remove(Styles.hideFooter);
+    } else {
+      footerElement?.classList.add(Styles.hideFooter);
+    }
+  }, [location.pathname]);
+
   return (
-    <div className={Styles.footer}>
+    <div className={Styles.footer} id="footer">
       <div className={Styles.footerContainer}>
         <div className={Styles.footer__nav_section}>
           <div className={Styles.footer__nav_box}>

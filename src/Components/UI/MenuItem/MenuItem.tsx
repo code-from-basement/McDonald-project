@@ -40,13 +40,14 @@ function MenuItem({ item }: any) {
         setBasketList((prevData: any) => {
           return [...prevData, { id, image, title, price, qty }];
         });
-      } else if(isItemInBasket) {
-        const getItemQty = basketList.filter((item)=> item.title === title);
-        console.log(getItemQty,"getItemQty")
-        setBasketList((prevData: any)=>{
-          return prevData.map((item:any)=>{return item.title === getItemQty[0].title ? {...item, qty:item.qty + qty} : item})
+      } else if (isItemInBasket) {
+        const getItemQty = basketList.filter((item) => item.title === title);
+        console.log(getItemQty, "getItemQty");
+        setBasketList((prevData: any) => {
+          return prevData.map((item: any) => {
+            return item.title === getItemQty[0].title ? { ...item, qty: item.qty + qty } : item;
+          });
         });
-        
       }
     }
   };
@@ -81,7 +82,7 @@ function MenuItem({ item }: any) {
             >
               <RemoveRoundedIcon />
             </button>
-            <input type="number" value={qty} onChange={()=>{}} />
+            <input type="number" value={qty} onChange={() => {}} />
             <button onClick={() => dispatch({ type: "increment", payload: qty + 1 })}>
               <AddRoundedIcon />
             </button>

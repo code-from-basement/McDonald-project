@@ -21,8 +21,9 @@ import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRound
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import SearchIcon from '@mui/icons-material/Search';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SearchIcon from "@mui/icons-material/Search";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 
 export {
   InstagramIcon,
@@ -49,5 +50,6 @@ export {
   InfoOutlinedIcon,
   DeleteRoundedIcon,
   SearchIcon,
-  LocationOnIcon
+  LocationOnIcon,
+  HomeRoundedIcon,
 };

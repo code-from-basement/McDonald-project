@@ -111,7 +111,7 @@
   --border-radius-circle: 999px;
 
   /* box-shadow */
-  --box-shadow: 0 1rem 3rem #00000020;
+  --box-shadow: 0 1rem 3rem #00000025;
 
   /* opacity */
   --opacity-0: 0;
@@ -222,4 +222,34 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  html {
+    font-size: 31.25%;
+  }
 }

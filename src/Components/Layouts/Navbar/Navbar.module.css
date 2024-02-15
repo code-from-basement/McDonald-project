@@ -13,6 +13,9 @@
   justify-content: space-between;
   z-index: var(--z-index-900);
 }
+.hideNavbar {
+  display: none;
+}
 
 .leftContainer {
   display: flex;
@@ -76,10 +79,10 @@
 
 .rightContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
-  height: 100%;
+  gap: var(--spacing-md);
+  /* height: 100%; */
 }
 .shoppingContainer {
   display: flex;
@@ -128,6 +131,12 @@
 
 .userContainer svg:hover {
   color: var(--color-primary-900);
+}
+.userPhoto {
+  border-radius: 999px;
+  width: 3.6rem;
+  height: auto;
+  border: 2px solid var(--color-primary-900);
 }
 
 .megaMenuContainer {

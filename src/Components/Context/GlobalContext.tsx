@@ -9,10 +9,15 @@ interface globalContextProps {
     isBasketShow: boolean;
     megaMenuOpen: boolean;
     isBasketEmpty: boolean;
+    stickyBasket: boolean;
   };
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  //**User State Management *///////////////////////////
+  const [loggedUser, setLoggedUser] = useState({});
+
+  // Loading State Management
   const [isLoading, setIsLoading] = useState(false);
 
   // Basket Data Management
@@ -35,6 +40,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     isBasketShow: false,
     megaMenuOpen: false,
     isBasketEmpty: false,
+    stickyBasket: false,
   });
   //----------------------------------------------------//
 
@@ -132,6 +138,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         menuLists,
         basketList,
         receipt,
+        loggedUser,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
@@ -139,6 +146,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setMegaMenuItemData,
         setBasketList,
         setReceipt,
+        setLoggedUser,
       }}
     >
       {children}

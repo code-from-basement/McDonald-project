@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../../assets/Image/Icon/macdonaldPNG.png";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import { AccountCircleIcon, LocalMallOutlinedIcon } from "../../UI/IconsLibrary/IconsLibrary";
+import { AccountCircleIcon, LocalMallOutlinedIcon, FavoriteBorderRoundedIcon } from "../../UI/IconsLibrary/IconsLibrary";
 import { KeyboardArrowDownRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./Navbar.module.css";
 import { useEffect } from "react";
@@ -56,6 +56,9 @@ function Navbar() {
       <div className={Styles.rightContainer}>
         <Link to="/login" className={Styles.userContainer}>
           {loggedUser?.photoURL ? <img className={Styles.userPhoto} src={loggedUser.photoURL}></img> : <AccountCircleIcon />}
+        </Link>
+        <Link to="/favorite" className={Styles.favContainer}>
+          <FavoriteBorderRoundedIcon />
         </Link>
         <h5>{loggedUser.displayName}</h5>
         <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>

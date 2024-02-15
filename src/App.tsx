@@ -24,6 +24,7 @@ import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
+import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, isLoading }: any = useGlobalContext();
@@ -89,6 +90,7 @@ function App() {
           <Route path="ourapp" element={<OurApp />} />
           <Route path="trendingnow" element={<TrendingNow />} />
           <Route path="login" element={<Login />} />
+          <Route path="favorite" element={<FavoritePage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

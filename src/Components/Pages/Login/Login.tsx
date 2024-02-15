@@ -9,7 +9,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Login() {
   // logged in user data
-  const { loggedUser, setLoggedUser } = useGlobalContext();
+  const { loggedUser, setLoggedUser, fetchAllMenuData } = useGlobalContext();
 
   // navigate from react-router-dom
   const navigate = useNavigate();
@@ -21,6 +21,7 @@ function Login() {
     try {
       const result = await signInWithPopup(dataBase, provider);
       setLoggedUser(result.user);
+      fetchAllMenuData("menu");
       const btnGoToHome = document.querySelector("#btn-go-to-home");
       btnGoToHome?.classList.add(Styles.showHomeBtn);
     } catch (err) {
@@ -33,11 +34,12 @@ function Login() {
     try {
       await signOut(dataBase);
       setLoggedUser({});
+      fetchAllMenuData("menu");
     } catch (err) {
       console.log(err, "error to sign out");
     }
   };
-
+  console.log(dataBase.currentUser, "datable.currentUser");
   return (
     <div className={Styles.loginContainer}>
       <div className={Styles.brandContainer}>

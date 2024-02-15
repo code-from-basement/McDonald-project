@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { AddRoundedIcon, FavoriteBorderRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
-import Styles from "./MenuItem.module.css";
 import { useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { AddRoundedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
+import Styles from "./MenuItem.module.css";
 
 const initialState = {
   qty: 1,
@@ -20,9 +20,9 @@ const reducer = (state: any, action: any) => {
 };
 
 function MenuItem({ item }: any) {
-  const { setBasketList, basketList }: any = useGlobalContext();
+  const { setBasketList, basketList, loggedUser }: any = useGlobalContext();
   const navigate = useNavigate();
-  const { title, price, image, id, nutrition } = item;
+  const { title, price, image, id, nutrition, isFavorite } = item;
 
   const onClickNavigation = () => {
     navigate(`/${title}`);
@@ -64,9 +64,7 @@ function MenuItem({ item }: any) {
           </div>
           <div className={Styles.header__btn}>
             <h2>{price}:-</h2>
-            <button>
-              <FavoriteBorderRoundedIcon />
-            </button>
+            <button>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
             <button className={Styles.info__btn} onClick={onClickNavigation}>
               <InfoOutlinedIcon />
             </button>

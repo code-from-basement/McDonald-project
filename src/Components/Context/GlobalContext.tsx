@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { dataBase } from "../../Data/firebaseConfig";
 
 const GlobalContext = createContext();
 
@@ -45,20 +46,8 @@ function GlobalContextProvider({ children }: globalContextProps) {
   //----------------------------------------------------//
 
   //*Fetching data from Firebase Realtime Database
-
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
-
-  const [menuLists, setMenuLists] = useState({
-    hamburger: [],
-    chickenAndFish: [],
-    drinks: [],
-    breakfast: [],
-    snackAndSides: [],
-    dessert: [],
-    salad: [],
-    dips: [],
-  });
 
   const fetchAllMenuData = async (address: string) => {
     if (address === "menu") {
@@ -66,14 +55,21 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setIsLoading(true);
         const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
         const data = await res.json();
-        setFullMenuListData(data);
+        // Favorite Process
+        const dataFavoriteProcess = await data.map((item: any) => {
+          if (item.favoriteList.includes(dataBase.currentUser?.displayName)) {
+            return { ...item, isFavorite: true };
+          } else {
+            return { ...item, isFavorite: false };
+          }
+        });
+        setFullMenuListData(dataFavoriteProcess);
       } catch (error) {
         setIsLoading(false);
         alert(error);
       } finally {
         setTimeout(() => {
           setIsLoading(false);
-          console.log("full menu fetched");
         }, 1000);
       }
     } else if (address === "megaMenuItem") {
@@ -92,9 +88,22 @@ function GlobalContextProvider({ children }: globalContextProps) {
     }
   };
 
+  // Favorite list management
+  const [userFavoriteList, setUserFavoriteList] = useState([]);
+
   //----------------------------------------------------//
 
   //*Menu List Management
+  const [menuLists, setMenuLists] = useState({
+    hamburger: [],
+    chickenAndFish: [],
+    drinks: [],
+    breakfast: [],
+    snackAndSides: [],
+    dessert: [],
+    salad: [],
+    dips: [],
+  });
   useEffect(() => {
     if (fullMenuListData) {
       //hamburgers list
@@ -139,6 +148,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         basketList,
         receipt,
         loggedUser,
+        userFavoriteList,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
@@ -147,6 +157,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setBasketList,
         setReceipt,
         setLoggedUser,
+        setUserFavoriteList,
       }}
     >
       {children}

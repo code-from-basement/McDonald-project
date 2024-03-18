@@ -66,6 +66,7 @@
   --font-size-xl: 4.2rem;
   --font-size-xxl: 5.6rem;
   --font-size-xxxl: 6.8rem;
+  --font-size-huge: 12.8rem;
 
   /* font-weight */
   --font-weight-light: 300;
@@ -83,6 +84,7 @@
   --padding-lg: 4.5rem;
   --padding-container-xl: 0 4vw;
   --padding-container-lg: 0 16vw;
+  --padding-container-md: 0 32vw;
   --padding-section: 2rem;
 
   /* spacing */

@@ -1,0 +1,15 @@
+.collapsedBar__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:auto;
+    min-height: 9rem;
+    width: 76rem;
+    border-radius: var(--border-radius-md);
+    border: 6px solid green;
+    background-color: transparent;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    margin-right: 6rem;
+
+}

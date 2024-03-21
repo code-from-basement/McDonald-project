@@ -24,6 +24,9 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
+import PauseIcon from '@mui/icons-material/Pause';
 
 export {
   InstagramIcon,
@@ -52,4 +55,7 @@ export {
   SearchIcon,
   LocationOnIcon,
   HomeRoundedIcon,
+  ArrowForwardIosRoundedIcon,
+  ExpandMoreRoundedIcon,
+  PauseIcon
 };

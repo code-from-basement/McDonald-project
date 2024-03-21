@@ -25,31 +25,34 @@ const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
+import { dataBase } from "./Data/firebaseConfig";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any =
+    useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
 
-  // intersection observer for sticky basket
-  useEffect(() => {
-    const target = document.querySelector("#navbar");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        !entry.isIntersecting
-          ? setEventToggles((prevData) => {
-              return { ...prevData, stickyBasket: true };
-            })
-          : setEventToggles((prevData) => {
-              return { ...prevData, stickyBasket: false };
-            });
-      });
-    });
-    observer.observe(target);
-  }, []);
+  // Fetching data from API
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch("http://127.0.0.1:5000/api/v1/menus");
+  //       const data = await res.json();
+  //       console.log(data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   // Fetching data from Firebase Realtime Database
   useEffect(() => {
-    fetchAllMenuData("menu");
+    if (window.localStorage.getItem("user") !== null) {
+      fetchAllMenuData("menus");
+    } else {
+      console.log("Nadasht");
+    }
   }, []);
 
   // Fetching data from Firebase Realtime Database

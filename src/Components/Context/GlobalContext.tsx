@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { dataBase } from "../../Data/firebaseConfig";
+import { dataBase, db } from "../../Data/firebaseConfig";
+import { Database } from "firebase/database";
 
 const GlobalContext = createContext();
 
@@ -50,16 +51,24 @@ function GlobalContextProvider({ children }: globalContextProps) {
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
 
   const fetchAllMenuData = async (address: string) => {
-    if (address === "menu") {
+    if (address === "menus") {
       try {
         setIsLoading(true);
-        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
-        const data = await res.json();
+        const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
+        const { data } = await res.json();
+        const allMenus = await data.allMenus;
+
         // Favorite Process
-        const dataFavoriteProcess = await data.map((item: any) => {
-          if (item.favoriteList.includes(dataBase.currentUser?.displayName)) {
+        const dataFavoriteProcess = await allMenus.map((item: any) => {
+          if (
+            item.favoriteList.includes(
+              window.localStorage.getItem("user") || dataBase.currentUser?.displayName
+            )
+          ) {
+            console.log("included");
             return { ...item, isFavorite: true };
           } else {
+            console.log("NOT included");
             return { ...item, isFavorite: false };
           }
         });
@@ -74,7 +83,9 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     } else if (address === "megaMenuItem") {
       try {
-        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
+        const res = await fetch(
+          `https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`
+        );
         const data = await res.json();
         setMegaMenuItemData(data);
       } catch (error) {
@@ -88,8 +99,16 @@ function GlobalContextProvider({ children }: globalContextProps) {
     }
   };
 
+  console.log(fullMenuListData, "FullMenuListData");
+
   // Favorite list management
   const [userFavoriteList, setUserFavoriteList] = useState([]);
+  // const favoriteProcessFetching = async () => {
+  //   const res = await fetch("https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/menu.json", {
+  //     method: "",
+  //     body: "",
+  //   });
+  // };
 
   //----------------------------------------------------//
 
@@ -107,21 +126,37 @@ function GlobalContextProvider({ children }: globalContextProps) {
   useEffect(() => {
     if (fullMenuListData) {
       //hamburgers list
-      const getHamburgerMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "hamburger");
+      const getHamburgerMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "hamburger"
+      );
       //chicken and fish list
-      const getChickenAndFishMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "chicken&fish");
+      const getChickenAndFishMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "chicken&fish"
+      );
       //drink list
-      const getDrinkMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "drink");
+      const getDrinkMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "drink"
+      );
       //breakfast list
-      const getBreakFastMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "breakfast");
+      const getBreakFastMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "breakfast"
+      );
       //snack and slides list
-      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snack&slides");
+      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "snack&slides"
+      );
       //dessert list
-      const getDessertMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dessert");
+      const getDessertMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "dessert"
+      );
       //dips list
-      const getDipsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dip");
+      const getDipsMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "dip"
+      );
       //salad list
-      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salads");
+      const getSaladsMenuList = (fullMenuListData as never[]).filter(
+        (item: any) => item.category == "salads"
+      );
       setMenuLists({
         hamburger: getHamburgerMenuList,
         chickenAndFish: getChickenAndFishMenuList,
@@ -154,6 +189,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setIsLoading,
         setFullMenuListData,
         setMegaMenuItemData,
+        setMenuLists,
         setBasketList,
         setReceipt,
         setLoggedUser,

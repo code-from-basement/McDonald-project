@@ -21,7 +21,9 @@ function Login() {
     try {
       const result = await signInWithPopup(dataBase, provider);
       setLoggedUser(result.user);
-      fetchAllMenuData("menu");
+      fetchAllMenuData("menus");
+
+      window.localStorage.setItem("user", JSON.stringify(result.user.displayName));
       const btnGoToHome = document.querySelector("#btn-go-to-home");
       btnGoToHome?.classList.add(Styles.showHomeBtn);
     } catch (err) {
@@ -34,7 +36,7 @@ function Login() {
     try {
       await signOut(dataBase);
       setLoggedUser({});
-      fetchAllMenuData("menu");
+      fetchAllMenuData("menus");
     } catch (err) {
       console.log(err, "error to sign out");
     }
@@ -44,14 +46,29 @@ function Login() {
     <div className={Styles.loginContainer}>
       <div className={Styles.brandContainer}>
         <img src={macdonaldIcon} alt="macdonald icon in login page" />
-        {dataBase.currentUser ? <h1>Welcome {loggedUser.displayName}</h1> : <h1>Sign in to McDonald's</h1>}
+        {dataBase.currentUser ? (
+          <h1>Welcome {loggedUser?.displayName}</h1>
+        ) : (
+          <h1>Sign in to McDonald's</h1>
+        )}
       </div>
-      <button className={Styles.btn__login} onClick={dataBase.currentUser ? logOutWithGoogle : signInWithGoogle}>
+      <button
+        className={Styles.btn__login}
+        onClick={dataBase.currentUser ? logOutWithGoogle : signInWithGoogle}
+      >
         <img src={googleIcon} alt="google icon for login button" />
-        {dataBase.currentUser ? "Logout" : "Continue with google"}
+        {dataBase.currentUser?.displayName ? "Logout" : "Continue with google"}
       </button>
-      {dataBase.currentUser ? <p>You can log out from here.</p> : <p>Let's login to your google account.</p>}
-      <button id="btn-go-to-home" className={Styles.btn__home} onClick={() => navigate("/", { replace: true })}>
+      {dataBase.currentUser ? (
+        <p>You can log out from here.</p>
+      ) : (
+        <p>Let's login to your google account.</p>
+      )}
+      <button
+        id="btn-go-to-home"
+        className={Styles.btn__home}
+        onClick={() => navigate("/", { replace: true })}
+      >
         <HomeRoundedIcon />
       </button>
     </div>

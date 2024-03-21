@@ -10,7 +10,7 @@ function DrinksMenu() {
     <div className={Styles.drinksMenuContainer}>
       <h3 className={Styles.title}>Fresh and cold drinks for you!</h3>
       {drinks?.map((item: any) => {
-        return <MenuItem key={item.id} item={item} />;
+        return <MenuItem key={item._id} item={item} />;
       })}
     </div>
   );

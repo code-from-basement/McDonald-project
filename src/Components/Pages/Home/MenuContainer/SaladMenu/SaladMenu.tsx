@@ -10,7 +10,7 @@ function SaladMenu() {
     <div className={Styles.saladMenuContainer}>
       <h3 className={Styles.title}>Taste and freshness of nature!</h3>
       {salad?.map((item: any) => {
-        return <MenuItem key={item.id} item={item} />;
+        return <MenuItem key={item._id} item={item} />;
       })}
     </div>
   );

@@ -16,6 +16,7 @@ function FavoritePage() {
   }, []);
   console.log(userFavoriteList);
   const noFavItem = <h2>There no favorite item selected</h2>;
+  //
 
   return (
     <div className={Styles.favPage}>
@@ -25,6 +26,7 @@ function FavoritePage() {
           {dataBase.currentUser?.displayName} <br /> favorite menu:
         </h2>
       </section>
+
       <section className={Styles.favPage__filterPanel}>
         <div className={Styles.filterPanel__container}>
           <button className={Styles.filterPanel__btn}>Cheapest</button>
@@ -34,6 +36,7 @@ function FavoritePage() {
           <button className={Styles.filterPanel__btn}>Categories</button>
         </div>
       </section>
+
       <section className={Styles.favPage__favList}>
         <div className={Styles.favList__container}>
           {!dataBase.currentUser

@@ -16,6 +16,9 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  //**User Favorite List *//////////////////////////////
+  const [userFavoriteList, setUserFavoriteList] = useState([]);
+
   //**User State Management *///////////////////////////
   const [loggedUser, setLoggedUser] = useState({});
 
@@ -60,15 +63,9 @@ function GlobalContextProvider({ children }: globalContextProps) {
 
         // Favorite Process
         const dataFavoriteProcess = await allMenus.map((item: any) => {
-          if (
-            item.favoriteList.includes(
-              window.localStorage.getItem("user") || dataBase.currentUser?.displayName
-            )
-          ) {
-            console.log("included");
+          if (item.favoriteList.includes(dataBase.currentUser?.displayName)) {
             return { ...item, isFavorite: true };
           } else {
-            console.log("NOT included");
             return { ...item, isFavorite: false };
           }
         });
@@ -99,17 +96,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
     }
   };
 
-  console.log(fullMenuListData, "FullMenuListData");
-
-  // Favorite list management
-  const [userFavoriteList, setUserFavoriteList] = useState([]);
-  // const favoriteProcessFetching = async () => {
-  //   const res = await fetch("https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/menu.json", {
-  //     method: "",
-  //     body: "",
-  //   });
-  // };
-
   //----------------------------------------------------//
 
   //*Menu List Management
@@ -123,6 +109,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     salad: [],
     dips: [],
   });
+
   useEffect(() => {
     if (fullMenuListData) {
       //hamburgers list

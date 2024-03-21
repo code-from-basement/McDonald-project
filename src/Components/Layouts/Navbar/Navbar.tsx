@@ -6,16 +6,18 @@ import {
   LocalMallOutlinedIcon,
   FavoriteBorderRoundedIcon,
 } from "../../UI/IconsLibrary/IconsLibrary";
-import { KeyboardArrowDownRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
+import { KeyboardArrowDownRoundedIcon, FavoriteRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
+
 import Styles from "./Navbar.module.css";
 import { useEffect } from "react";
 import { dataBase } from "../../../Data/firebaseConfig";
+
 function Navbar() {
+  const { userFavoriteList } = useGlobalContext();
   // location from react-router-dom
   let location = useLocation();
 
   // logged in user data
-  const { loggedUser, setLoggedUser } = useGlobalContext();
 
   // hide navbar when login page is shown
   useEffect(() => {
@@ -70,7 +72,11 @@ function Navbar() {
           )}
         </Link>
         <Link to="/favorite" className={Styles.favContainer}>
-          <FavoriteBorderRoundedIcon />
+          {userFavoriteList.length === 0 ? (
+            <FavoriteBorderRoundedIcon />
+          ) : (
+            <FavoriteRoundedIcon style={{ color: "#da291c" }} />
+          )}
         </Link>
         <h5>{dataBase.currentUser?.displayName}</h5>
         <button

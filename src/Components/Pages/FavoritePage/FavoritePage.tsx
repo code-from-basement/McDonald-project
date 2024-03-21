@@ -6,15 +6,15 @@ import { dataBase } from "../../../Data/firebaseConfig";
 function FavoritePage() {
   const { fullMenuListData, userFavoriteList, setUserFavoriteList } = useGlobalContext();
 
-  useEffect(() => {
-    if (dataBase.currentUser === null) {
-      return;
-    } else {
-      const findFavoriteItem = fullMenuListData?.filter((item: any) => item.isFavorite === true);
-      setUserFavoriteList(findFavoriteItem);
-    }
-  }, []);
-  console.log(userFavoriteList);
+  // useEffect(() => {
+  //   if (dataBase.currentUser === null) {
+  //     return;
+  //   } else {
+  //     const findFavoriteItem = fullMenuListData?.filter((item: any) => item.isFavorite === true);
+  //     setUserFavoriteList(findFavoriteItem);
+  //   }
+  // }, []);
+
   const noFavItem = <h2>There no favorite item selected</h2>;
   //
 

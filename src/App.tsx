@@ -32,27 +32,9 @@ function App() {
     useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
 
-  // Fetching data from API
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await fetch("http://127.0.0.1:5000/api/v1/menus");
-  //       const data = await res.json();
-  //       console.log(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-
   // Fetching data from Firebase Realtime Database
   useEffect(() => {
-    if (window.localStorage.getItem("user") !== null) {
-      fetchAllMenuData("menus");
-    } else {
-      console.log("Nadasht");
-    }
+    fetchAllMenuData("menus");
   }, []);
 
   // Fetching data from Firebase Realtime Database

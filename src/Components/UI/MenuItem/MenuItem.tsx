@@ -1,10 +1,15 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import { AddRoundedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
+import {
+  AddRoundedIcon,
+  FavoriteBorderRoundedIcon,
+  FavoriteRoundedIcon,
+  InfoOutlinedIcon,
+  RemoveRoundedIcon,
+} from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
-import { dataBase, db } from "../../../Data/firebaseConfig";
-import { ref, set, get, update, query, orderByChild, equalTo, onValue } from "firebase/database";
+import { dataBase } from "../../../Data/firebaseConfig";
 
 const initialState = {
   qty: 1,
@@ -22,9 +27,16 @@ const reducer = (state: any, action: any) => {
 };
 
 function MenuItem({ item }: any) {
-  const { setBasketList, basketList, loggedUser, menuLists, setMenuLists }: any = useGlobalContext();
+  const target = useRef(null);
+  const {
+    setBasketList,
+    basketList,
+    fullMenuListData,
+    userFavoriteList,
+    setUserFavoriteList,
+  }: any = useGlobalContext();
   const navigate = useNavigate();
-  const { title, price, image, id, nutrition, category, isFavorite } = item;
+  const { title, price, image, _id, nutrition, category, isFavorite } = item;
 
   const onClickNavigation = () => {
     navigate(`/${title}`);
@@ -35,17 +47,16 @@ function MenuItem({ item }: any) {
   const onClickAddItemHandler = () => {
     if (basketList.length === 0) {
       setBasketList((prevData: any) => {
-        return [...prevData, { id, image, title, price, qty }];
+        return [...prevData, { _id, image, title, price, qty }];
       });
     } else {
       const isItemInBasket = basketList.find((item: any) => item.title === title);
       if (!isItemInBasket) {
         setBasketList((prevData: any) => {
-          return [...prevData, { id, image, title, price, qty }];
+          return [...prevData, { _id, image, title, price, qty }];
         });
       } else if (isItemInBasket) {
-        const getItemQty = basketList.filter((item) => item.title === title);
-        console.log(getItemQty, "getItemQty");
+        const getItemQty = basketList.filter((item: any) => item.title === title);
         setBasketList((prevData: any) => {
           return prevData.map((item: any) => {
             return item.title === getItemQty[0].title ? { ...item, qty: item.qty + qty } : item;
@@ -57,33 +68,16 @@ function MenuItem({ item }: any) {
 
   // favorite button logic
 
-  const onClickSearchIdHandler = (id) => {
-    onValue(ref(db, "menu/"), (snapshot) => {
-      const data = snapshot.val();
-      const selectedItem = data.find((item: any) => item.id === id);
-      const removeUserName = selectedItem.favoriteList.filter((item) => item !== "Mahyar Nafisi");
-    });
-    update(ref(db, `menu/`), removeUserName);
-    // const menuRef = ref(db, "menu");
-    // const idQuery = query(menuRef, orderByChild("id"), equalTo(id));
-    // onValue(
-    //   idQuery,
-    //   (snapshot) => {
-    //     if (snapshot.exists()) {
-    //       const data = snapshot.val();
-    //       console.log(data, "Data matching ID");
-    //       // Update the data object
-    //       const newData = { ...data, isFavorite: true };
-    //       update(ref(db, `menu/${snapshot.key}`), newData);
-    //     } else {
-    //       console.log("No data found matching ID");
-    //     }
-    //   },
-    //   {
-    //     onlyOnce: true, // Retrieve the data only once
-    //   }
-    // );
+  const favoriteBtnHandler = () => {
+    const getFavoriteItem = fullMenuListData.filter((item) => item._id === target.current?.id);
+    if (dataBase.currentUser?.displayName) {
+      setUserFavoriteList((prevData) => {
+        return [...prevData, getFavoriteItem[0]];
+      });
+    }
   };
+
+  console.log(userFavoriteList, "userFavoriteList");
 
   return (
     <div>
@@ -97,7 +91,9 @@ function MenuItem({ item }: any) {
           </div>
           <div className={Styles.header__btn}>
             <h2>{price}:-</h2>
-            <button onClick={() => onClickSearchIdHandler(id)}>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
+            <button onClick={favoriteBtnHandler} ref={target} id={_id}>
+              {isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}
+            </button>
             <button className={Styles.info__btn} onClick={onClickNavigation}>
               <InfoOutlinedIcon />
             </button>

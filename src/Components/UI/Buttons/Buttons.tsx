@@ -1,6 +1,5 @@
-import Styles from "./Buttons.module.css";
-import { Style } from "@mui/icons-material";
 import React from "react";
+import Styles from "./Buttons.module.css";
 
 type buttonProps = {
   children: React.ReactNode | string;

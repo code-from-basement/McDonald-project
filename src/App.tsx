@@ -26,11 +26,11 @@ import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import { dataBase } from "./Data/firebaseConfig";
+import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any =
-    useGlobalContext();
-  const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
+  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any = useGlobalContext();
+  const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
   // Fetching data from Firebase Realtime Database
   useEffect(() => {
@@ -48,6 +48,7 @@ function App() {
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
         <AnimatePresence>{stickyBasket && <BasketSticky />}</AnimatePresence>
+        <AnimatePresence>{isModalRedirectionShow && <ModalRedirection />}</AnimatePresence>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>

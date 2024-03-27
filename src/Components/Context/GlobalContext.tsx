@@ -12,6 +12,7 @@ interface globalContextProps {
     megaMenuOpen: boolean;
     isBasketEmpty: boolean;
     stickyBasket: boolean;
+    isModalRedirectionShow: boolean;
   };
 }
 
@@ -46,6 +47,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     megaMenuOpen: false,
     isBasketEmpty: false,
     stickyBasket: false,
+    isModalRedirectionShow: false,
   });
   //----------------------------------------------------//
 
@@ -80,9 +82,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     } else if (address === "megaMenuItem") {
       try {
-        const res = await fetch(
-          `https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`
-        );
+        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
         const data = await res.json();
         setMegaMenuItemData(data);
       } catch (error) {
@@ -113,37 +113,21 @@ function GlobalContextProvider({ children }: globalContextProps) {
   useEffect(() => {
     if (fullMenuListData) {
       //hamburgers list
-      const getHamburgerMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "hamburger"
-      );
+      const getHamburgerMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "hamburger");
       //chicken and fish list
-      const getChickenAndFishMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "chicken&fish"
-      );
+      const getChickenAndFishMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "chicken&fish");
       //drink list
-      const getDrinkMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "drink"
-      );
+      const getDrinkMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "drink");
       //breakfast list
-      const getBreakFastMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "breakfast"
-      );
+      const getBreakFastMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "breakfast");
       //snack and slides list
-      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "snack&slides"
-      );
+      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snack&slides");
       //dessert list
-      const getDessertMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "dessert"
-      );
+      const getDessertMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dessert");
       //dips list
-      const getDipsMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "dip"
-      );
+      const getDipsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dip");
       //salad list
-      const getSaladsMenuList = (fullMenuListData as never[]).filter(
-        (item: any) => item.category == "salads"
-      );
+      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salads");
       setMenuLists({
         hamburger: getHamburgerMenuList,
         chickenAndFish: getChickenAndFishMenuList,

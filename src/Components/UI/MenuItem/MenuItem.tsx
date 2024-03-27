@@ -1,20 +1,15 @@
 import { useReducer, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import {
-  AddRoundedIcon,
-  FavoriteBorderRoundedIcon,
-  FavoriteRoundedIcon,
-  InfoOutlinedIcon,
-  RemoveRoundedIcon,
-} from "./../IconsLibrary/IconsLibrary";
+import { AddRoundedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
 import { dataBase } from "../../../Data/firebaseConfig";
 
 const initialState = {
   qty: 1,
 };
-
+//
+//
 const reducer = (state: any, action: any) => {
   switch (action.type) {
     case "increment":
@@ -28,13 +23,9 @@ const reducer = (state: any, action: any) => {
 
 function MenuItem({ item }: any) {
   const target = useRef(null);
-  const {
-    setBasketList,
-    basketList,
-    fullMenuListData,
-    userFavoriteList,
-    setUserFavoriteList,
-  }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, setBasketList, basketList, fullMenuListData, userFavoriteList, setUserFavoriteList }: any = useGlobalContext();
+
+  const { isModalRedirectionShow } = eventToggles;
   const navigate = useNavigate();
   const { title, price, image, _id, nutrition, category, isFavorite } = item;
 
@@ -68,16 +59,29 @@ function MenuItem({ item }: any) {
 
   // favorite button logic
 
-  const favoriteBtnHandler = () => {
+  const favoriteBtnHandler = async () => {
+    if (dataBase.currentUser === null) {
+      setEventToggles((prevData) => {
+        return { ...prevData, isModalRedirectionShow: true };
+      });
+    } else {
+      return console.log("pass");
+    }
     const getFavoriteItem = fullMenuListData.filter((item) => item._id === target.current?.id);
     if (dataBase.currentUser?.displayName) {
-      setUserFavoriteList((prevData) => {
+      await setUserFavoriteList((prevData) => {
         return [...prevData, getFavoriteItem[0]];
+      });
+      const res = await fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userName: dataBase.currentUser?.displayName,
+          favoriteList: getFavoriteItem[0],
+        }),
       });
     }
   };
-
-  console.log(userFavoriteList, "userFavoriteList");
 
   return (
     <div>

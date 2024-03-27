@@ -11,6 +11,7 @@
   border: none;
   border-radius: var(--border-radius-md);
   transition: all 0.3s;
+  border: 2px solid var(--color-primary-900);
 }
 .buttonPrimary svg {
   font-size: var(--icon-size-24);

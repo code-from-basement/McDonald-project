@@ -66,10 +66,8 @@ function MenuItem({ item }: any) {
     } else {
       const getFavoriteItem = await fullMenuListData.filter((item) => item._id === target.current?.id);
       const FavoriteItemID = getFavoriteItem[0]._id;
-      console.log(FavoriteItemID);
       if (dataBase.currentUser?.displayName) {
         await setUserFavoriteList((prevData) => {
-          console.log("2");
           return [...prevData, getFavoriteItem[0]];
         });
         const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
@@ -84,7 +82,6 @@ function MenuItem({ item }: any) {
         console.log(data);
       }
     }
-    return console.log("pass");
   };
 
   return (

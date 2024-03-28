@@ -72,8 +72,15 @@ export const animateBackground = {
   viewport: { once: true },
 };
 
-export const animationOpacity = {
-  key: "opacity",
+export const animationOpacity1 = {
+  key: "redirectionModal1",
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
+
+export const animationOpacity2 = {
+  key: "redirectionModal2",
   initial: { opacity: 0 },
   animate: { opacity: 1, transition: { duration: 0.2 } },
   exit: { opacity: 0, transition: { duration: 0.2 } },

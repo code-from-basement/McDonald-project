@@ -41,8 +41,11 @@ function App() {
           setEventToggles((prevData) => {
             return { ...prevData, stickyBasket: true };
           });
+        } else {
+          setEventToggles((prevData) => {
+            return { ...prevData, stickyBasket: false };
+          });
         }
-        return stickyBasket;
       });
     });
     observer.observe(navbarTarget!);
@@ -58,7 +61,6 @@ function App() {
     fetchAllMenuData("megaMenuItem");
   }, []);
 
-  console.log(stickyBasket);
   return (
     <div className="app">
       <BrowserRouter>

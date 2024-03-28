@@ -32,9 +32,9 @@ export const emptyCartContentsAnimationStyles = {
 
 export const stickyBasketANimationStyles = {
   key: "stickyBasket",
-  initial: { x: "100%" },
-  animate: { x: "0%", transition: { duration: 0.5, ease: "easeInOut" } },
-  exit: { x: "300%", transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
+  initial: { x: "200%" },
+  animate: { x: "0%", transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
+  exit: { x: "300%", transition: { duration: 0.5, ease: "easeInOut" } },
 };
 
 export const floatImgAnimationStyle = {
@@ -75,6 +75,6 @@ export const animateBackground = {
 export const animationOpacity = {
   key: "opacity",
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.3 } },
-  exit: { opacity: 0, transition: { duration: 0.3 } },
+  animate: { opacity: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
 };

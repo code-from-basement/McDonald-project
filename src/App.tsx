@@ -32,6 +32,22 @@ function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
+  // Intersection API for sticky basket
+  useEffect(() => {
+    const navbarTarget = document.querySelector("#navbar");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          setEventToggles((prevData) => {
+            return { ...prevData, stickyBasket: true };
+          });
+        }
+        return stickyBasket;
+      });
+    });
+    observer.observe(navbarTarget!);
+  }, []);
+
   // Fetching data from Firebase Realtime Database
   useEffect(() => {
     fetchAllMenuData("menus");
@@ -42,6 +58,7 @@ function App() {
     fetchAllMenuData("megaMenuItem");
   }, []);
 
+  console.log(stickyBasket);
   return (
     <div className="app">
       <BrowserRouter>

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { dataBase, db } from "../../Data/firebaseConfig";
-import { Database } from "firebase/database";
 
 const GlobalContext = createContext();
 

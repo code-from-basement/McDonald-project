@@ -34,7 +34,7 @@ function ModalRedirection() {
           <h2>Favorite menu</h2>
         </div>
         <div className={Styles.card__body}>
-          <p>To add this item to your favorite list you need to login first </p>
+          <p>To add this item to your favorite list you need to login first. </p>
         </div>
         <div className={Styles.card__footer}>
           <ButtonSecondary onClick={onClickModalCloseHandler} type={""}>

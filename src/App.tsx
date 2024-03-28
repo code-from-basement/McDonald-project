@@ -25,31 +25,16 @@ const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
+import { dataBase } from "./Data/firebaseConfig";
+import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading }: any = useGlobalContext();
-  const { megaMenuOpen, isBasketShow, stickyBasket } = eventToggles;
-
-  // intersection observer for sticky basket
-  useEffect(() => {
-    const target = document.querySelector("#navbar");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        !entry.isIntersecting
-          ? setEventToggles((prevData) => {
-              return { ...prevData, stickyBasket: true };
-            })
-          : setEventToggles((prevData) => {
-              return { ...prevData, stickyBasket: false };
-            });
-      });
-    });
-    observer.observe(target);
-  }, []);
+  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any = useGlobalContext();
+  const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
   // Fetching data from Firebase Realtime Database
   useEffect(() => {
-    fetchAllMenuData("menu");
+    fetchAllMenuData("menus");
   }, []);
 
   // Fetching data from Firebase Realtime Database
@@ -63,6 +48,7 @@ function App() {
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
         <AnimatePresence>{stickyBasket && <BasketSticky />}</AnimatePresence>
+        <AnimatePresence>{isModalRedirectionShow && <ModalRedirection />}</AnimatePresence>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>

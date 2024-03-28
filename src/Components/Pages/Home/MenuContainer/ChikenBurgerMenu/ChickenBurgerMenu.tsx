@@ -10,7 +10,7 @@ function ChickenBurgerMenu() {
     <div className={Styles.chickenBurgerMenuContainer}>
       <h3 className={Styles.title}>Taste of crunchy of our chicken!</h3>
       {chickenAndFish?.map((item: any) => {
-        return <MenuItem key={item.id} item={item} />;
+        return <MenuItem key={item._id} item={item} />;
       })}
     </div>
   );

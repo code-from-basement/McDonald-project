@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { dataBase } from "../../Data/firebaseConfig";
+import { dataBase, db } from "../../Data/firebaseConfig";
+import { Database } from "firebase/database";
 
 const GlobalContext = createContext();
 
@@ -11,10 +12,14 @@ interface globalContextProps {
     megaMenuOpen: boolean;
     isBasketEmpty: boolean;
     stickyBasket: boolean;
+    isModalRedirectionShow: boolean;
   };
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  //**User Favorite List *//////////////////////////////
+  const [userFavoriteList, setUserFavoriteList] = useState([]);
+
   //**User State Management *///////////////////////////
   const [loggedUser, setLoggedUser] = useState({});
 
@@ -42,6 +47,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     megaMenuOpen: false,
     isBasketEmpty: false,
     stickyBasket: false,
+    isModalRedirectionShow: false,
   });
   //----------------------------------------------------//
 
@@ -50,13 +56,15 @@ function GlobalContextProvider({ children }: globalContextProps) {
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
 
   const fetchAllMenuData = async (address: string) => {
-    if (address === "menu") {
+    if (address === "menus") {
       try {
         setIsLoading(true);
-        const res = await fetch(`https://fir-1-c7f12-default-rtdb.asia-southeast1.firebasedatabase.app/${address}.json`);
-        const data = await res.json();
+        const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
+        const { data } = await res.json();
+        const allMenus = await data.allMenus;
+
         // Favorite Process
-        const dataFavoriteProcess = await data.map((item: any) => {
+        const dataFavoriteProcess = await allMenus.map((item: any) => {
           if (item.favoriteList.includes(dataBase.currentUser?.displayName)) {
             return { ...item, isFavorite: true };
           } else {
@@ -88,9 +96,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
     }
   };
 
-  // Favorite list management
-  const [userFavoriteList, setUserFavoriteList] = useState([]);
-
   //----------------------------------------------------//
 
   //*Menu List Management
@@ -104,6 +109,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     salad: [],
     dips: [],
   });
+
   useEffect(() => {
     if (fullMenuListData) {
       //hamburgers list
@@ -154,6 +160,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setIsLoading,
         setFullMenuListData,
         setMegaMenuItemData,
+        setMenuLists,
         setBasketList,
         setReceipt,
         setLoggedUser,

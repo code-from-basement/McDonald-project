@@ -1,13 +1,15 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { AddRoundedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
+import { dataBase } from "../../../Data/firebaseConfig";
 
 const initialState = {
   qty: 1,
 };
-
+//
+//
 const reducer = (state: any, action: any) => {
   switch (action.type) {
     case "increment":
@@ -20,35 +22,64 @@ const reducer = (state: any, action: any) => {
 };
 
 function MenuItem({ item }: any) {
-  const { setBasketList, basketList, loggedUser }: any = useGlobalContext();
+  const target = useRef(null);
+  const { eventToggles, setEventToggles, setBasketList, basketList, fullMenuListData, userFavoriteList, setUserFavoriteList }: any = useGlobalContext();
+
+  const { isModalRedirectionShow } = eventToggles;
   const navigate = useNavigate();
-  const { title, price, image, id, nutrition, isFavorite } = item;
+  const { title, price, image, _id, nutrition, category, isFavorite } = item;
 
   const onClickNavigation = () => {
     navigate(`/${title}`);
   };
 
+  //
   const [{ qty }, dispatch] = useReducer(reducer, initialState);
   const onClickAddItemHandler = () => {
     if (basketList.length === 0) {
       setBasketList((prevData: any) => {
-        return [...prevData, { id, image, title, price, qty }];
+        return [...prevData, { _id, image, title, price, qty }];
       });
     } else {
       const isItemInBasket = basketList.find((item: any) => item.title === title);
       if (!isItemInBasket) {
         setBasketList((prevData: any) => {
-          return [...prevData, { id, image, title, price, qty }];
+          return [...prevData, { _id, image, title, price, qty }];
         });
       } else if (isItemInBasket) {
-        const getItemQty = basketList.filter((item) => item.title === title);
-        console.log(getItemQty, "getItemQty");
+        const getItemQty = basketList.filter((item: any) => item.title === title);
         setBasketList((prevData: any) => {
           return prevData.map((item: any) => {
             return item.title === getItemQty[0].title ? { ...item, qty: item.qty + qty } : item;
           });
         });
       }
+    }
+  };
+
+  // favorite button logic
+
+  const favoriteBtnHandler = async () => {
+    if (dataBase.currentUser === null) {
+      setEventToggles((prevData) => {
+        return { ...prevData, isModalRedirectionShow: true };
+      });
+    } else {
+      return console.log("pass");
+    }
+    const getFavoriteItem = fullMenuListData.filter((item) => item._id === target.current?.id);
+    if (dataBase.currentUser?.displayName) {
+      await setUserFavoriteList((prevData) => {
+        return [...prevData, getFavoriteItem[0]];
+      });
+      const res = await fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userName: dataBase.currentUser?.displayName,
+          favoriteList: getFavoriteItem[0],
+        }),
+      });
     }
   };
 
@@ -64,7 +95,9 @@ function MenuItem({ item }: any) {
           </div>
           <div className={Styles.header__btn}>
             <h2>{price}:-</h2>
-            <button>{isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}</button>
+            <button onClick={favoriteBtnHandler} ref={target} id={_id}>
+              {isFavorite ? <FavoriteRoundedIcon /> : <FavoriteBorderRoundedIcon />}
+            </button>
             <button className={Styles.info__btn} onClick={onClickNavigation}>
               <InfoOutlinedIcon />
             </button>

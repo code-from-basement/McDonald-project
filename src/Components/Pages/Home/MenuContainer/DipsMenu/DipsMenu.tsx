@@ -11,7 +11,7 @@ function DipsMenu() {
     <div className={Styles.dipsMenuContainer}>
       <h3 className={Styles.title}>Let boost our taste in you mouth!</h3>
       {dips?.map((item: any) => {
-        return <MenuItem key={item.id} item={item} />;
+        return <MenuItem key={item._id} item={item} />;
       })}
     </div>
   );

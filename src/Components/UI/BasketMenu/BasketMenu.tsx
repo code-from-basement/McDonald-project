@@ -29,7 +29,10 @@ function BasketMenu() {
 
   return (
     <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu}>
-      <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.btn__close}>
+      <button
+        onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)}
+        className={Styles.btn__close}
+      >
         <NavigateNextRoundedIcon />
       </button>
       <h2 className={Styles.basketMenu__title}>Order List:</h2>
@@ -52,8 +55,18 @@ function BasketMenu() {
                   </div>
                   <div className={Styles.basketItem__sideRight}>
                     <h2>{price * qty} Kr</h2>
-                    <input className={Styles.input__qty} type="number" max="10" min="1" value={item.qty} onChange={(e) => onChangeItemQty(e, id)} />
-                    <button className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(id)}>
+                    <input
+                      className={Styles.input__qty}
+                      type="number"
+                      max="10"
+                      min="1"
+                      value={item.qty}
+                      onChange={(e) => onChangeItemQty(e, id)}
+                    />
+                    <button
+                      className={Styles.btn__delete}
+                      onClick={() => onClickRemoveItemHandler(id)}
+                    >
                       <DeleteRoundedIcon />
                     </button>
                   </div>

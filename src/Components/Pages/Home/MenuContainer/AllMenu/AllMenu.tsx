@@ -6,7 +6,7 @@ function AllMenu() {
     <div className={Styles.allMenuContainer}>
       <h3 className={Styles.title}>All menu</h3>
       {fullMenuListData?.map((item: any) => {
-        return <h2 key={item.id}>{item.title}</h2>;
+        return <h2 key={item._id}>{item.title}</h2>;
       })}
     </div>
   );

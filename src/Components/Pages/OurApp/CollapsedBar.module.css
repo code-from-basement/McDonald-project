@@ -1,15 +1,124 @@
 .collapsedBar__container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height:auto;
+    justify-content: center;
+    /* height:auto; */
     min-height: 9rem;
     width: 76rem;
     border-radius: var(--border-radius-md);
-    border: 6px solid green;
+    /* border: 1px solid green; */
     background-color: transparent;
     flex-direction: column;
     margin-bottom: 2rem;
     margin-right: 6rem;
 
+}
+.collapsedBar__container_button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 9rem;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-gray-900);
+  padding: 1.5rem 4rem 1.5rem 4rem;
+
+}
+.collapsedBar__container_button h2{
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semiBold);
+  color: var(--color-white);
+  letter-spacing: 0px;
+
+}
+.button_svg{
+  color: var(--color-white);
+  border-radius: var(--border-radius-circle) !important;
+  padding: 2.4rem !important;
+  position: relative;
+  transition: color 0.1s , padding 0.1s;
+}
+.button_svg svg{
+  color: var(--color-secondary-900);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  position: absolute;
+  transition: transform 0.3s ease; 
+}
+.button_svg span{
+  background-color: var(--color-secondary-900);
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-radius: var(--border-radius-circle);
+  transition: all 0.1s;
+
+}
+.button_svg:hover span{
+  height: 100%;
+  width: 100%;
+  padding: 2.7rem;
+}
+.button_svg:hover svg{
+  color: var(--color-white);
+}
+.isExpanded{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76rem;
+  height: auto;
+  background-color: var(--color-primary-900);
+}
+
+.isExpanded .collapsedBar__container_button {
+  background-color: var(--color-primary-900); /* Change background color when expanded */
+
+}
+.isExpanded .collapsedBar__container_button h2{
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semiBold);
+  color: var(--color-gray-900);
+  letter-spacing: 0px;
+}
+.isExpanded .button_svg{
+  border-radius: var(--border-radius-circle) !important;
+  padding: 2.9rem !important;
+  position: relative;
+  transition: color 0.1s , padding 0.1s;
+  background-color: var(--color-secondary-900);
+}
+.isExpanded .button_svg svg{
+  color: var(--color-white);
+}
+
+.collapsedBar__container_detail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-primary-900);
+  padding: 2rem 4rem 4rem 4rem;
+  flex-direction: column;
+  border-radius: var(--border-radius-md);
+
+
+}
+
+.collapsedBar__container_detail p{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  letter-spacing: 0px;
+  line-height: 2;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  width: 100%;
+  height:auto;
+}
+.collapsedBar__container_detail:not(.active) {
+  display: none; /* hide the detail container when not expanded */
 }

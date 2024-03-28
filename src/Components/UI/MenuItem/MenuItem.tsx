@@ -58,29 +58,33 @@ function MenuItem({ item }: any) {
   };
 
   // favorite button logic
-
   const favoriteBtnHandler = async () => {
     if (dataBase.currentUser === null) {
       setEventToggles((prevData) => {
         return { ...prevData, isModalRedirectionShow: true };
       });
     } else {
-      return console.log("pass");
+      const getFavoriteItem = await fullMenuListData.filter((item) => item._id === target.current?.id);
+      const FavoriteItemID = getFavoriteItem[0]._id;
+      console.log(FavoriteItemID);
+      if (dataBase.currentUser?.displayName) {
+        await setUserFavoriteList((prevData) => {
+          console.log("2");
+          return [...prevData, getFavoriteItem[0]];
+        });
+        const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            userName: dataBase.currentUser?.displayName,
+            favoriteList: [`${FavoriteItemID}`],
+          }),
+        });
+        const data = await res.json();
+        console.log(data);
+      }
     }
-    const getFavoriteItem = fullMenuListData.filter((item) => item._id === target.current?.id);
-    if (dataBase.currentUser?.displayName) {
-      await setUserFavoriteList((prevData) => {
-        return [...prevData, getFavoriteItem[0]];
-      });
-      const res = await fetch("", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userName: dataBase.currentUser?.displayName,
-          favoriteList: getFavoriteItem[0],
-        }),
-      });
-    }
+    return console.log("pass");
   };
 
   return (

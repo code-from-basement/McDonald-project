@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { basketMenuAnimationStyles } from "../Animation/AnimationStyles";
 import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/IconsLibrary";
@@ -9,7 +8,6 @@ import TotalSection from "./TotalSection/TotalSection";
 
 function BasketMenu() {
   const { eventToggles, basketList, setBasketList } = useGlobalContext();
-  const { itemQtyNum, setItemQtyNum } = useState("");
   const { togglerFunc, isBasketEmpty } = eventToggles;
 
   const onClickRemoveItemHandler = (_id: number) => {

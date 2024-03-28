@@ -29,44 +29,38 @@ import CollapsedBar from "./CollapsedBar";
 
 function OurApp() {
   const { scrollYProgress }: any = useScroll();
-  const [isExpanded, setExpanded] = useState(false);
-  const [isSelected, setIsSelected] = useState(false);
-  const [isExpandedOne, setExpandedOne] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  
-
-  // const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
-
-  function Collapse(props: any) {
-    const collapseProps = useCollapse(props);
-    return props.children(collapseProps);
-  }
 
   //define array for collapsed bar items
-
   const collapsedItems = [
     {
       title: "Crew",
+      id: 1,
       collapseDetail:"Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.",
     },
     {
       title: "Shift ManagerCrew",
+      id: 2,
       collapseDetail:"The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.",
     },
     {
       title: "Maintenance Person",
+      id: 3,
       collapseDetail:"If you like working with your hands and looking after all the internal and external areas of the restaurant, the maintenance role is for you. You need to be organised, have a keen eye for cleanliness as you will be responsible for janitorial duties, cleaning restaurant equipment, minor maintenance responsibilities and maintaining the restaurant surrounds.",
     },
     {
       title: "Department Manager & Assistant Restaurant Manager",
+      id: 4,
       collapseDetail:"In addition to delivering outstanding QSC every shift, Department Managers and Assistant Restaurant Managers have an additional responsibility of leading a team as either a Customer Experience, People Performance or Product Quality Manager."
     },
     {
       title: "Crew Coach",
+      id: 5,
       collapseDetail:"Crew have the opportunity to develop and progress into the Crew Coach position. The Crew Coach provides guidance and direction to fellow Crew and utilises all policies and procedures to provide the best quality coaching, to ensure outstanding delivery of QSC, under the supervision of the Shift Manager."
     },
     {
       title: "Restaurant Manager",
+      id: 6,
       collapseDetail:"The Restaurant Manager is the leader of the restaurant, and is responsible for the overall profitability, sales, people development and operations of the restaurant. The Restaurant Manager works closely with their management team to coordinate the functions and systems that are critical to business success."
     }
 
@@ -159,7 +153,7 @@ function OurApp() {
               </span>
               <input type="text" placeholder="Post Code or Suburb" />
             </div>
-            <button onClick={() => {}}>Search Restaurant Opportunities</button>
+            <button onClick={() => {}} disabled>Search Restaurant Opportunities</button>
           </div>
           <div className={Styles.imageContainer}>
             <img src={cardWave} alt="" />
@@ -200,149 +194,9 @@ function OurApp() {
           </div>
         </div>
         <div className={Styles.maccasContainer__downRow}>
-        
-          {/* <div className={Styles.maccasContainer__downRow__l1}> */}
-            {collapsedItems.map((item : any, index : number) => {
-              return <CollapsedBar item={item} key={index}  />
+            {collapsedItems.map((item : any) => {
+              return <CollapsedBar item={item} key={item.id}  />
             })}
-            {/* <Collapse defaultOpen>
-              {({ getToggleProps, getCollapseProps }: any) => (
-                <button
-                  className={Styles.maccasContainer__downRow__l1_section}
-                  {...getToggleProps({
-                    onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-                  })}
-                >
-                  {isExpanded ? (
-                    <div className={Styles.maccasContainer__downRow__l1_noCollapsed}>
-                      <div className={Styles.maccasContainer__downRow__l1_noCollapsed_up}>
-                        <h2>Crew</h2>
-                        <button>
-                          <ExpandMoreRoundedIcon />
-                        </button>
-                      </div>
-                      <p>
-                        Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and
-                        at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a
-                        role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={Styles.maccasContainer__downRow__l1_withCollapsed}>
-                      <h2>Crew</h2>
-                      <button>
-                        <span></span>
-                        <ArrowForwardIosRoundedIcon />
-                      </button>
-                    </div>
-                  )}
-                </button>
-              )}
-            </Collapse>
-            <Collapse defaultOpen>
-              {({ getToggleProps, getCollapseProps }: any) => (
-                <button
-                  className={Styles.maccasContainer__downRow__l1_section}
-                  {...getToggleProps({
-                    onClick: () => setIsSelected((prevSelected) => !prevSelected),
-                  })}
-                >
-                  {isSelected ? (
-                    <div className={Styles.maccasContainer__downRow__l1_noCollapsed}>
-                      <div className={Styles.maccasContainer__downRow__l1_noCollapsed_up}>
-                        <h2>Shift Manager</h2>
-                        <button>
-                          <ExpandMoreRoundedIcon />
-                        </button>
-                      </div>
-                      <p>
-                        The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to
-                        ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={Styles.maccasContainer__downRow__l1_withCollapsed}>
-                      <h2>Shift Manager</h2>
-                      <button>
-                        <span></span>
-                        <ArrowForwardIosRoundedIcon />
-                      </button>
-                    </div>
-                  )}
-                </button>
-              )}
-            </Collapse>
-          </div>
-
-          <div className={Styles.maccasContainer__downRow__l1}>
-            <Collapse defaultOpen>
-              {({ getToggleProps, getCollapseProps }: any) => (
-                <button
-                  className={Styles.maccasContainer__downRow__l1_section}
-                  {...getToggleProps({
-                    onClick: () => setExpandedOne((prevExpandedOne) => !prevExpandedOne),
-                  })}
-                >
-                  {isExpandedOne ? (
-                    <div className={Styles.maccasContainer__downRow__l1_noCollapsed}>
-                      <div className={Styles.maccasContainer__downRow__l1_noCollapsed_up}>
-                        <h2>Crew</h2>
-                        <button>
-                          <ExpandMoreRoundedIcon />
-                        </button>
-                      </div>
-                      <p>
-                        Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and
-                        at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a
-                        role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={Styles.maccasContainer__downRow__l1_withCollapsed}>
-                      <h2>Crew</h2>
-                      <button>
-                        <span></span>
-                        <ArrowForwardIosRoundedIcon />
-                      </button>
-                    </div>
-                  )}
-                </button>
-              )}
-            </Collapse>
-            <Collapse defaultOpen>
-              {({ getToggleProps, getCollapseProps }: any) => (
-                <button
-                  className={Styles.maccasContainer__downRow__l1_section}
-                  {...getToggleProps({
-                    onClick: () => setIsSelected((prevSelected) => !prevSelected),
-                  })}
-                >
-                  {isSelected ? (
-                    <div className={Styles.maccasContainer__downRow__l1_noCollapsed}>
-                      <div className={Styles.maccasContainer__downRow__l1_noCollapsed_up}>
-                        <h2>Shift Manager</h2>
-                        <button>
-                          <ExpandMoreRoundedIcon />
-                        </button>
-                      </div>
-                      <p>
-                        The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to
-                        ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={Styles.maccasContainer__downRow__l1_withCollapsed}>
-                      <h2>Shift Manager</h2>
-                      <button>
-                        <span></span>
-                        <ArrowForwardIosRoundedIcon />
-                      </button>
-                    </div>
-                  )}
-                </button>
-              )}
-            </Collapse> */}
-          {/* </div> */}
         </div>
       </div>
       <div className={Styles.ourJobs_container}>

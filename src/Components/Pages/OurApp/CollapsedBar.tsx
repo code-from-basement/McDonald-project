@@ -12,12 +12,12 @@ function CollapsedBar({item}: any) {
 
 
   return (
-    <div className={Styles.collapsedBar__container}>
-        <button className={Styles.collapsedBar__container_button} onClick={(e) => onClickExpandHandle(e)}>
+    <div className={`${Styles.collapsedBar__container} ${isExpanded ? Styles.isExpanded : ""}`}>
+        <button className={Styles.collapsedBar__container_button} onClick={() => onClickExpandHandle()}>
             <h2>{title}</h2>
-            {isExpanded? <ExpandMoreRoundedIcon /> : <ArrowForwardIosRoundedIcon />}
+            <button className={Styles.button_svg}><span></span>{isExpanded ? <ExpandMoreRoundedIcon /> : <ArrowForwardIosRoundedIcon />}</button>
         </button>
-        <div>
+        <div className={`${Styles.collapsedBar__container_detail} ${isExpanded ? Styles.active : ""}`}>
             <p>{collapseDetail}</p>
         </div>
     </div>

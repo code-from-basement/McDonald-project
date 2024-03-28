@@ -68,8 +68,6 @@
   width: 100rem;
   margin-right: 20rem;
   height: auto;
-  /* height: 41rem; */
-  /* background-color: palevioletred; */
   position: relative;
  
 }
@@ -131,11 +129,7 @@
   font-weight: var(--font-weight-semiBold);
   padding: 1rem;
 }
-.joinOurCrew_rightContainer_card button:hover {
-  background-color: var(--color-secondary-900);
-  color: var(--color-white);
-  transition: var(--transition);
-}
+
 .imageContainer {
   display: flex;
   align-items: flex-end;
@@ -147,11 +141,6 @@
     transform: translateY(99%) translateX(130%);
 
 }
-/* .imageContainer img {
-  width: 30%;
-  height: 200px;
-  margin-right: 4rem;
-} */
 
 .banner {
   background-image: url(../../../assets/Image/Careers/hero.jpg);
@@ -211,7 +200,6 @@
   max-height: max-content;
   width: 100%;
   z-index: var(--z-index-200);
-  /* border: 1px solid black; */
   margin-left: var(--padding-lg);
   margin-top: var(--padding-md);
 }
@@ -294,12 +282,12 @@
 }
 .maccasContainer__downRow {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   
   /* flex-direction: column;
   gap: 3rem; */
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   height: auto;
   width: 100%;
   margin-left: 10rem;
@@ -307,92 +295,6 @@
   flex-wrap: wrap;
 
 }
-.maccasContainer__downRow__container{
-
-}
-.maccasContainer__downRow__l1 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 7rem;
-  width: 100%;
-  min-height: 9rem;
-  height: auto;
-  background-color: blueviolet;
-  padding-left: 5rem;
-
-}
-
-.maccasContainer__downRow__l1_section{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height:auto;
-  min-height: 9rem;
-  width: 76rem;
-  border-radius: var(--border-radius-md);
-  /* border: 6px solid green; */
-  background-color: transparent;
-  /* padding: 1.5rem 4rem 1.5rem 4rem; */
-  /* position: relative; */
-
-  
-}
-
-
-.maccasContainer__downRow__l1_withCollapsed{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 9rem;
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-gray-900);
-  padding: 1.5rem 4rem 1.5rem 4rem;
-  
-}
-.maccasContainer__downRow__l1_withCollapsed h2 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semiBold);
-  color: var(--color-white);
-  letter-spacing: 0px;
-
-}
-
-.maccasContainer__downRow__l1_withCollapsed button{
-  color: var(--color-white);
-  border-radius: var(--border-radius-circle) !important;
-  padding: 2.4rem !important;
-  position: relative;
-  transition: color 0.1s , padding 0.1s;
-
-}
-.maccasContainer__downRow__l1_withCollapsed button svg{
-  color: var(--color-secondary-900);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-  position: absolute;
-}
-.maccasContainer__downRow__l1_withCollapsed button span{
-  background-color: var(--color-secondary-900);
-  display: block;
-  height: 0;
-  position: absolute;
-  width: 0;
-  border-radius: var(--border-radius-circle);
-  transition: all 0.1s;
-}
-.maccasContainer__downRow__l1_withCollapsed button:hover span{
-  height: 100%;
-  width: 100%;
-  padding: 2.7rem;
-}
-.maccasContainer__downRow__l1_withCollapsed button:hover svg{
-  color: var(--color-white);
-}
-
-
-
 
 
 .maccasContainer__downRow__l1_noCollapsed{
@@ -411,216 +313,7 @@
   animation-delay: 10000; */
   
 }
-.maccasContainer__downRow__l1_noCollapsed_up{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height:auto;
-  padding-bottom: 3rem;
 
-}
-.maccasContainer__downRow__l1_noCollapsed_up h2{
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semiBold);
-  color: var(--color-gray-900);
-  letter-spacing: 0px;
-}
-
-.maccasContainer__downRow__l1_noCollapsed p{
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  letter-spacing: 0px;
-  line-height: 2;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-normal);
-  /* background-color: red; */
-  width: 100%;
-  height:auto;
-  /* height: 100%; */
-  /* padding-bottom: 5rem; */
-
-}
-
-.maccasContainer__downRow__l1_noCollapsed_up button{
-  background-color: var(--color-secondary-900);
-  border-radius: var(--border-radius-circle);
-  padding: 2.4rem;
-  position: relative;
-  transition: color 0.1s , padding 0.1s;
-}
-.maccasContainer__downRow__l1_noCollapsed_up svg{
-  color: var(--color-white) !important;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-  position: absolute;
-}
-
-
-
-
-
-
-
-
-
-/* .maccasContainer__downRow__l1_section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-height: max-content;
-  min-height: 9rem;
-  width: 76rem;
-  background-color: var(--color-gray-900);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem 4rem 1.5rem 4rem;
-
-}
-.maccasContainer__downRow__l1_section h2 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semiBold);
-  color: var(--color-white);
-  letter-spacing: 0;
-}
-.maccasContainer__downRow__l1_section button {
-  color: var(--color-white);
-  border-radius: var(--border-radius-circle);
-  padding: 2.4rem;
-  position: relative;
-  transition: color 0.1s , padding 0.1s;
-}
-.maccasContainer__downRow__l1_section button svg {
-  color: var(--color-secondary-900);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-  position: absolute;
-}
-.maccasContainer__downRow__l1_section button span{
-  background-color: var(--color-secondary-900);
-  display: block;
-  height: 0;
-  position: absolute;
-  width: 0;
-  border-radius: var(--border-radius-circle);
-  transition: all 0.1s;
-}
-.maccasContainer__downRow__l1_section button:hover span{
-  height: 100%;
-  width: 100%;
-  padding: 2.7rem;
-}
-
-.maccasContainer__downRow__l1_section button:hover svg {
-  color: var(--color-white);
-}
-
-.collapsedButton{
-  background-color: var(--color-secondary-900);
-  border-radius: var(--border-radius-circle);
-  padding: 2.4rem;
-  position: relative;
-  transition: color 0.1s , padding 0.1s;
-}
-.collapsedButton svg{
-  color: var(--color-white) !important;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-  position: absolute;
-
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.maccasContainer__downRow__l2 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 7rem;
-  width: 100%;
-  height: 9rem;
-  background-color: blueviolet;
-  padding-left: 5rem;
-}
-.maccasContainer__downRow__l2_section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 76rem;
-  background-color: var(--color-gray-900);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem 4rem 1.5rem 4rem;
-}
-.maccasContainer__downRow__l2_section h2 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semiBold);
-  color: var(--color-white);
-  letter-spacing: 0;
-}
-.maccasContainer__downRow__l2_section button {
-  color: var(--color-white);
-  border-radius: var(--border-radius-circle);
-  padding: var(--padding-sm);
-}
-.maccasContainer__downRow__l2_section button svg {
-  color: var(--color-secondary-900);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-}
-.maccasContainer__downRow__l3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 7rem;
-  width: 100%;
-  height: 9rem;
-  /* background-color: blueviolet; */
-  padding-left: 5rem;
-}
-.maccasContainer__downRow__l3_section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 76rem;
-  background-color: var(--color-gray-900);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem 4rem 1.5rem 4rem;
-}
-.maccasContainer__downRow__l3_section h2 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semiBold);
-  color: var(--color-white);
-  letter-spacing: 0;
-}
-.maccasContainer__downRow__l3_section button {
-  color: var(--color-white);
-  border-radius: var(--border-radius-circle);
-  padding: var(--padding-sm);
-}
-.maccasContainer__downRow__l3_section button svg {
-  color: var(--color-secondary-900);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-light);
-}
 /*************************************** Our jobs ***********************************************/
 .ourJobs_container{
   display: flex;
@@ -747,7 +440,6 @@
   flex-direction: column;
   width: 60%;
   height: 100%;
-  /* border: 1px solid red; */
   
 }
 .ourJobs_container_right h2{
@@ -807,7 +499,6 @@
   margin-bottom: 20rem;
 }
 .goldenArchesContainer_imageContainer__image {
-  /* position: relative; */
   background-image: url(../../../assets/Image/Careers/2.jpg);
   background-size: cover;
   background-position: center;
@@ -887,7 +578,6 @@
   gap: 3rem;
   width: 100%;
   height: 100%;
-  /* background-color: blue; */
   overflow-y: scroll;
   scrollbar-color: var(--color-secondary-900) var(--color-gray-200);
   scrollbar-width: thin;
@@ -931,13 +621,11 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  /* background-color: yellowgreen; */
 }
 .scrollPanelContainer__right_card{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: aquamarine; */
   width: 100%;
   height: 50rem;
   gap: 4rem;
@@ -988,7 +676,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 1rem;
-  /* background-color: plum; */
   width: 110rem;
   height: 100%;
   position: absolute;
@@ -1000,7 +687,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* background-color: greenyellow; */
   width: 75%;
   height: 100%;
   margin-bottom: 4rem;
@@ -1033,9 +719,6 @@
   justify-content: center;
   flex-direction: column;
   gap: var(--padding-xs);
-  /* position: absolute;
-    top: 0;
-    right: 0; */
   width: 110rem;
   /* width:55%; */
   height: 57rem;
@@ -1076,7 +759,6 @@
   width: 100%;
   height: 140rem;
   margin-top: 12rem;
-  /* background-color: aqua; */
   position: relative;
 }
 .ourPeople__banner{
@@ -1146,10 +828,10 @@
   width: 95rem;
   height: 52rem;
   border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
-
 }
 .ourPeople__image2 img{
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+  /* border-radius: var(--border-radius-md); */
   width: 100%;
   height: 100%;
   object-fit: cover;

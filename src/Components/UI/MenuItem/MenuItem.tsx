@@ -68,7 +68,7 @@ function MenuItem({ item }: any) {
       const FavoriteItemID = getFavoriteItem[0]._id;
       if (dataBase.currentUser?.displayName) {
         await setUserFavoriteList((prevData) => {
-          return [...prevData, getFavoriteItem[0]];
+          return [...new Set([...prevData, getFavoriteItem[0]])];
         });
         const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
           method: "POST",

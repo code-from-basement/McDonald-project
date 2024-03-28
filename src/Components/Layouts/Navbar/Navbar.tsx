@@ -12,7 +12,6 @@ function Navbar() {
   const { userFavoriteList } = useGlobalContext();
   // location from react-router-dom
   let location = useLocation();
-  console.log(userFavoriteList);
 
   // logged in user data
 

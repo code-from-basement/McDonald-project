@@ -12,13 +12,13 @@ function ModalRedirection() {
   const navigate = useNavigate();
 
   const onClickModalCloseHandler = () => {
-    setEventToggles((prevData) => {
+    setEventToggles((prevData: any) => {
       return { ...prevData, isModalRedirectionShow: false };
     });
   };
 
   const onClickRedirectToLoginHandler = () => {
-    setEventToggles((prevData) => {
+    setEventToggles((prevData: any) => {
       return { ...prevData, isModalRedirectionShow: false };
     });
     navigate("/login");

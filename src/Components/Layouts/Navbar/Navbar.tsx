@@ -61,7 +61,7 @@ function Navbar() {
           {dataBase.currentUser?.photoURL ? <img className={Styles.userPhoto} src={dataBase.currentUser.photoURL}></img> : <AccountCircleIcon />}
         </Link>
         <Link to="/favorite" className={Styles.favContainer}>
-          {userFavoriteList.length === 0 ? <FavoriteBorderRoundedIcon /> : <FavoriteRoundedIcon style={{ color: "#da291c" }} />}
+          {!userFavoriteList?.length ? <FavoriteBorderRoundedIcon /> : <FavoriteRoundedIcon style={{ color: "#da291c" }} />}
         </Link>
         <h5>{dataBase.currentUser?.displayName}</h5>
         <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>

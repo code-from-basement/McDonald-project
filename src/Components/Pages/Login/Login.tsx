@@ -20,7 +20,7 @@ function Login() {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(dataBase, provider);
-      setLoggedUser(result.user);
+      await setLoggedUser(result.user);
       fetchAllMenuData("menus");
 
       window.localStorage.setItem("user", JSON.stringify(result.user.displayName));
@@ -42,7 +42,6 @@ function Login() {
       console.log(err, "error to sign out");
     }
   };
-  console.log(dataBase.currentUser, "datable.currentUser");
   return (
     <div className={Styles.loginContainer}>
       <div className={Styles.brandContainer}>

@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
-import Styles from "./favorite.module.css";
-import { useGlobalContext } from "../../Context/GlobalContext";
 import { dataBase } from "../../../Data/firebaseConfig";
+import { useGlobalContext } from "../../Context/GlobalContext";
+import { DeleteRoundedIcon } from "../../UI/IconsLibrary/IconsLibrary";
+import Styles from "./favorite.module.css";
 
 function FavoritePage() {
-  const { fullMenuListData, userFavoriteList, setUserFavoriteList } = useGlobalContext();
+  const { setFullMenuListData, userFavoriteList } = useGlobalContext();
+  const noFavItem = <h2>There no favorite item selected</h2>;
 
   // useEffect(() => {
   //   if (dataBase.currentUser === null) {
@@ -15,8 +16,20 @@ function FavoritePage() {
   //   }
   // }, []);
 
-  const noFavItem = <h2>There no favorite item selected</h2>;
+  // useEffect(() => {
+  //   setUserFavoriteList(fullMenuListData?.find((item) => item.isFavorite === true));
+  // }, [fullMenuListData]);
+
   //
+  // Delete item from list and update full menu list isFavorite key to false
+  const onClickDeleteHandler = (e) => {
+    const targetID = e.currentTarget.id;
+    setFullMenuListData((prevData: any) => {
+      return prevData.map((item) => {
+        return item._id === targetID ? { ...item, isFavorite: false } : item;
+      });
+    });
+  };
 
   return (
     <div className={Styles.favPage}>
@@ -42,11 +55,21 @@ function FavoritePage() {
           {!dataBase.currentUser
             ? noFavItem
             : userFavoriteList?.map((item: any) => {
-                const { title, price } = item;
+                const { title, price, _id, image } = item;
                 return (
-                  <div>
-                    <h2>{title}</h2>
-                    <h2>{price}</h2>
+                  <div className={Styles.favCard} key={_id}>
+                    <div className={Styles.favCard__image}>
+                      <img src={image} alt={title} />
+                    </div>
+                    <div className={Styles.favCard__details}>
+                      <h2>{title}</h2>
+                      <h2>{price}Kr</h2>
+                    </div>
+                    <div className={Styles.favCard__footer}>
+                      <button ref={deleteButtonRef} id={_id} onClick={(e) => onClickDeleteHandler(e)}>
+                        <DeleteRoundedIcon />
+                      </button>
+                    </div>
                   </div>
                 );
               })}

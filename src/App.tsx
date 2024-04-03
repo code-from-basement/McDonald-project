@@ -29,10 +29,10 @@ import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, isLoading, fullMenuListData }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
-  // Intersection API for sticky basket
+  // Intersection observer API for sticky basket
   useEffect(() => {
     const navbarTarget = document.querySelector("#navbar");
     const observer = new IntersectionObserver((entries) => {
@@ -60,6 +60,12 @@ function App() {
   useEffect(() => {
     fetchAllMenuData("megaMenuItem");
   }, []);
+
+  useEffect(() => {
+    if (dataBase.currentUser?.displayName) {
+      fetchAllFavoriteList(`${dataBase.currentUser?.displayName}`);
+    }
+  }, [dataBase.currentUser?.displayName]);
 
   return (
     <div className="app">

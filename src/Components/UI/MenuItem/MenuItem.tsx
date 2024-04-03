@@ -23,7 +23,7 @@ const reducer = (state: any, action: any) => {
 
 function MenuItem({ item }: any) {
   const target = useRef(null);
-  const { eventToggles, setEventToggles, setBasketList, basketList, fullMenuListData, userFavoriteList, setUserFavoriteList }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, setBasketList, basketList, fullMenuListData, setFullMenuListData, userFavoriteList, setUserFavoriteList }: any = useGlobalContext();
 
   const { isModalRedirectionShow } = eventToggles;
   const navigate = useNavigate();
@@ -67,19 +67,22 @@ function MenuItem({ item }: any) {
       const getFavoriteItem = await fullMenuListData.filter((item) => item._id === target.current?.id);
       const FavoriteItemID = getFavoriteItem[0]._id;
       if (dataBase.currentUser?.displayName) {
-        await setUserFavoriteList((prevData) => {
-          return [...new Set([...prevData, getFavoriteItem[0]])];
+        setFullMenuListData((prevData: any) => {
+          return prevData.map((item: any) => {
+            return item._id === FavoriteItemID ? { ...item, isFavorite: !item.isFavorite } : item;
+          });
         });
-        const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            userName: dataBase.currentUser?.displayName,
-            favoriteList: [`${FavoriteItemID}`],
-          }),
-        });
-        const data = await res.json();
-        console.log(data);
+
+        // const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify({
+        //     userName: dataBase.currentUser?.displayName,
+        //     favoriteList: [`${FavoriteItemID}`],
+        //   }),
+        // });
+        // const data = await res.json();
+        // console.log(data);
       }
     }
   };

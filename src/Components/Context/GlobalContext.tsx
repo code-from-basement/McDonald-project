@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { dataBase, db } from "../../Data/firebaseConfig";
+import { dataBase } from "../../Data/firebaseConfig";
 
 const GlobalContext = createContext();
 
@@ -16,7 +16,13 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
-  //**User Favorite List *//////////////////////////////
+  //*Fetching data from Firebase Realtime Database
+  const [fullMenuListData, setFullMenuListData] = useState<any>(null);
+  const [megaMenuItemData, setMegaMenuItemData] = useState([]);
+  // **USER FAVORITE LIST IN BACKEND
+  const [loggedInUserFavoriteList, setLoggedInUserFavoriteList] = useState([]);
+
+  //**User Favorite List in front end *//////////////////////////////
   const [userFavoriteList, setUserFavoriteList] = useState([]);
 
   //**User State Management *///////////////////////////
@@ -48,29 +54,71 @@ function GlobalContextProvider({ children }: globalContextProps) {
     stickyBasket: false,
     isModalRedirectionShow: false,
   });
+
+  // Updating User Favorite List in favorite page
+  {
+  }
+  useEffect(() => {
+    setUserFavoriteList(
+      fullMenuListData?.filter((item) => {
+        return item.isFavorite === true;
+      })
+    );
+  }, [fullMenuListData]);
+
   //----------------------------------------------------//
 
-  //*Fetching data from Firebase Realtime Database
-  const [fullMenuListData, setFullMenuListData] = useState<any>(null);
-  const [megaMenuItemData, setMegaMenuItemData] = useState([]);
+  // Fetching Favorite List
+  const fetchAllFavoriteList = async (usernameParams: string) => {
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs/${usernameParams}`);
+      const { data } = await response.json();
+      const uniqueItemList = [...new Set(data.allFavItems.favoriteList)];
+      setLoggedInUserFavoriteList(uniqueItemList);
+      console.log("fav fecthed");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  console.log(loggedInUserFavoriteList);
 
   const fetchAllMenuData = async (address: string) => {
     if (address === "menus") {
       try {
         setIsLoading(true);
+        //
         const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
         const { data } = await res.json();
         const allMenus = await data.allMenus;
+        setFullMenuListData(allMenus);
 
         // Favorite Process
-        const dataFavoriteProcess = await allMenus.map((item: any) => {
-          if (item.favoriteList.includes(dataBase.currentUser?.displayName)) {
-            return { ...item, isFavorite: true };
-          } else {
-            return { ...item, isFavorite: false };
-          }
-        });
-        setFullMenuListData(dataFavoriteProcess);
+        // if (loggedInUserFavoriteList) {
+        //   console.log(loggedInUserFavoriteList);
+        //   console.log("logic is working");
+        //   const newAllMenus = allMenus.map((menu: any) => {
+        //     loggedInUserFavoriteList.map((item: any) => {
+        //       if (menu._id == item) {
+        //         menu.isFavorite = true;
+        //       }
+        //     });
+        //   });
+        //   setFullMenuListData(newAllMenus);
+        // } else {
+        //   console.log("goooz");
+        // }
+
+        // loggedInUserFavoriteList?.map((item: any) => {
+        //   const allMenusAfter = allMenus.map((menu: any) => {
+        //     if (menu._id == item) {
+        //       menu.isFavorite = true;
+        //     } else {
+        //       menu.isFavorite = false;
+        //     }
+        //   });
+        //   console.log(allMenusAfter);
+
+        // });
       } catch (error) {
         setIsLoading(false);
         alert(error);
@@ -164,6 +212,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setReceipt,
         setLoggedUser,
         setUserFavoriteList,
+        fetchAllFavoriteList,
       }}
     >
       {children}

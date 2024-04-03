@@ -280,38 +280,43 @@
   background-color: var(--color-secondary-900);
   border-radius: 0 0 0 var(--border-radius-lg);
 }
-.maccasContainer__downRow {
+/* .maccasContainer__downRow {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  
-  /* flex-direction: column;
-  gap: 3rem; */
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
   height: auto;
   width: 100%;
   margin-left: 10rem;
   margin-bottom: 7rem;
   flex-wrap: wrap;
 
+} */
+.maccasContainer__downRow__container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 7rem;
+  margin-left: 10rem; 
 }
-
-
-.maccasContainer__downRow__l1_noCollapsed{
+.maccasContainer__downRow__container_left{
   display: flex;
   align-items: center;
-  justify-content:center;
-  width: 100%;
-  height: auto;
-  background-color: var(--color-primary-900);
-  padding: 2rem 4rem 4rem 4rem;
+  justify-content: center;
   flex-direction: column;
-  border-radius: var(--border-radius-md);
-  /* transition: var(--transition); */
-  /* border: 1px solid greenyellow; */
-  /* transition: cubic-bezier(0.19, 1, 0.22, 1);
-  animation-delay: 10000; */
-  
+  width: 45%;
+  height: auto;
+  padding-left: 7rem;
+}
+.maccasContainer__downRow__container_right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 45%;
+  height: auto;
+  padding-left: 5rem;
 }
 
 /*************************************** Our jobs ***********************************************/
@@ -587,17 +592,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--padding-md);
+  /* gap: var(--padding-md); */
   width: 100%;
-  height: max-content;
+  height: auto;
   padding-top: var(--padding-md);
   background-color: transparent;
-  /* background-color: aqua; */
-}
 
-.scrollPanelContainer__left_l1:hover img {
-  border: 3px solid var(--color-secondary-800);
-  transition: var(--transition);
+}
+.scrollPanelContainer__left_l1 h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0px;
+  padding-left: 3rem;
 }
 
 .scrollPanelContainer__left_l1 img {
@@ -606,12 +612,41 @@
   padding: 1rem;
   width: 8rem;
   height: 8rem;
+
 }
 
-.scrollPanelContainer__left_l1 h3 {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-light);
-  letter-spacing: 0px;
+.scrollPanelContainer__left_l1:hover img {
+  border: 3px solid var(--color-secondary-800);
+  transition: var(--transition);
+}
+
+
+.scrollPanelContainer__left_l1.active{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  padding-top: var(--padding-md);
+  position: relative;
+
+}
+
+.scrollPanelContainer__left_l1.active img{
+  border: 3px solid var(--color-secondary-900);
+}
+
+.scrollPanelContainer__left_l1.active .active-indicator {
+  position: absolute;
+  /* top: 25px; 
+  left: 10%; */
+  top: 0;
+  left: 0;
+  transform: translateX(420%) translateY(160%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-secondary-900); 
 }
 
 .scrollPanelContainer__right {

@@ -66,7 +66,7 @@ function FavoritePage() {
                       <h2>{price}Kr</h2>
                     </div>
                     <div className={Styles.favCard__footer}>
-                      <button ref={deleteButtonRef} id={_id} onClick={(e) => onClickDeleteHandler(e)}>
+                      <button id={_id} onClick={(e) => onClickDeleteHandler(e)}>
                         <DeleteRoundedIcon />
                       </button>
                     </div>

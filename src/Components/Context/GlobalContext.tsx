@@ -80,7 +80,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
       console.log(err);
     }
   };
-  console.log(loggedInUserFavoriteList);
 
   const fetchAllMenuData = async (address: string) => {
     if (address === "menus") {

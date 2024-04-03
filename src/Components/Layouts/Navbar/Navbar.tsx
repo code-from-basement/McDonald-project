@@ -1,11 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../../assets/Image/Icon/macdonaldPNG.png";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import {
-  AccountCircleIcon,
-  LocalMallOutlinedIcon,
-  FavoriteBorderRoundedIcon,
-} from "../../UI/IconsLibrary/IconsLibrary";
+import { AccountCircleIcon, LocalMallOutlinedIcon, FavoriteBorderRoundedIcon } from "../../UI/IconsLibrary/IconsLibrary";
 import { KeyboardArrowDownRoundedIcon, FavoriteRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 
 import Styles from "./Navbar.module.css";
@@ -46,10 +42,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
         </Link>
         <div className={Styles.pagesContainer}>
-          <button
-            onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}
-            className={megaMenuOpen ? `${Styles.activeMenu}` : ""}
-          >
+          <button onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)} className={megaMenuOpen ? `${Styles.activeMenu}` : ""}>
             Our Menu <KeyboardArrowDownRoundedIcon />
           </button>
           <NavLink to="/aboutourfood" className={activeClass}>
@@ -65,24 +58,13 @@ function Navbar() {
       </div>
       <div className={Styles.rightContainer}>
         <Link to="/login" className={Styles.userContainer}>
-          {dataBase.currentUser?.photoURL ? (
-            <img className={Styles.userPhoto} src={dataBase.currentUser.photoURL}></img>
-          ) : (
-            <AccountCircleIcon />
-          )}
+          {dataBase.currentUser?.photoURL ? <img className={Styles.userPhoto} src={dataBase.currentUser.photoURL}></img> : <AccountCircleIcon />}
         </Link>
         <Link to="/favorite" className={Styles.favContainer}>
-          {userFavoriteList.length === 0 ? (
-            <FavoriteBorderRoundedIcon />
-          ) : (
-            <FavoriteRoundedIcon style={{ color: "#da291c" }} />
-          )}
+          {!userFavoriteList?.length ? <FavoriteBorderRoundedIcon /> : <FavoriteRoundedIcon style={{ color: "#da291c" }} />}
         </Link>
         <h5>{dataBase.currentUser?.displayName}</h5>
-        <button
-          onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)}
-          className={Styles.shoppingContainer}
-        >
+        <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.shoppingContainer}>
           <span className={Styles.basketNum}>{basketList.length}</span>
           <LocalMallOutlinedIcon />
         </button>

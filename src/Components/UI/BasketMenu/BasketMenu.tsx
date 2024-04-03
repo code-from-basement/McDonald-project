@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { basketMenuAnimationStyles } from "../Animation/AnimationStyles";
 import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/IconsLibrary";
@@ -9,19 +8,18 @@ import TotalSection from "./TotalSection/TotalSection";
 
 function BasketMenu() {
   const { eventToggles, basketList, setBasketList } = useGlobalContext();
-  const { itemQtyNum, setItemQtyNum } = useState("");
   const { togglerFunc, isBasketEmpty } = eventToggles;
 
-  const onClickRemoveItemHandler = (id: number) => {
+  const onClickRemoveItemHandler = (_id: number) => {
     setBasketList((prevData: any) => {
-      return prevData.filter((item: any) => item.id !== id);
+      return prevData.filter((item: any) => item._id !== _id);
     });
   };
 
-  const onChangeItemQty = (e, id) => {
+  const onChangeItemQty = (e, _id) => {
     if (e.target.value <= 10 && e.target.value > 0) {
-      setBasketList((prevData) => {
-        return prevData.map((item) => (item.id === id ? { ...item, qty: e.target.value } : item));
+      setBasketList((prevData: any) => {
+        return prevData.map((item: any) => (item._id === _id ? { ...item, qty: e.target.value } : item));
       });
     }
     return;
@@ -29,10 +27,7 @@ function BasketMenu() {
 
   return (
     <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu}>
-      <button
-        onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)}
-        className={Styles.btn__close}
-      >
+      <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.btn__close}>
         <NavigateNextRoundedIcon />
       </button>
       <h2 className={Styles.basketMenu__title}>Order List:</h2>
@@ -42,9 +37,9 @@ function BasketMenu() {
         <div className={Styles.basketListContainer}>
           <ul className={Styles.basketList}>
             {basketList?.map((item: any) => {
-              const { id, title, price, image, qty } = item;
+              const { _id, title, price, image, qty } = item;
               return (
-                <li className={Styles.basketItem} key={id}>
+                <li className={Styles.basketItem} key={_id}>
                   <div className={Styles.basketItem__sideLeft}>
                     <img src={image} alt={title} />
                   </div>
@@ -55,18 +50,8 @@ function BasketMenu() {
                   </div>
                   <div className={Styles.basketItem__sideRight}>
                     <h2>{price * qty} Kr</h2>
-                    <input
-                      className={Styles.input__qty}
-                      type="number"
-                      max="10"
-                      min="1"
-                      value={item.qty}
-                      onChange={(e) => onChangeItemQty(e, id)}
-                    />
-                    <button
-                      className={Styles.btn__delete}
-                      onClick={() => onClickRemoveItemHandler(id)}
-                    >
+                    <input className={Styles.input__qty} type="number" max="10" min="1" value={item.qty} onChange={(e) => onChangeItemQty(e, _id)} />
+                    <button className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(_id)}>
                       <DeleteRoundedIcon />
                     </button>
                   </div>

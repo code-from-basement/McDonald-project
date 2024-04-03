@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import { useGlobalContext } from "../../Context/GlobalContext";
 import { stickyBasketANimationStyles } from "../Animation/AnimationStyles";
 import { LocalMallOutlinedIcon } from "../IconsLibrary/IconsLibrary";
 import Styles from "./BasketSticky.module.css";
-import { useGlobalContext } from "../../Context/GlobalContext";
-import { useLocation } from "react-router-dom";
 
 function BasketSticky() {
   const { basketList } = useGlobalContext();

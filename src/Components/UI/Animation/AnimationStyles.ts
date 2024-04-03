@@ -32,9 +32,9 @@ export const emptyCartContentsAnimationStyles = {
 
 export const stickyBasketANimationStyles = {
   key: "stickyBasket",
-  initial: { x: "100%" },
-  animate: { x: "0%", transition: { duration: 0.5, ease: "easeInOut" } },
-  exit: { x: "300%", transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
+  initial: { x: "200%" },
+  animate: { x: "0%", transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
+  exit: { x: "300%", transition: { duration: 0.5, ease: "easeInOut" } },
 };
 
 export const floatImgAnimationStyle = {
@@ -72,9 +72,16 @@ export const animateBackground = {
   viewport: { once: true },
 };
 
-export const animationOpacity = {
-  key: "opacity",
+export const animationOpacity1 = {
+  key: "redirectionModal1",
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.3 } },
-  exit: { opacity: 0, transition: { duration: 0.3 } },
+  animate: { opacity: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
+
+export const animationOpacity2 = {
+  key: "redirectionModal2",
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
 };

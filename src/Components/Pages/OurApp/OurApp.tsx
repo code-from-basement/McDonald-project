@@ -87,41 +87,49 @@ function OurApp() {
   //define items
   const items: any = [
     {
+      id: 1,
       title: "Wellbeing Program",
       detail: "We promote the ‘5 Ways of Wellbeing’ in our restaurants as we recognise employee safety is a key priority.",
       image: Sun,
     },
     {
+      id: 2,
       title: "Discounts at Major Retailers",
       detail: "Our MyBenefits program gives all employees product discounts from over 1000 retails (like JB HIFI, Woolworths and Myer).",
       image: Star,
     },
     {
+      id: 3,
       title: "Traineeships",
       detail: "Check out the Traineeship tab for more information on how you can learn and earn.",
       image: Piece,
     },
     {
+      id: 4,
       title: "Performance Reviews",
       detail: "We have a culture of continuous improvement, so feedback is critical and staying in touch with your Manager is key.      ",
       image: Line,
     },
     {
+      id: 5,
       title: "Flexible Scheduling",
       detail: "We create opportunities for all employees to work flexibly in a way that is meaningful and fits into your lifestyle.      .",
       image: Clock,
     },
     {
+      id: 6,
       title: "Rewards and Recognition",
       detail: "We appreciate our people and have a range of rewards to showcase employees.",
       image: Reward,
     },
     {
+      id: 7,
       title: "Discounted Meals",
       detail: "Enjoy 20% off your Macca’s meal.",
       image: Hamburger,
     },
     {
+      id: 8,
       title: "Learning and Development",
       detail: "You have the opportunity to grow and progress by learning transferable work and life skills.",
       image: Direction,
@@ -284,9 +292,11 @@ function OurApp() {
       </div>
       <div className={Styles.scrollPanelContainer}>
         <div className={Styles.scrollPanelContainer__left}>
-          {items.map((item: any, index: any) => (
-            <button key={index} className={Styles.scrollPanelContainer__left_l1} onClick={() => handleItemClick(item)}>
+          {items.map((item: any, id: any) => (
+            <button key={id} className={`${Styles.scrollPanelContainer__left_l1} ${selectedItem && selectedItem.title === item.title ? Styles.active : ""}`} onClick={() => handleItemClick(item)}>
               <img src={item.image} alt={item.title} />
+              {/* <div className={Styles['active-indicator']}></div> */}
+              <span className={Styles['active-indicator']}></span>
               <h3>{item.title}</h3>
             </button>
           ))}

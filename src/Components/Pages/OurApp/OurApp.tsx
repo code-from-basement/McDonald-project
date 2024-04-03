@@ -39,24 +39,25 @@ function OurApp() {
       collapseDetail:"Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.",
     },
     {
-      title: "Shift ManagerCrew",
-      id: 2,
-      collapseDetail:"The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.",
-    },
-    {
       title: "Maintenance Person",
-      id: 3,
+      id: 2,
       collapseDetail:"If you like working with your hands and looking after all the internal and external areas of the restaurant, the maintenance role is for you. You need to be organised, have a keen eye for cleanliness as you will be responsible for janitorial duties, cleaning restaurant equipment, minor maintenance responsibilities and maintaining the restaurant surrounds.",
     },
     {
-      title: "Department Manager & Assistant Restaurant Manager",
-      id: 4,
-      collapseDetail:"In addition to delivering outstanding QSC every shift, Department Managers and Assistant Restaurant Managers have an additional responsibility of leading a team as either a Customer Experience, People Performance or Product Quality Manager."
+      title: "Crew Coach",
+      id: 3,
+      collapseDetail:"Crew have the opportunity to develop and progress into the Crew Coach position. The Crew Coach provides guidance and direction to fellow Crew and utilises all policies and procedures to provide the best quality coaching, to ensure outstanding delivery of QSC, under the supervision of the Shift Manager."
     },
     {
-      title: "Crew Coach",
+      title: "Shift ManagerCrew",
+      id: 4,
+      collapseDetail:"The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.",
+    },
+    
+    {
+      title: "Department Manager & Assistant Restaurant Manager",
       id: 5,
-      collapseDetail:"Crew have the opportunity to develop and progress into the Crew Coach position. The Crew Coach provides guidance and direction to fellow Crew and utilises all policies and procedures to provide the best quality coaching, to ensure outstanding delivery of QSC, under the supervision of the Shift Manager."
+      collapseDetail:"In addition to delivering outstanding QSC every shift, Department Managers and Assistant Restaurant Managers have an additional responsibility of leading a team as either a Customer Experience, People Performance or Product Quality Manager."
     },
     {
       title: "Restaurant Manager",
@@ -193,10 +194,29 @@ function OurApp() {
             <div className={Styles.maccasContainer__upRow__right_sticky}></div>
           </div>
         </div>
-        <div className={Styles.maccasContainer__downRow}>
-            {collapsedItems.map((item : any) => {
+        {/* <div className={Styles.maccasContainer__downRow}>
+            {collapsedItems.slice(0,3).map((item : any) => {
               return <CollapsedBar item={item} key={item.id}  />
             })}
+             */}
+            {/* {collapsedItems.slice(3,7).map((item : any) => {
+              return <CollapsedBar item={item} key={item.id}  />
+            })} */}
+        {/* </div> */}
+        <div className={Styles.maccasContainer__downRow__container}>
+            <div className={Styles.maccasContainer__downRow__container_left}>
+            {collapsedItems.slice(0,3).map((item : any) => {
+              return <CollapsedBar item={item} key={item.id}  />
+            })}
+            </div>
+            <div className={Styles.maccasContainer__downRow__container_right}>
+            {collapsedItems.slice(3,7).map((item : any) => {
+              return <CollapsedBar item={item} key={item.id}  />
+            })}
+            </div>
+
+            
+            
         </div>
       </div>
       <div className={Styles.ourJobs_container}>

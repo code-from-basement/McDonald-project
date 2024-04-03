@@ -25,8 +25,6 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import CollapsedBar from "./CollapsedBar";
 
-
-
 function OurApp() {
   const { scrollYProgress }: any = useScroll();
   const [selectedItem, setSelectedItem] = useState(null);
@@ -36,36 +34,41 @@ function OurApp() {
     {
       title: "Crew",
       id: 1,
-      collapseDetail:"Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.",
+      collapseDetail:
+        "Crew provide an exceptional customer experience which includes delivering exceptional quality, service and cleanliness (QSC) to all guests. We understand that everyone should be able to work with their strengths, and at Macca’s®, we like to provide you with the opportunity to earn your money the way you want! So whether you like putting a smile on people’s dial, building delicious burgers, or making a mean macchiato, we have a role that will work for you! Crew are trained and verified to work in the Front Counter, Customer Areas, Kitchen, Drive-Thru or McCafe areas of the restaurant.",
     },
     {
       title: "Maintenance Person",
       id: 2,
-      collapseDetail:"If you like working with your hands and looking after all the internal and external areas of the restaurant, the maintenance role is for you. You need to be organised, have a keen eye for cleanliness as you will be responsible for janitorial duties, cleaning restaurant equipment, minor maintenance responsibilities and maintaining the restaurant surrounds.",
+      collapseDetail:
+        "If you like working with your hands and looking after all the internal and external areas of the restaurant, the maintenance role is for you. You need to be organised, have a keen eye for cleanliness as you will be responsible for janitorial duties, cleaning restaurant equipment, minor maintenance responsibilities and maintaining the restaurant surrounds.",
     },
     {
       title: "Crew Coach",
       id: 3,
-      collapseDetail:"Crew have the opportunity to develop and progress into the Crew Coach position. The Crew Coach provides guidance and direction to fellow Crew and utilises all policies and procedures to provide the best quality coaching, to ensure outstanding delivery of QSC, under the supervision of the Shift Manager."
+      collapseDetail:
+        "Crew have the opportunity to develop and progress into the Crew Coach position. The Crew Coach provides guidance and direction to fellow Crew and utilises all policies and procedures to provide the best quality coaching, to ensure outstanding delivery of QSC, under the supervision of the Shift Manager.",
     },
     {
       title: "Shift ManagerCrew",
       id: 4,
-      collapseDetail:"The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.",
+      collapseDetail:
+        "The first step in the McDonald’s management journey is to become a Shift Manager. Shift Managers are operations experts and run shifts delivering outstanding QSC at all times. Shift Managers supervise employees to ensure restaurant operations and procedures are adhered to and ensure the delivery of an exceptional and memorable Macca’s® experience.",
     },
-    
+
     {
       title: "Department Manager & Assistant Restaurant Manager",
       id: 5,
-      collapseDetail:"In addition to delivering outstanding QSC every shift, Department Managers and Assistant Restaurant Managers have an additional responsibility of leading a team as either a Customer Experience, People Performance or Product Quality Manager."
+      collapseDetail:
+        "In addition to delivering outstanding QSC every shift, Department Managers and Assistant Restaurant Managers have an additional responsibility of leading a team as either a Customer Experience, People Performance or Product Quality Manager.",
     },
     {
       title: "Restaurant Manager",
       id: 6,
-      collapseDetail:"The Restaurant Manager is the leader of the restaurant, and is responsible for the overall profitability, sales, people development and operations of the restaurant. The Restaurant Manager works closely with their management team to coordinate the functions and systems that are critical to business success."
-    }
-
-  ]
+      collapseDetail:
+        "The Restaurant Manager is the leader of the restaurant, and is responsible for the overall profitability, sales, people development and operations of the restaurant. The Restaurant Manager works closely with their management team to coordinate the functions and systems that are critical to business success.",
+    },
+  ];
   // swiper functionality for pause and stop
   const [swiperPaused, setSwiperPaused] = useState(false);
   const swiperRef = useRef(null);
@@ -83,52 +86,51 @@ function OurApp() {
 
   //define items
   const items: any = [
-    { 
-      title:"Wellbeing Program",
-      detail:"We promote the ‘5 Ways of Wellbeing’ in our restaurants as we recognise employee safety is a key priority.",
+    {
+      title: "Wellbeing Program",
+      detail: "We promote the ‘5 Ways of Wellbeing’ in our restaurants as we recognise employee safety is a key priority.",
       image: Sun,
     },
-    { 
-      title:"Discounts at Major Retailers",
-      detail:"Our MyBenefits program gives all employees product discounts from over 1000 retails (like JB HIFI, Woolworths and Myer).",
-      image:Star,
+    {
+      title: "Discounts at Major Retailers",
+      detail: "Our MyBenefits program gives all employees product discounts from over 1000 retails (like JB HIFI, Woolworths and Myer).",
+      image: Star,
     },
-    { 
-      title:"Traineeships",
-      detail:"Check out the Traineeship tab for more information on how you can learn and earn.",
+    {
+      title: "Traineeships",
+      detail: "Check out the Traineeship tab for more information on how you can learn and earn.",
       image: Piece,
     },
-    { 
-      title:"Performance Reviews",
-      detail:"We have a culture of continuous improvement, so feedback is critical and staying in touch with your Manager is key.      ",
+    {
+      title: "Performance Reviews",
+      detail: "We have a culture of continuous improvement, so feedback is critical and staying in touch with your Manager is key.      ",
       image: Line,
     },
-    { 
-      title:"Flexible Scheduling",
-      detail:"We create opportunities for all employees to work flexibly in a way that is meaningful and fits into your lifestyle.      .",
+    {
+      title: "Flexible Scheduling",
+      detail: "We create opportunities for all employees to work flexibly in a way that is meaningful and fits into your lifestyle.      .",
       image: Clock,
     },
-    { 
-      title:"Rewards and Recognition",
-      detail:"We appreciate our people and have a range of rewards to showcase employees.",
+    {
+      title: "Rewards and Recognition",
+      detail: "We appreciate our people and have a range of rewards to showcase employees.",
       image: Reward,
     },
-    { 
-      title:"Discounted Meals",
-      detail:"Enjoy 20% off your Macca’s meal.",
+    {
+      title: "Discounted Meals",
+      detail: "Enjoy 20% off your Macca’s meal.",
       image: Hamburger,
     },
-    { 
-      title:"Learning and Development",
-      detail:"You have the opportunity to grow and progress by learning transferable work and life skills.",
+    {
+      title: "Learning and Development",
+      detail: "You have the opportunity to grow and progress by learning transferable work and life skills.",
       image: Direction,
     },
-    ]
+  ];
 
-    const handleItemClick = (item: any) => {
-      setSelectedItem(item);
-    }
-
+  const handleItemClick = (item: any) => {
+    setSelectedItem(item);
+  };
 
   return (
     <div className={Styles.ourApp}>
@@ -154,7 +156,9 @@ function OurApp() {
               </span>
               <input type="text" placeholder="Post Code or Suburb" />
             </div>
-            <button onClick={() => {}} disabled>Search Restaurant Opportunities</button>
+            <button onClick={() => {}} disabled>
+              Search Restaurant Opportunities
+            </button>
           </div>
           <div className={Styles.imageContainer}>
             <img src={cardWave} alt="" />
@@ -190,33 +194,23 @@ function OurApp() {
             </div>
           </div>
           <div className={Styles.maccasContainer__upRow__right}>
-            <motion.div {...animateFadeIn}><img src={guy} alt="a guy" /></motion.div>
+            <motion.div {...animateFadeIn}>
+              <img src={guy} alt="a guy" />
+            </motion.div>
             <div className={Styles.maccasContainer__upRow__right_sticky}></div>
           </div>
         </div>
-        {/* <div className={Styles.maccasContainer__downRow}>
-            {collapsedItems.slice(0,3).map((item : any) => {
-              return <CollapsedBar item={item} key={item.id}  />
-            })}
-             */}
-            {/* {collapsedItems.slice(3,7).map((item : any) => {
-              return <CollapsedBar item={item} key={item.id}  />
-            })} */}
-        {/* </div> */}
         <div className={Styles.maccasContainer__downRow__container}>
-            <div className={Styles.maccasContainer__downRow__container_left}>
-            {collapsedItems.slice(0,3).map((item : any) => {
-              return <CollapsedBar item={item} key={item.id}  />
+          <div className={Styles.maccasContainer__downRow__container_left}>
+            {collapsedItems.slice(0, 3).map((item: any) => {
+              return <CollapsedBar item={item} key={item.id} />;
             })}
-            </div>
-            <div className={Styles.maccasContainer__downRow__container_right}>
-            {collapsedItems.slice(3,7).map((item : any) => {
-              return <CollapsedBar item={item} key={item.id}  />
+          </div>
+          <div className={Styles.maccasContainer__downRow__container_right}>
+            {collapsedItems.slice(3, 7).map((item: any) => {
+              return <CollapsedBar item={item} key={item.id} />;
             })}
-            </div>
-
-            
-            
+          </div>
         </div>
       </div>
       <div className={Styles.ourJobs_container}>
@@ -290,26 +284,25 @@ function OurApp() {
       </div>
       <div className={Styles.scrollPanelContainer}>
         <div className={Styles.scrollPanelContainer__left}>
-          {items.map((item : any, index: any) => (
+          {items.map((item: any, index: any) => (
             <button key={index} className={Styles.scrollPanelContainer__left_l1} onClick={() => handleItemClick(item)}>
               <img src={item.image} alt={item.title} />
               <h3>{item.title}</h3>
-            </button>            
-          ))}       
-
+            </button>
+          ))}
         </div>
         <div className={Styles.scrollPanelContainer__right}>
           {selectedItem ? (
-          <div className={Styles.scrollPanelContainer__right_card}>
-            <img src={selectedItem.image} alt={selectedItem.title} />
-            <h3>{selectedItem.detail}</h3>
-          </div>
-        ) : (
-          <div className={Styles.scrollPanelContainer__right_card}>
-            <img src={items[0].image} alt="a pic of sun" />
-            <h3>{items[0].detail}</h3>
-          </div>
-        )}
+            <div className={Styles.scrollPanelContainer__right_card}>
+              <img src={selectedItem.image} alt={selectedItem.title} />
+              <h3>{selectedItem.detail}</h3>
+            </div>
+          ) : (
+            <div className={Styles.scrollPanelContainer__right_card}>
+              <img src={items[0].image} alt="a pic of sun" />
+              <h3>{items[0].detail}</h3>
+            </div>
+          )}
         </div>
       </div>
       <div className={Styles.safetyContainer}>
@@ -355,9 +348,12 @@ function OurApp() {
       <div className={Styles.our_Restaurants}>
         <motion.div {...bannerOpacityMotion} className={Styles.bannerImg}></motion.div>
         <div className={Styles.our_Restaurants_card}>
-          <img src={Hat} alt="a pic of hat"/>
+          <img src={Hat} alt="a pic of hat" />
           <h2>Our Restaurants</h2>
-          <p>We have over 1020 restaurants in Australia so there are some things that will be different from restaurant to restaurant. Some of our restaurants are owned and operated by local Licensees, whilst others are operated by McDonald’s Australia.</p>
+          <p>
+            We have over 1020 restaurants in Australia so there are some things that will be different from restaurant to restaurant. Some of our restaurants are owned and operated by local Licensees, whilst others are operated by
+            McDonald’s Australia.
+          </p>
         </div>
       </div>
     </div>

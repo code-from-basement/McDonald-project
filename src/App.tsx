@@ -37,7 +37,7 @@ function App() {
     const navbarTarget = document.querySelector("#navbar");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting && !isBasketShow) {
           setEventToggles((prevData) => {
             return { ...prevData, stickyBasket: true };
           });
@@ -72,7 +72,7 @@ function App() {
       <BrowserRouter>
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
-        <AnimatePresence>{stickyBasket && <BasketSticky />}</AnimatePresence>
+        <AnimatePresence>{stickyBasket && !isBasketShow && <BasketSticky />}</AnimatePresence>
         <AnimatePresence>{isModalRedirectionShow && <ModalRedirection />}</AnimatePresence>
         <Navbar />
         <Routes>

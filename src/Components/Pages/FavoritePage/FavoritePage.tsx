@@ -52,7 +52,7 @@ function FavoritePage() {
 
       <section className={Styles.favPage__favList}>
         <div className={Styles.favList__container}>
-          {!dataBase.currentUser
+          {!dataBase.currentUser || userFavoriteList.length === 0
             ? noFavItem
             : userFavoriteList?.map((item: any) => {
                 const { title, price, _id, image } = item;

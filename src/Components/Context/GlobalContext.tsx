@@ -69,17 +69,17 @@ function GlobalContextProvider({ children }: globalContextProps) {
   //----------------------------------------------------//
 
   // Fetching Favorite List
-  const fetchAllFavoriteList = async (usernameParams: string) => {
-    try {
-      const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs/${usernameParams}`);
-      const { data } = await response.json();
-      const uniqueItemList = [...new Set(data.allFavItems.favoriteList)];
-      setLoggedInUserFavoriteList(uniqueItemList);
-      console.log("fav fecthed");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const fetchAllFavoriteList = async (usernameParams: string) => {
+  //   try {
+  //     const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs/${usernameParams}`);
+  //     const { data } = await response.json();
+  //     const uniqueItemList = [...new Set(data.allFavItems.favoriteList)];
+  //     setLoggedInUserFavoriteList(uniqueItemList);
+  //     console.log("fav fecthed");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const fetchAllMenuData = async (address: string) => {
     if (address === "menus") {
@@ -211,7 +211,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setReceipt,
         setLoggedUser,
         setUserFavoriteList,
-        fetchAllFavoriteList,
+        // fetchAllFavoriteList,
       }}
     >
       {children}

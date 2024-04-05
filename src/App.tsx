@@ -61,11 +61,11 @@ function App() {
     fetchAllMenuData("megaMenuItem");
   }, []);
 
-  useEffect(() => {
-    if (dataBase.currentUser?.displayName) {
-      fetchAllFavoriteList(`${dataBase.currentUser?.displayName}`);
-    }
-  }, [dataBase.currentUser?.displayName]);
+  // useEffect(() => {
+  //   if (dataBase.currentUser?.displayName) {
+  //     fetchAllFavoriteList(`${dataBase.currentUser?.displayName}`);
+  //   }
+  // }, [dataBase.currentUser?.displayName]);
 
   return (
     <div className="app">

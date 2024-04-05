@@ -21,7 +21,20 @@ function Login() {
     try {
       const result = await signInWithPopup(dataBase, provider);
       await setLoggedUser(result.user);
-      fetchAllMenuData("menus");
+      // fetchAllMenuData("menus");
+
+      // Create user favorite list in backend
+      const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userName: dataBase.currentUser?.displayName,
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+
+      //
 
       window.localStorage.setItem("user", JSON.stringify(result.user.displayName));
       const btnGoToHome = document.querySelector("#btn-go-to-home");
@@ -37,7 +50,8 @@ function Login() {
       await signOut(dataBase);
       setUserFavoriteList([]);
       setLoggedUser({});
-      fetchAllMenuData("menus");
+
+      // fetchAllMenuData("menus");
     } catch (err) {
       console.log(err, "error to sign out");
     }

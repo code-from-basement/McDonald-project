@@ -28,7 +28,7 @@ function Login() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userName: dataBase.currentUser?.displayName,
+          username: dataBase.currentUser?.displayName,
         }),
       });
       const data = await response.json();

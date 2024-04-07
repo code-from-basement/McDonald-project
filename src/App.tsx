@@ -27,6 +27,7 @@ import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
+import { Database } from "firebase/database";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData }: any = useGlobalContext();
@@ -52,8 +53,12 @@ function App() {
   }, []);
 
   // Fetching data from Firebase Realtime Database
+
   useEffect(() => {
-    fetchAllMenuData("menus");
+    if (!dataBase.currentUser) {
+      fetchAllMenuData("menus");
+      console.log("fetch again");
+    } else return;
   }, []);
 
   // Fetching data from Firebase Realtime Database

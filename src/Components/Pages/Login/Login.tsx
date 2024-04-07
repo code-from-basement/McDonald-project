@@ -9,7 +9,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Login() {
   // logged in user data
-  const { loggedUser, setLoggedUser, fetchAllMenuData, setUserFavoriteList } = useGlobalContext();
+  const { loggedUser, setLoggedUser, fetchAllMenuData, setUserFavoriteList, setLoggedInUserFavoriteList } = useGlobalContext();
 
   // navigate from react-router-dom
   const navigate = useNavigate();
@@ -21,7 +21,6 @@ function Login() {
     try {
       const result = await signInWithPopup(dataBase, provider);
       await setLoggedUser(result.user);
-      // fetchAllMenuData("menus");
 
       // Create user favorite list in backend
       const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs`, {
@@ -32,8 +31,11 @@ function Login() {
           favoriteList: [],
         }),
       });
-      const data = await response.json();
-      console.log(data);
+      const { data } = await response.json();
+
+      await setLoggedInUserFavoriteList(data);
+
+      // await fetchAllMenuData("menus");
 
       //
 
@@ -50,6 +52,7 @@ function Login() {
     try {
       await signOut(dataBase);
       setUserFavoriteList([]);
+      setLoggedInUserFavoriteList([]);
       setLoggedUser({});
 
       // fetchAllMenuData("menus");

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { dataBase } from "../../Data/firebaseConfig";
+import { set } from "firebase/database";
 
 const GlobalContext = createContext();
 
@@ -18,10 +19,11 @@ interface globalContextProps {
 function GlobalContextProvider({ children }: globalContextProps) {
   //*Fetching data from Firebase Realtime Database
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
+
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
   // **USER FAVORITE LIST IN BACKEND
   const [loggedInUserFavoriteList, setLoggedInUserFavoriteList] = useState([]);
-
+  console.log(loggedInUserFavoriteList);
   //**User Favorite List in front end *//////////////////////////////
   const [userFavoriteList, setUserFavoriteList] = useState([]);
 
@@ -89,6 +91,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
         const { data } = await res.json();
         const allMenus = await data.allMenus;
+
         setFullMenuListData(allMenus);
 
         // Favorite Process
@@ -201,6 +204,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         receipt,
         loggedUser,
         userFavoriteList,
+        loggedInUserFavoriteList,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,
@@ -212,6 +216,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setLoggedUser,
         setUserFavoriteList,
         // fetchAllFavoriteList,
+        setLoggedInUserFavoriteList,
       }}
     >
       {children}

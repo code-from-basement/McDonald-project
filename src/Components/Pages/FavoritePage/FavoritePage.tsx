@@ -22,13 +22,26 @@ function FavoritePage() {
 
   //
   // Delete item from list and update full menu list isFavorite key to false
-  const onClickDeleteHandler = (e) => {
+  const onClickDeleteHandler = async (e) => {
     const targetID = e.currentTarget.id;
-    setFullMenuListData((prevData: any) => {
+
+    // Delete item from user favorite list in frontend
+    await setFullMenuListData((prevData: any) => {
       return prevData.map((item) => {
         return item._id === targetID ? { ...item, isFavorite: false } : item;
       });
     });
+
+    // Delete item from user favorite list in DATABASE
+    const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: dataBase.currentUser?.displayName,
+        favoriteList: [`${targetID}`],
+      }),
+    });
+    const data = await res.json();
   };
 
   return (

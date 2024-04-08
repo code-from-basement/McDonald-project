@@ -6,10 +6,11 @@ import Styles from "./Login.module.css";
 import { dataBase } from "../../../Data/firebaseConfig";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { useState } from "react";
 
 function Login() {
   // logged in user data
-  const { loggedUser, setLoggedUser, fetchAllMenuData, setUserFavoriteList, setLoggedInUserFavoriteList } = useGlobalContext();
+  const { loggedUser, setLoggedUser, fetchAllMenuData, setUserFavoriteList, setLoggedInUserFavoriteList, loggedInUserFavoriteList } = useGlobalContext();
 
   // navigate from react-router-dom
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Login() {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(dataBase, provider);
-      await setLoggedUser(result.user);
+      setLoggedUser(result.user);
 
       // Create user favorite list in backend
       const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs`, {
@@ -31,11 +32,10 @@ function Login() {
           favoriteList: [],
         }),
       });
-      const { data } = await response.json();
+      const data = await response.json();
+      console.log(data, "data");
 
-      await setLoggedInUserFavoriteList(data);
-
-      // await fetchAllMenuData("menus");
+      setLoggedInUserFavoriteList(data.data);
 
       //
 
@@ -60,6 +60,7 @@ function Login() {
       console.log(err, "error to sign out");
     }
   };
+
   return (
     <div className={Styles.loginContainer}>
       <div className={Styles.brandContainer}>

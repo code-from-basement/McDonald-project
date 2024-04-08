@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { dataBase } from "../../Data/firebaseConfig";
 import { set } from "firebase/database";
+import ItemPage from "../UI/ItemPage/ItemPage";
 
 const GlobalContext = createContext();
 
@@ -23,12 +24,13 @@ function GlobalContextProvider({ children }: globalContextProps) {
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
   // **USER FAVORITE LIST IN BACKEND
   const [loggedInUserFavoriteList, setLoggedInUserFavoriteList] = useState([]);
-  console.log(loggedInUserFavoriteList);
+  console.log(loggedInUserFavoriteList, "from context api");
+
   //**User Favorite List in front end *//////////////////////////////
   const [userFavoriteList, setUserFavoriteList] = useState([]);
 
   //**User State Management *///////////////////////////
-  const [loggedUser, setLoggedUser] = useState({});
+  const [loggedUser, setLoggedUser] = useState();
 
   // Loading State Management
   const [isLoading, setIsLoading] = useState(false);
@@ -58,8 +60,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
   });
 
   // Updating User Favorite List in favorite page
-  {
-  }
+
   useEffect(() => {
     setUserFavoriteList(
       fullMenuListData?.filter((item) => {
@@ -87,12 +88,25 @@ function GlobalContextProvider({ children }: globalContextProps) {
     if (address === "menus") {
       try {
         setIsLoading(true);
+
         //
         const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
         const { data } = await res.json();
         const allMenus = await data.allMenus;
 
-        setFullMenuListData(allMenus);
+        if (loggedInUserFavoriteList.length > 0) {
+          console.log("1");
+          const newAllMenus = allMenus.map((menu: any) => {
+            if (loggedInUserFavoriteList?.includes(menu._id)) {
+              return { ...menu, isFavorite: true };
+            }
+            return menu;
+          });
+          setFullMenuListData(newAllMenus);
+        } else {
+          console.log("2");
+          setFullMenuListData(allMenus);
+        }
 
         // Favorite Process
         // if (loggedInUserFavoriteList) {
@@ -144,6 +158,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     }
   };
+  console.log(fullMenuListData, "fullMenuListData");
 
   //----------------------------------------------------//
 

@@ -30,7 +30,7 @@ import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection"
 import { Database } from "firebase/database";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData, loggedInUserFavoriteList }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
   // Intersection observer API for sticky basket
@@ -55,11 +55,8 @@ function App() {
   // Fetching data from Firebase Realtime Database
 
   useEffect(() => {
-    if (!dataBase.currentUser) {
-      fetchAllMenuData("menus");
-      console.log("fetch again");
-    } else return;
-  }, []);
+    fetchAllMenuData("menus");
+  }, [loggedInUserFavoriteList]);
 
   // Fetching data from Firebase Realtime Database
   useEffect(() => {

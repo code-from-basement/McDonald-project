@@ -5,17 +5,20 @@ import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/Icon
 import Styles from "./BasketMenu.module.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
 import TotalSection from "./TotalSection/TotalSection";
+import { useEffect, useRef } from "react";
 
 function BasketMenu() {
-  const { eventToggles, basketList, setBasketList } = useGlobalContext();
-  const { togglerFunc, isBasketEmpty } = eventToggles;
+  const { eventToggles, setEventToggles, basketList, setBasketList } = useGlobalContext();
+  const { togglerFunc, isBasketEmpty, isBasketShow } = eventToggles;
 
+  // Remove item from basket menu list
   const onClickRemoveItemHandler = (_id: number) => {
     setBasketList((prevData: any) => {
       return prevData.filter((item: any) => item._id !== _id);
     });
   };
 
+  // Change quantity of ordered item in basket list
   const onChangeItemQty = (e, _id) => {
     if (e.target.value <= 10 && e.target.value > 0) {
       setBasketList((prevData: any) => {
@@ -25,8 +28,11 @@ function BasketMenu() {
     return;
   };
 
+  const basketMenuRef = useRef(null);
+  console.log(basketMenuRef);
+
   return (
-    <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu}>
+    <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu} ref={basketMenuRef}>
       <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.btn__close}>
         <NavigateNextRoundedIcon />
       </button>

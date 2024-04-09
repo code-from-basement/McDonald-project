@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import { animationOpacity, animationOpacity1, animationOpacity2 } from "../Animation/AnimationStyles";
+import { animationOpacity1, animationOpacity2, animationOpacity3 } from "../Animation/AnimationStyles";
 import { ButtonPrimary, ButtonSecondary } from "../Buttons/Buttons";
+import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
 import Styles from "./ModalRedirection.module.css";
 
 function ModalRedirection() {
@@ -21,7 +22,9 @@ function ModalRedirection() {
     setEventToggles((prevData: any) => {
       return { ...prevData, isModalRedirectionShow: false };
     });
-    navigate("/login");
+    setTimeout(() => {
+      navigate("/login");
+    }, 600);
   };
 
   return (
@@ -30,6 +33,7 @@ function ModalRedirection() {
         &nbsp;
       </motion.div>
       <motion.div {...animationOpacity2} className={Styles.card}>
+        <motion.img {...animationOpacity3} src={macIcon} alt="" />
         <div className={Styles.card__header}>
           <h2>Favorite menu</h2>
         </div>

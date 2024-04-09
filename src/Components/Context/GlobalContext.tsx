@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import { dataBase } from "../../Data/firebaseConfig";
 import { set } from "firebase/database";
 import ItemPage from "../UI/ItemPage/ItemPage";
@@ -69,21 +69,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
     );
   }, [fullMenuListData]);
 
-  //----------------------------------------------------//
-
-  // Fetching Favorite List
-  // const fetchAllFavoriteList = async (usernameParams: string) => {
-  //   try {
-  //     const response = await fetch(`http://127.0.0.1:5000/api/v1/usersfavs/${usernameParams}`);
-  //     const { data } = await response.json();
-  //     const uniqueItemList = [...new Set(data.allFavItems.favoriteList)];
-  //     setLoggedInUserFavoriteList(uniqueItemList);
-  //     console.log("fav fecthed");
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   const fetchAllMenuData = async (address: string) => {
     if (address === "menus") {
       try {
@@ -107,34 +92,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
           console.log("2");
           setFullMenuListData(allMenus);
         }
-
-        // Favorite Process
-        // if (loggedInUserFavoriteList) {
-        //   console.log(loggedInUserFavoriteList);
-        //   console.log("logic is working");
-        //   const newAllMenus = allMenus.map((menu: any) => {
-        //     loggedInUserFavoriteList.map((item: any) => {
-        //       if (menu._id == item) {
-        //         menu.isFavorite = true;
-        //       }
-        //     });
-        //   });
-        //   setFullMenuListData(newAllMenus);
-        // } else {
-        //   console.log("goooz");
-        // }
-
-        // loggedInUserFavoriteList?.map((item: any) => {
-        //   const allMenusAfter = allMenus.map((menu: any) => {
-        //     if (menu._id == item) {
-        //       menu.isFavorite = true;
-        //     } else {
-        //       menu.isFavorite = false;
-        //     }
-        //   });
-        //   console.log(allMenusAfter);
-
-        // });
       } catch (error) {
         setIsLoading(false);
         alert(error);
@@ -230,7 +187,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setReceipt,
         setLoggedUser,
         setUserFavoriteList,
-        // fetchAllFavoriteList,
         setLoggedInUserFavoriteList,
       }}
     >

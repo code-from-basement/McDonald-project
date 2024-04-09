@@ -33,10 +33,21 @@
   flex-direction: column;
   gap: var(--spacing-md);
   box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.card img {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  top: 0rem;
+  left: -10rem;
+  z-index: 200;
+  opacity: 0.35;
 }
 
 .card__header {
   width: 100%;
+  z-index: 300;
 }
 
 .card__header h2 {
@@ -45,6 +56,7 @@
 
 .card__body {
   width: 100%;
+  z-index: 300;
 }
 .card__body p {
   font-size: var(--font-size-md);
@@ -58,4 +70,5 @@
   align-items: center;
   gap: var(--spacing-sm);
   margin-top: var(--spacing-lg);
+  z-index: 300;
 }

@@ -29,7 +29,6 @@ import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 
 function App() {
-  const appRef = useRef(null);
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 

@@ -8,8 +8,7 @@ import TotalSection from "./TotalSection/TotalSection";
 import { useEffect, useRef } from "react";
 
 function BasketMenu() {
-  const basketMenuRef = useRef(null);
-  const { eventToggles, setEventToggles, basketList, setBasketList } = useGlobalContext();
+  const { eventToggles, setEventToggles, basketList, setBasketList, basketMenuRef } = useGlobalContext();
   const { togglerFunc, isBasketEmpty, isBasketShow } = eventToggles;
 
   // Remove item from basket menu list
@@ -28,18 +27,6 @@ function BasketMenu() {
     }
     return;
   };
-  if (basketMenuRef) {
-    useEffect(() => {
-      const basketMenuCloser = (e) => {
-        if (!basketMenuRef.current?.contains(e.target)) {
-          setEventToggles((prevData) => {
-            return { ...prevData, isBasketShow: false };
-          });
-        }
-      };
-      document.addEventListener("click", basketMenuCloser);
-    });
-  }
 
   return (
     <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu} id="basketMenuID" ref={basketMenuRef}>

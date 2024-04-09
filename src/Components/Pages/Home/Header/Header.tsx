@@ -14,10 +14,21 @@ import { ButtonPrimary } from "../../../UI/Buttons/Buttons";
 
 function Header() {
   const navigate = useNavigate();
+
   return (
     <div className={Styles.header}>
       <section className={Styles.banner}>
-        <Swiper className={Styles.swiper} autoplay={{ disableOnInteraction: false, delay: 20000 }} pagination={{ clickable: true }} data-swiper-autoplay="20" effect="fade" speed={500} parallax={true} navigation={true} modules={[Parallax, Pagination, Navigation]}>
+        <Swiper
+          className={Styles.swiper}
+          autoplay={{ disableOnInteraction: false, delay: 20000 }}
+          pagination={{ clickable: true }}
+          data-swiper-autoplay="20"
+          effect="fade"
+          speed={500}
+          parallax={true}
+          navigation={true}
+          modules={[Parallax, Pagination, Navigation]}
+        >
           <SwiperSlide className={Styles.banner__1}>
             <div className={Styles.teaserBox} data-swiper-parallax-duration="1000" data-swiper-parallax="75%">
               <div className={Styles.TeaserBox__header} data-swiper-parallax="15%" data-swiper-parallax-duration="600">

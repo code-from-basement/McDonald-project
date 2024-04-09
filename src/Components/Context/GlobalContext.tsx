@@ -16,13 +16,15 @@ interface globalContextProps {
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
+  const basketMenuRef = useRef(null);
+  const megaMenuRef = useRef(null);
+
   //*Fetching data from Firebase Realtime Database
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
 
   const [megaMenuItemData, setMegaMenuItemData] = useState([]);
   // **USER FAVORITE LIST IN BACKEND
   const [loggedInUserFavoriteList, setLoggedInUserFavoriteList] = useState([]);
-  console.log(loggedInUserFavoriteList, "from context api");
 
   //**User Favorite List in front end *//////////////////////////////
   const [userFavoriteList, setUserFavoriteList] = useState([]);
@@ -86,7 +88,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
           });
           setFullMenuListData(newAllMenus);
         } else {
-          console.log("2");
           setFullMenuListData(allMenus);
         }
       } catch (error) {
@@ -112,7 +113,6 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     }
   };
-  console.log(fullMenuListData, "fullMenuListData");
 
   //----------------------------------------------------//
 
@@ -174,7 +174,8 @@ function GlobalContextProvider({ children }: globalContextProps) {
         loggedUser,
         userFavoriteList,
         loggedInUserFavoriteList,
-
+        basketMenuRef,
+        megaMenuRef,
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,

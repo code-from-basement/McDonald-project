@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, lazy, Suspense, useRef } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
@@ -30,7 +30,8 @@ import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection"
 import { Database } from "firebase/database";
 
 function App() {
-  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData, loggedInUserFavoriteList }: any = useGlobalContext();
+  const appRef = useRef(null);
+  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
   // Intersection observer API for sticky basket
@@ -63,20 +64,29 @@ function App() {
     fetchAllMenuData("megaMenuItem");
   }, []);
 
-  // useEffect(() => {
-  //   if (dataBase.currentUser?.displayName) {
-  //     fetchAllFavoriteList(`${dataBase.currentUser?.displayName}`);
-  //   }
-  // }, [dataBase.currentUser?.displayName]);
+  // Mega Menu and Basket menu close Logic
+  const onPanelCloser = (e) => {
+    if (eventToggles.isBasketShow && basketMenuRef.current && !basketMenuRef.current.contains(e.target)) {
+      return setEventToggles((prevData) => {
+        return { ...prevData, isBasketShow: false };
+      });
+    }
+    if (eventToggles.megaMenuOpen && megaMenuRef.current && !megaMenuRef.current.contains(e.target)) {
+      return setEventToggles((prevData) => {
+        return { ...prevData, megaMenuOpen: false };
+      });
+    }
+  };
 
   return (
-    <div className="app">
+    <div className="app" onClick={onPanelCloser}>
       <BrowserRouter>
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>
         <AnimatePresence>{isBasketShow && <BasketMenu />}</AnimatePresence>
         <AnimatePresence>{stickyBasket && !isBasketShow && <BasketSticky />}</AnimatePresence>
         <AnimatePresence>{isModalRedirectionShow && <ModalRedirection />}</AnimatePresence>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />}>
             <Route index element={<Navigate to="all-menu" />} />

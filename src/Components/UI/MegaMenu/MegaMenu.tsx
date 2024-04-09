@@ -8,6 +8,7 @@ import MegaMenuItem from "./MegaMenuItem/MegaMenuItem";
 import { useMemo } from "react";
 
 function MegaMenu() {
+  const { megaMenuRef } = useGlobalContext();
   const { eventToggles, megaMenuItemData }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
 
@@ -18,7 +19,7 @@ function MegaMenu() {
   }, [megaMenuItemData]);
 
   return (
-    <motion.div {...megaMenuAnimationStyles} className={Styles.megaMenu}>
+    <motion.div {...megaMenuAnimationStyles} className={Styles.megaMenu} ref={megaMenuRef}>
       <AnimatePresence>
         {megaMenuOpen && (
           <motion.div {...megaMenuBackgroundLogoAnimationStyles} className={Styles.bg__logo}>

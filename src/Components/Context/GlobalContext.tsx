@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import { dataBase } from "../../Data/firebaseConfig";
-import { set } from "firebase/database";
-import ItemPage from "../UI/ItemPage/ItemPage";
 
 const GlobalContext = createContext();
 
@@ -9,7 +7,7 @@ interface globalContextProps {
   children: React.ReactNode;
   eventToggles: {
     toggleFunc: () => void;
-    isBasketShow: boolean;
+    isBasketShow: null;
     megaMenuOpen: boolean;
     isBasketEmpty: boolean;
     stickyBasket: boolean;
@@ -32,10 +30,10 @@ function GlobalContextProvider({ children }: globalContextProps) {
   //**User State Management *///////////////////////////
   const [loggedUser, setLoggedUser] = useState();
 
-  // Loading State Management
+  //** */ Loading State Management
   const [isLoading, setIsLoading] = useState(false);
 
-  // Basket Data Management
+  //** */ Basket Data Management
   const [basketList, setBasketList] = useState([]);
 
   const [receipt, setReceipt] = useState({
@@ -59,8 +57,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     isModalRedirectionShow: false,
   });
 
-  // Updating User Favorite List in favorite page
-
+  // **Updating User Favorite List in favorite page
   useEffect(() => {
     setUserFavoriteList(
       fullMenuListData?.filter((item) => {
@@ -177,6 +174,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         loggedUser,
         userFavoriteList,
         loggedInUserFavoriteList,
+
         setEventToggles,
         fetchAllMenuData,
         setIsLoading,

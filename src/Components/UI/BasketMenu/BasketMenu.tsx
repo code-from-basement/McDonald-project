@@ -8,6 +8,7 @@ import TotalSection from "./TotalSection/TotalSection";
 import { useEffect, useRef } from "react";
 
 function BasketMenu() {
+  const basketMenuRef = useRef(null);
   const { eventToggles, setEventToggles, basketList, setBasketList } = useGlobalContext();
   const { togglerFunc, isBasketEmpty, isBasketShow } = eventToggles;
 
@@ -27,12 +28,21 @@ function BasketMenu() {
     }
     return;
   };
-
-  const basketMenuRef = useRef(null);
-  console.log(basketMenuRef);
+  if (basketMenuRef) {
+    useEffect(() => {
+      const basketMenuCloser = (e) => {
+        if (!basketMenuRef.current?.contains(e.target)) {
+          setEventToggles((prevData) => {
+            return { ...prevData, isBasketShow: false };
+          });
+        }
+      };
+      document.addEventListener("click", basketMenuCloser);
+    });
+  }
 
   return (
-    <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu} ref={basketMenuRef}>
+    <motion.div {...basketMenuAnimationStyles} className={Styles.basketMenu} id="basketMenuID" ref={basketMenuRef}>
       <button onClick={() => togglerFunc("isBasketShow", !eventToggles.isBasketShow)} className={Styles.btn__close}>
         <NavigateNextRoundedIcon />
       </button>

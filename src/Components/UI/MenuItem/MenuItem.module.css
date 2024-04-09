@@ -49,6 +49,9 @@
   font-family: var(--font-family-bold);
   font-size: var(--font-size-lg);
   flex: 3;
+  width: 100%;
+}
+.header__title h2 {
 }
 .header__title p {
   margin: var(--spacing-xs) 0;
@@ -201,4 +204,19 @@
 
 .addBtn button:hover svg {
   color: var(--color-primary-700);
+}
+
+@media screen and (max-width: 992px) {
+  .header__title h2 {
+    font-size: var(--font-size-lg);
+  }
+  .header__btn h2 {
+    transform: translateX(8px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__btn h2 {
+    transform: translateX(6px);
+  }
 }

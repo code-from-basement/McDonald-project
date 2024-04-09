@@ -27,11 +27,10 @@ import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
-import { Database } from "firebase/database";
 
 function App() {
   const appRef = useRef(null);
-  const { eventToggles, setEventToggles, fetchAllMenuData, fetchAllFavoriteList, isLoading, fullMenuListData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
 
   // Intersection observer API for sticky basket
@@ -64,7 +63,7 @@ function App() {
     fetchAllMenuData("megaMenuItem");
   }, []);
 
-  // Mega Menu and Basket menu close Logic
+  // Mega Menu and Basket menu close
   const onPanelCloser = (e) => {
     if (eventToggles.isBasketShow && basketMenuRef.current && !basketMenuRef.current.contains(e.target)) {
       return setEventToggles((prevData) => {

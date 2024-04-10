@@ -78,3 +78,16 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/*responsive*/
+
+/* break point on 768 */
+@media screen and (max-width: 48em) {
+  .teaserBox {
+    top: 60%;
+    left: 5%;
+  }
+  .header {
+    height: calc(75vh - 8rem);
+  }
+}

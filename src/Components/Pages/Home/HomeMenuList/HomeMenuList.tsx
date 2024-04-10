@@ -29,7 +29,7 @@ const isActiveTab = ({ isActive }: homeMenuListProps) => {
 function HomeMenuList() {
   return (
     <div className={Styles.homeMenuList}>
-      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={40} navigation={false} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
+      <Swiper slidesPerView="auto" centeredSlides={false} spaceBetween={30} navigation={false} modules={[Pagination, Navigation]} className={Styles.menuListContainer}>
         <SwiperSlide className={Styles.menuListIntro}>
           <div className={Styles.menuListIntroCard}>
             <h2>Choose a menu:</h2>

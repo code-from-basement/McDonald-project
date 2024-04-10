@@ -163,3 +163,12 @@
   top: 100%;
   left: 0;
 }
+
+/*responsive*/
+
+/* break point on 768 */
+@media screen and (max-width: 48em) {
+  .pagesContainer {
+    display: none;
+  }
+}

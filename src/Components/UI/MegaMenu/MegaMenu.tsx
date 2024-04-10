@@ -5,7 +5,7 @@ import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./MegaMenu.module.css";
 import MegaMenuItem from "./MegaMenuItem/MegaMenuItem";
-import { useMemo } from "react";
+import { useMemo, memo } from "react";
 
 function MegaMenu() {
   const { megaMenuRef } = useGlobalContext();
@@ -13,6 +13,7 @@ function MegaMenu() {
   const { togglerFunc, megaMenuOpen } = eventToggles;
 
   const MenuItem = useMemo(() => {
+    console.log("rendering mega menu items");
     return megaMenuItemData.map((item: any) => {
       return <MegaMenuItem key={item.id} data={item} />;
     });
@@ -36,4 +37,4 @@ function MegaMenu() {
   );
 }
 
-export default MegaMenu;
+export default memo(MegaMenu);

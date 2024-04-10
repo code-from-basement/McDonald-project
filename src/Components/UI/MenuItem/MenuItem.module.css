@@ -206,7 +206,10 @@
   color: var(--color-primary-700);
 }
 
-@media screen and (max-width: 992px) {
+/* Breakpoints  */
+
+/* break point on 992px */
+@media screen and (max-width: 62em) {
   .header__title h2 {
     font-size: var(--font-size-lg);
   }
@@ -214,9 +217,17 @@
     transform: translateX(8px);
   }
 }
-
-@media screen and (max-width: 576px) {
+/* break point on 576px */
+@media screen and (max-width: 36em) {
   .header__btn h2 {
     transform: translateX(6px);
+  }
+}
+
+/* break point on 320px */
+@media screen and (max-width: 20em) {
+  .menuItem__body {
+    width: 60%;
+    transform: translateY(-2rem);
   }
 }

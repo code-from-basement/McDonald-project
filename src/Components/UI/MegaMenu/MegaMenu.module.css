@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-white);
-  height: calc(90vh - 8rem);
+  height: calc(70vh - 8rem);
   padding: var(--spacing-md);
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   overflow: hidden;
@@ -45,11 +45,14 @@
   position: absolute;
   bottom: 1rem;
   left: 50%;
+  height: 6rem;
   z-index: var(--z-index-900);
+  border: 2px solid var(--color-secondary-900);
 }
 .menuCloser:hover {
   background-color: var(--color-secondary-900);
   transform: translateY(-8px);
+  height: 7rem;
 }
 .menuCloser:hover svg {
   color: var(--color-white);

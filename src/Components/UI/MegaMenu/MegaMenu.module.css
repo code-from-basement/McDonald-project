@@ -3,13 +3,13 @@
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
   background-color: var(--color-white);
-  height: calc(70vh - 8rem);
-  padding: var(--spacing-md);
+  height: 60rem;
+  padding: var(--spacing-lg);
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   overflow: hidden;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   z-index: var(--z-index-500);
   top: 7rem;
   left: 0;
@@ -19,25 +19,62 @@
 .bg__logo {
   position: absolute;
   top: 10rem;
-  right: 0%;
+  left: 0%;
   transform: scale(0.7);
 }
 
 .foodCategory {
-  flex: 2;
-  z-index: var(--z-index-900);
+  width: 85%;
   height: 100%;
+  z-index: var(--z-index-900);
   display: grid;
+  /* place-content: start; */
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--spacing-md);
-  /* background-color: #eeeeee75; */
+  background-color: #eeeeee75;
 }
 
 .menuAds {
-  flex: 1;
-  z-index: var(--z-index-900);
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 25%;
   height: 100%;
-  /* background-color: #eeeeee75; */
+  z-index: var(--z-index-900);
+}
+
+.menuAds__card {
+  overflow: hidden;
+  background-color: var(--color-secondary-800);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menuAds__card h2 {
+  font-size: var(--font-size-xxl);
+  color: white;
+}
+.menuAds__card p {
+  font-size: var(--font-size-md);
+  color: white;
+}
+.menuAds__card img {
+  width: 12rem;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.dividerV {
+  height: 100%;
+  background-color: var(--color-primary-900);
+  width: 1rem;
+  border-radius: 999px;
 }
 .menuCloser {
   border-radius: var(--border-radius-circle);

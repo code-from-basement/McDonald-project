@@ -113,7 +113,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     }
   };
-
+  console.log(megaMenuItemData);
   //----------------------------------------------------//
 
   //*Menu List Management

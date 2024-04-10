@@ -20,7 +20,7 @@
 
 .menuListIntroCard {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   width: 100%;
@@ -135,4 +135,19 @@
 
 .homeMenuList a[type="selected"] {
   background-color: red;
+}
+
+/*responsive*
+
+/* break point on 768 */
+@media screen and (max-width: 48em) {
+  .menuListIntroCard h2 {
+    font-size: var(--font-size-xl);
+  }
+  .menuListIntroCard p {
+    font-size: var(--font-size-md);
+  }
+  .menuListIntro {
+    width: 22rem !important;
+  }
 }

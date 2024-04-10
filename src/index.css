@@ -226,31 +226,41 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-@media screen and (max-width: 1200px) {
+/* break point on 1200px */
+@media screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media screen and (max-width: 992px) {
+/* break point on 992px */
+@media screen and (max-width: 62em) {
   html {
     font-size: 50%;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* break point on 768 */
+@media screen and (max-width: 48em) {
   html {
     font-size: 43.75%;
   }
 }
 
-@media screen and (max-width: 576px) {
+/* break point on 576px */
+@media screen and (max-width: 36em) {
   html {
     font-size: 37.5%;
   }
 }
-
-@media screen and (max-width: 376px) {
+/* break point on 376px */
+@media screen and (max-width: 23.5em) {
+  html {
+    font-size: 31.25%;
+  }
+}
+/* break point on 320px */
+@media screen and (max-width: 20em) {
   html {
     font-size: 31.25%;
   }

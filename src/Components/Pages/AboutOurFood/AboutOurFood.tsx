@@ -70,7 +70,7 @@ function AboutOurFood() {
             </motion.div>
           </div>
         </div>
-        <div className={Styles.row1}>
+        <div className={Styles.row2}>
           <div className={Styles.cardContainerEven}>
             <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <div className={Styles.card_content}>
@@ -105,7 +105,7 @@ function AboutOurFood() {
             </motion.div>
           </div>
         </div>
-        <div className={Styles.row1}>
+        <div className={Styles.row2}>
           <div className={Styles.cardContainerEven}>
             <motion.div className={Styles.card} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <div className={Styles.card_content}>

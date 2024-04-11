@@ -34,7 +34,7 @@ function MegaMenu() {
     const menuContainerLocation = document.getElementById("menuContainerID");
     setTimeout(() => {
       menuContainerLocation?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
+    }, 600);
   };
 
   return (

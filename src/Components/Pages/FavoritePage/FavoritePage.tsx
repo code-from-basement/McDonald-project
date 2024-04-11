@@ -53,15 +53,17 @@ function FavoritePage() {
         </h2>
       </section>
 
-      <section className={Styles.favPage__filterPanel}>
-        <div className={Styles.filterPanel__container}>
-          <button className={Styles.filterPanel__btn}>Cheapest</button>
-          <button className={Styles.filterPanel__btn}>Most expensive</button>
-          <button className={Styles.filterPanel__btn}>Fat</button>
-          <button className={Styles.filterPanel__btn}>Calories</button>
-          <button className={Styles.filterPanel__btn}>Categories</button>
-        </div>
-      </section>
+      {false && (
+        <section className={Styles.favPage__filterPanel}>
+          <div className={Styles.filterPanel__container}>
+            <button className={Styles.filterPanel__btn}>Cheapest</button>
+            <button className={Styles.filterPanel__btn}>Most expensive</button>
+            <button className={Styles.filterPanel__btn}>Fat</button>
+            <button className={Styles.filterPanel__btn}>Calories</button>
+            <button className={Styles.filterPanel__btn}>Categories</button>
+          </div>
+        </section>
+      )}
 
       <section className={Styles.favPage__favList}>
         <div className={Styles.favList__container}>

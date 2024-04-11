@@ -34,9 +34,8 @@ function BasketMenu() {
         <NavigateNextRoundedIcon />
       </button>
       <h2 className={Styles.basketMenu__title}>Order List:</h2>
-
       {!basketList.length && <EmptyCart />}
-      {basketList.length && (
+      {basketList.length > 0 && (
         <div className={Styles.basketListContainer}>
           <ul className={Styles.basketList}>
             {basketList?.map((item: any) => {
@@ -54,7 +53,7 @@ function BasketMenu() {
                   <div className={Styles.basketItem__sideRight}>
                     <h2>{price * qty} Kr</h2>
                     <input className={Styles.input__qty} type="number" max="10" min="1" value={item.qty} onChange={(e) => onChangeItemQty(e, _id)} />
-                    <button className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(_id)}>
+                    <button name="delete from basket list" className={Styles.btn__delete} onClick={() => onClickRemoveItemHandler(_id)}>
                       <DeleteRoundedIcon />
                     </button>
                   </div>
@@ -64,7 +63,7 @@ function BasketMenu() {
           </ul>
         </div>
       )}
-      {basketList.length && (
+      {basketList.length > 0 && (
         <div className={Styles.totalContainer}>
           <TotalSection />
         </div>

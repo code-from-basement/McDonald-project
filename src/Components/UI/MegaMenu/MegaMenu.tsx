@@ -61,7 +61,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"hamburger-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"hamburger-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -80,7 +80,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"chicken&fish-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"chicken&fish-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -99,7 +99,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"breakfast-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"breakfast-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -118,7 +118,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"snacks-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"snacks-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -137,7 +137,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"drink-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"drink-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -156,7 +156,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"salad-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"salad-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -175,7 +175,7 @@ function MegaMenu() {
             </p>
           </div>
           <div className={Styles.card__btn}>
-            <button value={"dips-menu"} onClick={(e) => onclickNavigateHandler(e)}>
+            <button name="navigate to menu" value={"dips-menu"} onClick={(e) => onclickNavigateHandler(e)}>
               View Menu <ArrowForwardIosRoundedIcon />
             </button>
           </div>
@@ -189,7 +189,7 @@ function MegaMenu() {
           <p>Every month we comes with new idea until new year! follow use in the social media to be updated.</p>
         </div>
       </section>
-      <button className={Styles.menuCloser} onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}>
+      <button name="navigate to menu" className={Styles.menuCloser} onClick={() => togglerFunc("megaMenuOpen", !eventToggles.megaMenuOpen)}>
         <KeyboardArrowUpRoundedIcon />
       </button>
     </motion.div>

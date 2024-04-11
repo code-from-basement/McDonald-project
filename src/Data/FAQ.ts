@@ -2,8 +2,7 @@ const faqsData = [
   {
     id: "1",
     question: "Do your chicken McNuggets contain any preservatives?",
-    answer:
-      "We only use 100% pure and Halal white meat chicken in our chicken McNuggets, free from any artificial colorant, preservatives, or flavors. We use a special tempura batter which is typically made of wheat flour and starch mixed with our special spice and pepper mix, that we cook using a 100% vegetarian mix of rapeseed and sunflower oil for that extra crisp!",
+    answer: "We only use 100% pure and Halal white meat chicken in our chicken McNuggets, free from any artificial colorant, preservatives, or flavors. We use a special tempura batter which is typically made.",
   },
   {
     id: "2",
@@ -28,14 +27,13 @@ const faqsData = [
   {
     id: "6",
     question: "Do you have any vegan options on the menu?",
-    answer:
-      "Our apple pie is vegan friendly and our World Famous Fries do not contain wheat or gluten as an ingredient. However, it is important to note that, just like in any working kitchen, cross contact between food items cannot be ruled out.",
+    answer: "Our apple pie is vegan friendly and our World Famous Fries do not contain wheat or gluten as an ingredient. However, it is important to note that, just like in any working kitchen.",
   },
   {
     id: "7",
     question: "Why does your food not rot?",
     answer:
-      "The reality is that McDonald’s food does rot just like the food you would prepare at home. However, there is something important to note about the process. Essentially, the microbes that cause rotting are a lot like us, in that they need water, nutrients, warmth and time to grow. If we take one or more of these elements away, and lock food in an airtight container, then microbes cannot grow or spoil the food.",
+      "The reality is that McDonald’s food does rot just like the food you would prepare at home. However, there is something important to note about the process. Essentially, the microbes that cause rotting are a lot like us, in that they need water.",
   },
   {
     id: "8",

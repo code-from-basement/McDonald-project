@@ -42,7 +42,7 @@ function TrendingNow() {
         </div>        
       </div>
       <div className={Styles.familyMenuContainer}>
-        <Confetti width={width} height={height} numberOfPieces={60} tweenDuration={5000}
+        <Confetti width={width} height={height} numberOfPieces={60} tweenDuration={5000} 
         drawShape={ctx => {
           ctx.beginPath()
           for(let i = 0; i < 30; i++) {

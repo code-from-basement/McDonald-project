@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 function MenuContainer() {
   const { isLoading }: any = useGlobalContext();
   return (
-    <div className={Styles.menuContainer}>
+    <div className={Styles.menuContainer} id="menuContainerID">
       <AnimatePresence>{isLoading && <MainMenuLoading />}</AnimatePresence>
       <h2 className={Styles.title}>Menu</h2>
       <Outlet />

@@ -226,6 +226,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+/* break point on 1537px */
+@media screen and (max-width: 96em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 /* break point on 1200px */
 @media screen and (max-width: 75em) {
   html {

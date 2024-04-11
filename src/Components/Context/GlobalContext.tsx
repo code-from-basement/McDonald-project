@@ -12,12 +12,14 @@ interface globalContextProps {
     isBasketEmpty: boolean;
     stickyBasket: boolean;
     isModalRedirectionShow: boolean;
+    isIntroPageShow: boolean;
   };
 }
 
 function GlobalContextProvider({ children }: globalContextProps) {
   const basketMenuRef = useRef(null);
   const megaMenuRef = useRef(null);
+  console.log(megaMenuRef, "from context api");
 
   //*Fetching data from Firebase Realtime Database
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
@@ -57,6 +59,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
     isBasketEmpty: false,
     stickyBasket: false,
     isModalRedirectionShow: false,
+    isIntroPageShow: true,
   });
 
   // **Updating User Favorite List in favorite page

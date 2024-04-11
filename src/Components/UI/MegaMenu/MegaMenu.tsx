@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { memo, useEffect, useMemo } from "react";
+import { memo, useEffect, useMemo, useRef } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
 import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
@@ -18,10 +18,9 @@ import dipsIcon from "./../../../assets/Image/swipperIcons/14_Values.webp";
 import { ArrowForwardIosRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import { useNavigate } from "react-router-dom";
 function MegaMenu() {
-  const navigate = useNavigate();
-  const { megaMenuRef } = useGlobalContext;
-  const { eventToggles, setEventToggles }: any = useGlobalContext();
+  const { eventToggles, setEventToggles, megaMenuRef }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
+  const navigate = useNavigate();
 
   const onclickNavigateHandler = (e) => {
     const value = e.target.value;
@@ -57,7 +56,7 @@ function MegaMenu() {
             <h2 className={Styles.content__title}>Hamburgers</h2>
             <p className={Styles.content__description}>Our popular Cheeseburger with 100% pure beef.</p>
             <p className={Styles.content__numberOfMenus}>
-              <span>9</span> type of Burger{" "}
+              <span>9</span> meet Burgers{" "}
             </p>
           </div>
           <div className={Styles.card__btn}>
@@ -196,4 +195,4 @@ function MegaMenu() {
   );
 }
 
-export default memo(MegaMenu);
+export default MegaMenu;

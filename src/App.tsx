@@ -27,29 +27,32 @@ import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
+import IntroPage from "./Components/Pages/introPage/introPage";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
-  const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow } = eventToggles;
+  const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
 
   // Intersection observer API for sticky basket
   useEffect(() => {
     const navbarTarget = document.querySelector("#navbar");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting && !isBasketShow) {
-          setEventToggles((prevData) => {
-            return { ...prevData, stickyBasket: true };
-          });
-        } else {
-          setEventToggles((prevData) => {
-            return { ...prevData, stickyBasket: false };
-          });
-        }
+    if (navbarTarget) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !isBasketShow) {
+            setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: true };
+            });
+          } else {
+            setEventToggles((prevData) => {
+              return { ...prevData, stickyBasket: false };
+            });
+          }
+        });
       });
-    });
-    observer.observe(navbarTarget!);
-  }, []);
+      observer.observe(navbarTarget!);
+    }
+  }, [isIntroPageShow]);
 
   // Fetching data from Firebase Realtime Database
 
@@ -76,7 +79,9 @@ function App() {
     }
   };
 
-  return (
+  return isIntroPageShow ? (
+    <AnimatePresence>{<IntroPage />}</AnimatePresence>
+  ) : (
     <div className="app" onClick={onPanelCloser}>
       <BrowserRouter>
         <AnimatePresence>{megaMenuOpen && <MegaMenu />}</AnimatePresence>

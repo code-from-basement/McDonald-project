@@ -22,8 +22,8 @@ function IntroPage() {
         <div className={Styles.card__header}>
           <h1>welcome</h1>
           <p>
-            This website has been created with the primary goal of providing educational content and resources. It is designed to serve as a platform for learning and sharing knowledge in a specific domain. The content
-            on this website is carefully curated and structured to provide valuable information, tutorials, and interactive exercises to help users enhance their understanding of the subject matter.
+            This website has been developed primarily to provide <b>educational content and skill's level</b>. It functions as a portfolio and showcase. The content has been gathered from McDonald's main website.
+            However, it's important to note that this website is independent and not associated with McDonald's. It was created by <b>Mahyar Nafisi and Roudabeh Adnani </b> as a project showcase.
           </p>
         </div>
         <div className={Styles.card__body}>
@@ -33,8 +33,11 @@ function IntroPage() {
             </div>
             <div className={Styles.profile__content}>
               <h2>Mahyar Nafisi</h2>
-              <p>Full Stack Javascript developer, how like to learn more enjoying to work in team.</p>
+              <p>Full Stack Javascript developer, who enjoys learning and thrives in a team environment.</p>
               <em>React, Node JS, Express JS, TS and JS</em>
+              <hr />
+              <a href="mailto:mahyar.nafisi@gmail.com">mahyar.nafisi@gmail.com</a>
+              <a href="tel:+46760779693">+46760779693</a>
             </div>
           </div>
           <div className={Styles.profile}>
@@ -43,8 +46,11 @@ function IntroPage() {
             </div>
             <div className={Styles.profile__content}>
               <h2>Roudabeh Adnani</h2>
-              <p>Software developer, how like to learn more enjoying to work in team.</p>
+              <p>Full-stack developer, who enjoys developing and bringing ideas to life.</p>
               <em>React, Java, TS and JS</em>
+              <hr />
+              <a href="mailto:rodabeh.adnani@gamil.com">rodabeh.adnani@gmail.com</a>
+              <a href="">+46764359935</a>
             </div>
           </div>
         </div>

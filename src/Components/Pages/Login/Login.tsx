@@ -8,6 +8,8 @@ import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Login() {
+
+  
   // logged in user data
   const { loggedUser, setLoggedUser, setUserFavoriteList, setLoggedInUserFavoriteList } = useGlobalContext();
 

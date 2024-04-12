@@ -27,10 +27,27 @@ import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 import IntroPage from "./Components/Pages/introPage/IntroPage";
+import { signOut } from "firebase/auth";
+import { dataBase } from "./Data/firebaseConfig";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
+
+  useEffect(() => {
+    const logoutCaller = async () => {
+      try {
+        await signOut(dataBase);
+      } catch (err) {
+        alert("Error to sign out");
+      }
+    };
+    document.addEventListener("beforeunload", logoutCaller);
+
+    return () => {
+      document.removeEventListener("beforeunload", logoutCaller);
+    };
+  }, []);
 
   // Intersection observer API for sticky basket
   useEffect(() => {

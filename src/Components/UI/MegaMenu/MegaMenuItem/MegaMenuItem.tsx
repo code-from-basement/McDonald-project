@@ -1,6 +1,5 @@
-import React from "react";
-import Styles from "./MegaMenuItem.module.css";
 import { NavLink } from "react-router-dom";
+import Styles from "./MegaMenuItem.module.css";
 
 function MegaMenuItem({ data }: any) {
   return (

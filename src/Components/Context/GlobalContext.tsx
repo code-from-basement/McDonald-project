@@ -66,7 +66,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
         setIsLoading(true);
 
         //
-        const res = await fetch(`http://127.0.0.1:5000/api/v1/${address}`);
+        const res = await fetch(`https://mac-server.onrender.com/api/v1/${address}`);
         const { data } = await res.json();
         const allMenus = await data.allMenus;
 

@@ -42,10 +42,10 @@ function App() {
         alert("Error to sign out");
       }
     };
-    document.addEventListener("beforeunload", logoutCaller);
+    window.addEventListener("beforeunload", logoutCaller);
 
     return () => {
-      document.removeEventListener("beforeunload", logoutCaller);
+      window.removeEventListener("beforeunload", logoutCaller);
     };
   }, []);
 

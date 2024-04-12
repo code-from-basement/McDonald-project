@@ -4,9 +4,10 @@
   justify-content: center;
   /* height:auto; */
   min-height: 9rem;
-  width: 76rem;
+  /* width: 76rem; */
+  width: 100%;
+  max-width: auto;
   border-radius: var(--border-radius-md);
-  /* border: 1px solid green; */
   background-color: transparent;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -64,13 +65,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 76rem;
+  width: 100%;
   height: auto;
   background-color: var(--color-primary-900);
 }
 
 .isExpanded .collapsedBar__container_button {
   background-color: var(--color-primary-900); /* Change background color when expanded */
+  
 }
 .isExpanded .collapsedBar__container_button h2 {
   font-size: var(--font-size-md);

@@ -72,7 +72,7 @@ function MenuItem({ item }: any) {
           });
         });
 
-        await fetch("https://mac-server.onrender.com//api/v1/usersfavs", {
+        await fetch("https://mac-server.onrender.com/api/v1/usersfavs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

@@ -1,7 +1,7 @@
 import { dataBase } from "../../../Data/firebaseConfig";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { DeleteRoundedIcon } from "../../UI/IconsLibrary/IconsLibrary";
-import Styles from "./favorite.module.css";
+import Styles from "./Favorite.module.css";
 
 function FavoritePage() {
   const { setFullMenuListData, userFavoriteList } = useGlobalContext();

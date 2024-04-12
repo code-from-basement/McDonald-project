@@ -1,4 +1,3 @@
-import { useGlobalContext } from "../../Context/GlobalContext";
 import FQA from "./FQA/FQA";
 import Header from "./Header/Header";
 import Styles from "./Home.module.css";

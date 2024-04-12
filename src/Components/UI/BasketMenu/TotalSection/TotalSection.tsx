@@ -6,7 +6,7 @@ function TotalSection() {
   const { total, subTotal, deliveryFees, taxAndFees } = receipt;
 
   useEffect(() => {
-    const subTotalNum = basketList.reduce((acc, item) => {
+    const subTotalNum = basketList.reduce((acc: number, item: any) => {
       return acc + item.price * item.qty;
     }, 0);
     const totalNum = Number(subTotalNum + deliveryFees + taxAndFees);
@@ -15,7 +15,7 @@ function TotalSection() {
       return { ...receipt, subTotal: subTotalNum, total: totalNum, taxAndFees: taxNum };
     });
 
-    console.log(typeof subTotal);
+    // console.log(typeof subTotal);
   }, [basketList]);
 
   return (

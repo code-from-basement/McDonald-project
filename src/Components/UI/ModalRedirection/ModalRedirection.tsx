@@ -7,8 +7,8 @@ import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
 import Styles from "./ModalRedirection.module.css";
 
 function ModalRedirection() {
-  const { eventToggles, setEventToggles }: any = useGlobalContext();
-  const { isModalRedirectionShow } = eventToggles;
+  const { setEventToggles }: any = useGlobalContext();
+  // const { isModalRedirectionShow } = eventToggles;
 
   const navigate = useNavigate();
 

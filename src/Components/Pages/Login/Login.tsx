@@ -6,11 +6,10 @@ import Styles from "./Login.module.css";
 import { dataBase } from "../../../Data/firebaseConfig";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import { useState } from "react";
 
 function Login() {
   // logged in user data
-  const { loggedUser, setLoggedUser, fetchAllMenuData, setUserFavoriteList, setLoggedInUserFavoriteList, loggedInUserFavoriteList } = useGlobalContext();
+  const { loggedUser, setLoggedUser, setUserFavoriteList, setLoggedInUserFavoriteList } = useGlobalContext();
 
   // navigate from react-router-dom
   const navigate = useNavigate();
@@ -33,7 +32,7 @@ function Login() {
         }),
       });
       const data = await response.json();
-      console.log(data, "data");
+      // console.log(data, "data");
 
       setLoggedInUserFavoriteList(data.data);
 

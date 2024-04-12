@@ -1,7 +1,6 @@
-import React from "react";
-import Styles from "./ChickenBurgerMenu.module.css";
 import { useGlobalContext } from "../../../../Context/GlobalContext";
 import MenuItem from "../../../../UI/MenuItem/MenuItem";
+import Styles from "./ChickenBurgerMenu.module.css";
 
 function ChickenBurgerMenu() {
   const { menuLists }: any = useGlobalContext();

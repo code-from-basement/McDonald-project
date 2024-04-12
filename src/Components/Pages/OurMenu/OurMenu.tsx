@@ -1,10 +1,7 @@
-import React from 'react'
-import Styles from './OurMenu.module.css'
+import Styles from "./OurMenu.module.css";
 
 function OurMenu() {
-  return (
-    <div className={Styles.ourMenu}>OurMenu</div>
-  )
+  return <div className={Styles.ourMenu}>OurMenu</div>;
 }
 
-export default OurMenu
+export default OurMenu;

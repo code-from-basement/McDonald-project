@@ -26,7 +26,7 @@ import CollapsedBar from "./CollapsedBar";
 
 function OurApp() {
   const { scrollYProgress }: any = useScroll();
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState<any>(null);
 
   //define array for collapsed bar items
   const collapsedItems = [
@@ -73,7 +73,7 @@ function OurApp() {
   const swiperRef = useRef(null);
   const toggleSwiper = () => {
     if (swiperRef.current) {
-      const swiper = swiperRef.current.swiper;
+      const swiper = (swiperRef.current as any).swiper;
       if (swiper && swiperPaused) {
         swiper.autoplay.start();
       } else if (swiper) {
@@ -182,8 +182,8 @@ function OurApp() {
           <div className={Styles.maccasContainer__upRow__left}>
             <h2>Working at Macca’s</h2>
             <p>
-              We love nothing more than watching our employees grow. Did you know that a lot of our most successful Managers started their careers as Crew Members? You can do it too, and the best part is you get to earn while you learn! If
-              you've got the appetite to succeed, we’ll give you the opportunity.
+              We love nothing more than watching our employees grow. Did you know that a lot of our most successful Managers started their careers as Crew Members? You can do it too, and the best part is you get to earn
+              while you learn! If you've got the appetite to succeed, we’ll give you the opportunity.
             </p>
             <div className={Styles.maccasContainer__button}>
               <button>
@@ -235,7 +235,7 @@ function OurApp() {
               pagination={{
                 clickable: false,
                 dynamicBullets: true,
-                dynamicFraction: true,
+                // dynamicFraction: true,
               }}
               // navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
@@ -268,12 +268,12 @@ function OurApp() {
             </motion.div>
           </h2>
           <p>
-            At Maccas®, we attract people who love to create and serve seriously great food, possess an infectious attitude, provide <span>world-class customer service,</span> and most importantly, like to have fun while they’re working!
-            Whether it is building skills for life or giving you flexibility to fit in with your lifestyle, we create jobs that work for you.
+            At Maccas®, we attract people who love to create and serve seriously great food, possess an infectious attitude, provide <span>world-class customer service,</span> and most importantly, like to have fun while
+            they’re working! Whether it is building skills for life or giving you flexibility to fit in with your lifestyle, we create jobs that work for you.
           </p>
           <p>
-            Maccas® is always looking for <span>motivated, passionate people</span> who prioritize health and safety as much as we do, so apply now to join the Macca’s family and an organisation formally recognised as an Employer of Choice
-            four years running.
+            Maccas® is always looking for <span>motivated, passionate people</span> who prioritize health and safety as much as we do, so apply now to join the Macca’s family and an organisation formally recognised as an
+            Employer of Choice four years running.
           </p>
         </div>
       </div>
@@ -291,11 +291,11 @@ function OurApp() {
       </div>
       <div className={Styles.scrollPanelContainer}>
         <div className={Styles.scrollPanelContainer__left}>
-          {items.map((item: any, id: any) => (
+          {items.map((item: { title: string; image: string }, id: any) => (
             <button key={id} className={`${Styles.scrollPanelContainer__left_l1} ${selectedItem && selectedItem.title === item.title ? Styles.active : ""}`} onClick={() => handleItemClick(item)}>
               <img src={item.image} alt={item.title} />
               {/* <div className={Styles['active-indicator']}></div> */}
-              <span className={Styles['active-indicator']}></span>
+              <span className={Styles["active-indicator"]}></span>
               <h3>{item.title}</h3>
             </button>
           ))}
@@ -303,8 +303,8 @@ function OurApp() {
         <div className={Styles.scrollPanelContainer__right}>
           {selectedItem ? (
             <div className={Styles.scrollPanelContainer__right_card}>
-              <img src={selectedItem.image} alt={selectedItem.title} />
-              <h3>{selectedItem.detail}</h3>
+              <img src={(selectedItem as { title: string; image: string; detail: string }).image} alt={selectedItem.title} />
+              <h3>{(selectedItem as { title: string; image: string; detail: string }).detail}</h3>
             </div>
           ) : (
             <div className={Styles.scrollPanelContainer__right_card}>
@@ -323,9 +323,9 @@ function OurApp() {
               At McDonald’s the safety and wellbeing of our people, customers and the food and drink we serve is our <strong>highest priority</strong>.
             </p>
             <p>
-              Each McDonald’s restaurant follows strict cleaning, sanitation and hygiene procedures that meet or exceed the rigorous requirements outlined in the Food Standards Code. We are committed to protecting the safety of our people
-              and customers through our hygiene and cleanliness standards, social distancing practices and convenience of contact-free service and delivery. Additionally, we have implemented a range of communication methods to keep
-              employees up to date with the latest guidance and advice.
+              Each McDonald’s restaurant follows strict cleaning, sanitation and hygiene procedures that meet or exceed the rigorous requirements outlined in the Food Standards Code. We are committed to protecting the
+              safety of our people and customers through our hygiene and cleanliness standards, social distancing practices and convenience of contact-free service and delivery. Additionally, we have implemented a range
+              of communication methods to keep employees up to date with the latest guidance and advice.
             </p>
             <h4>You can have confidence that your wellbeing and safety comes first when you join the Macca’s family.</h4>
           </div>
@@ -360,8 +360,8 @@ function OurApp() {
           <img src={Hat} alt="a pic of hat" />
           <h2>Our Restaurants</h2>
           <p>
-            We have over 1020 restaurants in Australia so there are some things that will be different from restaurant to restaurant. Some of our restaurants are owned and operated by local Licensees, whilst others are operated by
-            McDonald’s Australia.
+            We have over 1020 restaurants in Australia so there are some things that will be different from restaurant to restaurant. Some of our restaurants are owned and operated by local Licensees, whilst others are
+            operated by McDonald’s Australia.
           </p>
         </div>
       </div>

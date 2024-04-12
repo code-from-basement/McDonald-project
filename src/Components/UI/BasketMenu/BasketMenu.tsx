@@ -5,11 +5,10 @@ import { DeleteRoundedIcon, NavigateNextRoundedIcon } from "../IconsLibrary/Icon
 import Styles from "./BasketMenu.module.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
 import TotalSection from "./TotalSection/TotalSection";
-import { useEffect, useRef } from "react";
 
 function BasketMenu() {
-  const { eventToggles, setEventToggles, basketList, setBasketList, basketMenuRef } = useGlobalContext();
-  const { togglerFunc, isBasketEmpty, isBasketShow } = eventToggles;
+  const { eventToggles, basketList, setBasketList, basketMenuRef } = useGlobalContext();
+  const { togglerFunc } = eventToggles;
 
   // Remove item from basket menu list
   const onClickRemoveItemHandler = (_id: number) => {
@@ -19,7 +18,7 @@ function BasketMenu() {
   };
 
   // Change quantity of ordered item in basket list
-  const onChangeItemQty = (e, _id) => {
+  const onChangeItemQty = (e: any, _id: any) => {
     if (e.target.value <= 10 && e.target.value > 0) {
       setBasketList((prevData: any) => {
         return prevData.map((item: any) => (item._id === _id ? { ...item, qty: e.target.value } : item));

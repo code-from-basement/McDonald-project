@@ -6,8 +6,8 @@ import { LocalMallOutlinedIcon } from "../IconsLibrary/IconsLibrary";
 import Styles from "./BasketSticky.module.css";
 
 function BasketSticky() {
-  const { basketList, eventToggles, setEventToggles } = useGlobalContext();
-  const { isBasketShow } = eventToggles;
+  const { basketList, setEventToggles } = useGlobalContext();
+  // const { isBasketShow } = eventToggles;
   const location = useLocation();
   const isLogin = location.pathname === "/login";
 
@@ -17,7 +17,7 @@ function BasketSticky() {
       block: "start",
     });
     setTimeout(() => {
-      setEventToggles((prevData) => {
+      setEventToggles((prevData: any) => {
         return { ...prevData, isBasketShow: true };
       });
     }, 1000);

@@ -23,11 +23,10 @@ const reducer = (state: any, action: any) => {
 
 function MenuItem({ item }: any) {
   const target = useRef(null);
-  const { eventToggles, setEventToggles, setBasketList, basketList, fullMenuListData, setFullMenuListData, userFavoriteList, setUserFavoriteList }: any = useGlobalContext();
+  const { setEventToggles, setBasketList, basketList, fullMenuListData, setFullMenuListData }: any = useGlobalContext();
 
-  const { isModalRedirectionShow } = eventToggles;
   const navigate = useNavigate();
-  const { title, price, image, _id, nutrition, category, isFavorite } = item;
+  const { title, price, image, _id, nutrition, isFavorite } = item;
 
   const onClickNavigation = () => {
     navigate(`/${title}`);
@@ -60,11 +59,11 @@ function MenuItem({ item }: any) {
   // favorite button logic
   const favoriteBtnHandler = async () => {
     if (dataBase.currentUser === null) {
-      setEventToggles((prevData) => {
+      setEventToggles((prevData: any) => {
         return { ...prevData, isModalRedirectionShow: true };
       });
     } else {
-      const getFavoriteItem = await fullMenuListData.filter((item) => item._id === target.current?.id);
+      const getFavoriteItem = await fullMenuListData.filter((item: any) => item._id === (target.current as any)?.id);
       const FavoriteItemID = getFavoriteItem[0]._id;
       if (dataBase.currentUser?.displayName) {
         setFullMenuListData((prevData: any) => {
@@ -73,7 +72,7 @@ function MenuItem({ item }: any) {
           });
         });
 
-        const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
+        await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -81,8 +80,8 @@ function MenuItem({ item }: any) {
             favoriteList: [`${FavoriteItemID}`],
           }),
         });
-        const data = await res.json();
-        console.log(data);
+        // const data = await res.json();
+        // console.log(data);
       }
     }
   };

@@ -1,6 +1,3 @@
-import { Opacity } from "@mui/icons-material";
-import { motion } from "framer-motion";
-
 /**Mega Menu Animation Styles */
 export const megaMenuAnimationStyles = {
   key: "megaMenu",

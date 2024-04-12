@@ -1,25 +1,14 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
-import { dataBase } from "../../Data/firebaseConfig";
 
-const GlobalContext = createContext();
+const GlobalContext = createContext<any>(null);
 
-interface globalContextProps {
+type globalContextProps = {
   children: React.ReactNode;
-  eventToggles: {
-    toggleFunc: () => void;
-    isBasketShow: null;
-    megaMenuOpen: boolean;
-    isBasketEmpty: boolean;
-    stickyBasket: boolean;
-    isModalRedirectionShow: boolean;
-    isIntroPageShow: boolean;
-  };
-}
+};
 
 function GlobalContextProvider({ children }: globalContextProps) {
   const basketMenuRef = useRef(null);
   const megaMenuRef = useRef(null);
-  console.log(megaMenuRef, "from context api");
 
   //*Fetching data from Firebase Realtime Database
   const [fullMenuListData, setFullMenuListData] = useState<any>(null);
@@ -65,7 +54,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
   // **Updating User Favorite List in favorite page
   useEffect(() => {
     setUserFavoriteList(
-      fullMenuListData?.filter((item) => {
+      fullMenuListData?.filter((item: any) => {
         return item.isFavorite === true;
       })
     );
@@ -82,9 +71,8 @@ function GlobalContextProvider({ children }: globalContextProps) {
         const allMenus = await data.allMenus;
 
         if (loggedInUserFavoriteList.length > 0) {
-          console.log("1");
           const newAllMenus = allMenus.map((menu: any) => {
-            if (loggedInUserFavoriteList?.includes(menu._id)) {
+            if (loggedInUserFavoriteList?.includes(menu._id as never)) {
               return { ...menu, isFavorite: true };
             }
             return menu;
@@ -116,7 +104,7 @@ function GlobalContextProvider({ children }: globalContextProps) {
       }
     }
   };
-  console.log(megaMenuItemData);
+
   //----------------------------------------------------//
 
   //*Menu List Management

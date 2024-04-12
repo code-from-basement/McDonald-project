@@ -1,7 +1,6 @@
-import Styles from "./ButtonSwiper.module.css";
-import React from "react";
 import { useSwiper } from "swiper/react";
 import { NavigateBeforeRoundedIcon, NavigateNextRoundedIcon } from "../../../../UI/IconsLibrary/IconsLibrary";
+import Styles from "./ButtonSwiper.module.css";
 function ButtonSwiper() {
   const swiper = useSwiper();
   return (

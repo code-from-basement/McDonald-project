@@ -1,31 +1,28 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { memo, useEffect, useMemo, useRef } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { megaMenuAnimationStyles, megaMenuBackgroundLogoAnimationStyles } from "../Animation/AnimationStyles";
-import bgLogo from "./../../../assets/Image/logo/macLogo-mid-size.png";
+import { default as bgLogo, default as macIcon } from "./../../../assets/Image/logo/macLogo-mid-size.png";
+import saladIcon from "./../../../assets/Image/swipperIcons/01_Ingredients_1.webp";
+import snackIcon from "./../../../assets/Image/swipperIcons/04_Chicken.webp";
+import hamburgersIcon from "./../../../assets/Image/swipperIcons/05_Beef_0.webp";
+import chickenIcon from "./../../../assets/Image/swipperIcons/07_Fish.webp";
+import dipsIcon from "./../../../assets/Image/swipperIcons/14_Values.webp";
+import drinksIcon from "./../../../assets/Image/swipperIcons/Beverages.webp";
+import breakfastIcon from "./../../../assets/Image/swipperIcons/breakfast_0.webp";
 import { KeyboardArrowUpRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import Styles from "./MegaMenu.module.css";
-import MegaMenuItem from "./MegaMenuItem/MegaMenuItem";
-import macIcon from "./../../../assets/Image/logo/macLogo-mid-size.png";
-import hamburgersIcon from "./../../../assets/Image/swipperIcons/05_Beef_0.webp";
-import snackIcon from "./../../../assets/Image/swipperIcons/04_Chicken.webp";
-import breakfastIcon from "./../../../assets/Image/swipperIcons/breakfast_0.webp";
-import chickenIcon from "./../../../assets/Image/swipperIcons/07_Fish.webp";
-import drinksIcon from "./../../../assets/Image/swipperIcons/Beverages.webp";
-import saladIcon from "./../../../assets/Image/swipperIcons/01_Ingredients_1.webp";
-import dipsIcon from "./../../../assets/Image/swipperIcons/14_Values.webp";
 
-import { ArrowForwardIosRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 import { useNavigate } from "react-router-dom";
+import { ArrowForwardIosRoundedIcon } from "./../../UI/IconsLibrary/IconsLibrary";
 function MegaMenu() {
   const { eventToggles, setEventToggles, megaMenuRef }: any = useGlobalContext();
   const { togglerFunc, megaMenuOpen } = eventToggles;
   const navigate = useNavigate();
 
-  const onclickNavigateHandler = (e) => {
+  const onclickNavigateHandler = (e: any) => {
     const value = e.target.value;
     navigate(`/${value}`);
-    setEventToggles((prevData) => {
+    setEventToggles((prevData: any) => {
       return {
         ...prevData,
         megaMenuOpen: false,

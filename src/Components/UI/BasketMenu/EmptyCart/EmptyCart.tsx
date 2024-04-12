@@ -1,8 +1,7 @@
-import React from "react";
-import Styles from "./EmptyCart.module.css";
-import emptyCartImage from "./../../../../assets/Image/BasketMenu/fast-food-isometric-50951.png";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { emptyCartContentsAnimationStyles } from "../../Animation/AnimationStyles";
+import emptyCartImage from "./../../../../assets/Image/BasketMenu/fast-food-isometric-50951.png";
+import Styles from "./EmptyCart.module.css";
 function EmptyCart() {
   return (
     <AnimatePresence>

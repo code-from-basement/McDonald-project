@@ -7,33 +7,19 @@ function FavoritePage() {
   const { setFullMenuListData, userFavoriteList } = useGlobalContext();
   const noFavItem = <h2>There no favorite item selected</h2>;
 
-  // useEffect(() => {
-  //   if (dataBase.currentUser === null) {
-  //     return;
-  //   } else {
-  //     const findFavoriteItem = fullMenuListData?.filter((item: any) => item.isFavorite === true);
-  //     setUserFavoriteList(findFavoriteItem);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   setUserFavoriteList(fullMenuListData?.find((item) => item.isFavorite === true));
-  // }, [fullMenuListData]);
-
-  //
   // Delete item from list and update full menu list isFavorite key to false
-  const onClickDeleteHandler = async (e) => {
+  const onClickDeleteHandler = async (e: any) => {
     const targetID = e.currentTarget.id;
 
     // Delete item from user favorite list in frontend
     await setFullMenuListData((prevData: any) => {
-      return prevData.map((item) => {
+      return prevData.map((item: any) => {
         return item._id === targetID ? { ...item, isFavorite: false } : item;
       });
     });
 
     // Delete item from user favorite list in DATABASE
-    const res = await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
+    await fetch("http://127.0.0.1:5000/api/v1/usersfavs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -41,7 +27,6 @@ function FavoritePage() {
         favoriteList: [`${targetID}`],
       }),
     });
-    const data = await res.json();
   };
 
   return (

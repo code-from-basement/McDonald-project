@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect, lazy, Suspense, useRef } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
@@ -25,9 +25,8 @@ const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import Login from "./Components/Pages/Login/Login";
 import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
-import { dataBase } from "./Data/firebaseConfig";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
-import IntroPage from "./Components/Pages/introPage/introPage";
+import IntroPage from "./Components/Pages/introPage/IntroPage";
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
@@ -40,11 +39,11 @@ function App() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting && !isBasketShow) {
-            setEventToggles((prevData) => {
+            setEventToggles((prevData: any) => {
               return { ...prevData, stickyBasket: true };
             });
           } else {
-            setEventToggles((prevData) => {
+            setEventToggles((prevData: any) => {
               return { ...prevData, stickyBasket: false };
             });
           }
@@ -66,14 +65,14 @@ function App() {
   }, []);
 
   // Mega Menu and Basket menu close
-  const onPanelCloser = (e) => {
+  const onPanelCloser = (e: any) => {
     if (eventToggles.isBasketShow && basketMenuRef.current && !basketMenuRef.current.contains(e.target)) {
-      return setEventToggles((prevData) => {
+      return setEventToggles((prevData: any) => {
         return { ...prevData, isBasketShow: false };
       });
     }
     if (eventToggles.megaMenuOpen && megaMenuRef.current && !megaMenuRef.current.contains(e.target)) {
-      return setEventToggles((prevData) => {
+      return setEventToggles((prevData: any) => {
         return { ...prevData, megaMenuOpen: false };
       });
     }

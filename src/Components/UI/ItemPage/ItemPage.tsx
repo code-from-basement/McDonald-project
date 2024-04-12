@@ -6,8 +6,8 @@ import macIcon from "./../../../assets/Image/Icon/macdonaldPNG.png";
 import Styles from "./itemPage.module.css";
 
 function ItemPage() {
-  const { fullMenuListData, isLoading, setIsLoading, fetchAllMenuData } = useGlobalContext();
-  const [selectedProduct, setSelectedProduct] = useState();
+  const { fullMenuListData, setIsLoading, fetchAllMenuData } = useGlobalContext();
+  const [selectedProduct, setSelectedProduct] = useState<any>();
   const [nutritionListComp, setNutritionListComp] = useState<[string, unknown][]>([]);
   const navigate = useNavigate();
   const { title } = useParams();
@@ -54,7 +54,7 @@ function ItemPage() {
           <div className={Styles.category}>
             <h2>{selectedProduct?.category}</h2>
           </div>
-          <img src={selectedProduct?.image} alt="" />
+          <img src={selectedProduct?.image as string} alt="" />
         </section>
         <section className={Styles.section__content}>
           <div className={Styles.item__card}>

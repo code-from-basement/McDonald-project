@@ -1,11 +1,13 @@
+import { signOut } from "firebase/auth";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, lazy, Suspense } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useGlobalContext } from "./Components/Context/GlobalContext";
 import Footer from "./Components/Layouts/Footer/Footer";
 import Navbar from "./Components/Layouts/Navbar/Navbar";
 import AboutOurFood from "./Components/Pages/AboutOurFood/AboutOurFood";
+import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
 import Home from "./Components/Pages/Home/Home";
 import AllMenu from "./Components/Pages/Home/MenuContainer/AllMenu/AllMenu";
 import BreakfastMenu from "./Components/Pages/Home/MenuContainer/BreakfastMenu/BreakfastMenu";
@@ -15,39 +17,22 @@ import DrinksMenu from "./Components/Pages/Home/MenuContainer/DrinksMenu/DrinksM
 import HamburgerMenu from "./Components/Pages/Home/MenuContainer/HamburgerMenu/HamburgerMenu";
 import SaladMenu from "./Components/Pages/Home/MenuContainer/SaladMenu/SaladMenu";
 import SnacksMenu from "./Components/Pages/Home/MenuContainer/SnacksMenu/SnacksMenu";
+import Login from "./Components/Pages/Login/Login";
 import OurApp from "./Components/Pages/OurApp/OurApp";
 import OurMenu from "./Components/Pages/OurMenu/OurMenu";
 import ShoppingCartPage from "./Components/Pages/ShoppingCartPage/ShoppingCartPage";
 import TrendingNow from "./Components/Pages/TrenedingNow/TrendingNow";
-import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
-import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
-const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
-import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
-import Login from "./Components/Pages/Login/Login";
-import FavoritePage from "./Components/Pages/FavoritePage/FavoritePage";
-import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 import IntroPage from "./Components/Pages/introPage/IntroPage";
-import { signOut } from "firebase/auth";
+import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
+import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
+import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
+import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
 import { dataBase } from "./Data/firebaseConfig";
+const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 
 function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
-
-  useEffect(() => {
-    const logoutCaller = async () => {
-      try {
-        await signOut(dataBase);
-      } catch (err) {
-        alert("Error to sign out");
-      }
-    };
-    window.addEventListener("beforeunload", logoutCaller);
-
-    return () => {
-      window.removeEventListener("beforeunload", logoutCaller);
-    };
-  }, []);
 
   // Intersection observer API for sticky basket
   useEffect(() => {

@@ -33,7 +33,6 @@ function App() {
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
 
   useEffect(() => {
-    const originUrl = window.location.origin;
     const reloadPage = () => {
       // window.location.href = originUrl;
       setEventToggles(() => {

@@ -1,4 +1,3 @@
-import { signOut } from "firebase/auth";
 import { AnimatePresence } from "framer-motion";
 import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -27,7 +26,6 @@ import BasketMenu from "./Components/UI/BasketMenu/BasketMenu";
 import BasketSticky from "./Components/UI/BasketSticky/BasketSticky";
 import MegaMenu from "./Components/UI/MegaMenu/MegaMenu";
 import ModalRedirection from "./Components/UI/ModalRedirection/ModalRedirection";
-import { dataBase } from "./Data/firebaseConfig";
 const LazyItemPage = lazy(() => import("./Components/UI/ItemPage/ItemPage"));
 
 function App() {

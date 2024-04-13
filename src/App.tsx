@@ -32,6 +32,7 @@ function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
 
+  console.log(window.location.origin);
   // Intersection observer API for sticky basket
   useEffect(() => {
     const navbarTarget = document.querySelector("#navbar");

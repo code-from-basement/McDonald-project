@@ -14,7 +14,7 @@ function Home() {
     const reloadFunc = () => {
       console.log("-----------------------------");
       pathName.pathname == "/";
-      // window.location.reload();
+      window.location.href = pathName.pathname;
     };
 
     window.addEventListener("beforeunload", reloadFunc);

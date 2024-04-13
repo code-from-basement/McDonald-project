@@ -13,8 +13,8 @@ function Home() {
   useEffect(() => {
     const reloadFunc = () => {
       console.log("-----------------------------");
-      // pathName.pathname == "/";
-      window.location.reload();
+      pathName.pathname == "/";
+      // window.location.reload();
     };
 
     window.addEventListener("beforeunload", reloadFunc);

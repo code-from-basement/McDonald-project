@@ -32,7 +32,18 @@ function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
 
-  console.log(window.location.origin);
+  useEffect(() => {
+    const originUrl = window.location.origin;
+    const reloadPage = () => {
+      window.location.href = originUrl;
+    };
+
+    window.addEventListener("beforeunload", reloadPage);
+    return () => {
+      window.removeEventListener("beforeunload", reloadPage);
+    };
+  }, []);
+
   // Intersection observer API for sticky basket
   useEffect(() => {
     const navbarTarget = document.querySelector("#navbar");

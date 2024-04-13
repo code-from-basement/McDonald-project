@@ -90,7 +90,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="*" element={<Home />}>
+          <Route path="/" element={<Home />}>
             <Route index element={<Navigate replace to="all-menu" />} />
             <Route path="all-menu" element={<AllMenu />} />
             <Route path="hamburger-menu" element={<HamburgerMenu />} />

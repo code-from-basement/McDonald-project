@@ -32,20 +32,6 @@ function App() {
   const { eventToggles, setEventToggles, fetchAllMenuData, loggedInUserFavoriteList, basketMenuRef, megaMenuRef }: any = useGlobalContext();
   const { megaMenuOpen, isBasketShow, stickyBasket, isModalRedirectionShow, isIntroPageShow } = eventToggles;
 
-  useEffect(() => {
-    const reloadPage = () => {
-      // window.location.href = originUrl;
-      setEventToggles(() => {
-        return { ...eventToggles, isIntroPageShow: true };
-      });
-    };
-
-    window.addEventListener("beforeunload", reloadPage);
-    return () => {
-      window.removeEventListener("beforeunload", reloadPage);
-    };
-  }, []);
-
   // Intersection observer API for sticky basket
   useEffect(() => {
     const navbarTarget = document.querySelector("#navbar");
@@ -104,8 +90,8 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Navigate to="all-menu" />} />
+          <Route path="*" element={<Home />}>
+            <Route index element={<Navigate replace to="all-menu" />} />
             <Route path="all-menu" element={<AllMenu />} />
             <Route path="hamburger-menu" element={<HamburgerMenu />} />
             <Route path="chicken&fish-menu" element={<ChickenBurgerMenu />} />

@@ -35,7 +35,10 @@ function App() {
   useEffect(() => {
     const originUrl = window.location.origin;
     const reloadPage = () => {
-      window.location.href = originUrl;
+      // window.location.href = originUrl;
+      setEventToggles(() => {
+        return { ...eventToggles, isIntroPageShow: true };
+      });
     };
 
     window.addEventListener("beforeunload", reloadPage);

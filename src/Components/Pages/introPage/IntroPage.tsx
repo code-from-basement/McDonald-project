@@ -25,7 +25,7 @@ function IntroPage() {
     if (!fullMenuListData) {
       setMessageComp(
         <motion.p className={Styles.waitingStatus} {...introPageMessageAnimation}>
-          We are waiting for web server provider response, We use <b>free services</b> so it might take a while to they re-active our web-server.{" "}
+          We use <b>free services</b> for our backend from Render website, so it might take a while to get re-active.{" "}
         </motion.p>
       );
     } else {

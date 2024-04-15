@@ -138,6 +138,7 @@
   color: var(--color-secondary-600);
   padding: var(--spacing-sm);
   border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
 }
 
 .readyStatus {
@@ -145,4 +146,5 @@
   color: var(--color-tertiary-700);
   padding: var(--spacing-sm);
   border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
 }

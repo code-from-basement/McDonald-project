@@ -54,6 +54,7 @@ function ItemPage() {
           <div className={Styles.category}>
             <h2>{selectedProduct?.category}</h2>
           </div>
+
           <img src={selectedProduct?.image as string} alt="" />
         </section>
         <section className={Styles.section__content}>

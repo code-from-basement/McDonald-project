@@ -1,9 +1,9 @@
 import { useReducer, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { dataBase } from "../../../Data/firebaseConfig";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import { AddRoundedIcon, FavoriteBorderRoundedIcon, FavoriteRoundedIcon, InfoOutlinedIcon, RemoveRoundedIcon } from "./../IconsLibrary/IconsLibrary";
 import Styles from "./MenuItem.module.css";
-import { dataBase } from "../../../Data/firebaseConfig";
 
 const initialState = {
   qty: 1,
@@ -106,7 +106,9 @@ function MenuItem({ item }: any) {
             </button>
           </div>
         </div>
+
         <div className={Styles.menuItem__body} style={{ backgroundImage: `url(${image})` }}></div>
+
         <div className={Styles.menuItem__footer}>
           <div className={Styles.qtySection}>
             <button

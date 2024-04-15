@@ -90,3 +90,10 @@ export const animationOpacity3 = {
   animate: { y: 50, opacity: 0.5, transition: { duration: 0.6, delay: 0.2 } },
   exit: { y: 300, Opacity: 0, transition: { duration: 0.3 } },
 };
+
+export const introPageMessageAnimation = {
+  key: "redirectionModal1",
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.3, delay: 1 } },
+  exit: { opacity: 0, transition: { duration: 0.3, delay: 0.4 } },
+};

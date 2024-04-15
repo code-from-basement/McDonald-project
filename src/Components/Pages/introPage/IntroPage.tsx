@@ -1,10 +1,14 @@
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { animationOpacity1, introPageMessageAnimation } from "../../UI/Animation/AnimationStyles";
 import mahyarImage from "./../../../assets/Image/profileImage/mahyar-nafisi-profile-image.webp";
 import roudabehImage from "./../../../assets/Image/profileImage/roudabeh-adnani-profile-image.webp";
 import Styles from "./IntroPage.module.css";
 
 function IntroPage() {
-  const { setEventToggles } = useGlobalContext();
+  const [messageComp, setMessageComp] = useState<any>();
+  const { setEventToggles, fullMenuListData } = useGlobalContext();
   // const { isIntroPageShow } = eventToggles;
 
   const onClickGoToMainWebsite = () => {
@@ -14,6 +18,22 @@ function IntroPage() {
       });
     }, 500);
   };
+
+  useEffect(() => {
+    if (!fullMenuListData) {
+      setMessageComp(
+        <motion.h2 className={Styles.waitingStatus} {...introPageMessageAnimation}>
+          We are waiting for web server provider response, We use <b>free services</b> so it might take a while to they re-active our web-server.{" "}
+        </motion.h2>
+      );
+    } else {
+      setMessageComp(
+        <motion.h2 className={Styles.readyStatus} {...introPageMessageAnimation}>
+          Got the response from server, everything is setup, we are good to go!.{" "}
+        </motion.h2>
+      );
+    }
+  }, [fullMenuListData]);
 
   return (
     <div className={Styles.introPage}>
@@ -59,6 +79,7 @@ function IntroPage() {
           </button>
         </div>
       </section>
+      <section>{messageComp}</section>
     </div>
   );
 }

@@ -60,9 +60,9 @@ function App() {
   }, [loggedInUserFavoriteList]);
 
   // Fetching data from Firebase Realtime Database
-  useEffect(() => {
-    fetchAllMenuData("megaMenuItem");
-  }, []);
+  // useEffect(() => {
+  //   fetchAllMenuData("megaMenuItem");
+  // }, []);
 
   // Mega Menu and Basket menu close
   const onPanelCloser = (e: any) => {

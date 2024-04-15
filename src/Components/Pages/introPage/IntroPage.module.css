@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .container {
@@ -126,4 +127,20 @@
 
 .card__footer button:hover {
   background-color: var(--color-gray-800);
+}
+
+/* Messages Status Styles */
+
+.waitingStatus {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-600);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.readyStatus {
+  background-color: var(--color-tertiary-100);
+  color: var(--color-tertiary-700);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
 }

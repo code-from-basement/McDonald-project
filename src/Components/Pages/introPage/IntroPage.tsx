@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
-import { animationOpacity1, introPageMessageAnimation } from "../../UI/Animation/AnimationStyles";
+import { introPageMessageAnimation } from "../../UI/Animation/AnimationStyles";
 import mahyarImage from "./../../../assets/Image/profileImage/mahyar-nafisi-profile-image.webp";
 import roudabehImage from "./../../../assets/Image/profileImage/roudabeh-adnani-profile-image.webp";
 import Styles from "./IntroPage.module.css";

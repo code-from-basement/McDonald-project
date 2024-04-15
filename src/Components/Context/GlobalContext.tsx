@@ -130,13 +130,13 @@ function GlobalContextProvider({ children }: globalContextProps) {
       //breakfast list
       const getBreakFastMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "breakfast");
       //snack and slides list
-      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snack&slides");
+      const getSnackAndSidesMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "snacks");
       //dessert list
       const getDessertMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dessert");
       //dips list
-      const getDipsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dip");
+      const getDipsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "dips");
       //salad list
-      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salads");
+      const getSaladsMenuList = (fullMenuListData as never[]).filter((item: any) => item.category == "salad");
       setMenuLists({
         hamburger: getHamburgerMenuList,
         chickenAndFish: getChickenAndFishMenuList,

@@ -17,7 +17,7 @@ function IntroPage() {
       setEventToggles((PrevData: any) => {
         return { ...PrevData, isIntroPageShow: false };
       });
-    }, 500);
+    }, 0);
   };
 
   // To show the message based on the response from the server
@@ -39,7 +39,7 @@ function IntroPage() {
 
   return (
     <div className={Styles.introPage}>
-      <section className={Styles.container}>
+      <motion.section {...introPageMessageAnimation} className={Styles.container}>
         <div className={Styles.card__header}>
           <h1>welcome</h1>
           <p>
@@ -80,7 +80,7 @@ function IntroPage() {
             To the website
           </button>
         </div>
-      </section>
+      </motion.section>
       <section>{messageComp}</section>
     </div>
   );

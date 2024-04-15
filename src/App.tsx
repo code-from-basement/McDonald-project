@@ -79,7 +79,7 @@ function App() {
   };
 
   return isIntroPageShow ? (
-    <AnimatePresence>{<IntroPage />}</AnimatePresence>
+    <IntroPage />
   ) : (
     <div className="app" onClick={onPanelCloser}>
       <BrowserRouter>

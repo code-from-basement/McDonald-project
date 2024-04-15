@@ -92,8 +92,8 @@ export const animationOpacity3 = {
 };
 
 export const introPageMessageAnimation = {
-  key: "redirectionModal1",
+  key: "introPageMessage",
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.3, delay: 1 } },
-  exit: { opacity: 0, transition: { duration: 0.3, delay: 0.4 } },
+  animate: { opacity: 1, transition: { duration: 0.3, delay: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 2 } },
 };

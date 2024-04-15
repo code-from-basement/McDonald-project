@@ -1,5 +1,4 @@
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useGlobalContext } from "../../../Context/GlobalContext";
 import MainMenuLoading from "../../../UI/MainMenuLoading/MainMenuLoading";

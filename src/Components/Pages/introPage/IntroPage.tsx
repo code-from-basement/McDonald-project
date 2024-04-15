@@ -31,7 +31,7 @@ function IntroPage() {
     } else {
       setMessageComp(
         <motion.p className={Styles.readyStatus} {...introPageMessageAnimation}>
-          Everything is set upm, We're good to go. thanks 👍{" "}
+          Everything is set up, and We're good to go. Thanks 👍{" "}
         </motion.p>
       );
     }

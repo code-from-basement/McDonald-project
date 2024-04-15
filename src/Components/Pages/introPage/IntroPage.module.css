@@ -123,10 +123,12 @@
   border-radius: var(--border-radius-sm);
   font-size: var(--font-size-sm);
   font-weight: 600;
+  transition: 1s 1.2s;
 }
-
-.card__footer button:hover {
-  background-color: var(--color-gray-800);
+.card__footer button:disabled {
+  background-color: var(--color-gray-300);
+  color: var(--color-gray-600);
+  cursor: not-allowed;
 }
 
 /* Messages Status Styles */

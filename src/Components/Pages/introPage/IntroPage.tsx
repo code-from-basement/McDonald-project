@@ -11,6 +11,7 @@ function IntroPage() {
   const { setEventToggles, fullMenuListData } = useGlobalContext();
   // const { isIntroPageShow } = eventToggles;
 
+  // To navigate to the main website
   const onClickGoToMainWebsite = () => {
     setTimeout(() => {
       setEventToggles((PrevData: any) => {
@@ -19,18 +20,19 @@ function IntroPage() {
     }, 500);
   };
 
+  // To show the message based on the response from the server
   useEffect(() => {
     if (!fullMenuListData) {
       setMessageComp(
-        <motion.h2 className={Styles.waitingStatus} {...introPageMessageAnimation}>
+        <motion.p className={Styles.waitingStatus} {...introPageMessageAnimation}>
           We are waiting for web server provider response, We use <b>free services</b> so it might take a while to they re-active our web-server.{" "}
-        </motion.h2>
+        </motion.p>
       );
     } else {
       setMessageComp(
-        <motion.h2 className={Styles.readyStatus} {...introPageMessageAnimation}>
+        <motion.p className={Styles.readyStatus} {...introPageMessageAnimation}>
           Got the response from server, everything is setup, we are good to go!.{" "}
-        </motion.h2>
+        </motion.p>
       );
     }
   }, [fullMenuListData]);
@@ -74,7 +76,7 @@ function IntroPage() {
           </div>
         </div>
         <div className={Styles.card__footer}>
-          <button onClick={onClickGoToMainWebsite} name="navigate to main website" className={Styles.footer__btn}>
+          <button onClick={onClickGoToMainWebsite} name="navigate to main website" disabled={!fullMenuListData && true} className={Styles.footer__btn}>
             To the website
           </button>
         </div>

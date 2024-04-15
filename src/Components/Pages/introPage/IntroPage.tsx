@@ -25,13 +25,13 @@ function IntroPage() {
     if (!fullMenuListData) {
       setMessageComp(
         <motion.p className={Styles.waitingStatus} {...introPageMessageAnimation}>
-          We use <b>free services</b> for our backend from Render website, so it might take a while to get re-active. ⌛{" "}
+          We're currently in the process of reactivating our backend services through Render's free platform, so there might be a slight delay. Thank you for your patience. ⌛{" "}
         </motion.p>
       );
     } else {
       setMessageComp(
         <motion.p className={Styles.readyStatus} {...introPageMessageAnimation}>
-          Got the response from server, everything is setup, we are good to go!. 👍{" "}
+          We've received the response from the server, confirming that everything is set up and ready to go! We're good to proceed. 👍{" "}
         </motion.p>
       );
     }

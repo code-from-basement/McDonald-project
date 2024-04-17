@@ -24,15 +24,20 @@ function IntroPage() {
   useEffect(() => {
     if (!fullMenuListData) {
       setMessageComp(
-        <motion.p className={Styles.waitingStatus} {...introPageMessageAnimation}>
-          We're currently use free services from Render for our backend, so there might be a delay. Thank you for your patience. ⌛{" "}
-        </motion.p>
+        <div className={Styles.statusContainer}>
+          <motion.p className={Styles.waitingStatus} {...introPageMessageAnimation}>
+            We're currently use free services for our backend, so there might be a delay before activation. Thank you for your waiting. ⌛
+          </motion.p>
+          <motion.span {...introPageMessageAnimation} className={Styles.loader}></motion.span>
+        </div>
       );
     } else {
       setMessageComp(
-        <motion.p className={Styles.readyStatus} {...introPageMessageAnimation}>
-          Everything is set up, and We're good to go. Thanks 👍{" "}
-        </motion.p>
+        <div className={Styles.statusContainer}>
+          <motion.p className={Styles.readyStatus} {...introPageMessageAnimation}>
+            Everything is set up, and We're good to go. Thanks 👍{" "}
+          </motion.p>
+        </div>
       );
     }
   }, [fullMenuListData]);

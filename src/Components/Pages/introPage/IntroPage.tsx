@@ -85,8 +85,8 @@ function IntroPage() {
             To the website
           </button>
         </div>
+        <section>{messageComp}</section>
       </motion.section>
-      <section>{messageComp}</section>
     </div>
   );
 }
